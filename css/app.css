@@ -1,0 +1,609 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+html, body{
+    background: url("../img/nuke.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+}
+.alert{
+    position: fixed; 
+    margin-left:45%;
+    z-index: 9999;
+}
+.navbar-brand img {
+    height: 100%;
+    width:auto;
+    margin-left:10%;
+    margin-top: 1% !important;
+}
+.font{
+    margin-top:-8%;
+}
+.navbar{
+    z-index: 1;
+    height:80px;
+}
+.container{
+    height:inherit;
+}
+.navbar-header{
+    height:inherit;
+}
+.navbar-brand{
+    height:inherit;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin:0 auto;
+    margin-top:-1%;
+}
+.nav{
+    margin-top:20px;
+}
+.menu-icon{
+    height:50px;
+    width:auto;
+    margin-top:-18px;
+}
+#usernameIndex{
+    margin-top:-8%;
+    position:relative;
+    font-weight: 1000;
+}
+#usernameInsertGame{
+    margin-top:-2%;
+    position:relative;
+    font-weight: 1000;
+}
+#score{
+    text-align:center;
+    font-family: 'Roboto', sans-serif;
+    color:white;
+    margin-top:1%;
+    display: inline-block;
+    padding-right:3%;
+}
+#week{
+    margin-top:-10px;
+    text-align:center;
+    font-family: 'Roboto', sans-serif;
+    color:white;
+    margin-top:1%;
+    display: inline-block;
+}
+.info{
+    background: rgba(0, 0, 0, 0.5);
+    text-align:center;
+    margin-bottom:-25px;
+}
+.playerTable td img{
+    height:400px;
+    width:auto;
+    position: relative;
+    float: left;
+    width:  100%;
+    height: 250%;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size: cover;
+}
+
+
+.playerTable td{
+    text-align: center;
+    height: 150px;
+    width: 200px;
+    overflow: hidden;
+}
+@media (min-width: 1700px) {
+    .playerTable td{
+        text-align: center;
+        height: 200px;
+        width: 200px;
+        overflow: hidden;
+    }
+  }
+.playerTable td p{
+    color:white;
+}
+
+.playerTable{
+    margin-top:2%;
+    margin-left:0,5%;
+    font-family: 'Roboto', sans-serif;
+    font-size:30px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+.form-control{
+    width:30%;
+}
+form {
+    border: 3px solid #f1f1f1;
+    padding-top:1%;
+    background: rgba(0, 0, 0, 0.5);
+}
+input[type=text], input[type=password] {
+    border: 3px solid #f1f1f1;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+button:hover {
+    opacity: 0.8;
+}
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0; 
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+/* The close button */
+.closebutton {
+    margin-left: 18px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebutton:hover {
+    color: black;
+}
+
+* {box-sizing: border-box}
+
+/* Full-width input fields */
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 18px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.txtcolor {
+    color:white;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+  }
+}
+.SignIn{
+    margin-top: 3%;
+}
+.SignUp{
+    margin-top: -2%;
+}
+input{
+    color:black;
+}
+.marketInfo {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color:white;
+    height:20%;
+    background: rgba(0, 0, 0, 0.5);
+    margin-top: -1%;
+}
+#balance{
+    padding-left:4%;
+}
+.marketGrid{
+    display:grid;
+    grid-template-columns: repeat(5,15%);
+    grid-column-gap: 30px;
+    grid-row-gap: 1px;
+    margin-left:14%;
+    margin-top: -1%;
+    overflow:hidden;
+}
+.marketGrid .marketTeam{
+    z-index: 1;
+    background: no-repeat center / cover;
+    transition: inherit;
+    margin:10px;
+}
+.marketTeam{
+    height:95%;
+    margin:20px;
+}
+.teamName{
+    text-align:center;
+    color:black;
+    font-weight: 600;
+}
+.nipContainer:hover .nipLogo img{
+    opacity:0.1;
+}
+.liquidContainer:hover .liquidLogo img{
+    opacity:0.1;
+}
+.g2Container:hover .g2Logo img{
+    opacity:0.1;
+}
+.fazeContainer:hover .fazeLogo img{
+    opacity:0.1;
+}
+.astralisContainer:hover .astralisLogo img{
+    opacity:0.1;
+}
+.skContainer:hover .skLogo img{
+    opacity:0.1;
+}
+.mouseContainer:hover .mouseLogo img{
+    opacity:0.1;
+}
+.fnaticContainer:hover .fnaticLogo img{
+    opacity:0.1;
+}
+.naviContainer:hover .naviLogo img{
+    opacity:0.1;
+}
+.cloud9Container:hover .cloud9Logo img{
+    opacity:0.1;
+}
+.marketGrid #nipList{
+    position: fixed;
+    font-weight: 600;
+    font-size:18px;
+    padding-top:5%;
+}
+.nipContainer span{
+    display:none;
+}
+.nipContainer:hover span{
+    display:block;
+}
+.marketGrid #liquidList{
+    position: fixed;
+    font-weight: 600;
+    font-size:18px;
+    padding-top:5%;
+}
+.liquidContainer span{
+    display:none;
+}
+.liquidContainer:hover span{
+    display: block;
+}
+.marketGrid #naviList{
+    position: fixed;
+    font-weight: 600;
+    font-size:18px;
+    padding-top:5%;
+}
+.naviContainer span{
+    display:none;
+}
+.naviContainer:hover span{
+    display: block;
+}
+.marketGrid #mouseList{
+    position: fixed;
+    font-weight: 600;
+    font-size:18px;
+    padding-top:5%;
+}
+.mouseContainer span{
+    display:none;
+}
+.mouseContainer:hover span{
+    display: block;
+}
+.marketGrid #cloud9List{
+    position: fixed;
+    font-weight: 600;
+    font-size:18px;
+    padding-top:5%;
+}
+.cloud9Container span{
+    display:none;
+}
+.cloud9Container:hover span{
+    display: block;
+}
+.marketGrid #skList{
+    position: fixed;
+    font-weight: 600;
+    font-size:18px;
+    padding-top:5%;
+}
+.skContainer span{
+    display:none;
+}
+.skContainer:hover span{
+    display: block;
+}
+.marketGrid #astralisList{
+    position: fixed;
+    font-weight: 600;
+    font-size:18px;
+    padding-top:5%;
+}
+.astralisContainer span{
+    display:none;
+}
+.astralisContainer:hover span{
+    display: block;
+}
+.marketGrid #fnaticList{
+    position: fixed;
+    font-weight: 600;
+    font-size:18px;
+    padding-top:5%;
+}
+.fnaticContainer span{
+    display:none;
+}
+.fnaticContainer:hover span{
+    display: block;
+}
+.marketGrid #g2List{
+    position: fixed;
+    font-weight: 600;
+    font-size:18px;
+    padding-top:5%;
+}
+.g2Container span{
+    display:none;
+}
+.g2Container:hover span{
+    display: block;
+}
+.marketGrid #fazeList{
+    position: fixed;
+    font-weight: 600;
+    font-size:18px;
+    padding-top:5%;
+}
+.fazeContainer span{
+    display:none;
+}
+.fazeContainer:hover span{
+    display: block;
+}
+.marketGrid li{
+    list-style-type:none;
+}
+.marketGrid li a{
+    color:white;
+}
+.marketGrid li a:visited { 
+    text-decoration: none; 
+    color:white;
+}
+  
+.marketGrid li a:hover { 
+    text-decoration: none; 
+    color:grey;
+}
+  
+.marketGrid li a:focus { 
+    text-decoration: none; 
+    color:white;
+}
+  
+.marketGrid li a:hover, a:active {
+    text-decoration: none; 
+    color:grey;
+}
+
+.marketGrid ul{
+    z-index:1;
+    text-shadow:-1px -1px 0 rgb(0, 0, 0),1px -1px 0 rgb(0, 0, 0),-1px 1px 0 rgb(0, 0, 0),1px 1px 0 rgb(0, 0, 0);  
+    padding-left:3%;
+}
+.marketGrid img{
+    z-index:0;
+}
+.marketModalPlayer img{
+    height: 500px;
+    width: auto;
+    padding:1px;
+    border:1px solid #021a40;
+    float:left;
+    
+}
+.modal-title{
+    text-align: center;
+}
+.marketModalTable{
+    float:right;
+}
+.modal-dialog{
+    width: 1000px;
+    overflow:inherit;    
+}
+.modal-content{
+    width:1000px;
+    overflow:inherit;
+    background: rgb(221, 221, 221);
+}
+.marketModalTableL{
+    display:inline-block;
+    padding-top:5%;
+    padding-left:10%;
+}
+.marketModalTableL table{
+    border-collapse: separate;
+    border-spacing: 20px 0;
+}
+.marketModalTableL table td{
+    padding:3px 0;
+}
+.marketModalTableN{
+    display:inline-block;
+    padding-top:5%;
+    padding-left:10%;
+}
+.marketModalTableN table{
+    border-collapse: separate;
+    border-spacing: 20px 0;
+}
+.marketModalTableN table td{
+    padding:3px 0;
+}
+.marketModalName{
+    width:500px;
+    height: 20px;
+    padding-left:50%;
+    text-align:center;
+}
+.marketModalName h2{
+    width: inherit;
+    height: inherit;
+}
+.marketGrid ul{
+    margin-left:-2.5%;
+}
+@media (min-width: 1700px) {
+    .marketGrid ul{
+        margin-left:-1%;
+    }
+  }
+.dropdown{
+    float:left;
+    width: 14.8%;
+    height: 5%;
+    margin-left: 20%;
+    margin-bottom:1%;
+    margin-top:-1%;
+}
+.btn{
+    border: 1px solid black;
+}
+.team1Insert{
+    padding-left:20%;
+    padding-right:20%;
+}
+.team1Insert table{
+    background-color:white;
+    border: 3px solid black;
+}
+.team1Insert table td{
+    border: 1px solid black;
+}
+.team1Insert table th{
+    border: 1px solid black;
+}
+.team2Insert{
+    padding-left:20%;
+    padding-right:20%;
+}
+.team2Insert table{
+    background-color:white;
+    border: 3px solid black;
+}
+.team2Insert table td{
+    border: 1px solid black;
+}
+.team2Insert table th{
+    border: 1px solid black;
+}
+#insertTeamsSucess{
+    margin-left:46.5%;
+    width:6%;
+}
+#team1_score{
+    padding-left:70%;
+    padding-right:20%;
+    margin-top:-1%;
+    position:absolute;
+}
+#team1_score input{
+    border: 1px solid black;
+}

@@ -1,0 +1,64 @@
+NiP
+-Forest     - 180k
+-Get_Right  - 180k
+-Xizt	    - 80k
+-Draken     - 130k
+-Rez        - 130k
+Astralis
+-Device	    - 230k
+-Glaive     - 80k   
+-Dupreeh    - 200k
+-Xyp9x      - 180k
+-Magisk     - 130k
+Faze
+-Karrigan   - 80k
+-Niko       - 230k
+-Olofmeister- 160k
+-Guardian   - 200k
+-Rain       - 210k
+G2
+-Shox       - 180k
+-Bodyy      - 120k
+-NBK        - 150k
+-KennyS     - 200k
+-Apex       - 150k
+SK
+-Fallen     - 200kP
+-Fer        - 220k
+-Coldzera   - 250k
+-Taco       - 90k
+-Boltz      - 160k
+Cloud9
+-Tarik      - 120k
+-Skadoodle  - 130k
+-Rush       - 120k
+-Stewie2k   - 130k
+-Autimatic  - 170k
+Na'vi 
+-Electronic - 150k
+-Zeus       - 50k
+-Simple     - 200k
+-Flamie     - 150k
+-Edward     - 90k
+Fnatic    
+-Lekro      - 130k
+-Flusha     - 150k
+-Golden     - 80k
+-Krimz      - 130k
+-Jw         - 100k
+Liquid
+-Steel	    - 120k
+-Twistz     - 170k
+-Elige      - 190k
+-Naf        - 130k
+-Nitro      - 120k
+Mousesports
+-ChrisJ     - 110k
+-Styko      - 90k
+-Oskar      - 170k
+-Sunny      - 140k
+-Ropz       - 140k
+
+
+
+500K
