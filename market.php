@@ -12,7 +12,6 @@ if (!empty($_GET)) {
     $stmt = $pdo->query("SELECT `id`,`price`,`photo`,`team`,`team_photo`,`first_name`,`last_name` FROM `users`.`players` WHERE name='$playerName'");
     $t = $stmt->fetch();
     $id = $t['id'];
-    //echo  $_SESSION["player_id"];
     $first_name = $t['first_name'];
     $last_name = $t['last_name'];
     $player_photo = $t['photo'];
