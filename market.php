@@ -162,7 +162,7 @@ if (!empty($_GET)) {
                     </div>
                     <div class="modal-body">
                         <div class="marketModalPlayer">
-                            <img id="playerPhoto" src="/img<?= $player_photo ?>" style="background: url(/img<?= $team_photo ?>);">
+                            <img id="playerPhoto" src="img<?= $player_photo ?>" style="background: url(img<?= $team_photo ?>);">
                             <div class="marketModalName">
                             <!--Nome-->
                                 <h2><?= $first_name ?> "<?= $playerName ?>" <?= $last_name ?></h2>
