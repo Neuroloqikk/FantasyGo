@@ -46,7 +46,7 @@ $username= $_SESSION["username"];
                         </li>
                         
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <a href="#" id = "menuDropdown" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                 <img class="menu-icon" src="img/menu.svg">
                             </a>
                             <ul class="dropdown-menu">

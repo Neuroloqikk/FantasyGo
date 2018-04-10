@@ -36,7 +36,7 @@ if (!empty($_GET)) {
         if ($player1 == NULL or $player2 == NULL or $player3 == NULL or $player4 == NULL or $player5 == NULL){
             if ($player1 == $id or $player2 == $id or $player3 == $id or $player4 == $id or $player5 == $id){
                 echo '<script>alert("You already have this player! Please select another one.")</script>';
-                echo '<script>window.location.href = "Market.php";</script>';
+                echo '<script>window.location.href = "market.php";</script>';
             }
             else{
                 if($player1 == NULL){
@@ -57,7 +57,7 @@ if (!empty($_GET)) {
                 $newBalance = $balance - $price;
                 if($newBalance < 0){
                     echo '<script>alert("You do not have enough money!")</script>';
-                    echo '<script>window.location.href = "Market.php";</script>';
+                    echo '<script>window.location.href = "market.php";</script>';
                 }
                 else{
                     $sql = "UPDATE `users`.`users_players` SET $freeSlot=? WHERE username=?";
@@ -67,7 +67,7 @@ if (!empty($_GET)) {
                     $stmt= $pdo->prepare($sql);
                     $stmt->execute([$newBalance,$username]);
                     echo '<script>alert("The player was added to your team!\nYour current balance is '.$newBalance.'");</script>';
-                    echo '<script>window.location.href = "Market.php";</script>';
+                    echo '<script>window.location.href = "market.php";</script>';
                 }
             }
         }
@@ -394,15 +394,15 @@ if (!empty($_GET)) {
         <script>
             function idPlayer(elem) {
                 var name = elem.id;
-                window.location.href="Market.php?name=" + name;
+                window.location.href="market.php?name=" + name;
                 
             }
             function buyButton(id) {
                 var buy = id.id;
                 if (confirm("Are you sure you wanna buy this player?")) {
-                    window.location.href="Market.php?buy=" + buy;
+                    window.location.href="market.php?buy=" + buy;
                 } else {
-                    window.location.href = "Market.php";
+                    window.location.href = "market.php";
                 }
             }
         </script>
