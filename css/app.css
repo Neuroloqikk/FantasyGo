@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 html, body{
-    background: url("../img/nuke.jpg") no-repeat center center fixed; 
+    background: url("../img/nuke1.png") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     
+}
+.containerLanding{
+    width:30%;
+}
+.containerLanding form input{
+    width:inherit;
 }
 .alert{
     position: fixed; 
@@ -555,6 +561,7 @@ input{
         margin-left:-1%;
     }
   }
+  
 .dropdown{
     float:left;
     width: 14.8%;
@@ -606,4 +613,91 @@ input{
 }
 #team1_score input{
     border: 1px solid black;
+}
+.wrapperLanding {	
+	margin-top: -37%;
+    margin-left: 60%;
+}
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);  
+}
+.form-signin-heading,
+.checkbox {
+    margin-bottom: 30px;
+}
+.checkbox {
+    font-weight: normal;
+}
+.form-control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+}
+#textLanding {
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#passLanding {
+    margin-bottom: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.imgLanding img{
+    width:50%;
+    height:auto;
+    margin-left:10%;
+    margin-top: 1%;
+    
+}
+
+
+@media (min-width: 1700px) {
+    .wrapperLanding {	
+        margin-top: -35%;
+        margin-left:60%;
+    }
+    
+.form-signin {
+    max-width: 380px;
+    padding: 15px 35px 45px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.1);  
+  }
+  .form-signin-heading,
+  .checkbox {
+      margin-bottom: 30px;
+  }
+  .checkbox {
+      font-weight: normal;
+  }
+  .form-control {
+      position: relative;
+      font-size: 16px;
+      height: auto;
+      padding: 10px;
+  }
+  #textLanding {
+      margin-bottom: -1px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+  }
+  #passLanding {
+      margin-bottom: 20px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+  }
+  .imgLanding img{
+      width:47%;
+      height:auto;
+      margin-left:10%;
+      margin-top: 1%;
+      
+  }
 }
