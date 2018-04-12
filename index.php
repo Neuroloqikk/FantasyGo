@@ -1,5 +1,8 @@
 <?php
-session_start();
+
+require 'vendor/autoload.php';
+use Mailgun\Mailgun;
+
 require 'connect.php';
 session_destroy ();
 $timestamp = date("Y-m-d H:i:s");
@@ -49,14 +52,14 @@ if (isset($_POST['register'])) {
             $sql = "INSERT INTO `users`.`users_players` (username) VALUES ('$username');";
             $stmt = $pdo->prepare($sql);
             $result = $stmt->execute();
-            $code=substr(md5(mt_rand()),0,15);
-            $message = "Your Activation Code is ".$code."";
-            $to="blockmaster12@gmail.com";
-            $subject="Activation Code For Fantasy Go";
-            $from = 'blockamster12@gmail.com';
-            $body='Your Activation Code is '.$code.' Please Click On This link <a href="teste.php">teste.php?id="3"&code='.$code.'</a>to activate your account.';
-            $headers = "From:".$from;
-            mail($to,$subject,$body,$headers);
+            $mgClient = new Mailgun('key-3d31f8fff100ea00947fc61bbc8b5a12');
+            $domain = "sandbox24f037afa384475d9271bbd80cc44fc3.mailgun.org";
+
+            $result = $mgClient->sendMessage("$domain",
+                array('from'    => 'Mailgun Sandbox <postmaster@sandbox24f037afa384475d9271bbd80cc44fc3.mailgun.org>',
+                'to'      => 'Fabio <fabioamrodrigues98@gmail.com>',
+                'subject' => 'Hello Fabio',
+                'text'    => 'Congratulations Fabio, you just sent an email with Mailgun!  You are truly awesome! '));
             
             echo "Verify!";
             /*echo '<script>alert("Welcome to Fantasy GO!")</script>';
