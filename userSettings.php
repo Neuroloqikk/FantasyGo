@@ -85,14 +85,14 @@ require 'connect.php';
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand">
                     <img src="img/logo.svg">
                 </a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li id="usernameInsertGame" class="font">
-                       <a href="userSettings.php"><?= $username ?></a>
+                       <a href="myteam.php"><?= $username ?></a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">

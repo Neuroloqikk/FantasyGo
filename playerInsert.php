@@ -45,7 +45,7 @@ if (isset($_POST['register'])) {
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.php">
+                    <a class="navbar-brand">
                         <img src="img/logo.svg">
                     </a>
                 </div>
@@ -60,7 +60,7 @@ if (isset($_POST['register'])) {
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="index.php">My Team</a>
+                                    <a href="myteam.php">My Team</a>
                                 </li>
                                 <li>
                                     <a href="#">Market</a>

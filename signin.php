@@ -9,7 +9,7 @@ if (isset($_POST['login'])) {
     $user = $stmt->fetch();
     if ($user && password_verify($psw, $user['psw'])){
         $_SESSION["username"] = $username;
-        echo '<script>location="index.php"</script>';
+        echo '<script>location="myteam.php"</script>';
     } 
     else {
     $message = "Username and/or Password incorrect.\\nTry again.";
@@ -39,7 +39,7 @@ if (isset($_POST['login'])) {
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.php">
+                    <a class="navbar-brand">
                         <img src="img/logo.svg">
                     </a>
                 </div>

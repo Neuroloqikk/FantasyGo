@@ -29,7 +29,7 @@ $username= $_SESSION["username"];
                         <span class="icon-bar"></span>
                     </button>
                     
-                    <a class="navbar-brand" href="index.php">
+                    <a class="navbar-brand">
                         <img src="img/logo.svg">
                     </a>
                     <a class="navbar-brand" id="balance">
@@ -51,7 +51,7 @@ $username= $_SESSION["username"];
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="index.php">My Team</a>
+                                    <a href="myteam.php">My Team</a>
                                 </li>
                                 <li>
                                     <a href="#">Next Games</a>

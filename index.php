@@ -1,116 +1,64 @@
 <?php
 session_start();
-
 require 'connect.php';
-    $username= $_SESSION["username"];
-    $stmt = $pdo->query("SELECT `score`,`balance`,timestamp FROM `users`.`users` WHERE username='$username'");
-    $p = $stmt->fetch();
-    $balance = $p['balance'];
-    $score = $p['score'];
-    $timestamp = $p['timestamp'];
-    $stmt = $pdo->query("SELECT player1_id, player2_id, player3_id, player4_id, player5_id FROM `users`.`users_players` WHERE username = '$username'");
-    $stmt->execute([20]);
-    $arr = $stmt->fetch(PDO::FETCH_NUM);
-    if(!$arr){
-        echo '<script>location="signin.php"</script>';
-    }
-    list($player1_Id, $player2_Id, $player3_Id, $player4_Id, $player5_Id) = $arr;
-    //
-    $q = $pdo->query("SELECT name,photo FROM `users`.`players` WHERE id= '".$player1_Id."'");
-    $t = $q->fetch();
-    $player1Name = $t['name'];
-    $player1Photo = $t['photo'];
-    if($player1Name == NULL){
-        $player1Name = "Buy another player.";
-        $player1Photo = "/BlackPlayer.png";
-    }
-    //
-    $q = $pdo->query("SELECT name,photo FROM `users`.`players` WHERE id= '".$player2_Id."'");
-    $t = $q->fetch();
-    $player2Name = $t['name'];
-    $player2Photo = $t['photo'];
-    
-    if($player2Name == ""){
-        $player2Name = "Buy another player.";
-        $player2Photo = "/BlackPlayer.png";
-    }
-    //
-    $q = $pdo->query("SELECT name,photo FROM `users`.`players` WHERE id= '".$player3_Id."'");
-    $t = $q->fetch();
-    $player3Name = $t['name'];
-    $player3Photo = $t['photo'];
-    if($player3Name == ""){
-        $player3Name = "Buy another player.";
-        $player3Photo = "/BlackPlayer.png";
-    }
-    $q = $pdo->query("SELECT name,photo FROM `users`.`players` WHERE id= '".$player4_Id."'");
-    $t = $q->fetch();
-    $player4Name = $t['name'];
-    $player4Photo = $t['photo'];
-    if($player4Name == ""){
-        $player4Name = "Buy another player.";
-        $player4Photo = "/BlackPlayer.png";
-    }
-    $q = $pdo->query("SELECT name,photo FROM `users`.`players` WHERE id= '".$player5_Id."'");
-    $t = $q->fetch();
-    $player5Name = $t['name'];
-    $player5Photo = $t['photo'];
-    if($player5Name == ""){
-        $player5Name = "Buy another player.";
-        $player5Photo = "/BlackPlayer.png";
+session_destroy ();
+$timestamp = date("Y-m-d H:i:s");
+if (isset($_POST['register'])) {
+    $username = !empty($_POST['username']) ? trim($_POST['username']) : null;
+    $pass = !empty($_POST['password']) ? trim($_POST['password']) : null;
+    $passVerify = !empty($_POST['password-repeat']) ? trim($_POST['password-repeat']) : null;
+    $email =!empty($_POST['email']) ? trim($_POST['email']) :null;
+
+    $stmt = $pdo->prepare("SELECT * FROM users WHERE username=:id");
+    $stmt->execute(['id' => $username]); 
+    $user = $stmt->fetch();
+    //EMAIL
+    $stmt = $pdo->prepare("SELECT COUNT(email) AS num FROM users.users WHERE username = :username");
+    $stmt->bindValue(':username', $username);
+    $stmt->execute();
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+    if($row['num'] > 0){
+        echo '<script>alert("That email already exists!")</script>';
+        echo '<script>location="index.php"</script>';
     }
 
-    $sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='".$player1Name."'";
-    $player1 = $pdo->query($sql);
-    foreach ($player1 as $row){
-        if($timestamp<$row['timestamp']){
-            $player1_score += $row['player_score'];
-        }
+    //USERNAME
+    $stmt = $pdo->prepare("SELECT COUNT(username) AS num FROM users.users WHERE username = :username");
+    $stmt->bindValue(':username', $username);
+    $stmt->execute();
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo '<script>alert("Please type a valid email!")</script>';
+        echo '<script>location="index.php"</script>';
     }
-    if($player1_score == 0){
-        $player1_score = 0;
+    if($row['num'] > 0){
+        echo '<script>alert("That username already exists!")</script>';
+        echo '<script>location="index.php"</script>';
     }
-    $sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='".$player2Name."'";
-    $player2 = $pdo->query($sql);
-    foreach ($player2 as $row){
-        if($timestamp<$row['timestamp']){
-            $player2_score += $row['player_score'];
-        }
+    echo $pass;
+    echo "<br>";
+    echo $passVerify;
+    if($pass == $passVerify){
+        $passwordHash = password_hash($pass, PASSWORD_BCRYPT, array("cost" => 12));
+    
+
+        $sql = "INSERT INTO `users`.`users` (username,email,`psw`,timestamp) VALUES ('$username','$email','$passwordHash','$timestamp')";
+        $stmt = $pdo->prepare($sql);
+    
+        $result = $stmt->execute();
+            $sql = "INSERT INTO `users`.`users_players` (username) VALUES ('$username');";
+            $stmt = $pdo->prepare($sql);
+            $result = $stmt->execute();
+            echo '<script>alert("Welcome to Fantasy GO!")</script>';
+            echo '<script>location="signinSucess.php"</script>';
     }
-    if($player2_score == 0){
-        $player2_score = 0;
+    else{
+        echo '<script>alert("Please verify your password!")</script>';
+        echo '<script>location="index.php"</script>';
     }
-    $sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='".$player3Name."'";
-    $player3 = $pdo->query($sql);
-    foreach ($player3 as $row){
-        if($timestamp<$row['timestamp']){
-            $player3_score += $row['player_score'];
-        }
-    }
-    if($player3_score == 0){
-        $player3_score = 0;
-    }
-    $sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='".$player4Name."'";
-    $player4 = $pdo->query($sql);
-    foreach ($player4 as $row){
-        if($timestamp<$row['timestamp']){
-            $player4_score += $row['player_score'];
-        }
-    }
-    if($player4_score == NULL){
-        $player4_score = 0;
-    }
-    $sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='".$player5Name."'";
-    $player5 = $pdo->query($sql);
-    foreach ($player5 as $row){
-        if($timestamp<$row['timestamp']){
-            $player5_score += $row['player_score'];
-        }
-    }
-    if($player5_score == 0){
-        $player5_score = 0;
-    }
+}
 ?>
+
 <html>
 <head>
     <meta charset="utf-8">
@@ -119,109 +67,53 @@ require 'connect.php';
     <title>Fantasy GO</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/app.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/img/icon.png">
 </head>
+<div class="container-example">
 
-<body class="bg">
-    <nav class="navbar navbar-default navbar-static-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-                    aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">
-                    <img src="img/logo.svg">
-                </a>
-                <a class="navbar-brand"  id="balance" href="#">
-                        <h4>Balance</h4>
-                        <h2><?= $balance ?>$</h2>
+    <body class="bg"  id="landingBG">
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    
+                    <a class="navbar-brand">
+                        <img src="img/logo.svg" href="index.php" >
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    
+                    <ul class="nav navbar-nav navbar-right">
+                    
+                        <li class="font">
+                            <a href="signin.php">Sign In</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li id="usernameIndex" class="font">
-                       <a href="userSettings.php"><?= $username ?></a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            <img class="menu-icon" src="img/menu.svg">
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="market.php">Market</a>
-                            </li>
-                            <li>
-                                <a href="#">Next Games</a>
-                            </li>
-                            <li>
-                                <a href="#">Last Games</a>
-                            </li>
-                            <li>
-                                <a href="#">Settings</a>
-                            </li>
-                            <li>
-                                <a href="logout.php" onClick>Logout</a>
-                            </li>
-                            
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+        </nav>
+        <div class="imgLanding">
+            <img src="img/Landing/2.png">
         </div>
-    </nav>
-    <div class="info">
-        <div id="score">
-            <p>
-                Score
-            </p>
-            <h1>
-            <?= $score ?>
-            </h1>
+        <div class="wrapperLanding ">
+            <form class="form-signin" method ="POST">       
+                <h2 class="form-signin-heading">Register now and build your team right away!</h2>
+                <input id="passText" type="text" class="form-control" name="email" placeholder="Email Address" required="" autofocus="" />
+                <input id="passText" type="text" class="form-control" name="username" placeholder="Username" required="" autofocus="" />
+                <input id="passLanding" type="password" class="form-control" name="password" placeholder="Password" required=""/>      
+                <input id="passLanding" type="password" class="form-control" name="password-repeat" placeholder="Password" required=""/>   
+                <p>Already have an account? <a href="signin.php" style="color:dodgerblue">Login</a></p>
+                <button id="btnLanding" class="btn btn-lg btn-primary btn-block" type="submit" value ="Register" name="register">Create Account</button>   
+            </form>
         </div>
-        <div id="week">
-            <p>
-                Week
-            </p>
-            <h1>
-                1/30
-            </h1>
-        </div>
-    </div>
-    <div class="container-table">
-        <table class="playerTable" style="width:100%">
-            <tr>
-                <td>
-                    <img src="img<?= $player1Photo ?>"></img>
-                    <p><?= $player1Name ?></p>
-                    <p>Score: <?= $player1_score ?></p>
-                </td>
-                <td>
-                    <img src="img<?= $player2Photo ?>"></img>
-                    <p><?= $player2Name ?></p>
-                    <p>Score: <?= $player2_score ?></p>
-                </td>
-                <td>
-                    <img src="img<?= $player3Photo ?>"></img>
-                    <p><?= $player3Name ?></p>
-                    <p>Score: <?= $player3_score ?></p>
-                </td>
-                <td>
-                    <img src="img<?= $player4Photo ?>"></img>
-                    <p><?= $player4Name ?></p>
-                    <p>Score: <?= $player4_score ?></p>
-                </td>
-                <td>
-                    <img src="img<?= $player5Photo ?>"></img>
-                    <p><?= $player5Name ?></p>
-                    <p>Score: <?= $player5_score ?></p>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-</body>
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</div>
 </html>

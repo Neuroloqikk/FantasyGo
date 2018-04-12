@@ -72,7 +72,7 @@ if (!empty($_GET)) {
         }
         else{
             echo '<script>alert("You already have five players!")</script>';
-            echo '<script>window.location.href = "index.php";</script>';
+            echo '<script>window.location.href = "myteam.php";</script>';
         }
     }
     else{
@@ -106,7 +106,7 @@ if (!empty($_GET)) {
                         <span class="icon-bar"></span>
                     </button>
                     
-                    <a class="navbar-brand" href="index.php">
+                    <a class="navbar-brand">
                         <img src="img/logo.svg">
                     </a>
                     <a class="navbar-brand" id="balance">
@@ -127,7 +127,7 @@ if (!empty($_GET)) {
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="index.php">My Team</a>
+                                    <a href="myteam.php">My Team</a>
                                 </li>
                                 <li>
                                     <a href="#">Next Games</a>

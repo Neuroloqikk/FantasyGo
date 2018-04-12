@@ -332,7 +332,7 @@ if (isset($_GET['t2'])){
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="index.php">My Team</a>
+                                    <a href="myteam.php">My Team</a>
                                 </li>
                                 <li>
                                     <a href="#">Next Games</a>

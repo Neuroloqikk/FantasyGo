@@ -1,11 +1,12 @@
 <?php
 session_start();
 require 'connect.php';
-
+$username= $_SESSION["username"];
 ?>
 
 <html>
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,7 +17,7 @@ require 'connect.php';
 </head>
 <div class="container-example">
 
-    <body class="bg"  id="landingBG">
+    <body class="bg">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
@@ -28,7 +29,7 @@ require 'connect.php';
                         <span class="icon-bar"></span>
                     </button>
                     
-                    <a class="navbar-brand" href="index.php">
+                    <a class="navbar-brand">
                         <img src="img/logo.svg">
                     </a>
                 </div>
@@ -36,26 +37,39 @@ require 'connect.php';
                     
                     <ul class="nav navbar-nav navbar-right">
                     
-                        <li class="font">
-                            <a >Sign In</a>
+                        <li id="usernameInsertGame" class="font">
+                            <a href="userSettings.php"><?= $username ?></a>
+                        </li>
+                        
+                        <li class="dropdown">
+                            <a href="#" id = "menuDropdown" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <img class="menu-icon" src="img/menu.svg">
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="myteam.php">My Team</a>
+                                </li>
+                                <li>
+                                    <a href="#">Next Games</a>
+                                </li>
+                                <li>
+                                    <a href="#">Last Games</a>
+                                </li>
+                                <li>
+                                    <a href="#">Settings</a>
+                                </li>
+                                <li>
+                                    <a href="signin.php">Logout</a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <div class="imgLanding">
-            <img src="img/Landing/2.png">
-        </div>
-        <div class="wrapperLanding ">
-            <form class="form-signin">       
-                <h2 class="form-signin-heading">Register now and build your team right away!</h2>
-                <input id="passText" type="text" class="form-control" name="email" placeholder="Email Address" required="" autofocus="" />
-                <input id="passText" type="text" class="form-control" name="username" placeholder="Username" required="" autofocus="" />
-                <input id="passLanding" type="password" class="form-control" name="password" placeholder="Password" required=""/>      
-                <input id="passLanding" type="password" class="form-control" name="password" placeholder="Password" required=""/>   
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Create Account</button>   
-            </form>
-        </div>
+        <script>
+
+        </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
     </body>
