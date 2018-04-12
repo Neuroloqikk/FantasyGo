@@ -64,6 +64,8 @@ if (isset($_POST['register'])) {
             -F subject="Hello" \
             -F text="Testing some Mailgun awesomeness!"');
             echo "<pre>$output</pre>";
+            $output = shell_exec('ls -lart');
+            echo "<pre>$output</pre>";
            // echo '<script>alert("Welcome to Fantasy GO!")</script>';
             //echo '<script>location="signinSucess.php"</script>';
             
