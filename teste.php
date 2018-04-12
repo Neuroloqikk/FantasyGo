@@ -3,8 +3,10 @@ session_start();
 require 'connect.php';
 $username= $_SESSION["username"];
 ?>
+
 <html>
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,13 +32,17 @@ $username= $_SESSION["username"];
                     <a class="navbar-brand">
                         <img src="img/logo.svg">
                     </a>
+                    <a class="navbar-brand" id="balance">
+                        <h4>Balance</h4>
+                        <h2>300000$</h2>
+                        </a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     
                     <ul class="nav navbar-nav navbar-right">
                     
-                        <li id="usernameInsertGame" class="font">
-                            <a href="userSettings.php"><?= $username ?></a>
+                        <li class="font">
+                            <a ><?= $username ?></a>
                         </li>
                         
                         <li class="dropdown">
@@ -65,9 +71,9 @@ $username= $_SESSION["username"];
                 </div>
             </div>
         </nav>
-        <div class="lastGames">
-            
-        </div>
+        <script>
+
+        </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
     </body>

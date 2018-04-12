@@ -7,17 +7,10 @@ if (isset($_POST['register'])) {
     $price = !empty($_POST['price']) ? trim($_POST['price']) : null;
     $team =!empty($_POST['Team']) ? trim($_POST['Team']) : null;
     $photo =!empty($_POST['Photo']) ? trim($_POST['Photo']) : null;
-    
-
     $sql = "INSERT INTO `users`.`players` (name,price,team,photo) VALUES ('$name','$price','$team','$photo')";
     $stmt = $pdo->prepare($sql);
- 
-
     $result = $stmt->execute();
-    
-
     if($result == 1){
-
         echo 'Thank you for registering a new player.';
         header('Location: /playerInsert.php');
     }

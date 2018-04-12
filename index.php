@@ -49,8 +49,18 @@ if (isset($_POST['register'])) {
             $sql = "INSERT INTO `users`.`users_players` (username) VALUES ('$username');";
             $stmt = $pdo->prepare($sql);
             $result = $stmt->execute();
-            echo '<script>alert("Welcome to Fantasy GO!")</script>';
-            echo '<script>location="signinSucess.php"</script>';
+            $code=substr(md5(mt_rand()),0,15);
+            $message = "Your Activation Code is ".$code."";
+            $to="blockmaster12@gmail.com";
+            $subject="Activation Code For Fantasy Go";
+            $from = 'blockamster12@gmail.com';
+            $body='Your Activation Code is '.$code.' Please Click On This link <a href="teste.php">teste.php?id="3"&code='.$code.'</a>to activate your account.';
+            $headers = "From:".$from;
+            mail($to,$subject,$body,$headers);
+            
+            echo "Verify!";
+            /*echo '<script>alert("Welcome to Fantasy GO!")</script>';
+            echo '<script>location="signinSucess.php"</script>';*/
     }
     else{
         echo '<script>alert("Please verify your password!")</script>';
