@@ -1,8 +1,5 @@
 <?php
 
-require 'vendor/autoload.php';
-use Mailgun\Mailgun;
-
 require 'connect.php';
 session_destroy ();
 $timestamp = date("Y-m-d H:i:s");
@@ -52,18 +49,59 @@ if (isset($_POST['register'])) {
             $sql = "INSERT INTO `users`.`users_players` (username) VALUES ('$username');";
             $stmt = $pdo->prepare($sql);
             $result = $stmt->execute();
-            $mgClient = new Mailgun('key-3d31f8fff100ea00947fc61bbc8b5a12');
-            $domain = "sandbox24f037afa384475d9271bbd80cc44fc3.mailgun.org";
-
-            $result = $mgClient->sendMessage("$domain",
-                array('from'    => 'Mailgun Sandbox <postmaster@sandbox24f037afa384475d9271bbd80cc44fc3.mailgun.org>',
-                'to'      => 'Fabio <fabioamrodrigues98@gmail.com>',
-                'subject' => 'Hello Fabio',
-                'text'    => 'Congratulations Fabio, you just sent an email with Mailgun!  You are truly awesome! '));
+/*
+            curl -s --user 'api:key-3d31f8fff100ea00947fc61bbc8b5a12' \
+            https://api.mailgun.net/v3/mail.neuroloq1kk.me/messages \
+            -F from='Excited User <mailgun@mail.neuroloq1kk.me>' \
+            -F to=blockmaster12@gmail.com \
+            -F subject='Hello' \
+            -F text='Testing some Mailgun awesomeness!'
+            echo "Verify!";*/
+            $output = shell_exec('curl -s --user "api:key-3d31f8fff100ea00947fc61bbc8b5a12" \
+            https://api.mailgun.net/v3/mail.neuroloq1kk.me/messages \
+            -F from="Excited User <mailgun@mail.neuroloq1kk.me>"" \
+            -F to=blockmaster12@gmail.com \
+            -F subject="Hello" \
+            -F text="Testing some Mailgun awesomeness!"');
+            echo "<pre>$output</pre>";
+           // echo '<script>alert("Welcome to Fantasy GO!")</script>';
+            //echo '<script>location="signinSucess.php"</script>';
             
-            echo "Verify!";
-            /*echo '<script>alert("Welcome to Fantasy GO!")</script>';
-            echo '<script>location="signinSucess.php"</script>';*/
+            
+            
+            /*$url = 'http://sendgrid.com/';
+            $user = 'USERNAME';
+            $pass = 'PASSWORD'; 
+            
+            $params = array(
+                'api_user'  => $user,
+                'api_key'   => $pass,
+                'to'        => 'example3@sendgrid.com',
+                'subject'   => 'testing from curl',
+                'html'      => 'testing body',
+                'text'      => 'testing body',
+                'from'      => 'example@sendgrid.com',
+            );
+            
+            
+            $request =  $url.'api/mail.send.json';
+            
+            // Generate curl request
+            $session = curl_init($request);
+            // Tell curl to use HTTP POST
+            curl_setopt ($session, CURLOPT_POST, true);
+            // Tell curl that this is the body of the POST
+            curl_setopt ($session, CURLOPT_POSTFIELDS, $params);
+            // Tell curl not to return headers, but do return the response
+            curl_setopt($session, CURLOPT_HEADER, false);
+            curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
+            
+            // obtain response
+            $response = curl_exec($session);
+            curl_close($session);
+            
+            // print everything out
+            print_r($response);*/
     }
     else{
         echo '<script>alert("Please verify your password!")</script>';
