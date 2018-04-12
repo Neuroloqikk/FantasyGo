@@ -1,11 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-html, body{
+
+html, body:not(#landingBG){
+    background: url("../img/nuke.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#landingBG{
+    overflow:hidden;
     background: url("../img/nuke1.png") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    
 }
 .containerLanding{
     width:30%;
@@ -96,8 +105,6 @@ html, body{
     background-repeat:   no-repeat;
     background-size: cover;
 }
-
-
 .playerTable td{
     text-align: center;
     height: 150px;
@@ -115,7 +122,6 @@ html, body{
 .playerTable td p{
     color:white;
 }
-
 .playerTable{
     margin-top:2%;
     margin-left:0,5%;
@@ -653,9 +659,50 @@ input{
     height:auto;
     margin-left:10%;
     margin-top: 1%;
-    
 }
-
+@media (min-width: 1281px) {
+    .wrapperLanding {	
+        margin-top: -39%;
+        margin-left:60%;
+    }
+    .form-signin {
+    max-width: 380px;
+    padding: 15px 35px 45px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.1);  
+  }
+  .form-signin-heading,
+  .checkbox {
+      margin-bottom: 30px;
+  }
+  .checkbox {
+      font-weight: normal;
+  }
+  .form-control {
+      position: relative;
+      font-size: 16px;
+      height: auto;
+      padding: 10px;
+  }
+  #textLanding {
+      margin-bottom: -1px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+  }
+  #passLanding {
+      margin-bottom: 20px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+  }
+  .imgLanding img{
+      width:47%;
+      height:auto;
+      margin-left:10%;
+      margin-top: 1%;
+      
+  }
+}
 
 @media (min-width: 1700px) {
     .wrapperLanding {	

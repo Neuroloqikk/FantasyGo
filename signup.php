@@ -44,9 +44,7 @@ if (isset($_POST['register'])) {
         echo '<script>location="signup.php"</script>';
     }
 }
-    
 ?>
-
 <html>
     <head>
     <meta charset="utf-8">
@@ -87,19 +85,14 @@ if (isset($_POST['register'])) {
         <div class="container">
           <h1>Sign Up</h1>
           <hr>
-      
           <label for="email"><b>Email</b></label>
           <input class ="txtcolorinput" type="text" placeholder="Enter Email" name="email" required>
-      
           <label for="username"><b>Username</b></label>
           <input class ="txtcolorinput" type="text" placeholder="Enter Username" name="username" required>
-      
           <label for="psw"><b>Password</b></label>
           <input class ="txtcolorinput" type="password" placeholder="Enter Password" name="psw" required>
-      
           <label for="psw-repeat"><b>Repeat Password</b></label>
           <input class ="txtcolorinput" type="password" placeholder="Repeat Password" name="psw-repeat" required>
-
           <label>
             <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
           </label>

@@ -74,7 +74,7 @@ require 'connect.php';
     <link href="css/app.css" rel="stylesheet">
 </head>
 
-<body class="bg">
+<body class="bg" id="userSettings">
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
@@ -142,7 +142,7 @@ require 'connect.php';
           <input class ="txtcolorinput" type="password" placeholder="Repeat new password" name="psw-repeat" required>
 
           <label for="psw"><b>Current password</b></label>
-          <input class ="txtcolorinput" type="password" placeholder="Enter your current password" name="psw-current" required>«
+          <input class ="txtcolorinput" type="password" placeholder="Enter your current password" name="psw-current" required>
           <div class="clearfix">
             <button type="button" class="cancelbtn">Cancel</button>
             <button type="submit" value ="Register" class="signupbtn" name="register">Update</button>
