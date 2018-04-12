@@ -57,21 +57,30 @@ if (isset($_POST['register'])) {
             -F subject='Hello' \
             -F text='Testing some Mailgun awesomeness!'
             echo "Verify!";*/
+            /*$TEST = <<<EOD
+            curl -s --user "api:key-3d31f8fff100ea00947fc61bbc8b5a12" \
+            https://api.mailgun.net/v3/mail.neuroloq1kk.me/messages \
+            -F from="Excited User <mailgun@mail.neuroloq1kk.me>" \
+            -F to=blockmaster12@gmail.com \
+            -F subject='Hello' \
+            -F text="Testing some Mailgun awesomeness!"
+            EOD;
+*/
+            /*sdad*/
+
             $output = shell_exec('curl -s --user "api:key-3d31f8fff100ea00947fc61bbc8b5a12" \
             https://api.mailgun.net/v3/mail.neuroloq1kk.me/messages \
-            -F from="Excited User <mailgun@mail.neuroloq1kk.me>"" \
+            -F from="Excited User <mailgun@mail.neuroloq1kk.me>" \
             -F to=blockmaster12@gmail.com \
             -F subject="Hello" \
             -F text="Testing some Mailgun awesomeness!"');
             echo "<pre>$output</pre>";
-            $output = shell_exec('ls -lart');
-            echo "<pre>$output</pre>";
-           // echo '<script>alert("Welcome to Fantasy GO!")</script>';
-            //echo '<script>location="signinSucess.php"</script>';
+            //echo '<script>alert("Welcome to Fantasy GO!")</script>';
+           // echo '<script>location="signinSucess.php"</script>';
             
             
             
-            /*$url = 'http://sendgrid.com/';
+            /*$url = 'http:sendgrid.co;
             $user = 'USERNAME';
             $pass = 'PASSWORD'; 
             
