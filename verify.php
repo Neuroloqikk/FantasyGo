@@ -7,7 +7,7 @@ require 'connect.php';
         $hash = ($_GET['hash']); // Set hash variable
     }
     $q = $pdo->query("SELECT count(*) FROM `users`.`users` WHERE email= '".$email."' AND hash='".$hash."' AND verified = '0'");
-    $result = $con->prepare($q); 
+    $result = $pdo->prepare($q); 
     $result->execute(); 
     $rows_found = $result->fetchColumn();
     
