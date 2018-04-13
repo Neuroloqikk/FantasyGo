@@ -8,8 +8,8 @@ require 'connect.php';
     }
     $q = $pdo->query("SELECT email,hash FROM `users`.`users` WHERE email= '".$email."' AND hash='".$hash."' AND verified = '0'");
     $t = $q->fetch();
-    $rows_found = $q->rowCount();
-    
+    $rows_found = $t->rowCount();
+    /*
     if $rows_found > 0{
         
         $sql = "UPDATE `users`.`users` SET verified=? WHERE email=? AND hash=?";
@@ -20,5 +20,5 @@ require 'connect.php';
     else
         echo 'Your account is already verified!';
     
-
+*/
 ?>
