@@ -12,7 +12,7 @@ require 'connect.php';
             $sql = "UPDATE `users`.`users` SET verified=? WHERE email=? AND hash=?";
             $stmt= $pdo->prepare($sql);
             $stmt->execute(['1', $email,$hash]);
-            echo '<script>location="signinSuccess.php"</script>';
+            echo '<script>location="signinSucess.php"</script>';
         }
         else
             echo 'Your account is already verified!';

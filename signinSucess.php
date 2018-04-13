@@ -11,7 +11,7 @@ if (isset($_POST['login'])) {
         if($user['verified'] == 0){
             $message = "You still need to verify your account!\\nCheck your spam folder if you can't find the email!";
             echo "<script type='text/javascript'>alert('".$message."');</script>";
-            echo '<script>location="signinSuccess.php"</script>';
+            echo '<script>location="signinSucess.php"</script>';
         }
         else{
             $_SESSION["username"] = $username;
