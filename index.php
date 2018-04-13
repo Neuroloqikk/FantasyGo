@@ -58,8 +58,8 @@ if (isset($_POST['register'])) {
             $domain = "mail.neuroloq1kk.me";
             //Customise the email - self explanatory
                 $mg->sendMessage($domain, array(
-                    'from'=>'FantasyGo@gmail.com',
-                    'to'=> 'fabioamrodrigues98@gmail.com',
+                    'from'=>'FantasyGoFantasyLeague@gmail.com',
+                    'to'=> 'daniel.leca99@hotmail.com',
                     'subject' => 'The PHP SDK is awesome!',
                     'text' => 'It is so simple to send a message.'
                         )
