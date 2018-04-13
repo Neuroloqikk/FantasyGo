@@ -15,7 +15,7 @@ require 'connect.php';
             echo '<script>location="signinSucess.php"</script>';
         }
         else
-            echo '<script>location="signin.php"</script>';
+            echo '<script>location="index.php"</script>';
     }
     
 
