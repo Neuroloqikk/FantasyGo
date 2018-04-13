@@ -19,10 +19,10 @@ if (isset($_POST['register'])) {
     $stmt->bindValue(':username', $username);
     $stmt->execute();
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    if($row['num'] > 0){
+    /*if($row['num'] > 0){
         echo '<script>alert("That email already exists!")</script>';
         echo '<script>location="index.php"</script>';
-    }
+    }*/
 
     //USERNAME
     $stmt = $pdo->prepare("SELECT COUNT(username) AS num FROM users.users WHERE username = :username");
