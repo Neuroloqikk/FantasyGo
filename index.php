@@ -59,7 +59,7 @@ if (isset($_POST['register'])) {
             //Your credentials
             $mg = new Mailgun("key-3d31f8fff100ea00947fc61bbc8b5a12");
             $domain = "sandbox24f037afa384475d9271bbd80cc44fc3.mailgun.org";
-            echo $mg;
+            var_dump($mg);
             echo "<br>";
             echo $domain;
             //Customise the email - self explanatory
