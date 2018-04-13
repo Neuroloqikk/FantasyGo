@@ -51,24 +51,11 @@ if (isset($_POST['register'])) {
             $sql = "INSERT INTO `users`.`users_players` (username) VALUES ('$username');";
             $stmt = $pdo->prepare($sql);
             $result = $stmt->execute();
-            echo $result;
-            echo "<br>";
-
-
 
             //Your credentials
             $mg = new Mailgun("key-3d31f8fff100ea00947fc61bbc8b5a12");
             $domain = "mail.neuroloq1kk.me";
-            var_dump($mg);
-            echo "<br>";
-            echo $domain;
             //Customise the email - self explanatory
-            try{
-                echo("zé manel");
-                echo "<br>";
-                echo "<br>";
-                echo "<br>";
-                echo "<br>";
                 $mg->sendMessage($domain, array(
                     'from'=>'blockmaster12@gmail.com',
                     'to'=> 'blockmaster12@gmail.com',
@@ -76,11 +63,6 @@ if (isset($_POST['register'])) {
                     'text' => 'It is so simple to send a message.'
                         )
                     );
-            } catch (Exception $e){
-                echo 'Caught exception: ',  $e->getMessage(), "\n";
-        }
-            echo "<br>";
-            var_dump($mg);
             /*echo '<script>alert("Welcome to Fantasy GO!")</script>';
             echo '<script>location="signinSucess.php"</script>';*/
     }
