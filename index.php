@@ -1,6 +1,6 @@
 <?php
 try {
-require 'vendor/autoload.php';
+require '/vendor/autoload.php';
 } catch (Exception $e) {
     echo 'Caught exception: ',  $e->getMessage(), "\n";
 }
