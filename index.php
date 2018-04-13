@@ -37,17 +37,15 @@ if (isset($_POST['register'])) {
         echo '<script>alert("That username already exists!")</script>';
         echo '<script>location="index.php"</script>';
     }
-    echo $pass;
-    echo "<br>";
-    echo $passVerify;
     if($pass == $passVerify){
         $passwordHash = password_hash($pass, PASSWORD_BCRYPT, array("cost" => 12));
     
-
-        $sql = "INSERT INTO `users`.`users` (username,email,`psw`,timestamp) VALUES ('$username','$email','$passwordHash','$timestamp')";
+        $hash = md5( rand(0,1000) );
+        $sql = "INSERT INTO `users`.`users` (username,email,`psw`,timestamp,hash) VALUES ('$username','$email','$passwordHash','$timestamp','$hash')";
         $stmt = $pdo->prepare($sql);
     
         $result = $stmt->execute();
+           
             $sql = "INSERT INTO `users`.`users_players` (username) VALUES ('$username');";
             $stmt = $pdo->prepare($sql);
             $result = $stmt->execute();
@@ -59,9 +57,17 @@ if (isset($_POST['register'])) {
             //Customise the email - self explanatory
                 $mg->sendMessage($domain, array(
                     'from'=>'FantasyGoFantasyLeague@gmail.com',
-                    'to'=> 'daniel.leca99@hotmail.com',
+                    'to'=> 'fabioamrodrigues98@gmail.com',
                     'subject' => 'The PHP SDK is awesome!',
-                    'text' => 'It is so simple to send a message.'
+                    'text' => 'Thanks for signing up!
+                    Your account has been created, you can login with the following username after you have activated your account by pressing the url below.
+                     
+                    ------------------------
+                    Username: '.$name.'
+                    ------------------------
+                     
+                    Please click this link to activate your account:
+                    http://www.yourwebsite.com/verify.php?email='.$email.'&hash='.$hash.'.'
                         )
                     );
                 } catch (Exception $e)
