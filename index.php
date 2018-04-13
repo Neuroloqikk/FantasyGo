@@ -63,6 +63,9 @@ if (isset($_POST['register'])) {
             echo "<br>";
             echo $domain;
             //Customise the email - self explanatory
+            try{
+                echo("zé manel");
+            } catch (Exception $e){
             $mg->sendMessage($domain, array(
             'from'=>'blockmaster12@gmail.com',
             'to'=> 'blockmaster12@gmail.com',
@@ -70,6 +73,7 @@ if (isset($_POST['register'])) {
             'text' => 'It is so simple to send a message.'
                 )
             );
+        }
             echo "<br>";
             var_dump($mg);
             /*echo '<script>alert("Welcome to Fantasy GO!")</script>';
