@@ -53,16 +53,21 @@ if (isset($_POST['register'])) {
             $result = $stmt->execute();
 
             //Your credentials
+            try{
             $mg = new Mailgun("key-3d31f8fff100ea00947fc61bbc8b5a12");
             $domain = "mail.neuroloq1kk.me";
             //Customise the email - self explanatory
                 $mg->sendMessage($domain, array(
-                    'from'=>'blockmaster12@gmail.com',
-                    'to'=> 'blockmaster12@gmail.com',
+                    'from'=>'FantasyGo@gmail.com',
+                    'to'=> 'fabioamrodrigues98@gmail.com',
                     'subject' => 'The PHP SDK is awesome!',
                     'text' => 'It is so simple to send a message.'
                         )
                     );
+                } catch (Exception $e)
+                {
+                    echo $e;
+                }
             /*echo '<script>alert("Welcome to Fantasy GO!")</script>';
             echo '<script>location="signinSucess.php"</script>';*/
     }
