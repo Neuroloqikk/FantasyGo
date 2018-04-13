@@ -1,5 +1,5 @@
 <?php
-
+require 'vendor/autoload.php';
 require 'connect.php';
 session_destroy ();
 $timestamp = date("Y-m-d H:i:s");
