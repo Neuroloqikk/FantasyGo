@@ -53,8 +53,8 @@ if (isset($_POST['register'])) {
             $result = $stmt->execute();
             
             //Your credentials
-            /*$mg = new Mailgun("key-3d31f8fff100ea00947fc61bbc8b5a12");
-            $domain = "neuroloq1kk.me";
+            $mg = new Mailgun("key-3d31f8fff100ea00947fc61bbc8b5a12");
+            /*$domain = "neuroloq1kk.me";
 
             //Customise the email - self explanatory
             $mg->sendMessage($domain, array(
