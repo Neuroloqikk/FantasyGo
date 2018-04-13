@@ -1,6 +1,5 @@
 <?php
-require 'vendor/autoload.php';
-use Mailgun\Mailgun;
+
 require 'connect.php';
 session_destroy ();
 $timestamp = date("Y-m-d H:i:s");
