@@ -10,7 +10,7 @@ if (isset($_POST['login'])) {
     if ($user && password_verify($psw, $user['psw'])){
         if($user['verified'] == 0){
             $message = "You still need to verify your account!\\nCheck your spam folder if you can't find the email!";
-            echo "<script type='text/javascript'>alert('.$message.');</script>";
+            echo "<script type='text/javascript'>alert('".$message."');</script>";
             echo '<script>location="signin.php"</script>';
         }
         else{
@@ -20,7 +20,7 @@ if (isset($_POST['login'])) {
     } 
     else {
     $message = "Username and/or Password incorrect.\\nTry again.";
-    echo "<script type='text/javascript'>alert('.$message.');</script>";
+    echo "<script type='text/javascript'>alert('".$message."');</script>";
 }
 }
 ?>
