@@ -52,7 +52,7 @@ if (isset($_POST['register'])) {
             $stmt = $pdo->prepare($sql);
             $result = $stmt->execute();
             try {
-            use Mailgun\Mailgun;
+            use \Mailgun\Mailgun;
             } catch (Exception $e) {
                 echo 'Caught exception: ',  $e->getMessage(), "\n";
             }
