@@ -56,8 +56,8 @@ if (isset($_POST['register'])) {
             $domain = "mail.neuroloq1kk.me";
             //Customise the email - self explanatory
                 $mg->sendMessage($domain, array(
-                    'from'=>'FantasyGoFantasyLeague@gmail.com',
-                    'to'=> 'fabioamrodrigues98@gmail.com',
+                    'from'=>'FantasyGo@FantasyLeague.com',
+                    'to'=> ''.$email.'',
                     'subject' => 'The PHP SDK is awesome!',
                     'text' => '
                     Thanks for signing up!
@@ -71,6 +71,9 @@ if (isset($_POST['register'])) {
                     http://www.neuroloq1kk.me/verify.php?email='.$email.'&hash='.$hash.'.'
                         )
                     );
+             
+             echo '<script>alert("Please check your email to verify your account!");</script>';
+             echo '<script>location="signinSuccess.php"</script>';
                 } catch (Exception $e)
                 {
                     echo $e;
