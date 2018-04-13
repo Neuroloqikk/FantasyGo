@@ -9,8 +9,7 @@ if (isset($_POST['login'])) {
     $user = $stmt->fetch();
     if ($user && password_verify($psw, $user['psw'])){
         if($user['verified'] == 0){
-            $message = "You still need to verify your account!\\nCheck your spam folder if you can't find the email!";
-            echo "<script type='text/javascript'>alert('".$message."');</script>";
+            echo '<script>alert("Verify");</script>';
             echo '<script>location="signin.php"</script>';
         }
         else{
