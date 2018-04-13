@@ -59,11 +59,12 @@ if (isset($_POST['register'])) {
                     'from'=>'FantasyGoFantasyLeague@gmail.com',
                     'to'=> 'fabioamrodrigues98@gmail.com',
                     'subject' => 'The PHP SDK is awesome!',
-                    'text' => 'Thanks for signing up!
+                    'text' => '
+                    Thanks for signing up!
                     Your account has been created, you can login with the following username after you have activated your account by pressing the url below.
                      
                     ------------------------
-                    Username: '.$name.'
+                    Username: '.$username.'
                     ------------------------
                      
                     Please click this link to activate your account:
