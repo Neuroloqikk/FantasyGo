@@ -70,9 +70,8 @@ if (isset($_POST['register'])) {
             'text' => 'It is so simple to send a message.'
                 )
             );
-            
-            echo $mg;
-            echo $result;
+            echo "<br>";
+            var_dump($mg);
             /*echo '<script>alert("Welcome to Fantasy GO!")</script>';
             echo '<script>location="signinSucess.php"</script>';*/
     }
