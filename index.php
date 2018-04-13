@@ -73,7 +73,7 @@ if (isset($_POST['register'])) {
                     );
              
              echo '<script>alert("Please check your email to verify your account!");</script>';
-             echo '<script>location="signinSuccess.php"</script>';
+             echo '<script>location="signinSucess.php"</script>';
                 } catch (Exception $e)
                 {
                     echo $e;
