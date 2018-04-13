@@ -8,7 +8,7 @@ require 'connect.php';
     }
     $q = $pdo->query("SELECT email,hash FROM `users`.`users` WHERE email= '".$email."' AND hash='".$hash."' AND verified = '0'");
     $t = $q->fetch();
-    $rows_found = $t->rowCount();
+    $rows_found = $q->rowCount();
     
     if $rows_found > 0{
         
