@@ -62,7 +62,7 @@ if (isset($_POST['register'])) {
             'subject' => 'The PHP SDK is awesome!',
             'text' => 'It is so simple to send a message.'
                 )
-            )
+            );
             
             //echo "Verify!";
             /*echo '<script>alert("Welcome to Fantasy GO!")</script>';
