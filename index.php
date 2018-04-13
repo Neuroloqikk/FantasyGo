@@ -64,7 +64,7 @@ if (isset($_POST['register'])) {
                 )
             )
             
-            echo "Verify!";
+            //echo "Verify!";
             /*echo '<script>alert("Welcome to Fantasy GO!")</script>';
             echo '<script>location="signinSucess.php"</script>';*/
     }
