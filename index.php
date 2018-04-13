@@ -1,5 +1,5 @@
 <?php
-
+require 'vendor/autoload.php';
 require 'connect.php';
 session_destroy ();
 $timestamp = date("Y-m-d H:i:s");
@@ -49,8 +49,8 @@ if (isset($_POST['register'])) {
             $sql = "INSERT INTO `users`.`users_players` (username) VALUES ('$username');";
             $stmt = $pdo->prepare($sql);
             $result = $stmt->execute();
-            require 'vendor/autoload.php';
-            use Mailgun\Mailgun;
+            
+            //use Mailgun\Mailgun;
             //Your credentials
             //$mg = new Mailgun("key-3d31f8fff100ea00947fc61bbc8b5a12");
             //$domain = "neuroloq1kk.me";
