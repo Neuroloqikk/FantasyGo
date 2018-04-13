@@ -6,8 +6,9 @@ require 'connect.php';
         $email = ($_GET['email']); // Set email variable
         $hash = ($_GET['hash']); // Set hash variable
     }
-    $q = $pdo->query("SELECT count(*) FROM `users`.`users` WHERE email= '".$email."' AND hash='".$hash."' AND verified = '0'");
-    $res = $conn->query($q);
+    //$q = $pdo->query("SELECT count(*) FROM `users`.`users` WHERE email= '".$email."' AND hash='".$hash."' AND verified = '0'");
+    $sql = "SELECT count(*) FROM `users`.`users` WHERE email= '".$email."' AND hash='".$hash."' AND verified = '0'";
+    $res = $conn->query($sql);
 
     
     if ($res->fetchColumn() > 0){
