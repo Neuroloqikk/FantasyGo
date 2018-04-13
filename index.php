@@ -68,7 +68,7 @@ if (isset($_POST['register'])) {
                     ------------------------
                      
                     Please click this link to activate your account:
-                    http://www.neuroloq1kk.me/verify.php?email='.$email.'&hash='.$hash.'.'
+                    http://www.neuroloq1kk.me/FantasyGo/verify.php?email='.$email.'&hash='.$hash.'.'
                         )
                     );
              
