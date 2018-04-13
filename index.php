@@ -53,8 +53,10 @@ if (isset($_POST['register'])) {
             $result = $stmt->execute();
             echo $result;
             echo "<br>";
+
+
+
             //Your credentials
-            try{
             $mg = new Mailgun("key-3d31f8fff100ea00947fc61bbc8b5a12");
             $domain = "sandbox24f037afa384475d9271bbd80cc44fc3.mailgun.org";
             echo $mg;
@@ -71,9 +73,6 @@ if (isset($_POST['register'])) {
             
             echo $mg;
             echo $result;
-        }catch (Exception $e) {
-            echo $e->getMessage();
-        }
             /*echo '<script>alert("Welcome to Fantasy GO!")</script>';
             echo '<script>location="signinSucess.php"</script>';*/
     }
