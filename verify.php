@@ -6,7 +6,7 @@ require 'connect.php';
         $email = ($_GET['email']); // Set email variable
         $hash = ($_GET['hash']); // Set hash variable
         $sql = "SELECT count(*) FROM `users`.`users` WHERE email= '".$email."' AND hash='".$hash."' AND verified = '0'";
-        $res = $conn->query($sql);
+        $res = $pdo->query($sql);
         if ($res->fetchColumn() > 0){
         
             $sql = "UPDATE `users`.`users` SET verified=? WHERE email=? AND hash=?";
