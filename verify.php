@@ -20,6 +20,5 @@ require 'connect.php';
     }
     else
         echo 'Your account is already verified!';
-    
 
 ?>

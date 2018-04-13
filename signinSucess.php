@@ -8,10 +8,17 @@ if (isset($_POST['login'])) {
     $stmt->execute(['id' => $username]); 
     $user = $stmt->fetch();
     if ($user && password_verify($psw, $user['psw'])){
-        $_SESSION["username"] = $username;
-        $_SESSION["1sttime"] = true;
-        echo '<script>location="market.php"</script>';
-        echo '<script>alert("To start, pick 5 players into your team!");</script>';
+        if($user['verified'] == 0){
+            $message = "You still need to verify your account!\\nCheck your spam folder if you can't find the email!";
+            echo "<script type='text/javascript'>alert('$message');</script>";
+            echo '<script>location="signinSuccess.php"</script>';
+        }
+        else{
+            $_SESSION["username"] = $username;
+            echo '<script>location="market.php"</script>';
+            echo '<script>alert("To start, pick 5 players into your team!");</script>';
+        }
+        
     }
     else {
         echo '<script>alert("Username and/or Password incorrect.\nTry again.");</script>';

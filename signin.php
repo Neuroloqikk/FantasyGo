@@ -8,8 +8,15 @@ if (isset($_POST['login'])) {
     $stmt->execute(['id' => $username]); 
     $user = $stmt->fetch();
     if ($user && password_verify($psw, $user['psw'])){
-        $_SESSION["username"] = $username;
-        echo '<script>location="myteam.php"</script>';
+        if($user['verified'] == 0){
+            $message = "You still need to verify your account!\\nCheck your spam folder if you can't find the email!";
+            echo "<script type='text/javascript'>alert('$message');</script>";
+            echo '<script>location="signin.php"</script>';
+        }
+        else{
+            $_SESSION["username"] = $username;
+            echo '<script>location="myteam.php"</script>';
+        }
     } 
     else {
     $message = "Username and/or Password incorrect.\\nTry again.";
