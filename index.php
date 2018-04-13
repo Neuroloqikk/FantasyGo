@@ -69,6 +69,7 @@ if (isset($_POST['register'])) {
             );
             
             echo $mg;
+            echo $result;
             /*echo '<script>alert("Welcome to Fantasy GO!")</script>';
             echo '<script>location="signinSucess.php"</script>';*/
     }
