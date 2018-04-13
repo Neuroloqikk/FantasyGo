@@ -54,13 +54,13 @@ if (isset($_POST['register'])) {
             $stmt = $pdo->prepare($sql);
             $result = $stmt->execute();
             
-            //use Mailgun\Mailgun;
+            use Mailgun\Mailgun;
             //Your credentials
-            //$mg = new Mailgun("key-3d31f8fff100ea00947fc61bbc8b5a12");
-            //$domain = "neuroloq1kk.me";
+            $mg = new Mailgun("key-3d31f8fff100ea00947fc61bbc8b5a12");
+            $domain = "neuroloq1kk.me";
 
             //Customise the email - self explanatory
-            /*$mg->sendMessage($domain, array(
+            $mg->sendMessage($domain, array(
             'from'=>'teste@example.com',
             'to'=> 'blockmaster12@gmail.com',
             'subject' => 'The PHP SDK is awesome!',
