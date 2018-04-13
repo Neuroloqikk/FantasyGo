@@ -1,5 +1,9 @@
 <?php
+try {
 require 'vendor/autoload.php';
+} catch (Exception $e) {
+    echo 'Caught exception: ',  $e->getMessage(), "\n";
+}
 require 'connect.php';
 session_destroy ();
 $timestamp = date("Y-m-d H:i:s");
