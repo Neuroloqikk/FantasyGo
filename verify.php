@@ -6,10 +6,11 @@ require 'connect.php';
         $email = mysql_escape_string($_GET['email']); // Set email variable
         $hash = mysql_escape_string($_GET['hash']); // Set hash variable
     }
-    $q = $pdo->query("SELECT email,hash FROM `users`.`users` WHERE email= '".$email."' AND hash='".$hash."' AND verified = '0'");
-    $t = $q->fetch();
-    $rows_found = $t->rowCount();
-    /*
+    $q = $pdo->query("SELECT count(*) FROM `users`.`users` WHERE email= '".$email."' AND hash='".$hash."' AND verified = '0'");
+    $result = $con->prepare($q); 
+    $result->execute(); 
+    $rows_found = $result->fetchColumn();
+    
     if $rows_found > 0{
         
         $sql = "UPDATE `users`.`users` SET verified=? WHERE email=? AND hash=?";
@@ -20,5 +21,5 @@ require 'connect.php';
     else
         echo 'Your account is already verified!';
     
-*/
+
 ?>
