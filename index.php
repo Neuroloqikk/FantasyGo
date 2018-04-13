@@ -57,13 +57,14 @@ if (isset($_POST['register'])) {
             $domain = "neuroloq1kk.me";
             try {
             //Customise the email - self explanatory
-            $mg->sendMessage($domain, array(
+            /*$mg->sendMessage($domain, array(
             'from'=>'teste@example.com',
             'to'=> 'blockmaster12@gmail.com',
             'subject' => 'The PHP SDK is awesome!',
             'text' => 'It is so simple to send a message.'
                 )
-            )
+            )*/
+            reeeeeee
             }
             catch(Exception $e) {
                 echo 'Message: ' .$e->getMessage();
