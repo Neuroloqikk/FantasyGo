@@ -56,7 +56,7 @@ if (isset($_POST['register'])) {
             $mg = new Mailgun("key-3d31f8fff100ea00947fc61bbc8b5a12");
             $domain = "sandbox24f037afa384475d9271bbd80cc44fc3.mailgun.org";
             //Customise the email - self explanatory
-            $mg->sendMessage($domain, array(
+            /*$mg->sendMessage($domain, array(
             'from'=>'teste@example.com',
             'to'=> 'blockmaster12@gmail.com',
             'subject' => 'The PHP SDK is awesome!',
