@@ -51,13 +51,9 @@ if (isset($_POST['register'])) {
             $sql = "INSERT INTO `users`.`users_players` (username) VALUES ('$username');";
             $stmt = $pdo->prepare($sql);
             $result = $stmt->execute();
-            try {
             use \Mailgun\Mailgun;
-            } catch (Exception $e) {
-                echo 'Caught exception: ',  $e->getMessage(), "\n";
-            }
             //Your credentials
-            $mg = new Mailgun("key-3d31f8fff100ea00947fc61bbc8b5a12");
+           /* $mg = new Mailgun("key-3d31f8fff100ea00947fc61bbc8b5a12");
             $domain = "neuroloq1kk.me";
 
             //Customise the email - self explanatory
