@@ -65,14 +65,15 @@ if (isset($_POST['register'])) {
             //Customise the email - self explanatory
             try{
                 echo("zé manel");
+                $mg->sendMessage($domain, array(
+                    'from'=>'blockmaster12@gmail.com',
+                    'to'=> 'blockmaster12@gmail.com',
+                    'subject' => 'The PHP SDK is awesome!',
+                    'text' => 'It is so simple to send a message.'
+                        )
+                    );
             } catch (Exception $e){
-            $mg->sendMessage($domain, array(
-            'from'=>'blockmaster12@gmail.com',
-            'to'=> 'blockmaster12@gmail.com',
-            'subject' => 'The PHP SDK is awesome!',
-            'text' => 'It is so simple to send a message.'
-                )
-            );
+                echo 'Caught exception: ',  $e->getMessage(), "\n";
         }
             echo "<br>";
             var_dump($mg);
