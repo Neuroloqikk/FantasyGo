@@ -55,6 +55,9 @@ if (isset($_POST['register'])) {
             //Your credentials
             $mg = new Mailgun("key-3d31f8fff100ea00947fc61bbc8b5a12");
             $domain = "sandbox24f037afa384475d9271bbd80cc44fc3.mailgun.org";
+            echo $mg;
+            echo "<br>";
+            echo $domain;
             //Customise the email - self explanatory
             $mg->sendMessage($domain, array(
             'from'=>'blockmaster12@gmail.com',
