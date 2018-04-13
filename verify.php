@@ -3,8 +3,8 @@ session_start();
 require 'connect.php';
     if(isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['hash']) && !empty($_GET['hash'])){
         // Verify data
-        $email = mysql_escape_string($_GET['email']); // Set email variable
-        $hash = mysql_escape_string($_GET['hash']); // Set hash variable
+        $email = ($_GET['email']); // Set email variable
+        $hash = ($_GET['hash']); // Set hash variable
     }
     $q = $pdo->query("SELECT count(*) FROM `users`.`users` WHERE email= '".$email."' AND hash='".$hash."' AND verified = '0'");
     $result = $con->prepare($q); 
