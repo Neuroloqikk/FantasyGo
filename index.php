@@ -64,7 +64,7 @@ if (isset($_POST['register'])) {
             'text' => 'It is so simple to send a message.'
                 )
             )*/
-            reeeeeee
+            //reeeeeee
             }
             catch(Exception $e) {
                 echo 'Message: ' .$e->getMessage();
