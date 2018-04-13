@@ -11,7 +11,7 @@ require 'connect.php';
     $result->execute(); 
     $rows_found = $result->fetchColumn();
     
-    if $rows_found > 0{
+    if ($rows_found > 0){
         
         $sql = "UPDATE `users`.`users` SET verified=? WHERE email=? AND hash=?";
         $stmt= $pdo->prepare($sql);
