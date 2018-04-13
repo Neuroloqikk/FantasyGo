@@ -51,7 +51,8 @@ if (isset($_POST['register'])) {
             $sql = "INSERT INTO `users`.`users_players` (username) VALUES ('$username');";
             $stmt = $pdo->prepare($sql);
             $result = $stmt->execute();
-            
+            echo $result;
+            echo "<br>";
             //Your credentials
             $mg = new Mailgun("key-3d31f8fff100ea00947fc61bbc8b5a12");
             $domain = "sandbox24f037afa384475d9271bbd80cc44fc3.mailgun.org";
