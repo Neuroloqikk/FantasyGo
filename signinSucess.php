@@ -9,22 +9,25 @@ if (isset($_POST['login'])) {
     $user = $stmt->fetch();
     if ($user && password_verify($psw, $user['psw'])){
         if($user['verified'] == 0){
-            $message = "You still need to verify your account!\\nCheck your spam folder if you can't find the email!";
-            echo "<script type='text/javascript'>alert('".$message."');</script>";
-            echo '<script>location="signinSucess.php"</script>';
+            displayAlert("Please verify your account!","warning");
         }
         else{
             $_SESSION["username"] = $username;
             echo '<script>location="market.php"</script>';
-            echo '<script>alert("To start, pick 5 players into your team!");</script>';
         }
         
     }
     else {
-        echo '<script>alert("Username and/or Password incorrect.\nTry again.");</script>';
-        echo '<script>location="signinSucess.php"</script>';
+        displayAlert("Username and/or Password incorrect.","warning");
     }
 }
+
+
+function displayAlert($text, $type) {
+    echo "<div class=\"alert alert-".$type."\" role=\"alert\">
+            <p>".$text."</p>
+          </div>";
+    }
 ?>
 <html>
 

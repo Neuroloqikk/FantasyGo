@@ -24,13 +24,11 @@ require 'connect.php';
                 $passwordHash = password_hash($pass, PASSWORD_BCRYPT, array("cost" => 12));
             }
             else{
-                echo '<script>alert("Please verify your password!")</script>';
-                echo '<script>location="userSettings.php"</script>';
+                displayAlert("Please verify your password!","danger");
             }
         }
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            echo '<script>alert("Please type a valid email!")</script>';
-            echo '<script>location="userSettings.php"</script>';
+            displayAlert("Please type a valid email!","danger");
         }
         else{
             if($email == ""){
@@ -44,25 +42,28 @@ require 'connect.php';
             $sql = "UPDATE `users`.`users` SET email=?,psw=? WHERE username=?";
             $stmt= $pdo->prepare($sql);
             $stmt->execute([$email, $passwordHash,$username]);
-            echo '<script>alert("Your email and password have been updated!")</script>';
-            echo '<script>location="userSettings.php"</script>';
+            displayAlert("Your email and password have been updated!","success");
         }
         else if($updatePass){
             $sql = "UPDATE `users`.`users` SET psw=? WHERE username=?";
             $stmt= $pdo->prepare($sql);
             $stmt->execute([$passwordHash,$username]);
-            echo '<script>alert("Your password have been updated!")</script>';
-            echo '<script>location="userSettings.php"</script>';
+            displayAlert("Your password have been updated!","success");
         }
         else if($updateEmail){
             $sql = "UPDATE `users`.`users` SET email=? WHERE username=?";
             $stmt= $pdo->prepare($sql);
             $stmt->execute([$email,$username]);
-            echo '<script>alert("Your email have been updated!")</script>';
-            echo '<script>location="userSettings.php"</script>';
+            displayAlert("Your email have been updated!","success");
         }
 
     }
+
+    function displayAlert($text, $type) {
+        echo "<div class=\"alert alert-".$type."\" role=\"alert\">
+                <p>".$text."</p>
+              </div>";
+        }
 ?>
 <html>
 <head>

@@ -287,6 +287,12 @@ if (isset($_GET['t2'])){
     $team2_player4 = $_SESSION['team2_player4'];
     $team2_player5 = $_SESSION['team2_player5'];
 }
+
+function displayAlert($text, $type) {
+    echo "<div class=\"alert alert-".$type."\" role=\"alert\">
+            <p>".$text."</p>
+          </div>";
+    }
 ?>
 <html>
 <head>

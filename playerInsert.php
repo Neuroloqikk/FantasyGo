@@ -11,10 +11,16 @@ if (isset($_POST['register'])) {
     $stmt = $pdo->prepare($sql);
     $result = $stmt->execute();
     if($result == 1){
-        echo 'Thank you for registering a new player.';
-        header('Location: /playerInsert.php');
+        displayAlert("Player Inserted","success");
     }
 }
+
+
+function displayAlert($text, $type) {
+    echo "<div class=\"alert alert-".$type."\" role=\"alert\">
+            <p>".$text."</p>
+          </div>";
+    }
 ?>
 <html>
 <head>

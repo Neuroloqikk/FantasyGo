@@ -19,10 +19,9 @@ if (isset($_POST['register'])) {
     $stmt->bindValue(':username', $username);
     $stmt->execute();
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    /*if($row['num'] > 0){
-        echo '<script>alert("That email already exists!")</script>';
-        echo '<script>location="index.php"</script>';
-    }*/
+    if($row['num'] > 0){
+        displayAlert("That email already exists!","warning");
+    }
 
     //USERNAME
     $stmt = $pdo->prepare("SELECT COUNT(username) AS num FROM users.users WHERE username = :username");
@@ -30,12 +29,10 @@ if (isset($_POST['register'])) {
     $stmt->execute();
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo '<script>alert("Please type a valid email!")</script>';
-        echo '<script>location="index.php"</script>';
+        displayAlert("Please type a valid email!","warning");
     }
     if($row['num'] > 0){
-        echo '<script>alert("That username already exists!")</script>';
-        echo '<script>location="index.php"</script>';
+        displayAlert("That username already exists!","warning");
     }
     if($pass == $passVerify){
         $passwordHash = password_hash($pass, PASSWORD_BCRYPT, array("cost" => 12));
@@ -51,7 +48,6 @@ if (isset($_POST['register'])) {
             $result = $stmt->execute();
 
             //Your credentials
-            try{
             $mg = new Mailgun("key-3d31f8fff100ea00947fc61bbc8b5a12");
             $domain = "mail.neuroloq1kk.me";
             //Customise the email - self explanatory
@@ -71,21 +67,19 @@ if (isset($_POST['register'])) {
                     http://www.neuroloq1kk.me/FantasyGo/verify.php?email='.$email.'&hash='.$hash.'.'
                         )
                     );
-             
-             echo '<script>alert("Please check your email to verify your account!");</script>';
-             echo '<script>location="signinSucess.php"</script>';
-                } catch (Exception $e)
-                {
-                    echo $e;
-                }
-            /*echo '<script>alert("Welcome to Fantasy GO!")</script>';
-            echo '<script>location="signinSucess.php"</script>';*/
+
+                    displayAlert("An email was sent to your email, check it in order to verify your account!","warning");
     }
     else{
-        echo '<script>alert("Please verify your password!")</script>';
-        echo '<script>location="index.php"</script>';
+        displayAlert("Please verify your password!","warning");
     }
 }
+
+function displayAlert($text, $type) {
+    echo "<div class=\"alert alert-".$type."\" role=\"alert\">
+            <p>".$text."</p>
+          </div>";
+    }
 ?>
 
 <html>

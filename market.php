@@ -34,8 +34,7 @@ if (!empty($_GET)) {
         $player5 = $p['player5_id'];
         if ($player1 == NULL or $player2 == NULL or $player3 == NULL or $player4 == NULL or $player5 == NULL){
             if ($player1 == $id or $player2 == $id or $player3 == $id or $player4 == $id or $player5 == $id){
-                echo '<script>alert("You already have this player! Please select another one.")</script>';
-                echo '<script>window.location.href = "market.php";</script>';
+                displayAlert("You already have this player! Please select another one!","danger");
             }
             else{
                 if($player1 == NULL){
@@ -55,8 +54,7 @@ if (!empty($_GET)) {
                 }
                 $newBalance = $balance - $price;
                 if($newBalance < 0){
-                    echo '<script>alert("You do not have enough money!")</script>';
-                    echo '<script>window.location.href = "market.php";</script>';
+                    displayAlert("You do not have enough money!","danger");
                 }
                 else{
                     $sql = "UPDATE `users`.`users_players` SET $freeSlot=? WHERE username=?";
@@ -65,25 +63,28 @@ if (!empty($_GET)) {
                     $sql = "UPDATE `users`.`users` SET balance=? WHERE username=?";
                     $stmt= $pdo->prepare($sql);
                     $stmt->execute([$newBalance,$username]);
-                    echo '<script>alert("The player was added to your team!\nYour current balance is '.$newBalance.'");</script>';
-                    echo '<script>window.location.href = "market.php";</script>';
+                    displayAlert("The player was added to your team!","success");
                 }
             }
         }
         else{
-            echo '<script>alert("You already have five players!")</script>';
-            echo '<script>window.location.href = "myteam.php";</script>';
+            displayAlert("You already have five players!","danger");
         }
     }
     else{
         echo '<script>$(document).ready(function(){ $("#myModal").modal("show"); });</script>';
     }
 }
+
+function displayAlert($text, $type) {
+    echo "<div class=\"alert alert-".$type."\" role=\"alert\">
+            <p>".$text."</p>
+          </div>";
+    }
 ?>
 
 <html>
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">

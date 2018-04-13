@@ -9,8 +9,8 @@ if (isset($_POST['login'])) {
     $user = $stmt->fetch();
     if ($user && password_verify($psw, $user['psw'])){
         if($user['verified'] == 0){
-            echo '<script>alert("Verify");</script>';
-            echo '<script>location="signin.php"</script>';
+            //echo '<script>alert("Verify");</script>';
+            displayAlert("Please verify your account!","danger");
         }
         else{
             $_SESSION["username"] = $username;
@@ -18,10 +18,16 @@ if (isset($_POST['login'])) {
         }
     } 
     else {
-    $message = "Username and/or Password incorrect.\\nTry again.";
-    echo "<script type='text/javascript'>alert('".$message."');</script>";
+        displayAlert("Username and/or Password incorrect.","danger");
 }
 }
+
+
+function displayAlert($text, $type) {
+    echo "<div class=\"alert alert-".$type."\" role=\"alert\">
+            <p>".$text."</p>
+          </div>";
+    }
 ?>
 <html>
 <head>
@@ -35,6 +41,7 @@ if (isset($_POST['login'])) {
 <div class="container-example">
 
     <body class="bg">
+    
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
@@ -58,6 +65,7 @@ if (isset($_POST['login'])) {
             </div>
         </nav>
         <!--Login-->
+        
         <form class="SignIn" action="signin.php" method ="POST" style="border:1px solid #ccc">
             <div class="txtcolor">
             <div class="container">
@@ -81,6 +89,7 @@ if (isset($_POST['login'])) {
             </div>
             </div>
           </form>
+          
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
     </body>

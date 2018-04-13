@@ -15,7 +15,6 @@ require 'connect.php';
             echo '<script>location="signinSucess.php"</script>';
         }
         else
-            echo '<script>alert("Your account is already verified!");</script>';
             echo '<script>location="signin.php"</script>';
     }
     
