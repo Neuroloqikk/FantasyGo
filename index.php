@@ -1,5 +1,4 @@
 <?php
-/*
 require '/vendor/autoload.php';
 use Mailgun\Mailgun;
 require 'connect.php';
@@ -79,7 +78,7 @@ function displayAlert($text, $type) {
     echo "<div class=\"alert alert-".$type."\" role=\"alert\">
             <p>".$text."</p>
           </div>";
-}*/
+}
 ?>
 
 <html>
@@ -155,7 +154,7 @@ function displayAlert($text, $type) {
                     <p><span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Fantasy Go leaderboards!</p>
                 </div>
                 <div class="landingImgPart4">
-                    <img src="../img/Landing/signin.jpg">
+                    <img src="img/Landing/signin.jpg">
                 </div>
             </div>
         </div>
