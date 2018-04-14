@@ -123,7 +123,7 @@ function displayAlert($text, $type) {
         <div class="siteInfo">
             <div class="landingPart1">
                 <div class="landingImgPart1">
-                    <img src="../img/Landing/signin.jpg">
+                    <img src="img/Landing/signin.jpg">
                 </div>
                 <div class="landingTxtPart1">
                     <p><span>Enter your username and password after</p>
@@ -136,12 +136,12 @@ function displayAlert($text, $type) {
                     <p><span>and buy him with your available balance.</p>
                 </div>
                 <div class="landingImgPart2">
-                    <img src="../img/Landing/market.jpg">
+                    <img src="img/Landing/market.jpg">
                 </div>
             </div>
             <div class="landingPart3">
                 <div class="landingImgPart3">
-                    <img src="../img/Landing/team.jpg">
+                    <img src="img/Landing/team.jpg">
                 </div>
                 <div class="landingTxtPart3">
                     <p><span>Increase your score accordingly to how</p>
