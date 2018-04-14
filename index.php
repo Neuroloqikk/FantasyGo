@@ -1,4 +1,5 @@
 <?php
+/*
 require '/vendor/autoload.php';
 use Mailgun\Mailgun;
 require 'connect.php';
@@ -78,7 +79,7 @@ function displayAlert($text, $type) {
     echo "<div class=\"alert alert-".$type."\" role=\"alert\">
             <p>".$text."</p>
           </div>";
-    }
+}*/
 ?>
 
 <html>
