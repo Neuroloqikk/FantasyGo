@@ -148,7 +148,7 @@ function displayAlert($text, $type) {
                     <p><span>your players perform in real matches.</p>
                 </div>
             </div>
-            <div class="landingPart4">
+            <!--<div class="landingPart4">
                 <div class="landingTxtPart4">
                     <p><span>Play with your friends and conquer the</p>
                     <p><span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Fantasy Go leaderboards!</p>
@@ -156,7 +156,7 @@ function displayAlert($text, $type) {
                 <div class="landingImgPart4">
                     <img src="../img/Landing/signin.jpg">
                 </div>
-            </div>
+            </div>-->
         </div>
         <div class="wrapperLanding2">
             <form class="form-signin" method ="POST">       
