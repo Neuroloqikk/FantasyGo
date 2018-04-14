@@ -751,3 +751,129 @@ input{
 #btnLanding{
     border:none;
 }
+@media (min-width: 1281px) {
+    .wrapperLanding2 {	
+        margin-top: 2%;
+        margin-left:60%;
+    }
+    .siteInfo{
+        float:left;
+        width:50%;
+        height:80%;
+        margin-left:10%;
+        margin-top:0%;
+        text-shadow: 2px 2px black;
+    }
+    .siteInfo span{
+        color:white;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+    }
+    .siteInfo img{
+        width:40%;
+        height:auto;
+        border: 1px solid black; 
+    }
+    .landingTxtPart1{
+        z-index: 9999;
+        margin-left:50%;
+        margin-top:-14%;
+        position:relative;
+    }
+    .landingTxtPart2{
+        z-index: 9999;
+        margin-top:12%;
+        position:relative;
+    }
+    .landingImgPart2 img{
+        width:80%;
+        height:auto;
+    }
+    .landingImgPart2{
+        margin-left:50%;
+        margin-top:-14%;
+    }
+    .landingTxtPart3{
+        z-index: 9999;
+        margin-left:50%;
+        margin-top:-13%;
+        position:relative;
+    }
+    .landingTxtPart4{
+        z-index: 9999;
+        margin-top:10%;
+        position:relative;
+    }
+    .landingImgPart4 img{
+        width:80%;
+        height:auto;
+    }
+    .landingImgPart4{
+        margin-left:50%;
+        margin-top:-13%;
+    }
+}
+@media (min-width: 1700px) {
+    .wrapperLanding2 {	
+        margin-top: 6%;
+        margin-left:60%;
+    }
+    .siteInfo{
+        float:left;
+        width:50%;
+        height:80%;
+        margin-left:10%;
+        margin-top:2%;
+        text-shadow: 2px 2px black;
+    }
+    .siteInfo span{
+        color:white;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+    }
+    .siteInfo img{
+        width:40%;
+        height:auto;
+        border: 1px solid black; 
+    }
+    .landingTxtPart1{
+        z-index: 9999;
+        margin-left:50%;
+        margin-top:-14%;
+        position:relative;
+    }
+    .landingTxtPart2{
+        z-index: 9999;
+        margin-top:14%;
+        position:relative;
+    }
+    .landingImgPart2 img{
+        width:80%;
+        height:auto;
+    }
+    .landingImgPart2{
+        margin-left:50%;
+        margin-top:-14%;
+    }
+    .landingTxtPart3{
+        z-index: 9999;
+        margin-left:50%;
+        margin-top:-13%;
+        position:relative;
+    }
+    .landingTxtPart4{
+        z-index: 9999;
+        margin-top:14%;
+        position:relative;
+    }
+    .landingImgPart4 img{
+        width:80%;
+        height:auto;
+    }
+    .landingImgPart4{
+        margin-left:50%;
+        margin-top:-13%;
+    }
+}

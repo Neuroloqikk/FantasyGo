@@ -1,4 +1,5 @@
 <?php
+
 require '/vendor/autoload.php';
 use Mailgun\Mailgun;
 require 'connect.php';
@@ -120,45 +121,10 @@ function displayAlert($text, $type) {
                 </div>
             </div>
         </nav>
-        <div class="siteInfo">
-            <div class="landingPart1">
-                <div class="landingImgPart1">
-                    <img src="img/Landing/signin.jpg">
-                </div>
-                <div class="landingTxtPart1">
-                    <p><span>Enter your username and password after</p>
-                    <p><span>registering to immediately start playing.</p>
-                </div>
-            </div>
-            <div class="landingPart2">
-                <div class="landingTxtPart2">
-                    <p><span>Hover your favorite teams,pick a player</p>
-                    <p><span>and buy him with your available balance.</p>
-                </div>
-                <div class="landingImgPart2">
-                    <img src="img/Landing/market.jpg">
-                </div>
-            </div>
-            <div class="landingPart3">
-                <div class="landingImgPart3">
-                    <img src="img/Landing/team.jpg">
-                </div>
-                <div class="landingTxtPart3">
-                    <p><span>Increase your score accordingly to how</p>
-                    <p><span>your players perform in real matches.</p>
-                </div>
-            </div>
-            <div class="landingPart4">
-                <div class="landingTxtPart4">
-                    <p><span>Play with your friends and conquer the</p>
-                    <p><span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Fantasy Go leaderboards!</p>
-                </div>
-                <div class="landingImgPart4">
-                    <img src="img/Landing/signin.jpg">
-                </div>
-            </div>
+        <div class="imgLanding">
+            <img src="img/Landing/2.png">
         </div>
-        <div class="wrapperLanding2">
+        <div class="wrapperLanding ">
             <form class="form-signin" method ="POST">       
                 <h2 class="form-signin-heading">Register now and build your team right away!</h2>
                 <input id="passText" type="text" class="form-control" name="email" placeholder="Email Address" required="" autofocus="" />
