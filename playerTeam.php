@@ -1,241 +1,276 @@
 <?php
 session_start();
-
 require 'connect.php';
-    $user= $_SESSION["user"];
-    $username= $_SESSION["username"];
-    $stmt = $pdo->query("SELECT `score`,`balance`,timestamp FROM `users`.`users` WHERE username='$user'");
-    $p = $stmt->fetch();
-    $balance = $p['balance'];
-    $score = $p['score'];
-    $timestamp = $p['timestamp'];
-    $stmt = $pdo->query("SELECT player1_id, player2_id, player3_id, player4_id, player5_id FROM `users`.`users_players` WHERE username = '$user'");
-    $stmt->execute([20]);
-    $arr = $stmt->fetch(PDO::FETCH_NUM);
-    
-    list($player1_Id, $player2_Id, $player3_Id, $player4_Id, $player5_Id) = $arr;
-    //
-    $q = $pdo->query("SELECT name,photo FROM `users`.`players` WHERE id= '".$player1_Id."'");
-    $t = $q->fetch();
-    $player1Name = $t['name'];
-    $player1Photo = $t['photo'];
-    if($player1Name == NULL){
-        $player1Name = "Player Missing";
-        $player1Photo = "/BlackPlayer.png";
-    }
-    //
-    $q = $pdo->query("SELECT name,photo FROM `users`.`players` WHERE id= '".$player2_Id."'");
-    $t = $q->fetch();
-    $player2Name = $t['name'];
-    $player2Photo = $t['photo'];
-    
-    if($player2Name == ""){
-        $player2Name = "Player Missing.";
-        $player2Photo = "/BlackPlayer.png";
-    }
-    //
-    $q = $pdo->query("SELECT name,photo FROM `users`.`players` WHERE id= '".$player3_Id."'");
-    $t = $q->fetch();
-    $player3Name = $t['name'];
-    $player3Photo = $t['photo'];
-    if($player3Name == ""){
-        $player3Name = "Player Missing.";
-        $player3Photo = "/BlackPlayer.png";
-    }
-    $q = $pdo->query("SELECT name,photo FROM `users`.`players` WHERE id= '".$player4_Id."'");
-    $t = $q->fetch();
-    $player4Name = $t['name'];
-    $player4Photo = $t['photo'];
-    if($player4Name == ""){
-        $player4Name = "Player Missing.";
-        $player4Photo = "/BlackPlayer.png";
-    }
-    $q = $pdo->query("SELECT name,photo FROM `users`.`players` WHERE id= '".$player5_Id."'");
-    $t = $q->fetch();
-    $player5Name = $t['name'];
-    $player5Photo = $t['photo'];
-    if($player5Name == ""){
-        $player5Name = "Player Missing.";
-        $player5Photo = "/BlackPlayer.png";
-    }
 
-    $sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='".$player1Name."'";
-    $player1 = $pdo->query($sql);
-    foreach ($player1 as $row){
-        if($timestamp<$row['timestamp']){
-            $player1_score += $row['player_score'];
-        }
-    }
-    if($player1_score == 0){
-        $player1_score = 0;
-    }
-    $sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='".$player2Name."'";
-    $player2 = $pdo->query($sql);
-    foreach ($player2 as $row){
-        if($timestamp<$row['timestamp']){
-            $player2_score += $row['player_score'];
-        }
-    }
-    if($player2_score == 0){
-        $player2_score = 0;
-    }
-    $sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='".$player3Name."'";
-    $player3 = $pdo->query($sql);
-    foreach ($player3 as $row){
-        if($timestamp<$row['timestamp']){
-            $player3_score += $row['player_score'];
-        }
-    }
-    if($player3_score == 0){
-        $player3_score = 0;
-    }
-    $sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='".$player4Name."'";
-    $player4 = $pdo->query($sql);
-    foreach ($player4 as $row){
-        if($timestamp<$row['timestamp']){
-            $player4_score += $row['player_score'];
-        }
-    }
-    if($player4_score == NULL){
-        $player4_score = 0;
-    }
-    $sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='".$player5Name."'";
-    $player5 = $pdo->query($sql);
-    foreach ($player5 as $row){
-        if($timestamp<$row['timestamp']){
-            $player5_score += $row['player_score'];
-        }
-    }
-    if($player5_score == 0){
-        $player5_score = 0;
-    }
+$user = $_SESSION["user"];
+$username = $_SESSION["username"];
+$stmt = $pdo->query("SELECT `score`,`balance`,timestamp FROM `users`.`users` WHERE username='$user'");
+$p = $stmt->fetch();
+$balance = $p['balance'];
+$score = $p['score'];
+$timestamp = $p['timestamp'];
+$stmt = $pdo->query("SELECT player1_id, player2_id, player3_id, player4_id, player5_id FROM `users`.`users_players` WHERE username = '$user'");
+$stmt->execute([20]);
+$arr = $stmt->fetch(PDO::FETCH_NUM);
+list($player1_Id, $player2_Id, $player3_Id, $player4_Id, $player5_Id) = $arr;
+
+//
+
+$q = $pdo->query("SELECT name,photo FROM `users`.`players` WHERE id= '" . $player1_Id . "'");
+$t = $q->fetch();
+$player1Name = $t['name'];
+$player1Photo = $t['photo'];
+
+if ($player1Name == NULL) {
+   $player1Name = "Player Missing";
+   $player1Photo = "/BlackPlayer.png";
+}
+
+//
+
+$q = $pdo->query("SELECT name,photo FROM `users`.`players` WHERE id= '" . $player2_Id . "'");
+$t = $q->fetch();
+$player2Name = $t['name'];
+$player2Photo = $t['photo'];
+
+if ($player2Name == "") {
+   $player2Name = "Player Missing.";
+   $player2Photo = "/BlackPlayer.png";
+}
+
+//
+
+$q = $pdo->query("SELECT name,photo FROM `users`.`players` WHERE id= '" . $player3_Id . "'");
+$t = $q->fetch();
+$player3Name = $t['name'];
+$player3Photo = $t['photo'];
+
+if ($player3Name == "") {
+   $player3Name = "Player Missing.";
+   $player3Photo = "/BlackPlayer.png";
+}
+
+$q = $pdo->query("SELECT name,photo FROM `users`.`players` WHERE id= '" . $player4_Id . "'");
+$t = $q->fetch();
+$player4Name = $t['name'];
+$player4Photo = $t['photo'];
+
+if ($player4Name == "") {
+   $player4Name = "Player Missing.";
+   $player4Photo = "/BlackPlayer.png";
+}
+
+$q = $pdo->query("SELECT name,photo FROM `users`.`players` WHERE id= '" . $player5_Id . "'");
+$t = $q->fetch();
+$player5Name = $t['name'];
+$player5Photo = $t['photo'];
+
+if ($player5Name == "") {
+   $player5Name = "Player Missing.";
+   $player5Photo = "/BlackPlayer.png";
+}
+
+$sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='" . $player1Name . "'";
+$player1 = $pdo->query($sql);
+
+foreach($player1 as $row) {
+   if ($timestamp < $row['timestamp']) {
+      $player1_score+= $row['player_score'];
+   }
+}
+
+if ($player1_score == 0) {
+   $player1_score = 0;
+}
+
+$sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='" . $player2Name . "'";
+$player2 = $pdo->query($sql);
+
+foreach($player2 as $row) {
+   if ($timestamp < $row['timestamp']) {
+      $player2_score+= $row['player_score'];
+   }
+}
+
+if ($player2_score == 0) {
+   $player2_score = 0;
+}
+
+$sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='" . $player3Name . "'";
+$player3 = $pdo->query($sql);
+
+foreach($player3 as $row) {
+   if ($timestamp < $row['timestamp']) {
+      $player3_score+= $row['player_score'];
+   }
+}
+
+if ($player3_score == 0) {
+   $player3_score = 0;
+}
+
+$sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='" . $player4Name . "'";
+$player4 = $pdo->query($sql);
+
+foreach($player4 as $row) {
+   if ($timestamp < $row['timestamp']) {
+      $player4_score+= $row['player_score'];
+   }
+}
+
+if ($player4_score == NULL) {
+   $player4_score = 0;
+}
+
+$sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='" . $player5Name . "'";
+$player5 = $pdo->query($sql);
+
+foreach($player5 as $row) {
+   if ($timestamp < $row['timestamp']) {
+      $player5_score+= $row['player_score'];
+   }
+}
+
+if ($player5_score == 0) {
+   $player5_score = 0;
+}
+
 ?>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Fantasy GO</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/app.css" rel="stylesheet">
-    </head>
 
-    <body class="bg">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button
-                        type="button"
-                        class="navbar-toggle collapsed"
-                        data-toggle="collapse"
-                        data-target="#bs-example-navbar-collapse-1"
-                        aria-expanded="false">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fantasy GO</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+</head>
+
+<body class="bg">
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand">
+                <a class="navbar-brand">
                         <img src="img/logo.svg">
                     </a>
-                    <a class="navbar-brand" id="balance">
-                        <h4>Player</h4>
-                        <h2><?= $user ?></h2>
-                    </a>
-                </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li id="usernameInsertGame" class="font">
-                            <a href="userSettings.php"><?= $username ?></a>
-                        </li>
-                        <li class="dropdown">
-                            <a
-                                href="#"
-                                class="dropdown-toggle"
-                                data-toggle="dropdown"
-                                role="button"
-                                aria-haspopup="true"
-                                aria-expanded="false">
+                <a class="navbar-brand" id="balance">
+                    <h4>Player</h4>
+                    <h2>
+                        <?= $user ?>
+                    </h2>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="usernameInsertGame" class="font">
+                        <a href="userSettings.php">
+                            <?= $username ?>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                 <img class="menu-icon" src="img/menu.svg">
                             </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="myteam.php">My Team</a>
-                                </li>
-                                <li>
-                                    <a href="market.php">Market</a>
-                                </li>
-                                <li>
-                                    <a href="leaderboard.php">Leaderboard</a>
-                                </li>
-                                <li>
-                                    <a href="#">Next Games</a>
-                                </li>
-                                <li>
-                                    <a href="#">Last Games</a>
-                                </li>
-                                <li>
-                                    <a href="userSettings.php">Settings</a>
-                                </li>
-                                <li>
-                                    <a href="logout.php" onclick="onClick">Logout</a>
-                                </li>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="myteam.php">My Team</a>
+                            </li>
+                            <li>
+                                <a href="market.php">Market</a>
+                            </li>
+                            <li>
+                                <a href="leaderboard.php">Leaderboard</a>
+                            </li>
+                            <li>
+                                <a href="#">Next Games</a>
+                            </li>
+                            <li>
+                                <a href="#">Last Games</a>
+                            </li>
+                            <li>
+                                <a href="userSettings.php">Settings</a>
+                            </li>
+                            <li>
+                                <a href="logout.php" onclick="onClick">Logout</a>
+                            </li>
 
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <div class="info">
-            <div id="score">
-                <p>
-                    Score
-                </p>
-                <h1>
-                    <?= $score ?>
-                </h1>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="container-table">
-            <table class="playerTable" style="width:100%">
-                <tr>
-                    <td>
-                        <img src="img<?= $player1Photo ?>"></img>
-                        <p><?= $player1Name ?></p>
-                        <p>Score:
-                            <?= $player1_score ?></p>
-                    </td>
-                    <td>
-                        <img src="img<?= $player2Photo ?>"></img>
-                        <p><?= $player2Name ?></p>
-                        <p>Score:
-                            <?= $player2_score ?></p>
-                    </td>
-                    <td>
-                        <img src="img<?= $player3Photo ?>"></img>
-                        <p><?= $player3Name ?></p>
-                        <p>Score:
-                            <?= $player3_score ?></p>
-                    </td>
-                    <td>
-                        <img src="img<?= $player4Photo ?>"></img>
-                        <p><?= $player4Name ?></p>
-                        <p>Score:
-                            <?= $player4_score ?></p>
-                    </td>
-                    <td>
-                        <img src="img<?= $player5Photo ?>"></img>
-                        <p><?= $player5Name ?></p>
-                        <p>Score:
-                            <?= $player5_score ?></p>
-                    </td>
-                </tr>
-            </table>
+    </nav>
+
+    <div class="info">
+        <div id="score">
+            <p>
+                Score
+            </p>
+            <h1>
+                <?= $score ?>
+            </h1>
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-    </body>
+    </div>
+    <div class="container-table">
+        <table class="playerTable" style="width:100%">
+            <tr>
+                <td>
+                    <img src="img<?= $player1Photo ?>"></img>
+                    <p>
+                        <?= $player1Name ?>
+                    </p>
+                    <p>Score:
+                        <?= $player1_score ?>
+                    </p>
+                </td>
+                <td>
+                    <img src="img<?= $player2Photo ?>"></img>
+                    <p>
+                        <?= $player2Name ?>
+                    </p>
+                    <p>Score:
+                        <?= $player2_score ?>
+                    </p>
+                </td>
+                <td>
+                    <img src="img<?= $player3Photo ?>"></img>
+                    <p>
+                        <?= $player3Name ?>
+                    </p>
+                    <p>Score:
+                        <?= $player3_score ?>
+                    </p>
+                </td>
+                <td>
+                    <img src="img<?= $player4Photo ?>"></img>
+                    <p>
+                        <?= $player4Name ?>
+                    </p>
+                    <p>Score:
+                        <?= $player4_score ?>
+                    </p>
+                </td>
+                <td>
+                    <img src="img<?= $player5Photo ?>"></img>
+                    <p>
+                        <?= $player5Name ?>
+                    </p>
+                    <p>Score:
+                        <?= $player5_score ?>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
 
 </html>

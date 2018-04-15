@@ -1,36 +1,42 @@
 <?php
 session_start();
 require 'connect.php';
-$username= $_SESSION["username"];
-    if($_GET['username'] != NULL){
-        $user = $_GET['username'];
-        $_SESSION["user"] = $user;
-        echo '<script>location="playerTeam.php"</script>';
-    }
-    if (isset($_POST['search'])) {
-        
-        $user = $_POST['nametxt'];
-        $stmt = $pdo->prepare("SELECT * FROM users WHERE username=:id");
-        $stmt->execute(['id' => $user]); 
-        $userSearch = $stmt->fetch();
-        if ($userSearch != NULL){
-            $_SESSION["user"] = $user;
-            echo '<script>location="playerTeam.php"</script>';
-        }
-        else{
-            displayAlert("That User does not exist!","danger");
-        }
-    }
-function displayAlert($text, $type) {
-    echo "<div class=\"alert alert-".$type."\" role=\"alert\">
-            <p>".$text."</p>
+
+$username = $_SESSION["username"];
+
+if ($_GET['username'] != NULL) {
+   $user = $_GET['username'];
+   $_SESSION["user"] = $user;
+   echo '<script>location="playerTeam.php"</script>';
+}
+
+if (isset($_POST['search'])) {
+   $user = $_POST['nametxt'];
+   $stmt = $pdo->prepare("SELECT * FROM users WHERE username=:id");
+   $stmt->execute(['id' => $user]);
+   $userSearch = $stmt->fetch();
+   if ($userSearch != NULL) {
+      $_SESSION["user"] = $user;
+      echo '<script>location="playerTeam.php"</script>';
+   }
+   else {
+      displayAlert("That User does not exist!", "danger");
+   }
+}
+
+function displayAlert($text, $type)
+{
+   echo "<div class=\"alert alert-" . $type . "\" role=\"alert\">
+            <p>" . $text . "</p>
             </div>";
-    }
+}
+
 ?>
 
-<html>
-<head>
 
+<html>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,28 +53,29 @@ function displayAlert($text, $type) {
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-                        aria-expanded="false">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    
+
                     <a class="navbar-brand">
                         <img src="img/logo.svg">
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    
+
                     <ul class="nav navbar-nav navbar-right">
-                    
-                    <li id="usernameInsertGame" class="font">
-                       <a href="userSettings.php"><?= $username ?></a>
-                    </li>
-                        
+
+                        <li id="usernameInsertGame" class="font">
+                            <a href="userSettings.php">
+                                <?= $username ?>
+                            </a>
+                        </li>
+
                         <li class="dropdown">
-                            <a href="myteam.php" id = "menuDropdown" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <a href="myteam.php" id="menuDropdown" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                 <img class="menu-icon" src="img/menu.svg">
                         </a>
                         </li>
@@ -76,23 +83,23 @@ function displayAlert($text, $type) {
                 </div>
             </div>
         </nav>
-        </div>
-        </div>
-        <form class="formLeaderboard" action="leaderboard.php" method="POST"> 
-            <div id ="rowLeaderboard" class="row">
-                <div class="col-xs-6 col-md-4">
-                <div id="inputLeaderboard" class="input-group">
-                    <input type="text" class="form-control" placeholder="Search" name="nametxt" id="txtSearch"/>
-                    <div class="input-group-btn">
+</div>
+</div>
+<form class="formLeaderboard" action="leaderboard.php" method="POST">
+    <div id="rowLeaderboard" class="row">
+        <div class="col-xs-6 col-md-4">
+            <div id="inputLeaderboard" class="input-group">
+                <input type="text" class="form-control" placeholder="Search" name="nametxt" id="txtSearch" />
+                <div class="input-group-btn">
                     <button class="btn btn-primary" type="submit" name="search">
                         <span class="glyphicon glyphicon-search"></span>
                     </button>
-                    </div>
-                </div>
                 </div>
             </div>
-        </form>
-        <?php
+        </div>
+    </div>
+</form>
+<?php
         
 
                 
@@ -133,8 +140,8 @@ function displayAlert($text, $type) {
     echo '</div>';
     echo '</div>';
     ?>
-        <script>
-            $.fn.pageMe = function(opts){
+    <script>
+        $.fn.pageMe = function(opts){
                 var $this = this,
                     defaults = {
                         perPage: 7,
@@ -241,7 +248,6 @@ function displayAlert($text, $type) {
             $('#myTable').pageMe({pagerSelector:'#myPager',showPrevNext:true,hidePageNumbers:false,perPage:10});
                 
             });
-        </script>
+    </script>
     </body>
-</div>
 </html>
