@@ -113,6 +113,7 @@ function displayAlert($text, $type) {
                     <a class="navbar-brand" id="balance">
                         <h4>Balance</h4>
                         <h2><?= $balance ?>$</h2>
+                        </a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     
@@ -131,13 +132,17 @@ function displayAlert($text, $type) {
                                     <a href="myteam.php">My Team</a>
                                 </li>
                                 <li>
+                                <a href="leaderboard.php">Leaderboard</a>
+                            </li>
+                                <li>
                                     <a href="#">Next Games</a>
                                 </li>
                                 <li>
                                     <a href="#">Last Games</a>
                                 </li>
+                                
                                 <li>
-                                    <a href="#">Settings</a>
+                                    <a href="userSettings.php">Settings</a>
                                 </li>
                                 <li>
                                     <a href="logout.php">Logout</a>

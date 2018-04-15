@@ -101,16 +101,19 @@ require 'connect.php';
                         </a>
                         <ul class="dropdown-menu">
                             <li>
+                                <a href="myteam.php">My Team</a>
+                            </li>
+                            <li>
                                 <a href="market.php">Market</a>
+                            </li>
+                            <li>
+                                <a href="leaderboard.php">Leaderboard</a>
                             </li>
                             <li>
                                 <a href="#">Next Games</a>
                             </li>
                             <li>
                                 <a href="#">Last Games</a>
-                            </li>
-                            <li>
-                                <a href="#">Settings</a>
                             </li>
                             <li>
                                 <a href="logout.php" onClick>Logout</a>

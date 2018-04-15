@@ -153,13 +153,16 @@ require 'connect.php';
                                 <a href="market.php">Market</a>
                             </li>
                             <li>
+                                <a href="leaderboard.php">Leaderboard</a>
+                            </li>
+                            <li>
                                 <a href="#">Next Games</a>
                             </li>
                             <li>
                                 <a href="#">Last Games</a>
                             </li>
                             <li>
-                                <a href="#">Settings</a>
+                                <a href="userSettings.php">Settings</a>
                             </li>
                             <li>
                                 <a href="logout.php" onClick>Logout</a>
@@ -178,14 +181,6 @@ require 'connect.php';
             </p>
             <h1>
             <?= $score ?>
-            </h1>
-        </div>
-        <div id="week">
-            <p>
-                Week
-            </p>
-            <h1>
-                1/30
             </h1>
         </div>
     </div>

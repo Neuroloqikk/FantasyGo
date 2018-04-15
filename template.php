@@ -54,13 +54,19 @@ $username= $_SESSION["username"];
                                     <a href="myteam.php">My Team</a>
                                 </li>
                                 <li>
+                                    <a href="market.php">Market</a>
+                                </li>
+                                <li>
+                                <a href="leaderboard.php">Leaderboard</a>
+                            </li>
+                                <li>
                                     <a href="#">Next Games</a>
                                 </li>
                                 <li>
                                     <a href="#">Last Games</a>
                                 </li>
                                 <li>
-                                    <a href="#">Settings</a>
+                                    <a href="userSettings.php">Settings</a>
                                 </li>
                                 <li>
                                     <a href="signin.php">Logout</a>

@@ -83,7 +83,7 @@ function displayAlert($text, $type) {
               <label>
                 <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
               </label>
-              <p>Don't have an account? <a href="signup.php" style="color:dodgerblue">Register</a>.</p>
+              <p>Don't have an account? <a href="index.php" style="color:dodgerblue">Register</a>.</p>
               <div class="clearfix">
                 <button type="button" class="cancelbtn">Cancel</button>
                 <button type="submit" class="signupbtn" name="login">Sign In</button>
