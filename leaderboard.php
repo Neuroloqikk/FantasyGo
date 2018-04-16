@@ -126,7 +126,7 @@ function displayAlert($text, $type)
         $index++;
         echo "<tr>";
         echo "<td>".$index."</td>";
-        echo '<td style="cursor:pointer"> <a href="leader.php?username='.$user['username'].'">'.$user['username'].'</a></td>';
+        echo '<td style="cursor:pointer"> <a href="leaderboard.php?username='.$user['username'].'">'.$user['username'].'</a></td>';
         echo "<td>".$user['score']."</td>";
         echo "<td>".$strip."</td>";
         echo "</tr>";
