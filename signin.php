@@ -10,9 +10,6 @@ if (isset($_POST['login'])) {
    $user = $stmt->fetch();
    if ($user && password_verify($psw, $user['psw'])) {
       if ($user['verified'] == 0) {
-
-         // echo '<script>alert("Verify");</script>';
-
          displayAlert("Please verify your account!", "danger");
       }
       else {
@@ -43,10 +40,9 @@ function displayAlert($text, $type)
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/app.css" rel="stylesheet">
 </head>
+
 <div class="container-example">
-
     <body class="bg">
-
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
@@ -82,10 +78,8 @@ function displayAlert($text, $type)
                     <label for="psw"><b>Password</b></label>
                     <input type="password" placeholder="Enter Password" name="psw" required>
 
-                    <label>
-                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-              </label>
-                    <p>Don't have an account? <a href="index.php" style="color:dodgerblue">Register</a>.</p>
+                    <p>Forgot your username/password? <a href="index.php" style="color:dodgerblue">Click here!</a></p>
+                    <p>Don't have an account? <a href="index.php" style="color:dodgerblue">Register</a></p>
                     <div class="clearfix">
                         <button type="button" class="cancelbtn">Cancel</button>
                         <button type="submit" class="signupbtn" name="login">Sign In</button>
