@@ -220,7 +220,7 @@ if ($player5_score == 0) {
         <table class="playerTable" style="width:100%">
             <tr>
                 <td>
-                    <img src="img<?= $player1Photo ?>"></img>
+                    <img src="img<?= $player1Photo ?>" class="img-responsive"></img>
                     <p>
                         <?= $player1Name ?>
                     </p>
@@ -229,7 +229,7 @@ if ($player5_score == 0) {
                     </p>
                 </td>
                 <td>
-                    <img src="img<?= $player2Photo ?>"></img>
+                    <img src="img<?= $player2Photo ?>" class="img-responsive"></img>
                     <p>
                         <?= $player2Name ?>
                     </p>
@@ -238,7 +238,7 @@ if ($player5_score == 0) {
                     </p>
                 </td>
                 <td>
-                    <img src="img<?= $player3Photo ?>"></img>
+                    <img src="img<?= $player3Photo ?>" class="img-responsive"></img>
                     <p>
                         <?= $player3Name ?>
                     </p>
@@ -247,7 +247,7 @@ if ($player5_score == 0) {
                     </p>
                 </td>
                 <td>
-                    <img src="img<?= $player4Photo ?>"></img>
+                    <img src="img<?= $player4Photo ?>" class="img-responsive"></img>
                     <p>
                         <?= $player4Name ?>
                     </p>
@@ -256,7 +256,7 @@ if ($player5_score == 0) {
                     </p>
                 </td>
                 <td>
-                    <img src="img<?= $player5Photo ?>"></img>
+                    <img src="img<?= $player5Photo ?>" class="img-responsive"></img>
                     <p>
                         <?= $player5Name ?>
                     </p>
