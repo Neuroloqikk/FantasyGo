@@ -121,7 +121,7 @@ function displayAlert($text, $type)
     </nav>
   </div>
 </div>
-<form class="formLeaderboard" action="leaderboard.php" method="POST">
+  <form class="formLeaderboard" action="leaderboard.php" method="POST">
   <div id="rowLeaderboard" class="row">
     <div class="col-xs-6 col-md-4">
       <div id="inputLeaderboard" class="input-group">
@@ -146,25 +146,24 @@ echo '<table class="table table-hover">';
 echo
 '<thead>
 <tr>
+<th>Team 1</th>
 <th></th>
-<th>Username</th>
-<th>Score</th>
-<th>Start Date</th>
+<th>Team 2</th>
+<th>Date</th>
+<th>Hour</th>
 </tr>
 </thead>
 <tbody id="myTable">';
-$getUsers = $pdo->query("SELECT username,score,timestamp FROM users ORDER BY score DESC");
-$index = 0;
-foreach ($getUsers as $user) {
-  $date = $user['timestamp'];
-  $createDate = new DateTime($date);
-  $strip = $createDate->format('Y-m-d');
-  $index++;
+$getGames = $pdo->query("SELECT team1,team2,Date,Hour FROM next_games ORDER BY Hour DESC");
+          foreach ($getGames as $user) {
+  $date = $user['Date'];
+  $hour = $user['Hour'];
   echo "<tr>";
-  echo "<td>".$index."</td>";
-  echo '<td style="cursor:pointer"> <a href="leaderboard.php?username='.$user['username'].'">'.$user['username'].'</a></td>';
-  echo "<td>".$user['score']."</td>";
-  echo "<td>".$strip."</td>";
+  echo '<td style="cursor:pointer"> <a href="leaderboard.php?username='.$user['team1'].'">'.$user['team1'].'</a></td>';
+  echo "<td>vs</td>";
+  echo '<td style="cursor:pointer"> <a href="leaderboard.php?username='.$user['username'].'">'.$user['team2'].'</a></td>';
+  echo '<td>'.$date.'</td>';
+  echo '<td>'.$hour.'</td>';
   echo "</tr>";
 }
 echo '</tbody>';

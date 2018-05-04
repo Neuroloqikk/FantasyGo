@@ -120,6 +120,9 @@ function displayAlert($text, $type)
                     <a class="navbar-brand">
                         <img src="img/logo.svg">
                     </a>
+                    <a href="#" class="navbar-brand" id="sidebarShow" onclick="showGames()">
+                        <img src="img/eye.svg">
+                    </a>
                     <a class="navbar-brand" id="balance">
                         <h4>Balance</h4>
                         <h2>
@@ -130,7 +133,7 @@ function displayAlert($text, $type)
 
                     <ul class="nav navbar-nav navbar-right">
 
-                        <li id="usernameIndex" class="font">
+                        <li id="usernameInsertGame" class="font">
                             <a href="userSettings.php">
                                 <?= $username ?>
                             </a>
@@ -165,6 +168,40 @@ function displayAlert($text, $type)
                     </ul>
                 </div>
             </div>
+            <div class="sidenav" id="sidebarShowBtn" style="display: none;">
+        <a id="SidebarTitle"><b>Coming Games</b></a>
+        <?php 
+         $stmt = $pdo->query("SELECT team1,team2,Date,Hour FROM next_games ORDER BY Date DESC LIMIT 5");
+         $p = $stmt->fetchAll();
+         foreach($p as $row){
+            ?>
+         <a><b><?=$row['team1'];?> vs <?=$row['team2'];?></b><br><?=$row['Date'];?>-<?=$row['Hour'];?></a>
+         
+
+         <?php }?>
+        <hr>
+        <a id="SidebarTitle"><b>Last Games</b></a>
+        <?php 
+         $stmt = $pdo->query("SELECT team1,team2,score_team1,score_team2,next_game_id FROM results ORDER BY timestamp DESC LIMIT 5");
+         $p = $stmt->fetchAll();
+         $team1score = "win";
+         $team2score = "loose";
+         foreach($p as $row){
+           if($row['score_team1']>$row['score_team2']){
+             $team1score = "win";
+             $team2score = "loose";
+           }
+          else{
+            $team2score = "win";
+            $team1score = "loose";
+          }
+            ?>
+         <a href="lastGame.php?id=<?=$row['next_game_id'];?>"><?=$row['team1'];?> vs <?=$row['team2'];?><br><span id="<?=$team1score?>"><?=$row['score_team1'];?></span>-<span id="<?=$team2score?>"><?=$row['score_team2'];?></span></a>
+         
+
+         <?php }?>
+      </div>
+        </div>
         </nav>
         <div class="marketInfo">
             <h1> Welcome to the market!</h1>
@@ -418,7 +455,7 @@ function displayAlert($text, $type)
             function idPlayer(elem) {
                 var name = elem.id;
                 window.location.href="market.php?name=" + name;
-                
+
             }
             function buyButton(id) {
                 var buy = id.id;
@@ -429,6 +466,16 @@ function displayAlert($text, $type)
                 }
             }
         </script>
+            <script>
+        function showGames() {
+            var x = document.getElementById("sidebarShowBtn");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
 </div>

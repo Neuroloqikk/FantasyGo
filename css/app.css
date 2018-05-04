@@ -1,13 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-html, body:not(#landingBG) {
+html, body:not(#landingBG){
   background: url("../img/nuke.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
-
+.wrapper {
+  display: flex;
+}
+#sidebarShow{
+  float:right;
+  margin-left:93%;
+  margin-top:0;
+  width:30px;
+  z-index:9999;
+}
+#sidebarShow img{
+  width:30px;
+}
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  height: 100vh;
+}
 #landingBG {
   overflow: hidden;
   background: url("../img/nuke1.png") no-repeat center center fixed;
@@ -15,6 +32,7 @@ html, body:not(#landingBG) {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  height:100%;
 }
 
 .containerLanding {
@@ -700,11 +718,9 @@ input {
   border: 1px solid black;
 }
 
-.team2Insert {
-  padding-left: 20%;
-  padding-right: 20%;
+#tableShadow{
+  box-shadow:5px 5px grey;
 }
-
 .team2Insert table {
   background-color: white;
   border: 3px solid black;
@@ -719,8 +735,9 @@ input {
 }
 
 #insertTeamsSucess {
-  margin-left: 46.5%;
-  width: 6%;
+  margin-right: 25%;
+  margin-left: 40%;
+  margin-top: 2%;
 }
 
 #team1_score {
@@ -808,7 +825,7 @@ input {
   .form-control {
     position: relative;
     font-size: 16px;
-    height: auto;
+    height: 10;
     padding: 10px;
   }
 
@@ -858,7 +875,7 @@ input {
   .form-control {
     position: relative;
     font-size: 16px;
-    height: auto;
+    height: 10;
     padding: 10px;
   }
 
@@ -1037,9 +1054,15 @@ input {
 }
 
 @media (min-width: 1281px) {
+  #txtSearch{
+    height:35px;
+  }
   #tableLeaderboard {
     background-color: white;
     margin-top: 1%;
+    /*border: 2px solid;*/
+    border: 2px solid #aaaaaa;
+    box-shadow: 5px 5px 3px #aaaaaa;
   }
 
   #rowLeaderboard {
@@ -1056,10 +1079,252 @@ input {
 
   #inputLeaderboard input {
     height: 10%;
+    border: 1px solid;
   }
 
   .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
     z-index: 2;
     margin-left: 5px;
   }
+}
+/*SIDEBAR*/
+.wrapper {
+  display: block;
+}
+
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* top layer */
+  z-index: 9999;
+}
+
+.overlay {
+  /* full screen */
+  width: 100vw;
+  height: 100vh;
+  /* transparent black */
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  /* middle layer, i.e. appears below the sidebar */
+  z-index: 9998;
+}
+
+#dismiss {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  /* top right corner of the sidebar */
+  top: 10px;
+  right: 10px;
+}
+
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  right:1;
+  background-color: #f8f8f8; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+}
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 13px;
+  text-align:center;
+  color: black;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+}
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover:not(#SidebarTitle) {
+  color: grey;
+}
+
+/* Style page content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+#SidebarTitle{
+  font-size:16px;
+  padding-bottom:10px;
+}
+@media (min-width: 1281px) {
+  #team1InsertLastGame{
+    padding-top:0%;
+  }
+  .team2Insert {
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top:0%;
+  }
+}
+@media (min-width: 1700px) {
+  #team1InsertLastGame{
+    padding-top:1.3%;
+  }
+  .team2Insert {
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top:1.3%;
+  }
+}
+
+
+@media (min-width: 1281px) {
+  #infoLastGame{
+    width:100%;
+    text-align:center;
+    color:white;
+  }
+  #infoLastGame h1{
+    font-size:40px;
+  }
+  #infoLastGame h2{
+    font-size:20px;
+  }
+  #infoLastGame h3{
+    font-size:20px;
+  }
+}
+@media (min-width: 1700px) {
+  #infoLastGame{
+    width:100%;
+    text-align:center;
+    color:white;
+  }
+  #infoLastGame h1{
+    font-size:40px;
+  }
+  #infoLastGame h2{
+    font-size:40px;
+  }
+  #infoLastGame h3{
+    font-size:40px;
+  }
+}
+#winLastGame{
+  color:greenyellow;
+}
+#loose{
+  color:red;
+}
+#win{
+  color:green;
+}
+#loose{
+  color:red;
+}
+
+#t1_player1 td{
+  width:50%;
+}
+#t2_player1 td{
+  width:50%;
+}
+@media (min-width: 1281px) {
+  .imgLastGame img{
+    width:8%;
+    height:auto;
+    z-index:9999;
+    padding-top:-100%;
+  }
+  #img1LastGame img{
+    margin-left: 30%;
+    margin-top:-1%;
+  }
+  #img2LastGame img{
+    margin-left: 59%;
+    margin-top:-8%;
+  }
+  #infoLastGame{
+    margin-top:-9%;
+  }
+}
+@media (min-width: 1700px) {
+  .imgLastGame img{
+    width:8%;
+    height:auto;
+    z-index:9999;
+    margin-bottom:0;
+  }
+  #img1LastGame{
+    margin-left: 0%;
+    margin-top:2%;
+  }
+  #img2LastGame{
+    width:100%;
+    margin-left:3%;
+  }
+}
+
+#Hour{
+  width: 60%;
+  height: 35%;
+  margin-top: 5%;
+  margin-right: 0;
+  margin-left: 34;
+}
+#insertTeamsSucess{
+  margin-right:25%;
+  margin-left:39%;
+  width:10%;
+}
+#nextGameDrop1{
+  margin-left:30%;
+  margin-top:3%;
+}
+#nextGameDrop2{
+  margin-left:3%;
+  margin-top:3%;
+}
+
+#calendar{
+  margin-left:45%;
+  margin-top:-8.5%;
+}
+#DateNextGame label{
+  text-align: center;
+  width:17%;
+  margin-left:45%;
+  font-size:20px;
+  color:black;
+  background: rgba(255, 255, 255, 0.8);
+}
+.imgTeamNext{
+  margin-left: auto;
+	margin-right: auto;
+	display: block;
+  margin-top:10%;
+  width:60%;
+  height:auto;
+}
+
+#panelNextGame{
+  width: 10%;
+  margin-left: 32%;
+  margin-top: 20%;
+  height: 15%;
+  font-size:18px;
+  border: 1px solid black;
+}
+
+.panel-body input{
+  width:20%;
 }
