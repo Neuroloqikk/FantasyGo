@@ -28,26 +28,20 @@ $username = $_SESSION["username"];
       <div class="container">
         <div class="navbar-header">
           <p class="usernameMobile">Neuroloq1kk</p>
-          <img class="menuMobile" src="img/menu.svg">
-          <a id="logoMobile" class="navbar-brand">
-            <img src="img/logo.png">
+            <img class="menuLogoMobile" onclick="myFunction()" src="img/menu.svg">
+            <div id="myDropdown" class="dropdownMobile-content">
+              <a href="#">My Team</a>
+              <a href="#">Market</a>
+              <a href="#">Leaderboard</a>
+              <a href="#">Next Games</a>
+              <a href="#">Last Games</a>
+              <a href="#">Settings</a>
+              <a href="#">Logout</a>
+            </div>
+          <!--<a href="#" id="menuDropdownMobile" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <img class="menuMobile" src="img/menu.svg">
           </a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-          <ul class="nav navbar-nav navbar-right">
-
-            <li class="usernameIndex">
-              <a>
-                <?= $username ?>
-              </a>
-            </li>
-
-            <li class="dropdown">
-              <a href="#" id="menuDropdown" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                <img class="menu-icon" src="img/menu.svg">
-              </a>
-              <ul class="dropdown-menu">
+          <ul class="dropdown-menu">
                 <li>
                   <a href="myteam.php">My Team</a>
                 </li>
@@ -69,7 +63,19 @@ $username = $_SESSION["username"];
                 <li>
                   <a href="signin.php">Logout</a>
                 </li>
-              </ul>
+              </ul>-->
+          <a id="logoMobile" class="navbar-brand">
+            <img src="img/logo.png">
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+          <ul class="nav navbar-nav navbar-right">
+
+            <li class="usernameIndex">
+              <a>
+                <?= $username ?>
+              </a>
             </li>
           </ul>
 
@@ -110,6 +116,28 @@ $username = $_SESSION["username"];
          <?php }?>
       </div>
     </nav>
+    <script>
+            /* When the user clicks on the button, 
+      toggle between hiding and showing the dropdown content */
+      function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      // Close the dropdown menu if the user clicks outside of it
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+      </script>
     <script>
     function showGames() {
       var x = document.getElementById("sidebar123");
