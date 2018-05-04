@@ -1275,11 +1275,20 @@ input {
 }
 
 #Hour{
-  width: 60%;
+  width: 90%;
   height: 35%;
   margin-top: 5%;
   margin-right: 0;
-  margin-left: 34;
+  margin-left: 8;
+}
+@media (min-width: 1700px) {
+  #Hour{
+    width: 60%;
+    height: 35%;
+    margin-top: 5%;
+    margin-right: 0;
+    margin-left: 34;
+  }
 }
 #insertTeamsSucess{
   margin-right:25%;
