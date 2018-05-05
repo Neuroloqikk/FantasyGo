@@ -48,7 +48,14 @@ html, body:not(#landingBG){
   margin-left: 45%;
   z-index: 9999;
 }
-
+@media (min-width: 320px) and (max-width: 480px) {
+  .alert {
+    position: fixed;
+    margin-left: 20%;
+    margin-top:130%;
+    z-index: 9999;
+  }
+}
 .navbar-brand img {
   height: 100%;
   width: auto;
@@ -977,7 +984,18 @@ input {
     margin-top: -13%;
   }
 }
-
+@media (min-width: 320px) and (max-width: 480px) {
+  html, body {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative;
+  }
+  .wrapperLanding2 {
+    margin-top: -5%;
+    overflow-x: hidden;
+  }
+}
 @media (min-width: 1700px) {
   .wrapperLanding2 {
     margin-top: 6%;
@@ -1416,4 +1434,12 @@ input {
     float: right;
     margin-top: -18%;
     margin-right: 5%;
+}
+
+
+#logoSigninMobile{
+  height: 250;
+  width: auto;
+  margin-left: 3%;
+  margin-top: -19%;
 }

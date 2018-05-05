@@ -38,83 +38,10 @@ $username = $_SESSION["username"];
               <a href="#">Settings</a>
               <a href="#">Logout</a>
             </div>
-          <!--<a href="#" id="menuDropdownMobile" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            <img class="menuMobile" src="img/menu.svg">
-          </a>
-          <ul class="dropdown-menu">
-                <li>
-                  <a href="myteam.php">My Team</a>
-                </li>
-                <li>
-                  <a href="market.php">Market</a>
-                </li>
-                <li>
-                  <a href="leaderboard.php">Leaderboard</a>
-                </li>
-                <li>
-                  <a href="#">Next Games</a>
-                </li>
-                <li>
-                  <a href="#">Last Games</a>
-                </li>
-                <li>
-                  <a href="userSettings.php">Settings</a>
-                </li>
-                <li>
-                  <a href="signin.php">Logout</a>
-                </li>
-              </ul>-->
           <a id="logoMobile" class="navbar-brand">
             <img src="img/logo.png">
           </a>
         </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-          <ul class="nav navbar-nav navbar-right">
-
-            <li class="usernameIndex">
-              <a>
-                <?= $username ?>
-              </a>
-            </li>
-          </ul>
-
-        </div>
-
-      </div>
-      <div class="sidenav" id="sidebarShowBtn" style="display: none;">
-        <a id="SidebarTitle"><b>Coming Games</b></a>
-        <?php 
-         $stmt = $pdo->query("SELECT team1,team2,Date,Hour FROM next_games ORDER BY Date DESC LIMIT 5");
-         $p = $stmt->fetchAll();
-         foreach($p as $row){
-            ?>
-         <a><b><?=$row['team1'];?> vs <?=$row['team2'];?></b><br><?=$row['Date'];?>-<?=$row['Hour'];?></a>
-         
-
-         <?php }?>
-        <hr>
-        <a id="SidebarTitle"><b>Last Games</b></a>
-        <?php 
-         $stmt = $pdo->query("SELECT team1,team2,score_team1,score_team2,next_game_id FROM results ORDER BY timestamp DESC LIMIT 5");
-         $p = $stmt->fetchAll();
-         $team1score = "win";
-         $team2score = "loose";
-         foreach($p as $row){
-           if($row['score_team1']>$row['score_team2']){
-             $team1score = "win";
-             $team2score = "loose";
-           }
-          else{
-            $team2score = "win";
-            $team1score = "loose";
-          }
-            ?>
-         <a href="lastGame.php?id=<?=$row['next_game_id'];?>"><?=$row['team1'];?> vs <?=$row['team2'];?><br><span id="<?=$team1score?>"><?=$row['score_team1'];?></span>-<span id="<?=$team2score?>"><?=$row['score_team2'];?></span></a>
-         
-
-         <?php }?>
-      </div>
     </nav>
     <script>
             /* When the user clicks on the button, 
@@ -138,15 +65,5 @@ $username = $_SESSION["username"];
         }
       }
       </script>
-    <script>
-    function showGames() {
-      var x = document.getElementById("sidebar123");
-      if (x.style.display === "none") {
-        x.style.display = "block";
-      } else {
-        x.style.display = "none";
-      }
-    }
-    </script>
   </body>
   </html>
