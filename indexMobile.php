@@ -37,13 +37,7 @@ else {
     $stmt->bindValue(':username', $username);
     $stmt->execute();
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      displayAlert("Please type a valid email!", "warning");
-    }
-
-    if ($row['num'] > 0) {
-      displayAlert("That username already exists!", "warning");
-    }
+    
 
     if ($row['num'] < 0 and $pass == $passVerify and filter_var($email, FILTER_VALIDATE_EMAIL)) {
       $passwordHash = password_hash($pass, PASSWORD_BCRYPT, array(
@@ -75,7 +69,14 @@ else {
       ));
       displayAlert("An email was sent to your email, check it in order to verify your account!", "warning");
     }
-    else {
+    else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      displayAlert("Please type a valid email!", "warning");
+    }
+
+    else if ($row['num'] > 0) {
+      displayAlert("That username already exists!", "warning");
+    }
+    else if($pass == $passVerify){
       displayAlert("Please verify your password!", "warning");
     }
   }
