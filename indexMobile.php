@@ -45,7 +45,7 @@ else {
       displayAlert("That username already exists!", "warning");
     }
 
-    if ($pass == $passVerify) {
+    if ($row['num'] < 0 and $pass == $passVerify and filter_var($email, FILTER_VALIDATE_EMAIL)) {
       $passwordHash = password_hash($pass, PASSWORD_BCRYPT, array(
         "cost" => 12
       ));
