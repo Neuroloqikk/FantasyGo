@@ -354,11 +354,24 @@ input {
   background: rgba(0, 0, 0, 0.5);
   margin-top: -1%;
 }
-
+.marketInfoMobile{
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  height: 12%;
+  font-size:20px;
+  background: rgba(0, 0, 0, 0.5);
+  margin-top: -1%;
+}
 #balance {
   padding-left: 4%;
 }
-
+.balanceMobile{
+  margin-left:43%;
+  margin-top:3%;
+  position:absolute;
+  z-index:9999;
+}
 .marketGrid {
   display: grid;
   grid-template-columns: repeat(5,15%);
@@ -703,10 +716,56 @@ input {
   margin-top: -1%;
 }
 
+#dropdownMarketMobile{
+  width:100%;
+  margin-left:0;
+  margin-top:0%;
+}
+#dropdown-menuMarketMobile{
+  width:100%;
+  margin-top:3%;
+  z-index:1;
+}
 .btn {
   border: 1px solid black;
 }
-
+.playerMarketMobile{
+  margin-top: 5%;
+  margin-bottom: 20%;
+}
+.playerMarketMobile img{
+  height: 230px;
+  width: auto;
+}
+.playerMarketMobile li a{
+  text-decoration: none;
+    text-align: center;
+    margin-left: 15%;
+    color: black;
+}
+.playerNameMobile{
+  font-size: 20px;
+  margin-left:-5%;
+}
+.lastGamesMarketMobile{
+  font-size: 15px;
+  margin-left: 11%;
+  list-style-type: none;
+}
+.lastGamesMarketMobile span{
+  color:green;
+}
+#btnMarketMobile{
+  width: 34%;
+  margin-left: 17%;
+  position: absolute;
+  margin-top: 5%;
+}
+#marketImgMobile{
+  float: right;
+    padding-top: 2%;
+    margin-top: -35%;
+}
 .team1Insert {
   padding-left: 20%;
   padding-right: 20%;
@@ -1371,9 +1430,10 @@ input {
   margin-top:-19%;
 }
 .usernameMobile{
-  margin-left: 40%;
-    margin-top: 10%;
-    margin-right: 35%;
+  margin-left: 39%;
+  margin-top: 10%;
+  margin-right: 35%;
+  font-weight: 600;
 }
 
 #logoMobile{
