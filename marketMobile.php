@@ -150,11 +150,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">F0rest</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="F0rest"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='F0rest' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="F0rest" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 180.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/NiP/F0rest.png">
@@ -163,11 +175,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Get_Right</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Get_Right"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Get_Right' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Get_Right" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 180.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/NiP/Get_Right.png">
@@ -176,11 +200,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Dennis</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Dennis"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Dennis' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Dennis" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 120.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/NiP/Dennis.png">
@@ -188,11 +224,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Draken</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Draken"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Draken' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Draken" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 130.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/NiP/Draken.png">
@@ -201,11 +249,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Rez</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Rez"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Rez' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Rez" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 130.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/NiP/Rez.png">
@@ -230,11 +290,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Steel</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Steel"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Steel' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Steel" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 120.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Liquid/Steel.png">
@@ -243,11 +315,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Twistzz</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Twistzz"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Twistzz' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Twistzz" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 170.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Liquid/Twistzz.png">
@@ -256,11 +340,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Elige</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Elige"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Elige' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Elige" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 190.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Liquid/Elige.png">
@@ -268,11 +364,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Nafly</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Nafly"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Nafly' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Nafly" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 130.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Liquid/Nafly.png">
@@ -281,11 +389,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Nitro</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Nitro"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Nitro' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Nitro" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 120.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Liquid/Nitro.png">
@@ -307,11 +427,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Zeus</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Zeus"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Zeus' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Zeus" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 50.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Navi/Zeus.png">
@@ -320,11 +452,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">S1mple</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="S1mple"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='S1mple' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="S1mple" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Navi/S1mple.png">
@@ -333,11 +477,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Flamie</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Flamie"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Flamie' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Flamie" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 150.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Navi/Flamie.png">
@@ -345,11 +501,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Edward</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Edward"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Edward' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Edward" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 90.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Navi/Edward.png">
@@ -358,11 +526,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Electronic</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Electronic"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Electronic' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Electronic" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 150.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Navi/Electronic.png">
@@ -384,11 +564,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Styko</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Styko"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Styko' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Styko" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 90.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Mousesports/Styko.png">
@@ -397,11 +589,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Chris J</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="ChrisJ"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='ChrisJ' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="ChrisJ" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 110.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Mousesports/ChrisJ.png">
@@ -410,11 +614,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Sunny</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Sunny"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Sunny' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Sunny" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 140.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Mousesports/Sunny.png">
@@ -422,11 +638,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Oskar</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Oskar"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Oskar' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Oskar" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 170.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Mousesports/Oskar.png">
@@ -435,11 +663,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Ropz</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Ropz"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Ropz' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Ropz" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 140.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Mousesports/Ropz.png">
@@ -461,11 +701,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Tarik</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Tarik"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Tarik' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Tarik" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 120.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Cloud9/Tarik.png">
@@ -474,11 +726,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Stewie2K</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Stewie2K"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Stewie2K' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Stewie2K" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 130.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Cloud9/Stewie2K.png">
@@ -487,11 +751,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Autimatic</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Autimatic"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Autimatic' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Autimatic" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 170.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Cloud9/Autimatic.png">
@@ -499,11 +775,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Rush</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Rush"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Rush' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Rush" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 120.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Cloud9/Rush.png">
@@ -512,11 +800,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Skadoodle</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Skadoodle"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Skadoodle' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Skadoodle" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 130.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Cloud9/Skadoodle.png">
@@ -538,11 +838,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Coldzera</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Coldzera"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Coldzera' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Coldzera" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 250.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/SK/Coldzera.png">
@@ -551,11 +863,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Fallen</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Fallen"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Fallen' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Fallen" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/SK/Fallen.png">
@@ -564,11 +888,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Taco</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Taco"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Taco' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Taco" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 90.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/SK/Taco.png">
@@ -576,11 +912,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Fer</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Fer"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Fer' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Fer" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 220.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/SK/Fer.png">
@@ -589,11 +937,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Boltz</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Boltz"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Boltz' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Boltz" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 160.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/SK/Boltz.png">
@@ -615,11 +975,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Dupreeh</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Dupreeh"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Dupreeh' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Dupreeh" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Astralis/Dupreeh.png">
@@ -628,11 +1000,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Device</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Device"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Device' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Device" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 230.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Astralis/Device.png">
@@ -641,11 +1025,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Glaive</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Glaive"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Glaive' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Glaive" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 80.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Astralis/Glaive.png">
@@ -653,11 +1049,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Magisk</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Magisk"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Magisk' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Magisk" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 130.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Astralis/Magisk.png">
@@ -666,11 +1074,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Xyp9x</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Xyp9x"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Xyp9x' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Xyp9x"id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 180.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Astralis/Xyp9x.png">
@@ -692,11 +1112,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Lekro</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Lekro"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Lekro' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Lekro" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 130.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Fnatic/Lekro.png">
@@ -705,11 +1137,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Flusha</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Flusha"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Flusha' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Flusha" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 150.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Fnatic/Flusha.png">
@@ -718,11 +1162,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Krimz</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Krimz"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Krimz' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Krimz" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 130.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Fnatic/Krimz.png">
@@ -730,11 +1186,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Golden</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Golden"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Golden' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Golden" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 80.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Fnatic/Golden.png">
@@ -743,11 +1211,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">JW</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="JW"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='JW' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="JW" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 100.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Fnatic/JW.png">
@@ -769,11 +1249,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Shox</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Shox"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Shox' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Shox" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 180.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/G2/Shox.png">
@@ -782,11 +1274,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">KennyS</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="KennyS"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='KennyS' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="KennyS" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/G2/KennyS.png">
@@ -795,11 +1299,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Apex</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Apex"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Apex' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Apex" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 150.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/G2/Apex.png">
@@ -807,11 +1323,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Bodyy</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Bodyy"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Bodyy' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Bodyy" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 120.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/G2/Bodyy.png">
@@ -820,11 +1348,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">NBK</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="NBK"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='NBK' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="NBK" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 150.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/G2/NBK.png">
@@ -846,11 +1386,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Olofmeister</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Olofmeister"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Olofmeister' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Olofmeister" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 160.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Faze/Olofmeister.png">
@@ -859,11 +1411,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Guardian</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Guardian"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Guardian' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Guardian" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Faze/Guardian.png">
@@ -872,11 +1436,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Niko</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Niko"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Niko' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Niko" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 230.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Faze/Niko.png">
@@ -884,11 +1460,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Rain</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Rain"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Rain' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Rain" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 210.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Faze/Rain.png">
@@ -897,11 +1485,23 @@ function displayAlert($text, $type)
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Karrigan</p>
                     <ul class="lastGamesMarketMobileCollapse">
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
-                        <li>NiP vs Sk <span>(+160)</span></li>
+                    <?php
+                        $stmt = $pdo->query('SELECT Team FROM players WHERE name="Karrigan"');
+                        $p = $stmt->fetch();
+                        $team = implode($p);
+
+                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
+                        $p = $stmt->fetchAll();
+
+
+                        foreach($p as $row){
+                            $id=$row['next_game_id'];
+                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='Karrigan' ORDER BY timestamp DESC LIMIT 5");
+                            $p = $stmt->fetch();
+                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
+                        }
+
+                    ?>
                     </ul>
                     <button value="Karrigan" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 80.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Faze/Karrigan.png">

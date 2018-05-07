@@ -30,6 +30,7 @@ if ($hour != null and $date != null and $teamOne != null and $teamTwo != null){
   $sql = 'INSERT INTO `next_games` (team1,team2,Date,Hour) VALUES ("'.$teamOne.'","'.$teamTwo.'","'.$date.'","'.$hour.'")';
   $stmt = $pdo->prepare($sql);
   $result = $stmt->execute();
+  echo '<script type="text/javascript">alert("Game Inserted!");</script>';
   unset($_SESSION['team1']);
   unset($_SESSION['team2']);
   unset($_SESSION['hour']);
