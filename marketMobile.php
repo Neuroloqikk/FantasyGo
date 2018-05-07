@@ -9,7 +9,11 @@ $stmt = $pdo->query("SELECT `balance` FROM `users`.`users` WHERE username='$user
 $p = $stmt->fetch();
 $balance = $p['balance'];
 
-
+if($username == null){
+    $balance="";
+    $username="Login";
+    $loginLink="signinMobile.php";
+}
 if (!empty($_GET)) {
    $playerName = $_GET["name"];
    $stmt = $pdo->query("SELECT `id`,`price`,`photo`,`team`,`team_photo`,`first_name`,`last_name` FROM `users`.`players` WHERE name='$playerName'");
@@ -112,7 +116,7 @@ function displayAlert($text, $type)
       <div class="container">
         <div class="navbar-header">
           <p class="balanceMobile"><?=$balance?></p>
-          <p class="usernameMobile"><?=$username?></p>
+          <p class="usernameMobile"><a href="<?=$loginLink?>"><?=$username?></a></p>
             <img class="menuLogoMobile" onclick="myFunction()" src="img/menu.svg">
             <div id="myDropdown" class="dropdownMobile-content">
               <a href="#">My Team</a>
@@ -121,7 +125,7 @@ function displayAlert($text, $type)
               <a href="#">Next Games</a>
               <a href="#">Last Games</a>
               <a href="#">Settings</a>
-              <a href="#">Logout</a>
+              <a href="logoutMobile.php">Logout</a>
             </div>
           <a id="logoMobile" class="navbar-brand">
             <img src="img/logo.png">
