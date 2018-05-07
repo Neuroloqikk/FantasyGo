@@ -1507,6 +1507,9 @@ input {
 
 .playerNameCollapse{
   font-size: 20px;
+  width: 30%;
+  margin-left: 9%;
+  text-align: center;
 }
 
 .lastGamesMarketMobileCollapse{

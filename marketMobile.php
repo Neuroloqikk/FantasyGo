@@ -9,6 +9,7 @@ $stmt = $pdo->query("SELECT `balance` FROM `users`.`users` WHERE username='$user
 $p = $stmt->fetch();
 $balance = $p['balance'];
 
+
 if (!empty($_GET)) {
    $playerName = $_GET["name"];
    $stmt = $pdo->query("SELECT `id`,`price`,`photo`,`team`,`team_photo`,`first_name`,`last_name` FROM `users`.`players` WHERE name='$playerName'");
@@ -144,7 +145,6 @@ function displayAlert($text, $type)
             <ul class="list-group">
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">F0rest</p>
-                <p class="playerPriceCollapse" href="#">180.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -152,13 +152,12 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="F0rest" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="F0rest" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 180.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/NiP/F0rest.png">
                 
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Get_Right</p>
-                <p class="playerPriceCollapse" href="#">180.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -166,13 +165,12 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Get_Right" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Get_Right" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 180.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/NiP/Get_Right.png">
                 
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Dennis</p>
-                <p class="playerPriceCollapse" href="#">120.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -180,12 +178,11 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Dennis" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Dennis" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 120.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/NiP/Dennis.png">
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Draken</p>
-                <p class="playerPriceCollapse" href="#">130.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -193,13 +190,12 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Draken" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Draken" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 130.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/NiP/Draken.png">
                 
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Rez</p>
-                <p class="playerPriceCollapse" href="#">130.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -207,7 +203,7 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Rez" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Rez" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 130.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/NiP/Rez.png">
                 </li>
             </ul>
@@ -229,7 +225,6 @@ function displayAlert($text, $type)
             <ul class="list-group">
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Steel</p>
-                <p class="playerPriceCollapse" href="#">120.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -237,13 +232,12 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Steel" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Steel" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 120.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Liquid/Steel.png">
                 
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Twistzz</p>
-                <p class="playerPriceCollapse" href="#">170.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -251,13 +245,12 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Twistzz" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Twistzz" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 170.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Liquid/Twistzz.png">
                 
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Elige</p>
-                <p class="playerPriceCollapse" href="#">190.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -265,12 +258,11 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Elige" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Elige" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 190.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Liquid/Elige.png">
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Nafly</p>
-                <p class="playerPriceCollapse" href="#">130.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -278,13 +270,12 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Nafly" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Nafly" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 130.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Liquid/Nafly.png">
                 
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Nitro</p>
-                <p class="playerPriceCollapse" href="#">120.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -292,7 +283,7 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Nitro" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Nitro" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 120.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Liquid/Nitro.png">
                 </li>
             </ul>
@@ -311,7 +302,6 @@ function displayAlert($text, $type)
             <ul class="list-group">
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Zeus</p>
-                <p class="playerPriceCollapse" href="#">50.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -319,13 +309,12 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Zeus" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Zeus" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 50.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Navi/Zeus.png">
                 
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">S1mple</p>
-                <p class="playerPriceCollapse" href="#">200.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -339,7 +328,6 @@ function displayAlert($text, $type)
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Flamie</p>
-                <p class="playerPriceCollapse" href="#">150.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -347,12 +335,11 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Flamie" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Flamie" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 150.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Navi/Flamie.png">
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Edward</p>
-                <p class="playerPriceCollapse" href="#">90.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -360,13 +347,12 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Edward" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Edward" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 90.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Navi/Edward.png">
                 
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Electronic</p>
-                <p class="playerPriceCollapse" href="#">150.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -374,7 +360,7 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Electronic" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Electronic" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 150.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Navi/Electronic.png">
                 </li>
             </ul>
@@ -393,7 +379,6 @@ function displayAlert($text, $type)
             <ul class="list-group">
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Styko</p>
-                <p class="playerPriceCollapse" href="#">90.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -401,13 +386,12 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Styko" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Styko" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 90.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Mousesports/Styko.png">
                 
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Chris J</p>
-                <p class="playerPriceCollapse" href="#">110.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -415,13 +399,12 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="ChrisJ" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="ChrisJ" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 110.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Mousesports/ChrisJ.png">
                 
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Sunny</p>
-                <p class="playerPriceCollapse" href="#">140.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -429,12 +412,11 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Sunny" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Sunny" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 140.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Mousesports/Sunny.png">
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Oskar</p>
-                <p class="playerPriceCollapse" href="#">170.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -442,13 +424,12 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Oskar" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Oskar" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 170.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Mousesports/Oskar.png">
                 
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Ropz</p>
-                <p class="playerPriceCollapse" href="#">140.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -456,7 +437,7 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Ropz" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Ropz" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 140.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Mousesports/Ropz.png">
                 </li>
             </ul>
@@ -475,7 +456,6 @@ function displayAlert($text, $type)
             <ul class="list-group">
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Tarik</p>
-                <p class="playerPriceCollapse" href="#">120.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -483,13 +463,12 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Tarik" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Tarik" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 120.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Cloud9/Tarik.png">
                 
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Stewie2K</p>
-                <p class="playerPriceCollapse" href="#">130.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -497,13 +476,12 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Stewie2K" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Stewie2K" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 130.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Cloud9/Stewie2K.png">
                 
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Autimatic</p>
-                <p class="playerPriceCollapse" href="#">170.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -511,12 +489,11 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Autimatic" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Autimatic" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 170.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Cloud9/Autimatic.png">
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Rush</p>
-                <p class="playerPriceCollapse" href="#">120.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -524,13 +501,12 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Rush" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Rush" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 120.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Cloud9/Rush.png">
                 
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Skadoodle</p>
-                <p class="playerPriceCollapse" href="#">130.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -538,7 +514,7 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Skadoodle" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Skadoodle" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 130.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Cloud9/Skadoodle.png">
                 </li>
             </ul>
@@ -557,7 +533,6 @@ function displayAlert($text, $type)
             <ul class="list-group">
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Coldzera</p>
-                <p class="playerPriceCollapse" href="#">250.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -565,13 +540,12 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Coldzera" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Coldzera" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 250.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/SK/Coldzera.png">
                 
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Fallen</p>
-                <p class="playerPriceCollapse" href="#">200.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -585,7 +559,6 @@ function displayAlert($text, $type)
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Taco</p>
-                <p class="playerPriceCollapse" href="#">90.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -593,12 +566,11 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Taco" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Taco" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 90.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/SK/Taco.png">
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Fer</p>
-                <p class="playerPriceCollapse" href="#">220.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -606,13 +578,12 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Fer" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Fer" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 220.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/SK/Fer.png">
                 
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Boltz</p>
-                <p class="playerPriceCollapse" href="#">160.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -620,7 +591,7 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Boltz" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Boltz" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 160.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/SK/Boltz.png">
                 </li>
             </ul>
@@ -639,7 +610,6 @@ function displayAlert($text, $type)
             <ul class="list-group">
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Dupreeh</p>
-                <p class="playerPriceCollapse" href="#">200.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -653,7 +623,6 @@ function displayAlert($text, $type)
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Device</p>
-                <p class="playerPriceCollapse" href="#">230.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -661,13 +630,12 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Device" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Device" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 230.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Astralis/Device.png">
                 
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Glaive</p>
-                <p class="playerPriceCollapse" href="#">80.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -675,12 +643,11 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Glaive" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Glaive" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 80.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Astralis/Glaive.png">
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Magisk</p>
-                <p class="playerPriceCollapse" href="#">130.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -688,13 +655,12 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Magisk" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Magisk" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 130.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Astralis/Magisk.png">
                 
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Xyp9x</p>
-                <p class="playerPriceCollapse" href="#">180.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -702,7 +668,7 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Xyp9x"id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Xyp9x"id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 180.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Astralis/Xyp9x.png">
                 </li>
             </ul>
@@ -721,7 +687,6 @@ function displayAlert($text, $type)
             <ul class="list-group">
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Lekro</p>
-                <p class="playerPriceCollapse" href="#">130.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -729,13 +694,12 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Lekro" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Lekro" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 130.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Fnatic/Lekro.png">
                 
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Flusha</p>
-                <p class="playerPriceCollapse" href="#">150.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -743,13 +707,12 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Flusha" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Flusha" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 150.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Fnatic/Flusha.png">
                 
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Krimz</p>
-                <p class="playerPriceCollapse" href="#">130.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -757,12 +720,11 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Krimz" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Krimz" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 130.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Fnatic/Krimz.png">
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Golden</p>
-                <p class="playerPriceCollapse" href="#">80.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -770,13 +732,12 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Golden" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Golden" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 80.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Fnatic/Golden.png">
                 
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">JW</p>
-                <p class="playerPriceCollapse" href="#">100.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -784,7 +745,7 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="JW" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="JW" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 100.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Fnatic/JW.png">
                 </li>
             </ul>
@@ -803,7 +764,6 @@ function displayAlert($text, $type)
             <ul class="list-group">
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Shox</p>
-                <p class="playerPriceCollapse" href="#">180.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -811,13 +771,12 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Shox" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Shox" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 180.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/G2/Shox.png">
                 
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">KennyS</p>
-                <p class="playerPriceCollapse" href="#">200.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -831,7 +790,6 @@ function displayAlert($text, $type)
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Apex</p>
-                <p class="playerPriceCollapse" href="#">150.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -839,12 +797,11 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Apex" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Apex" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 150.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/G2/Apex.png">
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Bodyy</p>
-                <p class="playerPriceCollapse" href="#">120.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -852,13 +809,12 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Bodyy" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Bodyy" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 120.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/G2/Bodyy.png">
                 
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">NBK</p>
-                <p class="playerPriceCollapse" href="#">150.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -866,7 +822,7 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="NBK" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="NBK" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 150.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/G2/NBK.png">
                 </li>
             </ul>
@@ -885,7 +841,6 @@ function displayAlert($text, $type)
             <ul class="list-group">
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Olofmeister</p>
-                <p class="playerPriceCollapse" href="#">160.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -893,13 +848,12 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Olofmeister" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Olofmeister" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 160.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Faze/Olofmeister.png">
                 
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Guardian</p>
-                <p class="playerPriceCollapse" href="#">200.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -913,7 +867,6 @@ function displayAlert($text, $type)
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Niko</p>
-                <p class="playerPriceCollapse" href="#">230.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -921,12 +874,11 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Niko" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Niko" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 230.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Faze/Niko.png">
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Rain</p>
-                <p class="playerPriceCollapse" href="#">210.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -934,13 +886,12 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Rain" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Rain" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 210.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Faze/Rain.png">
                 
                 </li>
                 <li class="list-group-item">
                 <p class="playerNameCollapse" href="#">Karrigan</p>
-                <p class="playerPriceCollapse" href="#">80.000$</p>
                     <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
@@ -948,7 +899,7 @@ function displayAlert($text, $type)
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button value="Karrigan" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Karrigan" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 80.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/Faze/Karrigan.png">
                 </li>
             </ul>
