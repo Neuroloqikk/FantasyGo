@@ -110,7 +110,7 @@ function displayAlert($text, $type)
     <nav class="navbar navbar-default navbar-static-top">
       <div class="container">
         <div class="navbar-header">
-          <p class="balanceMobile"><?=$balance?>$</p>
+          <p class="balanceMobile"><?=$balance?></p>
           <p class="usernameMobile"><?=$username?></p>
             <img class="menuLogoMobile" onclick="myFunction()" src="img/menu.svg">
             <div id="myDropdown" class="dropdownMobile-content">
@@ -133,316 +133,828 @@ function displayAlert($text, $type)
             <p> Welcome to the market!</p>
             <p> Here you can buy players to join your team.</p>
         </div>
-        <div id="dropdownMarketMobile" class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">NiP
-            <span class="caret"></span></button>
-            <ul id="dropdown-menuMarketMobile" class="dropdown-menu">
-                <div class="playerMarketMobile">
-                    <li class="playerNameMobile"><a href="#">F0rest&nbsp;&nbsp;&nbsp;&nbsp;200.000$</a>
-                    <ul class="lastGamesMarketMobile">
+        <div class="panel-group col-xs-10 col-xs-offset-1 col-xs-offset-right-1">
+        <div class="panel panel-default">
+            <div id="panel-heading-market" class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapse1">NiP</a>
+            </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse">
+            <ul class="list-group">
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">F0rest</p>
+                <p class="playerPriceCollapse" href="#">180.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button id="btnMarketMobile" class="btn btn-success" type="button">Buy for 200.000$?</button>
-                    <img id="marketImgMobile" src="img/NiP/F0rest.png"></li>
-                </div>
-                <div class="playerMarketMobile">
-                    <li class="playerNameMobile"><a href="#">F0rest&nbsp;&nbsp;&nbsp;&nbsp;200.000$</a>
-                    <ul class="lastGamesMarketMobile">
+                    <button value="F0rest" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/NiP/F0rest.png">
+                
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Get_Right</p>
+                <p class="playerPriceCollapse" href="#">180.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button id="btnMarketMobile" class="btn btn-success" type="button">Buy for 200.000$?</button>
-                    <img id="marketImgMobile" src="img/NiP/Dennis.png"></li>
-                </div>
-                <div class="playerMarketMobile">
-                    <li class="playerNameMobile"><a href="#">F0rest&nbsp;&nbsp;&nbsp;&nbsp;200.000$</a>
-                    <ul class="lastGamesMarketMobile">
+                    <button value="Get_Right" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/NiP/Get_Right.png">
+                
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Dennis</p>
+                <p class="playerPriceCollapse" href="#">120.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button id="btnMarketMobile" class="btn btn-success" type="button">Buy for 200.000$?</button>
-                    <img id="marketImgMobile" src="img/NiP/Get_Right.png"></li>
-                </div>
-                <div class="playerMarketMobile">
-                    <li class="playerNameMobile"><a href="#">F0rest&nbsp;&nbsp;&nbsp;&nbsp;200.000$</a>
-                    <ul class="lastGamesMarketMobile">
+                    <button value="Dennis" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/NiP/Dennis.png">
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Draken</p>
+                <p class="playerPriceCollapse" href="#">130.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button id="btnMarketMobile" class="btn btn-success" type="button">Buy for 200.000$?</button>
-                    <img id="marketImgMobile" src="img/NiP/Draken.png"></li>
-                </div>
-                <div class="playerMarketMobile">
-                    <li class="playerNameMobile"><a href="#">F0rest&nbsp;&nbsp;&nbsp;&nbsp;200.000$</a>
-                    <ul class="lastGamesMarketMobile">
+                    <button value="Draken" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/NiP/Draken.png">
+                
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Rez</p>
+                <p class="playerPriceCollapse" href="#">130.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                         <li>NiP vs Sk <span>(+160)</span></li>
                     </ul>
-                    <button id="btnMarketMobile" class="btn btn-success" type="button">Buy for 200.000$?</button>
-                    <img id="marketImgMobile" src="img/NiP/Rez.png"></li>
-                </div>
+                    <button value="Rez" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/NiP/Rez.png">
+                </li>
             </ul>
+            </div>
         </div>
-        <!-- Modal -->
-<!--
-        <div class="modal fade" id="myModal" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Player Profile<br>
-                            <?= $balance ?>$</h4>
-                    </div>
-                    <div class="modal-body">
-                        <div class="marketModalPlayer">
-                            <img id="playerPhoto" src="img<?= $player_photo ?>" style="background: url(img<?= $team_photo ?>);">
-                            <div class="marketModalName">
-                                <h2>
-                                    <?= $first_name ?> "
-                                        <?= $playerName ?>"
-                                            <?= $last_name ?>
-                                </h2>
-                            </div>
-                            <div class="marketModalTableL">
-                                <table class="table table-condensed">
-                                    <thead>
-                                        <tr>
-                                            <th>Last Games</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>NiP vs SK</td>
-                                            <td>16-10</td>
-                                            <td>+20</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NiP vs SK</td>
-                                            <td>16-10</td>
-                                            <td>+20</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NiP vs SK</td>
-                                            <td>16-10</td>
-                                            <td>+20</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NiP vs SK</td>
-                                            <td>16-10</td>
-                                            <td>+20</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="marketModalTableN">
-                                <table class="table table-condensed">
-                                    <thead>
-                                        <tr>
-                                            <th>Next Games</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>NiP vs SK</td>
-                                            <td>17/03/2018</td>
-                                            <td>17:30</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NiP vs SK</td>
-                                            <td>17/03/2018</td>
-                                            <td>17:30</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NiP vs SK</td>
-                                            <td>17/03/2018</td>
-                                            <td>17:30</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NiP vs SK</td>
-                                            <td>17/03/2018</td>
-                                            <td>17:30</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-success" id="<?=$id?>" onClick="buyButton(this)" <?=$buy?>>Buy for <?= $price ?>$</button>
-                    </div>
-                </div>
-            </div>
-        </div>-->
-        <!--
-        <div class="marketGrid">
-            <div class="nipContainer">
-                <ul id="nipList">
+        </div>
+        
 
-                    <li><a href="#" id="F0rest" onClick="idPlayer(this)"><span>F0rest&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $180.000<span></a></li>
-                    <li><a href="#" id="Get_Right" onClick="idPlayer(this)"><span>Get_Right&nbsp;| $180.000<span></a></li>
-                    <li><a href="#" id="Dennis" onClick="idPlayer(this)"><span>Dennis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $120.000<span></a></li>
-                    <li><a href="#" id="Draken" onClick="idPlayer(this)"><span>Draken&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $130.000<span></a></li>
-                    <li><a href="#" id="Rez" onClick="idPlayer(this)"><span>Rez&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $130.000<span></a></li>
-                </ul>
-                <div class="marketTeam" id="nip">
-                    <div class="nipLogo">
-                        <h3 class="teamName">NiP</h3>
-                        <img src="img/NiP/NiP.svg" />
-                    </div>
-                </div>
 
+        
+        <div class="panel-group col-xs-10 col-xs-offset-1 col-xs-offset-right-1">
+        <div class="panel panel-default">
+            <div id="panel-heading-market" class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapse2">Team Liquid</a>
+            </h4>
             </div>
-            <div class="liquidContainer">
-                <ul id="liquidList">
-                    <li><a href="#" id="Steel" onClick="idPlayer(this)"><span>Steel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $120.000<span></a></li>
-                    <li><a href="#" id="Twistzz" onClick="idPlayer(this)"><span>Twistzz&nbsp;| $170.000<span></a></li>
-                    <li><a href="#" id="Elige" onClick="idPlayer(this)"><span>Elige&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $190.000<span></a></li>
-                    <li><a href="#" id="Nafly" onClick="idPlayer(this)"><span>Nafly&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $130.000<span></a></li>
-                    <li><a href="#" id="Nitro" onClick="idPlayer(this)"><span>Nitro&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $120.000<span></a></li>
-                </ul>
-                <div class="marketTeam">
-                    <div class="liquidLogo">
-                        <h3 class="teamName">Liquid</h3>
-                        <img src="img/Liquid/Liquid.svg" />
-                    </div>
-                </div>
+            <div id="collapse2" class="panel-collapse collapse">
+            <ul class="list-group">
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Steel</p>
+                <p class="playerPriceCollapse" href="#">120.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Steel" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Liquid/Steel.png">
+                
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Twistzz</p>
+                <p class="playerPriceCollapse" href="#">170.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Twistzz" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Liquid/Twistzz.png">
+                
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Elige</p>
+                <p class="playerPriceCollapse" href="#">190.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Elige" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Liquid/Elige.png">
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Nafly</p>
+                <p class="playerPriceCollapse" href="#">130.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Nafly" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Liquid/Nafly.png">
+                
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Nitro</p>
+                <p class="playerPriceCollapse" href="#">120.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Nitro" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Liquid/Nitro.png">
+                </li>
+            </ul>
             </div>
-            <div class="naviContainer">
-                <ul id="naviList">
-                    <li><a href="#" id="Zeus" onClick="idPlayer(this)"><span>Zeus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $50.000<span></a></li>
-                    <li><a href="#" id="S1mple" onClick="idPlayer(this)"><span>S1mple&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $200.000<span></a></li>
-                    <li><a href="#" id="Flamie" onClick="idPlayer(this)"><span>Flamie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $150.000<span></a></li>
-                    <li><a href="#" id="Edward" onClick="idPlayer(this)"><span>Edward&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $90.000<span></a></li>
-                    <li><a href="#" id="Electronic" onClick="idPlayer(this)"><span>Electronic&nbsp;| $150.000<span></a></li>
-                </ul>
-                <div class="marketTeam">
-                    <div class="naviLogo">
-                        <h3 class="teamName">Navi</h3>
-                        <img src="img/Navi/Navi.svg" />
-                    </div>
-                </div>
+        </div>
+        </div>
+
+        <div class="panel-group col-xs-10 col-xs-offset-1 col-xs-offset-right-1">
+        <div class="panel panel-default">
+            <div id="panel-heading-market" class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapse3">Na'vi</a>
+            </h4>
             </div>
-            <div class="mouseContainer">
-                <ul id="mouseList">
-                    <li><a href="#" id="Styko" onClick="idPlayer(this)"><span>Styko&nbsp;&nbsp;&nbsp;| $90.000<span></a></li>
-                    <li><a href="#" id="ChrisJ" onClick="idPlayer(this)"><span>Chris J&nbsp;| $110.000<span></a></li>
-                    <li><a href="#" id="Sunny" onClick="idPlayer(this)"><span>Sunny&nbsp;&nbsp;| $140.000<span></a></li>
-                    <li><a href="#" id="Oskar" onClick="idPlayer(this)"><span>Oskar&nbsp;&nbsp;&nbsp;| $170.000<span></a></li>
-                    <li><a href="#" id="Ropz" onClick="idPlayer(this)"><span>Ropz&nbsp;&nbsp;&nbsp;&nbsp;| $140.000<span></a></li>
-                </ul>
-                <div class="marketTeam">
-                    <div class="mouseLogo">
-                        <h3 class="teamName">Mousesports</h3>
-                        <img src="img/Mousesports/Mousesports.svg" />
-                    </div>
-                </div>
+            <div id="collapse3" class="panel-collapse collapse">
+            <ul class="list-group">
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Zeus</p>
+                <p class="playerPriceCollapse" href="#">50.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Zeus" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Navi/Zeus.png">
+                
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">S1mple</p>
+                <p class="playerPriceCollapse" href="#">200.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="S1mple" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Navi/S1mple.png">
+                
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Flamie</p>
+                <p class="playerPriceCollapse" href="#">150.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Flamie" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Navi/Flamie.png">
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Edward</p>
+                <p class="playerPriceCollapse" href="#">90.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Edward" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Navi/Edward.png">
+                
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Electronic</p>
+                <p class="playerPriceCollapse" href="#">150.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Electronic" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Navi/Electronic.png">
+                </li>
+            </ul>
             </div>
-            <div class="cloud9Container">
-                <ul id="cloud9List">
-                    <li><a href="#" id="Tarik" onClick="idPlayer(this)"><span>Tarik&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $120.000<span></a></li>
-                    <li><a href="#" id="Stewie2K" onClick="idPlayer(this)"><span>Stewie2K&nbsp;&nbsp;| $130.000<span></a></li>
-                    <li><a href="#" id="Autimatic" onClick="idPlayer(this)"><span>Autimatic&nbsp;&nbsp;| $170.000<span></a></li>
-                    <li><a href="#" id="Rush" onClick="idPlayer(this)"><span>Rush&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $120.000<span></a></li>
-                    <li><a href="#" id="Skadoodle" onClick="idPlayer(this)"><span>Skadoodle&nbsp;| $130.000<span></a></li>
-                </ul>
-                <div class="marketTeam">
-                    <div class="cloud9Logo">
-                        <h3 class="teamName">Cloud9</h3>
-                        <img src="img/Cloud9/Cloud9.svg" />
-                    </div>
-                </div>
+        </div>
+        </div>
+
+        <div class="panel-group col-xs-10 col-xs-offset-1 col-xs-offset-right-1">
+        <div class="panel panel-default">
+            <div id="panel-heading-market" class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapse4">Mousesports</a>
+            </h4>
             </div>
-            <div class="skContainer">
-                <ul id="skList">
-                    <li><a href="#" id="Coldzera" onClick="idPlayer(this)"><span>Coldzera&nbsp;| $250.000<span></a></li>
-                    <li><a href="#" id="Fallen" onClick="idPlayer(this)"><span>Fallen&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $200.000<span></a></li>
-                    <li><a href="#" id="Taco" onClick="idPlayer(this)"><span>Taco&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $90.000<span></a></li>
-                    <li><a href="#" id="Fer" onClick="idPlayer(this)"><span>Fer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $220.000<span></a></li>
-                    <li><a href="#" id="Boltz" onClick="idPlayer(this)"><span>Boltz&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $160.000<span></a></li>
-                </ul>
-                <div class="marketTeam">
-                    <div class="skLogo">
-                        <h3 class="teamName">SK</h3>
-                        <img src="img/SK/SK.svg" />
-                    </div>
-                </div>
+            <div id="collapse4" class="panel-collapse collapse">
+            <ul class="list-group">
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Styko</p>
+                <p class="playerPriceCollapse" href="#">90.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Styko" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Mousesports/Styko.png">
+                
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Chris J</p>
+                <p class="playerPriceCollapse" href="#">110.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="ChrisJ" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Mousesports/ChrisJ.png">
+                
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Sunny</p>
+                <p class="playerPriceCollapse" href="#">140.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Sunny" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Mousesports/Sunny.png">
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Oskar</p>
+                <p class="playerPriceCollapse" href="#">170.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Oskar" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Mousesports/Oskar.png">
+                
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Ropz</p>
+                <p class="playerPriceCollapse" href="#">140.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Ropz" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Mousesports/Ropz.png">
+                </li>
+            </ul>
             </div>
-            <div class="astralisContainer">
-                <ul id="astralisList">
-                    <li><a href="#" id="Dupreeh" onClick="idPlayer(this)"><span>Dupreeh&nbsp;| $200.000<span></a></li>
-                    <li><a href="#" id="Device" onClick="idPlayer(this)"><span>Device&nbsp;&nbsp;&nbsp;&nbsp;| $230.000<span></a></li>
-                    <li><a href="#" id="Glaive" onClick="idPlayer(this)"><span>Glaive&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $80.000<span></a></li>
-                    <li><a href="#" id="Magisk" onClick="idPlayer(this)"><span>Magisk&nbsp;&nbsp;&nbsp;&nbsp;| $130.000<span></a></li>
-                    <li><a href="#" id="Xyp9x" onClick="idPlayer(this)"><span>Xyp9x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $180.000<span></a></li>
-                </ul>
-                <div class="marketTeam">
-                    <div class="astralisLogo">
-                        <h3 class="teamName">Astralis</h3>
-                        <img src="img/Astralis/Astralis.svg" />
-                    </div>
-                </div>
+        </div>
+        </div>
+
+        <div class="panel-group col-xs-10 col-xs-offset-1 col-xs-offset-right-1">
+        <div class="panel panel-default">
+            <div id="panel-heading-market" class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapse5">Cloud 9</a>
+            </h4>
             </div>
-            <div class="fnaticContainer">
-                <ul id="fnaticList">
-                    <li><a href="#" id="Lekro" onClick="idPlayer(this)"><span>Lekro&nbsp;&nbsp;&nbsp;| $130.000<span></a></li>
-                    <li><a href="#" id="Flusha" onClick="idPlayer(this)"><span>Flusha&nbsp;| $150.000<span></a></li>
-                    <li><a href="#" id="Krimz" onClick="idPlayer(this)"><span>Krimz&nbsp;&nbsp;&nbsp;| $130.000<span></a></li>
-                    <li><a href="#" id="Golden" onClick="idPlayer(this)"><span>Golden&nbsp;| $80.000<span></a></li>
-                    <li><a href="#" id="JW" onClick="idPlayer(this)"><span>JW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $100.000<span></a></li>
-                </ul>
-                <div class="marketTeam">
-                    <div class="fnaticLogo">
-                        <h3 class="teamName">Fnatic</h3>
-                        <img src="img/Fnatic/Fnatic.svg" />
-                    </div>
-                </div>
+            <div id="collapse5" class="panel-collapse collapse">
+            <ul class="list-group">
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Tarik</p>
+                <p class="playerPriceCollapse" href="#">120.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Tarik" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Cloud9/Tarik.png">
+                
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Stewie2K</p>
+                <p class="playerPriceCollapse" href="#">130.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Stewie2K" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Cloud9/Stewie2K.png">
+                
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Autimatic</p>
+                <p class="playerPriceCollapse" href="#">170.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Autimatic" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Cloud9/Autimatic.png">
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Rush</p>
+                <p class="playerPriceCollapse" href="#">120.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Rush" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Cloud9/Rush.png">
+                
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Skadoodle</p>
+                <p class="playerPriceCollapse" href="#">130.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Skadoodle" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Cloud9/Skadoodle.png">
+                </li>
+            </ul>
             </div>
-            <div class="g2Container">
-                <ul id="g2List">
-                    <li><a href="#" id="Shox" onClick="idPlayer(this)"><span>Shox&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $180.000<span></a></li>
-                    <li><a href="#" id="KennyS" onClick="idPlayer(this)"><span>KennyS&nbsp;| $200.000<span></a></li>
-                    <li><a href="#" id="Apex" onClick="idPlayer(this)"><span>Apex&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $150.000<span></a></li>
-                    <li><a href="#" id="Bodyy" onClick="idPlayer(this)"><span>Bodyy&nbsp;&nbsp;&nbsp;&nbsp;| $120.000<span></a></li>
-                    <li><a href="#" id="NBK" onClick="idPlayer(this)"><span>NBK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $150.000<span></a></li>
-                </ul>
-                <div class="marketTeam">
-                    <div class="g2Logo">
-                        <h3 class="teamName">G2</h3>
-                        <img src="img/G2/G2.svg" />
-                    </div>
-                </div>
+        </div>
+        </div>
+
+        <div class="panel-group col-xs-10 col-xs-offset-1 col-xs-offset-right-1">
+        <div class="panel panel-default">
+            <div id="panel-heading-market" class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapse6">SK</a>
+            </h4>
             </div>
-            <div class="fazeContainer">
-                <ul id="fazeList">
-                    <li><a href="#" id="Olofmeister" onClick="idPlayer(this)"><span>Olofmeister&nbsp;| $160.000<span></a></li>
-                    <li><a href="#" id="Guardian" onClick="idPlayer(this)"><span>Guardian&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $200.000<span></a></li>
-                    <li><a href="#" id="Niko" onClick="idPlayer(this)"><span>Niko&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $230.000<span></a></li>
-                    <li><a href="#" id="Rain" onClick="idPlayer(this)"><span>Rain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $210.000<span></a></li>
-                    <li><a href="#" id="Karrigan" onClick="idPlayer(this)"><span>Karrigan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $8s0.000<span></a></li>
-                </ul>
-                <div class="marketTeam">
-                    <div class="fazeLogo">
-                        <h3 class="teamName">Faze</h3>
-                        <img src="img/Faze/Faze.svg" />
-                    </div>
-                </div>
+            <div id="collapse6" class="panel-collapse collapse">
+            <ul class="list-group">
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Coldzera</p>
+                <p class="playerPriceCollapse" href="#">250.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Coldzera" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/SK/Coldzera.png">
+                
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Fallen</p>
+                <p class="playerPriceCollapse" href="#">200.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Fallen" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/SK/Fallen.png">
+                
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Taco</p>
+                <p class="playerPriceCollapse" href="#">90.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Taco" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/SK/Taco.png">
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Fer</p>
+                <p class="playerPriceCollapse" href="#">220.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Fer" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/SK/Fer.png">
+                
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Boltz</p>
+                <p class="playerPriceCollapse" href="#">160.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Boltz" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/SK/Boltz.png">
+                </li>
+            </ul>
             </div>
-        </div>-->
+        </div>
+        </div>
+
+        <div class="panel-group col-xs-10 col-xs-offset-1 col-xs-offset-right-1">
+        <div class="panel panel-default">
+            <div id="panel-heading-market" class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapse7">Astralis</a>
+            </h4>
+            </div>
+            <div id="collapse7" class="panel-collapse collapse">
+            <ul class="list-group">
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Dupreeh</p>
+                <p class="playerPriceCollapse" href="#">200.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Dupreeh" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Astralis/Dupreeh.png">
+                
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Device</p>
+                <p class="playerPriceCollapse" href="#">230.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Device" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Astralis/Device.png">
+                
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Glaive</p>
+                <p class="playerPriceCollapse" href="#">80.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Glaive" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Astralis/Glaive.png">
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Magisk</p>
+                <p class="playerPriceCollapse" href="#">130.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Magisk" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Astralis/Magisk.png">
+                
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Xyp9x</p>
+                <p class="playerPriceCollapse" href="#">180.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Xyp9x"id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Astralis/Xyp9x.png">
+                </li>
+            </ul>
+            </div>
+        </div>
+        </div>
+
+        <div class="panel-group col-xs-10 col-xs-offset-1 col-xs-offset-right-1">
+        <div class="panel panel-default">
+            <div id="panel-heading-market" class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapse8">Fnatic</a>
+            </h4>
+            </div>
+            <div id="collapse8" class="panel-collapse collapse">
+            <ul class="list-group">
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Lekro</p>
+                <p class="playerPriceCollapse" href="#">130.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Lekro" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Fnatic/Lekro.png">
+                
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Flusha</p>
+                <p class="playerPriceCollapse" href="#">150.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Flusha" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Fnatic/Flusha.png">
+                
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Krimz</p>
+                <p class="playerPriceCollapse" href="#">130.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Krimz" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Fnatic/Krimz.png">
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Golden</p>
+                <p class="playerPriceCollapse" href="#">80.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Golden" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Fnatic/Golden.png">
+                
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">JW</p>
+                <p class="playerPriceCollapse" href="#">100.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="JW" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Fnatic/JW.png">
+                </li>
+            </ul>
+            </div>
+        </div>
+        </div>
+
+        <div class="panel-group col-xs-10 col-xs-offset-1 col-xs-offset-right-1">
+        <div class="panel panel-default">
+            <div id="panel-heading-market" class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapse9">G2</a>
+            </h4>
+            </div>
+            <div id="collapse9" class="panel-collapse collapse">
+            <ul class="list-group">
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Shox</p>
+                <p class="playerPriceCollapse" href="#">180.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Shox" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/G2/Shox.png">
+                
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">KennyS</p>
+                <p class="playerPriceCollapse" href="#">200.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="KennyS" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/G2/KennyS.png">
+                
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Apex</p>
+                <p class="playerPriceCollapse" href="#">150.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Apex" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/G2/Apex.png">
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Bodyy</p>
+                <p class="playerPriceCollapse" href="#">120.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Bodyy" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/G2/Bodyy.png">
+                
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">NBK</p>
+                <p class="playerPriceCollapse" href="#">150.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="NBK" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/G2/NBK.png">
+                </li>
+            </ul>
+            </div>
+        </div>
+        </div>
+
+        <div class="panel-group col-xs-10 col-xs-offset-1 col-xs-offset-right-1">
+        <div class="panel panel-default">
+            <div id="panel-heading-market" class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapse10">Faze</a>
+            </h4>
+            </div>
+            <div id="collapse10" class="panel-collapse collapse">
+            <ul class="list-group">
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Olofmeister</p>
+                <p class="playerPriceCollapse" href="#">160.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Olofmeister" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Faze/Olofmeister.png">
+                
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Guardian</p>
+                <p class="playerPriceCollapse" href="#">200.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Guardian" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Faze/Guardian.png">
+                
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Niko</p>
+                <p class="playerPriceCollapse" href="#">230.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Niko" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Faze/Niko.png">
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Rain</p>
+                <p class="playerPriceCollapse" href="#">210.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Rain" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Faze/Rain.png">
+                
+                </li>
+                <li class="list-group-item">
+                <p class="playerNameCollapse" href="#">Karrigan</p>
+                <p class="playerPriceCollapse" href="#">80.000$</p>
+                    <ul class="lastGamesMarketMobileCollapse">
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                        <li>NiP vs Sk <span>(+160)</span></li>
+                    </ul>
+                    <button value="Karrigan" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <img id="marketImgMobileCollapse" src="img/Faze/Karrigan.png">
+                </li>
+            </ul>
+            </div>
+        </div>
+        </div>
         <script>
             function idPlayer(elem) {
                 var name = elem.id;

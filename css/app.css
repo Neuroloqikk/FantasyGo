@@ -1430,17 +1430,18 @@ input {
   margin-top:-19%;
 }
 .usernameMobile{
-  margin-left: 39%;
+  margin-left: 33%;
   margin-top: 10%;
   margin-right: 35%;
   font-weight: 600;
+  text-align: center;
 }
 
 #logoMobile{
-  margin-top: -19%;
-    margin-right: 80%;
-    width: 20%;
-    margin-left: 20;
+  margin-top: -17%;
+  margin-right: 80%;
+  width: 20%;
+  margin-left: 20;
 }
 
 .dropbtnMobile {
@@ -1497,3 +1498,38 @@ input {
   margin-left: 3%;
   margin-top: -19%;
 }
+
+.playerPriceCollapse{
+  margin-left: 23%;
+  margin-top: -13%;
+  font-size: 20px;
+}
+
+.playerNameCollapse{
+  font-size: 20px;
+}
+
+.lastGamesMarketMobileCollapse{
+  text-decoration: none;
+  list-style: none;
+  margin-left: -6%;
+}
+
+#btnMarketMobileCollapse{
+  width: 48%;
+  margin-top: 5%;
+  margin-left: 2%;
+}
+
+#marketImgMobileCollapse{
+  height: 20%;
+  margin-left: 50%;
+  margin-top: -65%;
+}
+.lastGamesMarketMobileCollapse span{
+  color:green;
+}
+
+#panel-heading-market{
+  text-align:center;
+} 

@@ -441,7 +441,7 @@ function displayAlert($text, $type)
                     <li><a href="#" id="Guardian" onClick="idPlayer(this)"><span>Guardian&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $200.000<span></a></li>
                     <li><a href="#" id="Niko" onClick="idPlayer(this)"><span>Niko&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $230.000<span></a></li>
                     <li><a href="#" id="Rain" onClick="idPlayer(this)"><span>Rain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $210.000<span></a></li>
-                    <li><a href="#" id="Karrigan" onClick="idPlayer(this)"><span>Karrigan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $8s0.000<span></a></li>
+                    <li><a href="#" id="Karrigan" onClick="idPlayer(this)"><span>Karrigan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $80.000<span></a></li>
                 </ul>
                 <div class="marketTeam">
                     <div class="fazeLogo">
