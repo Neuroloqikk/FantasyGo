@@ -70,20 +70,19 @@ else {
         http://www.neuroloq1kk.me/FantasyGo/verify.php?email=' . $email . '&hash=' . $hash . '.'
       ));
       displayAlert("An email was sent to your email, check it in order to verify your account!", "warning");
-      break;
+      exit;
     }
     else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       displayAlert("Please type a valid email!", "warning");
-      break;
+      exit;
     }
-
     else if ($row['num'] > 0) {
       displayAlert("That username already exists!", "warning");
-      break;
+      exit;
     }
     else if($pass == $passVerify){
       displayAlert("Please verify your password!", "warning");
-      break;
+      exit;
     }
   }
 }
