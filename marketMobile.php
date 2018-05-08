@@ -1513,15 +1513,15 @@ function displayAlert($text, $type)
         <script>
             function idPlayer(elem) {
                 var name = elem.id;
-                window.location.href="market.php?name=" + name;
+                window.location.href="marketMobile.php?name=" + name;
 
             }
             function buyButton(id) {
                 var buy = id.id;
                 if (confirm("Are you sure you wanna buy this player?")) {
-                    window.location.href="market.php?buy=" + buy;
+                    window.location.href="marketMobile.php?buy=" + buy;
                 } else {
-                    window.location.href = "market.php";
+                    window.location.href = "marketMobile.php";
                 }
             }
         </script>
