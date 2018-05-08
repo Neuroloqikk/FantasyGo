@@ -8,7 +8,11 @@ $username = $_SESSION["username"];
 $stmt = $pdo->query("SELECT `balance` FROM `users`.`users` WHERE username='$username'");
 $p = $stmt->fetch();
 $balance = $p['balance'];
-
+if($username == null){
+    $balance="";
+    $username="Login";
+    $loginLink="signinMobile.php";
+}
 if (!empty($_GET)) {
    $playerName = $_GET["name"];
    $stmt = $pdo->query("SELECT `id`,`price`,`photo`,`team`,`team_photo`,`first_name`,`last_name` FROM `users`.`players` WHERE name='$playerName'");
@@ -19,7 +23,7 @@ if (!empty($_GET)) {
    $player_photo = $t['photo'];
    $team_photo = $t['team_photo'];
    $price = $t['price'];
-   if ($_GET['buy'] != NULL) {
+   if ($_GET['buy'] != NULL and $username != null) {
       $id = $_GET['buy'];
       $stmt = $pdo->query("SELECT `balance` FROM `users`.`users` WHERE username='$username'");
       $p = $stmt->fetch();
