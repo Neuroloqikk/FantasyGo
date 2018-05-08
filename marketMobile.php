@@ -83,10 +83,11 @@ if (!empty($_GET)) {
          displayAlert("You already have five players!", "danger");
       }
    }
-}
-else{
+   else{
     displayAlert("Please Login!", "danger");
 }
+}
+
 function displayAlert($text, $type)
 {
    echo "<div class=\"alert alert-" . $type . "\" role=\"alert\">
