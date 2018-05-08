@@ -84,7 +84,7 @@ if (!empty($_GET)) {
       }
    }
 }
-else{
+else if(!isset($_GET) AND $username == null){
     displayAlert("Please Login!", "danger");
 }
 function displayAlert($text, $type)
