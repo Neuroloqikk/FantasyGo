@@ -1710,3 +1710,7 @@ input {
       margin-top: -35%;
   }
 }
+.panel-group{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
