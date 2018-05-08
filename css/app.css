@@ -2233,7 +2233,7 @@ input {
       margin-top: -35%;
   }
 }
-@media (min-width: 480px) and (max-width: 500px) {
+@media (min-width: 380px) and (max-width: 410px) {
   .menuLogoMobile{
     width: 20%;
       float: right;
