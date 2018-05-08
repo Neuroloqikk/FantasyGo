@@ -1516,7 +1516,7 @@ function displayAlert($text, $type)
 
             }
             function buyButton(id) {
-                var buy = id.id;
+                var buy = id.value;
                 if (confirm("Are you sure you wanna buy this player?")) {
                     window.location.href="marketMobile.php?buy=" + buy;
                 } else {
