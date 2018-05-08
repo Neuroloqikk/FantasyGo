@@ -168,7 +168,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="F0rest" id="btnMarketMobileCollapse" class="btn btn-success" type="button" onClick="buyButton(this)">Buy for 180.000$?</button>
+                    <button value="F0rest" id="btnMarketMobileCollapse" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 180.000$?</button>
                     <img id="marketImgMobileCollapse" src="img/NiP/F0rest.png">
                 
                 </li>
