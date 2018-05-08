@@ -123,9 +123,9 @@ function displayAlert($text,$type)
       <form class="form-signin" method ="POST">
         <h2 class="form-signin-heading">Register now and build your team right away!</h2>
         <input id="passText" type="text" class="form-control" name="email" placeholder="Email Address" required="" autofocus="" />
-        <input id="passText" type="text" class="form-control" name="username" placeholder="Username" required="" autofocus="" />
+        <input id="dsad" type="text" class="form-control" name="username" placeholder="Username" required="" autofocus="" />
         <input id="passLanding" type="password" class="form-control" name="password" placeholder="Password" required=""/>
-        <input id="passLanding" type="password" class="form-control" name="password-repeat" placeholder="Password" required=""/>
+        <input id="fsaf" type="password" class="form-control" name="password-repeat" placeholder="Password" required=""/>
         <p>Already have an account? <a href="signin.php" style="color:dodgerblue">Login</a></p>
         <button id="btnLanding" class="btn btn-lg btn-primary btn-block" type="submit" value ="Register" name="register">Create Account</button>
       </form>
