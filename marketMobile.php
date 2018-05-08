@@ -25,6 +25,7 @@ if (!empty($_GET)) {
    $team_photo = $t['team_photo'];
    $price = $t['price'];
    if ($_GET['buy'] != NULL and $username != null) {
+       var_dump($username);
       $id = $_GET['buy'];
       $stmt = $pdo->query("SELECT `balance` FROM `users`.`users` WHERE username='$username'");
       $p = $stmt->fetch();
