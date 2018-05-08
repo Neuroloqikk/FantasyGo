@@ -168,7 +168,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="F0rest" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 180.000$?</button>
+                    <button value="F0rest" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 180.000$</button>
                     <img id="marketImgMobileCollapse" src="img/NiP/F0rest.png">
                 
                 </li>
@@ -193,7 +193,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Get_Right" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 180.000$?</button>
+                    <button value="Get_Right" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 180.000$</button>
                     <img id="marketImgMobileCollapse" src="img/NiP/Get_Right.png">
                 
                 </li>
@@ -218,7 +218,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Dennis" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 120.000$?</button>
+                    <button value="Dennis" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 120.000$</button>
                     <img id="marketImgMobileCollapse" src="img/NiP/Dennis.png">
                 </li>
                 <li class="list-group-item">
@@ -242,7 +242,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Draken" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 130.000$?</button>
+                    <button value="Draken" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 130.000$</button>
                     <img id="marketImgMobileCollapse" src="img/NiP/Draken.png">
                 
                 </li>
@@ -267,7 +267,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Rez" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 130.000$?</button>
+                    <button value="Rez" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 130.000$</button>
                     <img id="marketImgMobileCollapse" src="img/NiP/Rez.png">
                 </li>
             </ul>
@@ -308,7 +308,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Steel" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 120.000$?</button>
+                    <button value="Steel" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 120.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Liquid/Steel.png">
                 
                 </li>
@@ -333,7 +333,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Twistzz" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 170.000$?</button>
+                    <button value="Twistzz" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 170.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Liquid/Twistzz.png">
                 
                 </li>
@@ -358,7 +358,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Elige" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 190.000$?</button>
+                    <button value="Elige" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 190.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Liquid/Elige.png">
                 </li>
                 <li class="list-group-item">
@@ -382,7 +382,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Nafly" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 130.000$?</button>
+                    <button value="Nafly" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 130.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Liquid/Nafly.png">
                 
                 </li>
@@ -407,7 +407,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Nitro" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 120.000$?</button>
+                    <button value="Nitro" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 120.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Liquid/Nitro.png">
                 </li>
             </ul>
@@ -445,7 +445,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Zeus" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 50.000$?</button>
+                    <button value="Zeus" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 50.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Navi/Zeus.png">
                 
                 </li>
@@ -470,7 +470,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="S1mple" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="S1mple" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 200.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Navi/S1mple.png">
                 
                 </li>
@@ -495,7 +495,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Flamie" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 150.000$?</button>
+                    <button value="Flamie" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 150.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Navi/Flamie.png">
                 </li>
                 <li class="list-group-item">
@@ -519,7 +519,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Edward" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 90.000$?</button>
+                    <button value="Edward" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 90.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Navi/Edward.png">
                 
                 </li>
@@ -544,7 +544,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Electronic" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 150.000$?</button>
+                    <button value="Electronic" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 150.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Navi/Electronic.png">
                 </li>
             </ul>
@@ -582,7 +582,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Styko" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 90.000$?</button>
+                    <button value="Styko" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 90.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Mousesports/Styko.png">
                 
                 </li>
@@ -607,7 +607,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="ChrisJ" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 110.000$?</button>
+                    <button value="ChrisJ" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 110.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Mousesports/ChrisJ.png">
                 
                 </li>
@@ -632,7 +632,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Sunny" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 140.000$?</button>
+                    <button value="Sunny" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 140.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Mousesports/Sunny.png">
                 </li>
                 <li class="list-group-item">
@@ -656,7 +656,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Oskar" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 170.000$?</button>
+                    <button value="Oskar" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 170.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Mousesports/Oskar.png">
                 
                 </li>
@@ -681,7 +681,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Ropz" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 140.000$?</button>
+                    <button value="Ropz" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 140.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Mousesports/Ropz.png">
                 </li>
             </ul>
@@ -719,7 +719,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Tarik" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 120.000$?</button>
+                    <button value="Tarik" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 120.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Cloud9/Tarik.png">
                 
                 </li>
@@ -744,7 +744,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Stewie2K" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 130.000$?</button>
+                    <button value="Stewie2K" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 130.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Cloud9/Stewie2K.png">
                 
                 </li>
@@ -769,7 +769,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Autimatic" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 170.000$?</button>
+                    <button value="Autimatic" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 170.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Cloud9/Autimatic.png">
                 </li>
                 <li class="list-group-item">
@@ -793,7 +793,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Rush" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 120.000$?</button>
+                    <button value="Rush" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 120.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Cloud9/Rush.png">
                 
                 </li>
@@ -818,7 +818,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Skadoodle" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 130.000$?</button>
+                    <button value="Skadoodle" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 130.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Cloud9/Skadoodle.png">
                 </li>
             </ul>
@@ -856,7 +856,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Coldzera" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 250.000$?</button>
+                    <button value="Coldzera" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 250.000$</button>
                     <img id="marketImgMobileCollapse" src="img/SK/Coldzera.png">
                 
                 </li>
@@ -881,7 +881,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Fallen" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Fallen" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 200.000$</button>
                     <img id="marketImgMobileCollapse" src="img/SK/Fallen.png">
                 
                 </li>
@@ -906,7 +906,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Taco" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 90.000$?</button>
+                    <button value="Taco" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 90.000$</button>
                     <img id="marketImgMobileCollapse" src="img/SK/Taco.png">
                 </li>
                 <li class="list-group-item">
@@ -930,7 +930,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Fer" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 220.000$?</button>
+                    <button value="Fer" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 220.000$</button>
                     <img id="marketImgMobileCollapse" src="img/SK/Fer.png">
                 
                 </li>
@@ -955,7 +955,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Boltz" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 160.000$?</button>
+                    <button value="Boltz" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 160.000$</button>
                     <img id="marketImgMobileCollapse" src="img/SK/Boltz.png">
                 </li>
             </ul>
@@ -993,7 +993,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Dupreeh" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Dupreeh" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 200.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Astralis/Dupreeh.png">
                 
                 </li>
@@ -1018,7 +1018,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Device" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 230.000$?</button>
+                    <button value="Device" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 230.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Astralis/Device.png">
                 
                 </li>
@@ -1043,7 +1043,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Glaive" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 80.000$?</button>
+                    <button value="Glaive" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 80.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Astralis/Glaive.png">
                 </li>
                 <li class="list-group-item">
@@ -1067,7 +1067,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Magisk" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 130.000$?</button>
+                    <button value="Magisk" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 130.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Astralis/Magisk.png">
                 
                 </li>
@@ -1092,7 +1092,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Xyp9x" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 180.000$?</button>
+                    <button value="Xyp9x" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 180.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Astralis/Xyp9x.png">
                 </li>
             </ul>
@@ -1130,7 +1130,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Lekro" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 130.000$?</button>
+                    <button value="Lekro" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 130.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Fnatic/Lekro.png">
                 
                 </li>
@@ -1155,7 +1155,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Flusha" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 150.000$?</button>
+                    <button value="Flusha" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 150.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Fnatic/Flusha.png">
                 
                 </li>
@@ -1180,7 +1180,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Krimz" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 130.000$?</button>
+                    <button value="Krimz" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 130.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Fnatic/Krimz.png">
                 </li>
                 <li class="list-group-item">
@@ -1204,7 +1204,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Golden" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 80.000$?</button>
+                    <button value="Golden" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 80.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Fnatic/Golden.png">
                 
                 </li>
@@ -1229,7 +1229,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="JW" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 100.000$?</button>
+                    <button value="JW" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 100.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Fnatic/JW.png">
                 </li>
             </ul>
@@ -1267,7 +1267,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Shox" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 180.000$?</button>
+                    <button value="Shox" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 180.000$</button>
                     <img id="marketImgMobileCollapse" src="img/G2/Shox.png">
                 
                 </li>
@@ -1292,7 +1292,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="KennyS" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="KennyS" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 200.000$</button>
                     <img id="marketImgMobileCollapse" src="img/G2/KennyS.png">
                 
                 </li>
@@ -1317,7 +1317,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Apex" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 150.000$?</button>
+                    <button value="Apex" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 150.000$</button>
                     <img id="marketImgMobileCollapse" src="img/G2/Apex.png">
                 </li>
                 <li class="list-group-item">
@@ -1341,7 +1341,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Bodyy" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 120.000$?</button>
+                    <button value="Bodyy" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 120.000$</button>
                     <img id="marketImgMobileCollapse" src="img/G2/Bodyy.png">
                 
                 </li>
@@ -1366,7 +1366,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="NBK" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 150.000$?</button>
+                    <button value="NBK" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 150.000$</button>
                     <img id="marketImgMobileCollapse" src="img/G2/NBK.png">
                 </li>
             </ul>
@@ -1404,7 +1404,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Olofmeister" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 160.000$?</button>
+                    <button value="Olofmeister" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 160.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Faze/Olofmeister.png">
                 
                 </li>
@@ -1429,7 +1429,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Guardian" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 200.000$?</button>
+                    <button value="Guardian" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 200.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Faze/Guardian.png">
                 
                 </li>
@@ -1454,7 +1454,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Niko" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 230.000$?</button>
+                    <button value="Niko" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 230.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Faze/Niko.png">
                 </li>
                 <li class="list-group-item">
@@ -1478,7 +1478,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Rain" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 210.000$?</button>
+                    <button value="Rain" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 210.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Faze/Rain.png">
                 
                 </li>
@@ -1503,7 +1503,7 @@ function displayAlert($text, $type)
 
                     ?>
                     </ul>
-                    <button value="Karrigan" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 80.000$?</button>
+                    <button value="Karrigan" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 80.000$</button>
                     <img id="marketImgMobileCollapse" src="img/Faze/Karrigan.png">
                 </li>
             </ul>
