@@ -280,7 +280,7 @@ function displayAlert($text, $type)
         
         <div class="panel-group col-xs-10 col-xs-offset-1 col-xs-offset-right-1">
         <div class="panel panel-default">
-            <div data-toggle="collapse" href="#collapse1" id="panel-heading-market" class="panel-heading">
+            <div data-toggle="collapse" href="#collapse2" id="panel-heading-market" class="panel-heading">
             <h4 class="panel-title">
                 <a data-toggle="collapse" href="#collapse2">Team Liquid</a>
             </h4>
@@ -417,7 +417,7 @@ function displayAlert($text, $type)
 
         <div class="panel-group col-xs-10 col-xs-offset-1 col-xs-offset-right-1">
         <div class="panel panel-default">
-            <div data-toggle="collapse" href="#collapse1" id="panel-heading-market" class="panel-heading">
+            <div data-toggle="collapse" href="#collapse3" id="panel-heading-market" class="panel-heading">
             <h4 class="panel-title">
                 <a data-toggle="collapse" href="#collapse3">Na'vi</a>
             </h4>
@@ -554,7 +554,7 @@ function displayAlert($text, $type)
 
         <div class="panel-group col-xs-10 col-xs-offset-1 col-xs-offset-right-1">
         <div class="panel panel-default">
-            <div data-toggle="collapse" href="#collapse1" id="panel-heading-market" class="panel-heading">
+            <div data-toggle="collapse" href="#collapse4" id="panel-heading-market" class="panel-heading">
             <h4 class="panel-title">
                 <a data-toggle="collapse" href="#collapse4">Mousesports</a>
             </h4>
@@ -691,7 +691,7 @@ function displayAlert($text, $type)
 
         <div class="panel-group col-xs-10 col-xs-offset-1 col-xs-offset-right-1">
         <div class="panel panel-default">
-            <div data-toggle="collapse" href="#collapse1" id="panel-heading-market" class="panel-heading">
+            <div data-toggle="collapse" href="#collapse5" id="panel-heading-market" class="panel-heading">
             <h4 class="panel-title">
                 <a data-toggle="collapse" href="#collapse5">Cloud 9</a>
             </h4>
@@ -828,7 +828,7 @@ function displayAlert($text, $type)
 
         <div class="panel-group col-xs-10 col-xs-offset-1 col-xs-offset-right-1">
         <div class="panel panel-default">
-            <div data-toggle="collapse" href="#collapse1" id="panel-heading-market" class="panel-heading">
+            <div data-toggle="collapse" href="#collapse6" id="panel-heading-market" class="panel-heading">
             <h4 class="panel-title">
                 <a data-toggle="collapse" href="#collapse6">SK</a>
             </h4>
@@ -965,7 +965,7 @@ function displayAlert($text, $type)
 
         <div class="panel-group col-xs-10 col-xs-offset-1 col-xs-offset-right-1">
         <div class="panel panel-default">
-            <div data-toggle="collapse" href="#collapse1" id="panel-heading-market" class="panel-heading">
+            <div data-toggle="collapse" href="#collapse7" id="panel-heading-market" class="panel-heading">
             <h4 class="panel-title">
                 <a data-toggle="collapse" href="#collapse7">Astralis</a>
             </h4>
@@ -1102,7 +1102,7 @@ function displayAlert($text, $type)
 
         <div class="panel-group col-xs-10 col-xs-offset-1 col-xs-offset-right-1">
         <div class="panel panel-default">
-            <div data-toggle="collapse" href="#collapse1" id="panel-heading-market" class="panel-heading">
+            <div data-toggle="collapse" href="#collapse8" id="panel-heading-market" class="panel-heading">
             <h4 class="panel-title">
                 <a data-toggle="collapse" href="#collapse8">Fnatic</a>
             </h4>
@@ -1239,7 +1239,7 @@ function displayAlert($text, $type)
 
         <div class="panel-group col-xs-10 col-xs-offset-1 col-xs-offset-right-1">
         <div class="panel panel-default">
-            <div data-toggle="collapse" href="#collapse1" id="panel-heading-market" class="panel-heading">
+            <div data-toggle="collapse" href="#collapse9" id="panel-heading-market" class="panel-heading">
             <h4 class="panel-title">
                 <a data-toggle="collapse" href="#collapse9">G2</a>
             </h4>
@@ -1376,7 +1376,7 @@ function displayAlert($text, $type)
 
         <div class="panel-group col-xs-10 col-xs-offset-1 col-xs-offset-right-1">
         <div class="panel panel-default">
-            <div data-toggle="collapse" href="#collapse1" id="panel-heading-market" class="panel-heading">
+            <div data-toggle="collapse" href="#collapse10" id="panel-heading-market" class="panel-heading">
             <h4 class="panel-title">
                 <a data-toggle="collapse" href="#collapse10">Faze</a>
             </h4>
