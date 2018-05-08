@@ -104,7 +104,10 @@ function displayAlert($text,$type)
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta 
+     name='viewport' 
+     content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' 
+/>
     <title>Fantasy GO</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/app.css" rel="stylesheet">
