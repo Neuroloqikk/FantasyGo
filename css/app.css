@@ -1406,7 +1406,7 @@ input {
   .lastGamesMarketMobileCollapse{
     text-decoration: none;
     list-style: none;
-    margin-left: -15%;
+    margin-left: -5%;
   }
   
   #btnMarketMobileCollapse{
@@ -1876,9 +1876,6 @@ input {
     float: right;
       padding-top: 2%;
       margin-top: -35%;
-  }
-  .list-group-item button{
-    width:30%;
   }
 }
 .panel-group{
