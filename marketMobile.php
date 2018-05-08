@@ -83,11 +83,10 @@ if (!empty($_GET) AND $username != null) {
          displayAlert("You already have five players!", "danger");
       }
    }
-   else {
-      echo '<script>$(document).ready(function(){ $("#myModal").modal("show"); });</script>';
-   }
 }
-
+else{
+    displayAlert("Please Login!", "danger");
+}
 function displayAlert($text, $type)
 {
    echo "<div class=\"alert alert-" . $type . "\" role=\"alert\">
