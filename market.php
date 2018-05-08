@@ -5,9 +5,12 @@ require 'connect.php';
 
 unset($_SESSION['1sttime']);
 $username = $_SESSION["username"];
+if($username != null){
 $stmt = $pdo->query("SELECT `balance` FROM `users`.`users` WHERE username='$username'");
 $p = $stmt->fetch();
-$balance = $p['balance'];
+$balance = $p['balance']."$";
+$BalanceText = "Balance";
+}
 if($username == null){
     $balance="";
     $username="Login";
@@ -128,9 +131,9 @@ function displayAlert($text, $type)
                         <img src="img/eye.svg">
                     </a>
                     <a class="navbar-brand" id="balance">
-                        <h4>Balance</h4>
+                        <h4><?=$BalanceText?></h4>
                         <h2>
-                            <?= $balance ?>$</h2>
+                            <?= $balance ?></h2>
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
