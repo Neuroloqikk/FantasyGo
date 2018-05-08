@@ -51,9 +51,9 @@ html, body:not(#landingBG){
 @media (min-width: 320px) and (max-width: 480px) {
   .alert {
     position: fixed;
-    margin-left: 20%;
-    margin-top:130%;
     z-index: 9999;
+    margin-top: 20%;
+    margin-left: 155;
   }
 }
 .navbar-brand img {
