@@ -82,9 +82,6 @@ if (!empty($_GET)) {
       else {
          displayAlert("You already have five players!", "danger");
       }
-      else{
-        displayAlert("Please Login!", "danger");
-    }
    }
 }
 else{
