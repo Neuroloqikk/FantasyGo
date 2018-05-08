@@ -7,7 +7,7 @@ unset($_SESSION['1sttime']);
 $username = $_SESSION["username"];
 $stmt = $pdo->query("SELECT `balance` FROM `users`.`users` WHERE username='$username'");
 $p = $stmt->fetch();
-$balance = $p['balance'] + "$";
+$balance = $p['balance']."$";
 
 if($username == null){
     $balance="";
