@@ -1406,7 +1406,7 @@ input {
   .lastGamesMarketMobileCollapse{
     text-decoration: none;
     list-style: none;
-    margin-left: -5%;
+    margin-left: -15%;
   }
   
   #btnMarketMobileCollapse{
@@ -1746,7 +1746,7 @@ input {
   .lastGamesMarketMobileCollapse{
     text-decoration: none;
     list-style: none;
-    margin-left: -15%;
+    margin-left: -5%;
   }
   #marketImgMobileCollapse{
     height: 20%;
