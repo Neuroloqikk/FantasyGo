@@ -90,7 +90,7 @@ if (!empty($_GET)) {
 
 function displayAlertDanger($text)
 {
-   echo "<div class=\"col-xs-8 col-xs-offset-2 col-xs-offset-right-2 alert alert-danger\" role=\"alert\">
+   echo "<div class=\"col-xs-10 col-xs-offset-1 col-xs-offset-right-1 alert alert-danger\" role=\"alert\">
         <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\" style=\"float: right;\">&times;</span></button>
             <p>" . $text . "</p>
           </div>";
