@@ -1374,6 +1374,179 @@ input {
 #panel-heading-market{
   text-align:center;
 } 
+@media (min-width: 320px) and (max-width: 780px) {
+  .menuLogoMobile{
+    width: 20%;
+      float: right;
+      margin-top: -18%;
+      margin-right: 5%;
+  }
+  .list-group-item button{
+    width:50%;
+  }
+  
+  #logoSigninMobile{
+    height: 250;
+    width: auto;
+    margin-left: 3%;
+    margin-top: -19%;
+  }
+  
+  .playerPriceCollapse{
+    margin-left: 23%;
+    margin-top: -13%;
+    font-size: 20px;
+  }
+  
+  .playerNameCollapse{
+    font-size: 20px;
+    width: 30%;
+    margin-left: 9%;
+    text-align: center;
+  }
+  
+  .lastGamesMarketMobileCollapse{
+    text-decoration: none;
+    list-style: none;
+    margin-left: -15%;
+  }
+  
+  #btnMarketMobileCollapse{
+    width: 48%;
+    margin-top: 5%;
+    margin-left: 2%;
+  }
+  
+  #marketImgMobileCollapse{
+    height: 20%;
+    margin-left: 55%;
+    margin-top: -65%;
+  }
+  .lastGamesMarketMobileCollapse span{
+    color:green;
+  }
+  .menuMobile{
+    float:right;
+    padding:20;
+    width:25%;
+    margin-top:-19%;
+  }
+  .usernameMobile{
+    margin-left: 33%;
+    margin-top: 10%;
+    margin-right: 35%;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  #logoMobile{
+    margin-top: -17%;
+    margin-right: 80%;
+    width: 20%;
+    margin-left: 20;
+  }
+  
+  .dropbtnMobile {
+    background-repeat: no-repeat, repeat;
+    background-color:transparent;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  /* The container <div> - needed to position the dropdown content */
+  .dropdownMobile {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdownMobile-content {
+    display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      margin-left: 61%;
+      right: 0;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdownMobile-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdownMobile-content a:hover {background-color: #ddd}
+  .marketInfoMobile{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    height: 12%;
+    font-size:20px;
+    background: rgba(0, 0, 0, 0.5);
+    margin-top: -1%;
+  }
+
+  .balanceMobile{
+    margin-left:43%;
+    margin-top:3%;
+    position:absolute;
+    z-index:9999;
+  }
+  #dropdownMarketMobile{
+    width:100%;
+    margin-left:0;
+    margin-top:0%;
+  }
+  #dropdown-menuMarketMobile{
+    width:100%;
+    margin-top:3%;
+    z-index:1;
+  }
+  .playerMarketMobile{
+    margin-top: 5%;
+    margin-bottom: 20%;
+  }
+  .playerMarketMobile img{
+    height: 230px;
+    width: auto;
+  }
+  .playerMarketMobile li a{
+    text-decoration: none;
+      text-align: center;
+      margin-left: 15%;
+      color: black;
+  }
+  .playerNameMobile{
+    font-size: 20px;
+    margin-left:-5%;
+  }
+  .lastGamesMarketMobile{
+    font-size: 15px;
+    margin-left: 11%;
+    list-style-type: none;
+  }
+  .lastGamesMarketMobile span{
+    color:green;
+  }
+  #btnMarketMobile{
+    width: 34%;
+    margin-left: 17%;
+    position: absolute;
+    margin-top: 5%;
+  }
+  #marketImgMobile{
+    float: right;
+      padding-top: 2%;
+      margin-top: -35%;
+  }
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
   .menuLogoMobile{
     width: 20%;
