@@ -8,11 +8,9 @@ require 'connect.php';
 $username = $_SESSION["username"];
 
 if ($username != NULL) {
-  echo "<script>alert('test 5');</script>";
   echo '<script>location="myteam.php"</script>';
 }
 else {
-  echo "<script>alert('test 6');</script>";
   session_destroy();
   $timestamp = date("Y-m-d H:i:s");
   if (isset($_POST['register'])) {
@@ -23,22 +21,19 @@ else {
     $stmt = $pdo->prepare("SELECT * FROM users WHERE username=:id");
     $stmt->execute(['id' => $username]);
     $user = $stmt->fetch();
-    echo "<script>alert('test 7');</script>";
     // EMAIL
 
     $stmt = $pdo->prepare("SELECT COUNT(email) AS num FROM users.users WHERE username = :username");
     $stmt->bindValue(':username', $username);
     $stmt->execute();
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    echo "<script>alert('test 8');</script>";
     // USERNAME
 
     $stmt = $pdo->prepare("SELECT COUNT(username) AS num FROM users.users WHERE username = :username");
     $stmt->bindValue(':username', $username);
     $stmt->execute();
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    
-    echo "<script>alert('test 9');</script>";
+
     if ($row['num'] <= 0 and $pass == $passVerify and filter_var($email, FILTER_VALIDATE_EMAIL)) {
       $passwordHash = password_hash($pass, PASSWORD_BCRYPT, array(
         "cost" => 12
@@ -68,20 +63,16 @@ else {
         http://www.neuroloq1kk.me/FantasyGo/verify.php?email=' . $email . '&hash=' . $hash . '.'
       ));
       displayAlert("An email was sent to your email, check it in order to verify your account!", "warning");
-      echo "<script>alert('test 4');</script>";
     }
     
     else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       displayAlert("Please enter a valid email!", "warning");
-      echo "<script>alert('test 1');</script>";
     }
     else if( $row['num'] > 0 ){
       displayAlert("That username already exists!", "warning");
-      echo "<script>alert('test 2');</script>";
     }
     else if($pass != $passVerify){
       displayAlert("Please verify your password!", "warning");
-      echo "<script>alert('test 3');</script>";
     }
   }
 }

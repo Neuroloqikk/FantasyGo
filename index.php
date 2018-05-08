@@ -1,3 +1,4 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <?php
 require '/vendor/autoload.php';
 
@@ -20,32 +21,20 @@ else {
     $stmt = $pdo->prepare("SELECT * FROM users WHERE username=:id");
     $stmt->execute(['id' => $username]);
     $user = $stmt->fetch();
-
     // EMAIL
 
     $stmt = $pdo->prepare("SELECT COUNT(email) AS num FROM users.users WHERE username = :username");
     $stmt->bindValue(':username', $username);
     $stmt->execute();
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    if ($row['num'] > 0) {
-      displayAlert("That email already exists!", "warning");
-    }
-
     // USERNAME
 
     $stmt = $pdo->prepare("SELECT COUNT(username) AS num FROM users.users WHERE username = :username");
     $stmt->bindValue(':username', $username);
     $stmt->execute();
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      displayAlert("Please type a valid email!", "warning");
-    }
 
-    if ($row['num'] > 0) {
-      displayAlert("That username already exists!", "warning");
-    }
-
-    if ($pass == $passVerify) {
+    if ($row['num'] <= 0 and $pass == $passVerify and filter_var($email, FILTER_VALIDATE_EMAIL)) {
       $passwordHash = password_hash($pass, PASSWORD_BCRYPT, array(
         "cost" => 12
       ));
@@ -75,7 +64,14 @@ else {
       ));
       displayAlert("An email was sent to your email, check it in order to verify your account!", "warning");
     }
-    else {
+    
+    else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      displayAlert("Please enter a valid email!", "warning");
+    }
+    else if( $row['num'] > 0 ){
+      displayAlert("That username already exists!", "warning");
+    }
+    else if($pass != $passVerify){
       displayAlert("Please verify your password!", "warning");
     }
   }
@@ -84,13 +80,12 @@ else {
 function displayAlert($text,$type)
 {
    echo "<div class=\"col-xs-10 col-xs-offset-1 col-xs-offset-right-1 alert alert-".$type."\" role=\"alert\">
-        <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\" style=\"float: right;\">&times;</span></button>
+        <button type=\"button\" class=\"col-xs-10 col-xs-offset-1 col-xs-offset-right-1 close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\" style=\"float: right;\">&times;</span></button>
             <p>" . $text . "</p>
           </div>";
 }
 
 ?>
-
 
 <html>
 
