@@ -47,6 +47,7 @@ html, body:not(#landingBG){
   position: absolute;
   margin-left: 45%;
   z-index: 9999;
+  text-align:center;
 }
 @media (min-width: 320px) and (max-width: 480px) {
   .alert {
@@ -1374,6 +1375,8 @@ input {
 #panel-heading-market{
   text-align:center;
 } 
+
+
 @media (min-width: 500px) and (max-width: 780px) {
   .alert {
     position: absolute;
@@ -1382,9 +1385,9 @@ input {
     margin-left: 315;
   }
   .menuLogoMobile{
-    width: 150%;
-    margin-top: -140%;
-    margin-left: 1200%;
+    width: 75%;
+    margin-top: -78%;
+    margin-left: 460%;
   }
   .list-group-item button{
     width:50%;
@@ -1446,10 +1449,9 @@ input {
   }
   
   #logoMobile{
-    margin-top: -10%;
-    margin-right: 80%;
+    margin-top: -11%;
     width: 20%;
-    margin-left: 20;
+    margin-left: 60;
   }
   
   .dropbtnMobile {
@@ -1555,8 +1557,6 @@ input {
 }
 
 
-
-
 @media (min-width: 320px) and (max-width: 330px) {
   .alert {
     position: fixed;
@@ -1573,9 +1573,9 @@ input {
   
   
   #logoSigninMobile{
-    height: 250;
+    height: 200;
     width: auto;
-    margin-left: 3%;
+    margin-left: 0;
     margin-top: -19%;
   }
   
@@ -1749,8 +1749,8 @@ input {
   #logoSigninMobile{
     height: 250;
     width: auto;
-    margin-left: 3%;
-    margin-top: -19%;
+    margin-left: -5%;
+    margin-top: -22%;
   }
   
   .playerPriceCollapse{
@@ -2283,8 +2283,8 @@ input {
   #logoSigninMobile{
     height: 250;
     width: auto;
-    margin-left: 3%;
-    margin-top: -19%;
+    margin-left: -5%;
+    margin-top: -22%;
   }
   
   .playerPriceCollapse{
@@ -2440,4 +2440,8 @@ input {
       padding-top: 2%;
       margin-top: -35%;
   }
+}
+
+.col-xs-offset-2 {
+  margin-left: 16.66666667% !important;
 }
