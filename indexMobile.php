@@ -68,8 +68,14 @@ else {
       displayAlert("An email was sent to your email, check it in order to verify your account!", "warning");
     }
     
-    else if (!filter_var($email, FILTER_VALIDATE_EMAIL) OR $row['num'] > 0 OR $pass == $passVerify) {
-      displayAlert("po crl!", "warning");
+    else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      displayAlert("Please enter a valid email!", "warning");
+    }
+    else if( $row['num'] > 0 ){
+      displayAlert("That username already exists!", "warning");
+    }
+    else if($pass == $passVerify){
+      displayAlert("Please verify your password!", "warning");
     }
   }
 }
