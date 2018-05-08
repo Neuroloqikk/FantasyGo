@@ -30,7 +30,6 @@ else {
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
     if ($row['num'] > 0) {
       displayAlert("That email already exists!", "warning");
-      break;
     }
 
     // USERNAME
