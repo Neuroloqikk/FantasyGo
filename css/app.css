@@ -44,13 +44,13 @@ html, body:not(#landingBG){
 }
 
 .alert {
-  position: fixed;
+  position: absolute;
   margin-left: 45%;
   z-index: 9999;
 }
 @media (min-width: 320px) and (max-width: 480px) {
   .alert {
-    position: fixed;
+    position: absolute;
     z-index: 9999;
     margin-top: 20%;
     margin-left: 155;
@@ -1376,7 +1376,7 @@ input {
 } 
 @media (min-width: 500px) and (max-width: 780px) {
   .alert {
-    position: fixed;
+    position: absolute;
     z-index: 9999;
     margin-top: 11%;
     margin-left: 315;
@@ -1733,7 +1733,7 @@ input {
 }
 @media (min-width: 360px) and (max-width: 380px) {
   .alert {
-    position: fixed;
+    position: absolute;
     z-index: 9999;
     margin-top: 22%;
     margin-left: 125;
@@ -1909,7 +1909,7 @@ input {
 
 @media (min-width: 410px) and (max-width: 480px) {
   .alert {
-    position: fixed;
+    position: absolute;
     z-index: 9999;
     margin-top: 20%;
     margin-left: 155;
@@ -2087,7 +2087,7 @@ input {
 }
 @media (min-width: 1000px){
   .alert {
-    position: fixed;
+    position: absolute;
     z-index: 9999;
     margin-top: 8%;
     margin-left: 453;
@@ -2265,7 +2265,7 @@ input {
 }
 @media (min-width: 380px) and (max-width: 410px) {
   .alert {
-    position: fixed;
+    position: absolute;
     z-index: 9999;
     margin-top: 20%;
     margin-left: 155;
