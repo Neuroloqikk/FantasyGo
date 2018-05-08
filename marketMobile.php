@@ -41,7 +41,7 @@ if (!empty($_GET)) {
       $player5 = $p['player5_id'];
       if ($player1 == NULL or $player2 == NULL or $player3 == NULL or $player4 == NULL or $player5 == NULL) {
          if ($player1 == $id or $player2 == $id or $player3 == $id or $player4 == $id or $player5 == $id) {
-            displayAlertDanger("You already have this player! Please select another one!", "danger");
+            displayAlert("You already have this player! Please select another one!", "danger");
          }
          else {
             if ($player1 == NULL) {
@@ -66,7 +66,7 @@ if (!empty($_GET)) {
 
             $newBalance = $balance - $price;
             if ($newBalance < 0) {
-                displayAlertDanger("You do not have enough money!", "danger");
+                displayAlert("You do not have enough money!", "danger");
             }
             else {
                $sql = "UPDATE `users`.`users_players` SET $freeSlot=? WHERE username=?";
@@ -80,24 +80,18 @@ if (!empty($_GET)) {
          }
       }
       else {
-        displayAlertDanger("You already have five players!", "danger");
+        displayAlert("You already have five players!", "danger");
       }
    }
    else{
-    displayAlertDanger("Please Login!", "danger");
+    displayAlert("Please Login!", "danger");
 }
 }
 
-function displayAlertDanger($text)
+function displayAlert($text,$type)
 {
-   echo "<div class=\"col-xs-10 col-xs-offset-1 col-xs-offset-right-1 alert alert-danger\" role=\"alert\">
+   echo "<div class=\"col-xs-10 col-xs-offset-1 col-xs-offset-right-1 alert alert-".$type."\" role=\"alert\">
         <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\" style=\"float: right;\">&times;</span></button>
-            <p>" . $text . "</p>
-          </div>";
-}
-function displayAlert($text, $type)
-{
-   echo "<div class=\"alert alert-" . $type . "\" role=\"alert\">
             <p>" . $text . "</p>
           </div>";
 }

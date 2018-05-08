@@ -36,11 +36,12 @@ if ($hour != null and $date != null and $teamOne != null and $teamTwo != null){
   unset($_SESSION['date']);
 }
 
-function displayAlert($text, $type)
+function displayAlert($text,$type)
 {
-  echo "<div class=\"alert alert-" . $type . "\" role=\"alert\">
-  <p>" . $text . "</p>
-  </div>";
+   echo "<div class=\"col-xs-10 col-xs-offset-1 col-xs-offset-right-1 alert alert-".$type."\" role=\"alert\">
+        <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\" style=\"float: right;\">&times;</span></button>
+            <p>" . $text . "</p>
+          </div>";
 }
 
 ?>
