@@ -14,7 +14,7 @@ if($username == null){
     $username="Login";
     $loginLink="signinMobile.php";
 }
-if (!empty($_GET)) {
+if (!empty($_GET) AND $username != null) {
    $playerName = $_GET["name"];
    $stmt = $pdo->query("SELECT `id`,`price`,`photo`,`team`,`team_photo`,`first_name`,`last_name` FROM `users`.`players` WHERE name='$playerName'");
    $t = $stmt->fetch();
