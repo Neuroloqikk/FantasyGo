@@ -86,9 +86,6 @@ if (!empty($_GET)) {
         displayAlert("Please Login!", "danger");
     }
    }
-   else{
-    displayAlert("Please Login!", "danger");
-}
 }
 else{
     displayAlert("Please Login!", "danger");
