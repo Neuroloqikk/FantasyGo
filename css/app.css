@@ -1375,6 +1375,12 @@ input {
   text-align:center;
 } 
 @media (min-width: 500px) and (max-width: 780px) {
+  .alert {
+    position: fixed;
+    z-index: 9999;
+    margin-top: 20%;
+    margin-left: 155;
+  }
   .menuLogoMobile{
     width: 150%;
     margin-top: -140%;
@@ -1552,6 +1558,12 @@ input {
 
 
 @media (min-width: 320px) and (max-width: 330px) {
+  .alert {
+    position: fixed;
+    z-index: 9999;
+    margin-top: 20%;
+    margin-left: 155;
+  }
   .menuLogoMobile{
     width: 20%;
       float: right;
@@ -1720,6 +1732,12 @@ input {
   margin-top: 10px;
 }
 @media (min-width: 360px) and (max-width: 380px) {
+  .alert {
+    position: fixed;
+    z-index: 9999;
+    margin-top: 20%;
+    margin-left: 155;
+  }
   .menuLogoMobile{
     width: 20%;
       float: right;
@@ -1890,6 +1908,12 @@ input {
 
 
 @media (min-width: 410px) and (max-width: 480px) {
+  .alert {
+    position: fixed;
+    z-index: 9999;
+    margin-top: 20%;
+    margin-left: 155;
+  }
   .menuLogoMobile{
     width: 20%;
       float: right;
@@ -2062,6 +2086,12 @@ input {
   }
 }
 @media (min-width: 1000px){
+  .alert {
+    position: fixed;
+    z-index: 9999;
+    margin-top: 20%;
+    margin-left: 155;
+  }
   .menuLogoMobile{
     width: 20%;
       float: right;
@@ -2234,6 +2264,12 @@ input {
   }
 }
 @media (min-width: 380px) and (max-width: 410px) {
+  .alert {
+    position: fixed;
+    z-index: 9999;
+    margin-top: 20%;
+    margin-left: 155;
+  }
   .menuLogoMobile{
     width: 20%;
       float: right;
