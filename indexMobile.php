@@ -28,9 +28,6 @@ else {
     $stmt->bindValue(':username', $username);
     $stmt->execute();
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    if ($row['num'] > 0) {
-      displayAlert("That email already exists!", "warning");
-    }
 
     // USERNAME
 
@@ -70,6 +67,7 @@ else {
       ));
       displayAlert("An email was sent to your email, check it in order to verify your account!", "warning");
     }
+    
     else if (!filter_var($email, FILTER_VALIDATE_EMAIL) OR $row['num'] > 0 OR $pass == $passVerify) {
       displayAlert("po crl!", "warning");
     }
