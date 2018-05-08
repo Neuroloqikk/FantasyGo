@@ -1376,10 +1376,9 @@ input {
 } 
 @media (min-width: 320px) and (max-width: 780px) {
   .menuLogoMobile{
-    width: 20%;
-      float: right;
-      margin-top: -18%;
-      margin-right: 5%;
+    width: 150%;
+    margin-top: -60%;
+    margin-left: 1700%;
   }
   .list-group-item button{
     width:50%;
@@ -1493,10 +1492,11 @@ input {
   }
 
   .balanceMobile{
-    margin-left:43%;
-    margin-top:3%;
-    position:absolute;
-    z-index:9999;
+    margin-top: 3%;
+    position: absolute;
+    z-index: 9999;
+    margin-left: 40%;
+    font-size: 20px;
   }
   #dropdownMarketMobile{
     width:100%;
