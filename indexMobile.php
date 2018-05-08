@@ -74,7 +74,7 @@ else {
     else if( $row['num'] > 0 ){
       displayAlert("That username already exists!", "warning");
     }
-    else if($pass == $passVerify){
+    else if($pass != $passVerify){
       displayAlert("Please verify your password!", "warning");
     }
   }
