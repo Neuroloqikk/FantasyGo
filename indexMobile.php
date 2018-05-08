@@ -121,7 +121,8 @@ function displayAlert($text,$type)
         <button id="btnLanding" class="btn btn-lg btn-primary btn-block" type="submit" value ="Register" name="register">Create Account</button>
       </form>
       
-        
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
     </div>
   </body>
   </html>
