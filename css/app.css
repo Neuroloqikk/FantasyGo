@@ -1381,7 +1381,9 @@ input {
       margin-top: -18%;
       margin-right: 5%;
   }
-  
+  .list-group-item button{
+    width:50%;
+  }
   
   #logoSigninMobile{
     height: 250;
