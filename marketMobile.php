@@ -1233,8 +1233,8 @@ function displayAlert($text,$type)
 
                     ?>
                     </ul>
-                    <button value="JW" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 100.000$</button>
-                    <img id="marketImgMobileCollapse" src="img/Fnatic/JW.png">
+                    <button value="Jw" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 100.000$</button>
+                    <img id="marketImgMobileCollapse" src="img/Fnatic/Jw.png">
                 </li>
             </ul>
             </div>
@@ -1408,8 +1408,8 @@ function displayAlert($text,$type)
 
                     ?>
                     </ul>
-                    <button value="Olofmeister" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 160.000$</button>
-                    <img id="marketImgMobileCollapse" src="img/Faze/Olofmeister.png">
+                    <button value="OlofMeister" class="btn btn-success text-center" type="button" onClick="buyButton(this)">Buy for 160.000$</button>
+                    <img id="marketImgMobileCollapse" src="img/Faze/OlofMeister.png">
                 
                 </li>
                 <li class="list-group-item">
