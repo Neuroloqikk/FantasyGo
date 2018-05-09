@@ -1,21 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 html, body:not(#landingBG){
-  background: url("../img/nuke.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-image: url('../img/nuke.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
 }
 .wrapper {
   display: flex;
 }
 .bg{
-  background: url("../img/nuke.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-image: url('../img/nuke.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
 }
 #sidebarShow{
   float:right;
