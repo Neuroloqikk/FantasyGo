@@ -184,13 +184,13 @@ function displayAlert($text,$type)
           <input class ="txtcolorinput" type="text" placeholder="<?=$email?>" name="currentEmail" disabled>
 
           <label for="email"><b>New email</b></label>
-          <input class="txtcolorinput" type="text" placeholder="Enter new email" name="email" required>
+          <input class="txtcolorinput" type="text" placeholder="Enter new email" name="email">
 
           <label for="psw"><b>New password</b></label>
-          <input class="txtcolorinput" type="password" placeholder="Enter new password" name="psw" required>
+          <input class="txtcolorinput" type="password" placeholder="Enter new password" name="psw" >
 
           <label for="psw-repeat"><b>Repeat new password</b></label>
-          <input class="txtcolorinput" type="password" placeholder="Repeat new password" name="psw-repeat" required>
+          <input class="txtcolorinput" type="password" placeholder="Repeat new password" name="psw-repeat" >
 
           <label for="psw"><b>Current password</b></label>
           <input class="txtcolorinput" type="password" placeholder="Enter your current password" name="psw-current" required>
