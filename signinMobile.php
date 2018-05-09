@@ -14,7 +14,7 @@ if (isset($_POST['login'])) {
     }
     else {
       $_SESSION["username"] = $username;
-      echo '<script>location="myTeamMobile.php"</script>';
+      header("Location: myTeamMobile.php");
     }
   }
   else {
