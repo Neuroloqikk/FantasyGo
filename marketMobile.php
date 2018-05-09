@@ -123,7 +123,7 @@ function displayAlert($text,$type)
           <p class="usernameMobile"><a href="<?=$loginLink?>"><?=$username?></a></p>
             <img class="menuLogoMobile" onclick="myFunction()" src="img/menu.svg">
             <div id="myDropdown" class="dropdownMobile-content">
-              <a href="#">My Team</a>
+              <a href="signinMobile.php">My Team</a>
               <a href="#">Market</a>
               <a href="#">Leaderboard</a>
               <a href="#">Next Games</a>
