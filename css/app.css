@@ -1437,6 +1437,11 @@ input {
     margin-left: 58%;
     margin-top: -34%;
   }
+  #myTeamImgMobileCollapse{
+    height: 15%;
+    margin-left: 65%;
+    margin-top: -38%;
+  }
   .lastGamesMarketMobileCollapse span{
     color:green;
   }
@@ -1609,6 +1614,11 @@ input {
     margin-left: 55%;
     margin-top: -65%;
     display: none;
+  }
+  #myTeamImgMobileCollapse{
+    height: 15%;
+    margin-left: 65%;
+    margin-top: -38%;
   }
   .lastGamesMarketMobileCollapse span{
     color:green;
@@ -1783,6 +1793,11 @@ input {
     margin-left: 55%;
     margin-top: -65%;
     display: none;
+  }
+  #myTeamImgMobileCollapse{
+    height: 15%;
+    margin-left: 65%;
+    margin-top: -38%;
   }
   .lastGamesMarketMobileCollapse span{
     color:green;
@@ -1968,6 +1983,11 @@ input {
     margin-left: 55%;
     margin-top: -65%;
   }
+  #myTeamImgMobileCollapse{
+    height: 15%;
+    margin-left: 65%;
+    margin-top: -38%;
+  }
   .lastGamesMarketMobileCollapse span{
     color:green;
   }
@@ -2145,6 +2165,11 @@ input {
     height: 20%;
     margin-left: 55%;
     margin-top: -65%;
+  }
+  #myTeamImgMobileCollapse{
+    height: 15%;
+    margin-left: 65%;
+    margin-top: -38%;
   }
   .lastGamesMarketMobileCollapse span{
     color:green;
@@ -2324,6 +2349,11 @@ input {
     margin-left: 55%;
     margin-top: -65%;
   }
+  #myTeamImgMobileCollapse{
+    height: 15%;
+    margin-left: 65%;
+    margin-top: -38%;
+  }
   .lastGamesMarketMobileCollapse span{
     color:green;
   }
@@ -2451,4 +2481,9 @@ input {
 
 .col-xs-offset-1 {
   margin-left: 8.33333333% !important;
+}
+
+.MobileTeamPoints{
+  float: right;
+  color: green;
 }
