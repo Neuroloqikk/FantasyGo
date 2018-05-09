@@ -161,6 +161,7 @@ function displayAlert($text,$type)
     <link href="css/app.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="/img/icon.png">
 </head>
+<div class="turnDeviceNotification"></div>
 <div class="container-example">
 
     <body class="bg">
@@ -362,6 +363,31 @@ function displayAlert($text,$type)
             </div>
         </div>
         </div>
+        <script>
+            jQuery(window).bind('orientationchange', function(e) {
+            switch ( window.orientation ) {
+            case 0:
+                $('.turnDeviceNotification').css('display', 'none');
+                // The device is in portrait mode now
+            break;
+
+            case 180:
+                $('.turnDeviceNotification').css('display', 'none');
+                // The device is in portrait mode now
+            break;
+
+            case 90:
+                // The device is in landscape now
+                $('.turnDeviceNotification').css('display', 'block');
+            break;
+
+            case -90:
+                // The device is in landscape now
+                $('.turnDeviceNotification').css('display', 'block');
+            break;
+            }
+            });
+        </script>
         <script>
                 /* When the user clicks on the button, 
         toggle between hiding and showing the dropdown content */
