@@ -2502,4 +2502,5 @@ input {
 .turnDeviceNotification {
   background-image:url('../img/turn.png');
   background-size:cover;
+  background-position: center;
 }
