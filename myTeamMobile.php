@@ -172,7 +172,7 @@ function displayAlert($text,$type)
             <img class="menuLogoMobile" onclick="myFunction()" src="img/menu.svg">
             <div id="myDropdown" class="dropdownMobile-content">
               <a href="#">My Team</a>
-              <a href="#">Market</a>
+              <a href="marketMobile.php">Market</a>
               <a href="#">Leaderboard</a>
               <a href="#">Next Games</a>
               <a href="#">Last Games</a>
