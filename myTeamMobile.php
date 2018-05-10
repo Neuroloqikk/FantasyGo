@@ -199,7 +199,7 @@ function displayAlert($text,$type)
         <div class="panel panel-default">
             <div data-toggle="collapse" href="#collapse1" id="panel-heading-market" class="panel-heading">
             <h4 class="panel-title">
-                <a><div class="playerNameMobile"><?=$player1Name?></div><div class="playerScoreMobile"><span style="margin-top: -3%;" class="MobileTeamPoints">+<?=$player1_score?></span></div></a>
+                <a><div class="playerNameMobile"><?=$player1Name?></div><div class="playerScoreMobile"><span class="MobileTeamPoints">+<?=$player1_score?></span></div></a>
             </h4>
             </div>
             <div>
@@ -233,7 +233,7 @@ function displayAlert($text,$type)
         <div class="panel panel-default">
             <div data-toggle="collapse" href="#collapse2" id="panel-heading-market" class="panel-heading">
             <h4 class="panel-title">
-            <a><div class="playerNameMobile"><?=$player2Name?></div><div class="playerScoreMobile"><span style="margin-top: -3%;" class="MobileTeamPoints">+<?=$player2_score?></span></div></a>
+            <a><div class="playerNameMobile"><?=$player2Name?></div><div class="playerScoreMobile"><span class="MobileTeamPoints">+<?=$player2_score?></span></div></a>
             </h4>
             </div>
             <div>
@@ -267,7 +267,7 @@ function displayAlert($text,$type)
         <div class="panel panel-default">
             <div data-toggle="collapse" href="#collapse3" id="panel-heading-market" class="panel-heading">
             <h4 class="panel-title">
-            <a><div class="playerNameMobile"><?=$player3Name?></div><div class="playerScoreMobile"><span style="margin-top: -3%;" class="MobileTeamPoints">+<?=$player3_score?></span></div></a>
+            <a><div class="playerNameMobile"><?=$player3Name?></div><div class="playerScoreMobile"><span class="MobileTeamPoints">+<?=$player3_score?></span></div></a>
             </h4>
             </div>
             <div>
@@ -301,7 +301,7 @@ function displayAlert($text,$type)
         <div class="panel panel-default">
             <div data-toggle="collapse" href="#collapse4" id="panel-heading-market" class="panel-heading">
             <h4 class="panel-title">
-            <a><div class="playerNameMobile"><?=$player4Name?></div><div class="playerScoreMobile"><span style="margin-top: -3%;" class="MobileTeamPoints">+<?=$player4_score?></span></div></a>
+            <a><div class="playerNameMobile"><?=$player4Name?></div><div class="playerScoreMobile"><span class="MobileTeamPoints">+<?=$player4_score?></span></div></a>
             </h4>
             </div>
             <div>
@@ -335,7 +335,7 @@ function displayAlert($text,$type)
         <div class="panel panel-default">
             <div data-toggle="collapse" href="#collapse5" id="panel-heading-market" class="panel-heading">
             <h4 class="panel-title">
-            <a><div class="playerNameMobile"><?=$player5Name?></div><div class="playerScoreMobile"><span style="margin-top: -3%;" class="MobileTeamPoints">+<?=$player5_score?></span></div></a>
+            <a><div class="playerNameMobile"><?=$player5Name?></div><div class="playerScoreMobile"><span class="MobileTeamPoints">+<?=$player5_score?></span></div></a>
             </h4>
             </div>
             <div>

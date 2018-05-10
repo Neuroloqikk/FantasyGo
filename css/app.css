@@ -1570,7 +1570,7 @@ input {
   }
 }
 
-@media (min-width: 320px) and (max-width: 360px) {
+@media (min-width: 0px) and (max-width: 360px) {
   .alert {
     position: fixed;
     z-index: 9999;
