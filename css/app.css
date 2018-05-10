@@ -1388,8 +1388,11 @@ input {
 
 
 @media (min-width: 481px) and (max-width: 780px) {
+  .marketInfoMobile p{
+    margin-left:5%;
+  }
   .MobileTeamPoints {
-
+    margin-top: -3%;
   }
   .alert {
     position: absolute;
@@ -1578,7 +1581,7 @@ input {
 
 @media (min-width: 0px) and (max-width: 360px) {
   .MobileTeamPoints {
-
+    margin-top: -10%;
   }
   .alert {
     position: fixed;
@@ -1692,10 +1695,11 @@ input {
     text-align: center;
     font-family: 'Roboto', sans-serif;
     color: white;
-    height: 12%;
+    height: 16%;
     font-size:20px;
     background: rgba(0, 0, 0, 0.5);
     margin-top: -1%;
+    
   }
 
   .balanceMobile{
@@ -1754,7 +1758,7 @@ input {
 }
 @media (min-width: 320px) and (max-width: 360px) {
   .MobileTeamPoints {
-
+    margin-top: -9%;
   }
   .alert {
     position: fixed;
@@ -2116,7 +2120,7 @@ input {
 
 @media (min-width: 410px) and (max-width: 480px) {
   .MobileTeamPoints {
-
+    margin-top: -6%;
   }
   .alert {
     position: absolute;
@@ -2482,7 +2486,7 @@ input {
 }
 @media (min-width: 380px) and (max-width: 410px) {
   .MobileTeamPoints {
-
+    margin-top: -7%;
   }
   .alert {
     position: absolute;
