@@ -192,8 +192,8 @@ function displayAlert($text,$type)
     
         </nav>
         <div class="marketInfoMobile">
-            <p style="margin-left: 5%;"> Welcome to your team!<br>Here's your score from this season</p>
-            <p style="margin-left: 5%;"> <?=$score?></p>
+            <p> Welcome to your team!<br>Here's your score from this season</p>
+            <p> <?=$score?></p>
         </div>
         <div class="panel-group col-xs-10 col-xs-offset-1 col-xs-offset-right-1">
         <div class="panel panel-default">
