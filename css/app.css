@@ -1578,10 +1578,9 @@ input {
     margin-left: 105;
   }
   .menuLogoMobile{
-    width: 20%;
-      float: right;
-      margin-top: -18%;
-      margin-right: 5%;
+    width: 70px;
+    float: right;
+    margin-right: 5%;
   }
   
   
@@ -1632,13 +1631,12 @@ input {
     margin-top:-19%;
   }
   .usernameMobile{
-    margin-top: 10%;
+    margin-top: 5%;
     font-weight: 600;
     text-align: center;
   }
   
   #logoMobile{
-    margin-top: -17%;
     margin-right: 80%;
     width: 20%;
     margin-left: 20;
@@ -1691,9 +1689,10 @@ input {
   }
 
   .balanceMobile{
-    margin-top:3%;
-    position:absolute;
-    z-index:9999;
+    margin-top: 15%;
+    position: absolute;
+    z-index: 9999;
+    text-align: center;
   }
   #dropdownMarketMobile{
     width:100%;
@@ -1755,10 +1754,9 @@ input {
     margin-left: 125;
   }
   .menuLogoMobile{
-    width: 20%;
-      float: right;
-      margin-top: -18%;
-      margin-right: 5%;
+    width: 70px;
+    float: right;
+    margin-right: 5%;
   }
   
   
@@ -1809,14 +1807,12 @@ input {
     margin-top:-19%;
   }
   .usernameMobile{
-
-    margin-top: 10%;
+    margin-top: 2%;
     font-weight: 600;
     text-align: center;
   }
   
   #logoMobile{
-    margin-top: -17%;
     margin-right: 80%;
     width: 20%;
     margin-left: 20;
@@ -1869,9 +1865,10 @@ input {
   }
 
   .balanceMobile{
-    margin-top:3%;
-    position:absolute;
-    z-index:9999;
+    margin-top: 10%;
+    position: absolute;
+    z-index: 9999;
+    text-align: center;
   }
   #dropdownMarketMobile{
     width:100%;
