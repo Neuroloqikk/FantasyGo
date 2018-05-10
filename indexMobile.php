@@ -120,7 +120,7 @@ function displayAlert($text,$type)
         <input id="passText2" type="text" class="form-control" name="username" placeholder="Username" required="" autofocus="" />
         <input id="passLanding" type="password" class="form-control" name="password" placeholder="Password" required=""/>
         <input id="passLanding2" type="password" class="form-control" name="password-repeat" placeholder="Password" required=""/>
-        <p>Already have an account? <a href="signin.php" style="color:dodgerblue">Login</a></p>
+        <p>Already have an account? <a href="signinMobile.php" style="color:dodgerblue">Login</a></p>
         <button id="btnLanding" class="btn btn-lg btn-primary btn-block" type="submit" value ="Register" name="register">Create Account</button>
       </form>
       
