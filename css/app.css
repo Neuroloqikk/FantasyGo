@@ -1384,7 +1384,7 @@ input {
 } 
 
 
-@media (min-width: 500px) and (max-width: 780px) {
+@media (min-width: 481px) and (max-width: 780px) {
   .alert {
     position: absolute;
     z-index: 9999;
