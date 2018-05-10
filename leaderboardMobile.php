@@ -78,7 +78,7 @@ function displayAlert($text,$type)
     </nav>
 
 
-    <form class="formLeaderboard" action="leaderboard.php" method="POST">
+    <form class="formLeaderboard" action="leaderboardMobile.php" method="POST">
   <div id="rowLeaderboard" class="row" style="margin-top: -10px;">
     <div class="col-xs-6 col-md-4" style="width: 100%;">
       <div id="inputLeaderboard" class="input-group" style="display: table;width: 50%;margin: 0 auto;">
