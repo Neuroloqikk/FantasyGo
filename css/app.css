@@ -1385,6 +1385,9 @@ input {
 
 
 @media (min-width: 481px) and (max-width: 780px) {
+  .MobileTeamPoints span{
+    margin-top:-1%;
+  }
   .alert {
     position: absolute;
     z-index: 9999;
@@ -1571,6 +1574,9 @@ input {
 }
 
 @media (min-width: 0px) and (max-width: 360px) {
+  .MobileTeamPoints span{
+    margin-top:-1%;
+  }
   .alert {
     position: fixed;
     z-index: 9999;
@@ -1744,6 +1750,9 @@ input {
   }
 }
 @media (min-width: 320px) and (max-width: 360px) {
+  .MobileTeamPoints span{
+    margin-top:-1%;
+  }
   .alert {
     position: fixed;
     z-index: 9999;
@@ -1921,6 +1930,9 @@ input {
   margin-top: 10px;
 }
 @media (min-width: 360px) and (max-width: 380px) {
+  .MobileTeamPoints span{
+    margin-top:-1%;
+  }
   .alert {
     position: absolute;
     z-index: 9999;
@@ -2100,6 +2112,9 @@ input {
 
 
 @media (min-width: 410px) and (max-width: 480px) {
+  .MobileTeamPoints span{
+    margin-top:-1%;
+  }
   .alert {
     position: absolute;
     z-index: 9999;
@@ -2279,6 +2294,9 @@ input {
   }
 }
 @media (min-width: 1000px){
+  .MobileTeamPoints span{
+    margin-top:-1%;
+  }
   .alert {
     position: absolute;
     z-index: 9999;
