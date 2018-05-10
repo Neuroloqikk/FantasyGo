@@ -1490,7 +1490,7 @@ input {
     z-index: 1;
     margin-left: 61%;
     right: 0;
-    margin-top: 20%;
+    margin-top: -1%;
   }
   
   /* Links inside the dropdown */
@@ -2030,7 +2030,6 @@ input {
     z-index: 1;
     margin-left: 61%;
     right: 0;
-    margin-top: 20%;
   }
   
   /* Links inside the dropdown */
