@@ -119,9 +119,13 @@ function displayAlert($text,$type)
     <nav class="navbar navbar-default navbar-static-top">
       <div class="container">
         <div class="navbar-header">
-          <p class="balanceMobile"><?=$balance?></p>
-          <p class="usernameMobile"><a href="<?=$loginLink?>"><?=$username?></a></p>
-            <img class="menuLogoMobile" onclick="myFunction()" src="img/menu.svg">
+        <p class="balanceMobile col-xs-4 col-xs-offset-4 col-xs-offset-right-4"><?=$balance?></p>
+          <div class="usernameMobile col-xs-4 col-xs-offset-4 col-xs-offset-right-4">
+            <p><a href="userSettings.php"><?=$username?></a></p>
+          </div>
+          <div class="menuLogoMobile">
+            <img onclick="myFunction()" src="img/menu.svg" style="width: inherit;">
+          </div>  
             <div id="myDropdown" class="dropdownMobile-content">
               <a href="signinMobile.php">My Team</a>
               <a href="#">Market</a>
@@ -139,8 +143,8 @@ function displayAlert($text,$type)
     
         </nav>
         <div class="marketInfoMobile">
-            <p> Welcome to the market!</p>
-            <p> Here you can buy players to join your team.</p>
+            <p style="margin-left: 5%;"> Welcome to the market!</p>
+            <p style="margin-left: 5%;"> Here you can buy players to join your team.</p>
         </div>
         <div class="panel-group col-xs-10 col-xs-offset-1 col-xs-offset-right-1">
         <div class="panel panel-default">

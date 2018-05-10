@@ -168,13 +168,9 @@ function displayAlert($text,$type)
     <nav class="navbar navbar-default navbar-static-top">
       <div class="container">
         <div class="navbar-header">
-          <p class="balanceMobile col-xs-4 col-xs-offset-4 col-xs-offset-right-4"><?=$balance?></p>
-          <div class="usernameMobile col-xs-4 col-xs-offset-4 col-xs-offset-right-4">
-            <p><a href="userSettings.php"><?=$username?></a></p>
-          </div>
-          <div class="menuLogoMobile">
-            <img onclick="myFunction()" src="img/menu.svg" style="width: inherit;">
-          </div>  
+          <p class="balanceMobile"><?=$balance?></p>
+          <p class="usernameMobile"><a href="userSettings.php"><?=$username?></a></p>
+            <img class="menuLogoMobile" onclick="myFunction()" src="img/menu.svg">
             <div id="myDropdown" class="dropdownMobile-content">
               <a href="#">My Team</a>
               <a href="marketMobile.php">Market</a>
@@ -192,14 +188,14 @@ function displayAlert($text,$type)
     
         </nav>
         <div class="marketInfoMobile">
-            <p style="margin-left: 5%;"> Welcome to your team!<br>Here's your score from this season</p>
-            <p style="margin-left: 5%;"> <?=$score?></p>
+            <p> Welcome to your team!<br>Here's your score from this season</p>
+            <p> <?=$score?></p>
         </div>
         <div class="panel-group col-xs-10 col-xs-offset-1 col-xs-offset-right-1">
         <div class="panel panel-default">
             <div data-toggle="collapse" href="#collapse1" id="panel-heading-market" class="panel-heading">
             <h4 class="panel-title">
-                <a><div class="playerNameMobile"><?=$player1Name?></div><div class="playerScoreMobile"><span style="margin-top: -3%;" class="MobileTeamPoints">+<?=$player1_score?></span></div></a>
+                <a><?=$player1Name?><span class="MobileTeamPoints">+<?=$player1_score?></span></a>
             </h4>
             </div>
             <div>
@@ -233,7 +229,7 @@ function displayAlert($text,$type)
         <div class="panel panel-default">
             <div data-toggle="collapse" href="#collapse2" id="panel-heading-market" class="panel-heading">
             <h4 class="panel-title">
-            <a><div class="playerNameMobile"><?=$player2Name?></div><div class="playerScoreMobile"><span style="margin-top: -3%;" class="MobileTeamPoints">+<?=$player2_score?></span></div></a>
+                <a><?=$player2Name?><span class="MobileTeamPoints">+<?=$player2_score?></span></a>
             </h4>
             </div>
             <div>
@@ -267,7 +263,7 @@ function displayAlert($text,$type)
         <div class="panel panel-default">
             <div data-toggle="collapse" href="#collapse3" id="panel-heading-market" class="panel-heading">
             <h4 class="panel-title">
-            <a><div class="playerNameMobile"><?=$player3Name?></div><div class="playerScoreMobile"><span style="margin-top: -3%;" class="MobileTeamPoints">+<?=$player3_score?></span></div></a>
+                <a><?=$player3Name?><span class="MobileTeamPoints">+<?=$player3_score?></span></a>
             </h4>
             </div>
             <div>
@@ -301,7 +297,7 @@ function displayAlert($text,$type)
         <div class="panel panel-default">
             <div data-toggle="collapse" href="#collapse4" id="panel-heading-market" class="panel-heading">
             <h4 class="panel-title">
-            <a><div class="playerNameMobile"><?=$player4Name?></div><div class="playerScoreMobile"><span style="margin-top: -3%;" class="MobileTeamPoints">+<?=$player4_score?></span></div></a>
+                <a><?=$player4Name?><span class="MobileTeamPoints">+<?=$player4_score?></span></a>
             </h4>
             </div>
             <div>
@@ -335,7 +331,7 @@ function displayAlert($text,$type)
         <div class="panel panel-default">
             <div data-toggle="collapse" href="#collapse5" id="panel-heading-market" class="panel-heading">
             <h4 class="panel-title">
-            <a><div class="playerNameMobile"><?=$player5Name?></div><div class="playerScoreMobile"><span style="margin-top: -3%;" class="MobileTeamPoints">+<?=$player5_score?></span></div></a>
+                <a><?=$player5Name?><span class="MobileTeamPoints">+<?=$player5_score?></span></a>
             </h4>
             </div>
             <div>

@@ -1392,9 +1392,9 @@ input {
     margin-left: 315;
   }
   .menuLogoMobile{
-    width: 75%;
-    margin-top: -78%;
-    margin-left: 460%;
+    width: 90px;
+    margin-left: 600;
+    margin-top: -1%;
   }
   .list-group-item button{
     width:50%;
@@ -1440,7 +1440,7 @@ input {
   #myTeamImgMobileCollapse{
     height: 15%;
     margin-left: 65%;
-    margin-top: -38%;
+    margin-top: -20%;
   }
   .lastGamesMarketMobileCollapse span{
     color:green;
@@ -1452,12 +1452,12 @@ input {
     margin-top:-19%;
   }
   .usernameMobile{
-    margin-left: 590%;
-    margin-top: 70%;
-    margin-right: 35%;
     font-weight: 600;
     text-align: center;
     font-size: 20px;
+    z-index: 9999;
+    position: absolute;
+    margin-top: 1%;
   }
   
   #logoMobile{
@@ -1513,11 +1513,11 @@ input {
   }
 
   .balanceMobile{
-    margin-top: 1%;
+    margin-top: 5%;
     position: absolute;
     z-index: 9999;
-    margin-left: 40%;
     font-size: 20px;
+    text-align: center;
   }
   #dropdownMarketMobile{
     width:100%;
@@ -1545,7 +1545,8 @@ input {
   }
   .playerNameMobile{
     font-size: 20px;
-    margin-left:-5%;
+    text-align: center;
+    margin-left: 7%;
   }
   .lastGamesMarketMobile{
     font-size: 15px;
@@ -1619,6 +1620,7 @@ input {
     height: 15%;
     margin-left: 65%;
     margin-top: -38%;
+    display:none;
   }
   .lastGamesMarketMobileCollapse span{
     color:green;
@@ -1798,6 +1800,7 @@ input {
     height: 15%;
     margin-left: 65%;
     margin-top: -38%;
+    display:none;
   }
   .lastGamesMarketMobileCollapse span{
     color:green;
@@ -1809,9 +1812,8 @@ input {
     margin-top:-19%;
   }
   .usernameMobile{
-    margin-left: 33%;
+
     margin-top: 10%;
-    margin-right: 35%;
     font-weight: 600;
     text-align: center;
   }
@@ -1938,9 +1940,9 @@ input {
   }
   .menuLogoMobile{
     width: 20%;
-      float: right;
-      margin-top: -18%;
-      margin-right: 5%;
+    float: right;
+    margin-top: -12%;
+    margin-right: 5%;
   }
   .list-group-item button{
     width:50%;
@@ -1999,14 +2001,13 @@ input {
   }
   .usernameMobile{
     margin-left: 33%;
-    margin-top: 10%;
+    margin-top: 4%;
     margin-right: 35%;
     font-weight: 600;
     text-align: center;
   }
   
   #logoMobile{
-    margin-top: -17%;
     margin-right: 80%;
     width: 20%;
     margin-left: 20;
@@ -2059,10 +2060,10 @@ input {
   }
 
   .balanceMobile{
-    margin-left:43%;
-    margin-top:3%;
-    position:absolute;
-    z-index:9999;
+    margin-top: 10%;
+    position: absolute;
+    z-index: 9999;
+    text-align: center;
   }
   #dropdownMarketMobile{
     width:100%;
