@@ -1,8 +1,3 @@
-<script type="text/javascript">
-  if (screen.width <= 800) {
-  document.location = "signinMobile.php";
-  }
-</script>
 <?php
 session_start();
 require 'connect.php';
@@ -36,140 +31,82 @@ function displayAlert($text,$type)
             <p>" . $text . "</p>
           </div>";
 }
-?>
 
+?>
 
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fantasy GO</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/app.css" rel="stylesheet">
-  <link rel="icon" type="image/png" href="/img/icon.png">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta 
+     name='viewport' 
+     content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' 
+     />
+    <title>Fantasy GO</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/img/icon.png">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 <div class="container-example">
 
-  <body class="bg" >
+    <body class="bg">
     <nav class="navbar navbar-default navbar-static-top">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-
-          <a class="navbar-brand">
-            <img src="img/logo.svg">
-          </a>
-          <a href="#" class="navbar-brand" id="sidebarShow" onclick="showGames()">
-            <img src="img/eye.svg">
+        <p class="balanceMobile col-xs-4 col-xs-offset-4 col-xs-offset-right-4"><?=$balance?></p>
+          <div class="usernameMobile col-xs-4 col-xs-offset-4 col-xs-offset-right-4">
+            <p><a href="userSettings.php"><?=$username?></a></p>
+          </div>
+          <div class="menuLogoMobile">
+            <img onclick="myFunction()" src="img/menu.svg" style="width: inherit;">
+          </div>  
+            <div id="myDropdown" class="dropdownMobile-content">
+              <a href="signinMobile.php">My Team</a>
+              <a href="marketMobile.php">Market</a>
+              <a href="leaderboardMobile.php">Leaderboard</a>
+              <a href="nextGamesMobile.php">Next Games</a>
+              <a href="lastGamesMobile.php">Last Games</a>
+              <a href="userSettingsMobile.php">Settings</a>
+              <a href="logoutMobile.php">Logout</a>
+            </div>
+          <a id="logoMobile" class="navbar-brand">
+            <img src="img/logo.png">
           </a>
         </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-          <ul class="nav navbar-nav navbar-right">
-
-            <li id="usernameInsertGame" class="font">
-              <a href="userSettings.php">
-                <?= $username ?>
-              </a>
-            </li>
-
-            <li class="dropdown">
-              <a href="myteam.php" id="menuDropdown" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                <img class="menu-icon" src="img/menu.svg">
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="sidenav" id="sidebarShowBtn" style="display: none;">
-        <a id="SidebarTitle"><b>Coming Games</b></a>
-        <?php 
-         $stmt = $pdo->query("SELECT team1,team2,Date,Hour FROM next_games ORDER BY Date DESC LIMIT 5");
-         $p = $stmt->fetchAll();
-         foreach($p as $row){
-            ?>
-         <a><b><?=$row['team1'];?> vs <?=$row['team2'];?></b><br><?=$row['Date'];?>-<?=$row['Hour'];?></a>
-         
-
-         <?php }?>
-        <hr>
-        <a id="SidebarTitle"><b>Last Games</b></a>
-        <?php 
-         $stmt = $pdo->query("SELECT team1,team2,score_team1,score_team2,next_game_id FROM results ORDER BY timestamp DESC LIMIT 5");
-         $p = $stmt->fetchAll();
-         $team1score = "win";
-         $team2score = "loose";
-         foreach($p as $row){
-           if($row['score_team1']>$row['score_team2']){
-             $team1score = "win";
-             $team2score = "loose";
-           }
-          else{
-            $team2score = "win";
-            $team1score = "loose";
-          }
-            ?>
-         <a href="lastGame.php?id=<?=$row['next_game_id'];?>"><?=$row['team1'];?> vs <?=$row['team2'];?><br><span id="<?=$team1score?>"><?=$row['score_team1'];?></span>-<span id="<?=$team2score?>"><?=$row['score_team2'];?></span></a>
-         
-
-         <?php }?>
-      </div>
     </nav>
-  </div>
-</div>
-<form class="formLeaderboard" action="leaderboard.php" method="POST">
-  <div id="rowLeaderboard" class="row">
-    <div class="col-xs-6 col-md-4">
-      <div id="inputLeaderboard" class="input-group">
-        <input type="text" class="form-control" placeholder="Search" name="nametxt" id="txtSearch" />
-        <div class="input-group-btn"  id="txtSearch" >
-          <button class="btn btn-primary" type="submit" name="search" id="txtSearch" >
-            <span class="glyphicon glyphicon-search"></span id="txtSearch" >
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</form>
+
 <?php
 
 
 
 echo '<div id="tableLeaderboard" class="container">';
-echo '<div class="row">';
+echo '<div class="row" style="background-color: white;margin-top: 10%">';
 echo '<div class="table-responsive">';
 echo '<table class="table table-hover">';
 echo
 '<thead>
 <tr>
+<th>Team 1</th>
 <th></th>
-<th>Username</th>
-<th>Score</th>
-<th>Start Date</th>
+<th>Team 2</th>
+<th>Date</th>
+<th>Hour</th>
 </tr>
 </thead>
 <tbody id="myTable">';
-$getUsers = $pdo->query("SELECT username,score,timestamp FROM users ORDER BY score DESC");
-$index = 0;
-foreach ($getUsers as $user) {
-  $date = $user['timestamp'];
-  $createDate = new DateTime($date);
-  $strip = $createDate->format('Y-m-d');
-  $index++;
+$getGames = $pdo->query("SELECT team1,team2,Date,Hour FROM next_games ORDER BY Hour DESC");
+          foreach ($getGames as $user) {
+  $date = $user['Date'];
+  $hour = $user['Hour'];
   echo "<tr>";
-  echo "<td>".$index."</td>";
-  echo '<td style="cursor:pointer"> <a href="leaderboard.php?username='.$user['username'].'">'.$user['username'].'</a></td>';
-  echo "<td>".$user['score']."</td>";
-  echo "<td>".$strip."</td>";
+  echo '<td style="cursor:pointer"> <a href="leaderboard.php?username='.$user['team1'].'">'.$user['team1'].'</a></td>';
+  echo "<td>vs</td>";
+  echo '<td style="cursor:pointer"> <a href="leaderboard.php?username='.$user['username'].'">'.$user['team2'].'</a></td>';
+  echo '<td>'.$date.'</td>';
+  echo '<td>'.$hour.'</td>';
   echo "</tr>";
 }
 echo '</tbody>';

@@ -1,151 +1,37 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <?php
 session_start();
 require 'connect.php';
 
-unset($_SESSION['1sttime']);
 $username = $_SESSION["username"];
-$stmt = $pdo->query("SELECT `score`,`balance` FROM `users`.`users` WHERE username='$username'");
-$p = $stmt->fetch();
-$balance = $p['balance']."$";
-$score = $p['score'];
-$stmt = $pdo->query("SELECT player1_id, player2_id, player3_id, player4_id, player5_id FROM `users`.`users_players` WHERE username = '$username'");
-$stmt->execute([20]);
-$arr = $stmt->fetch(PDO::FETCH_NUM);
-list($player1_Id, $player2_Id, $player3_Id, $player4_Id, $player5_Id) = $arr;
-if($username == null){
-    echo '<script>location="signinMobile.php"</script>';
+
+if ($_GET['username'] != NULL) {
+  $user = $_GET['username'];
+  $_SESSION["user"] = $user;
+  echo '<script>location="playerTeamMobile.php"</script>';
 }
 
-$q = $pdo->query("SELECT name,photo FROM `users`.`players` WHERE id= '" . $player1_Id . "'");
-$t = $q->fetch();
-$player1Name = $t['name'];
-$player1Photo = $t['photo'];
-
-if ($player1Name == NULL) {
-  $player1Name = "Buy another player.";
-  $player1Photo = "/BlackPlayer.png";
-}
-
-//
-
-$q = $pdo->query("SELECT name,photo FROM `users`.`players` WHERE id= '" . $player2_Id . "'");
-$t = $q->fetch();
-$player2Name = $t['name'];
-$player2Photo = $t['photo'];
-
-if ($player2Name == "") {
-  $player2Name = "Buy another player.";
-  $player2Photo = "/BlackPlayer.png";
-}
-
-//
-
-$q = $pdo->query("SELECT name,photo FROM `users`.`players` WHERE id= '" . $player3_Id . "'");
-$t = $q->fetch();
-$player3Name = $t['name'];
-$player3Photo = $t['photo'];
-
-if ($player3Name == "") {
-  $player3Name = "Buy another player.";
-  $player3Photo = "/BlackPlayer.png";
-}
-
-$q = $pdo->query("SELECT name,photo FROM `users`.`players` WHERE id= '" . $player4_Id . "'");
-$t = $q->fetch();
-$player4Name = $t['name'];
-$player4Photo = $t['photo'];
-
-if ($player4Name == "") {
-  $player4Name = "Buy another player.";
-  $player4Photo = "/BlackPlayer.png";
-}
-
-$q = $pdo->query("SELECT name,photo FROM `users`.`players` WHERE id= '" . $player5_Id . "'");
-$t = $q->fetch();
-$player5Name = $t['name'];
-$player5Photo = $t['photo'];
-
-if ($player5Name == "") {
-  $player5Name = "Buy another player.";
-  $player5Photo = "/BlackPlayer.png";
-}
-
-$sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='" . $player1Name . "'";
-$player1 = $pdo->query($sql);
-
-foreach($player1 as $row) {
-  if ($timestamp < $row['timestamp']) {
-    $player1_score+= $row['player_score'];
+if (isset($_POST['search'])) {
+  $user = $_POST['nametxt'];
+  $stmt = $pdo->prepare("SELECT * FROM users WHERE username=:id");
+  $stmt->execute(['id' => $user]);
+  $userSearch = $stmt->fetch();
+  if ($userSearch != NULL) {
+    $_SESSION["user"] = $user;
+    echo '<script>location="playerTeamMobile.php"</script>';
   }
-}
-
-if ($player1_score == 0) {
-  $player1_score = 0;
-}
-
-$sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='" . $player2Name . "'";
-$player2 = $pdo->query($sql);
-
-foreach($player2 as $row) {
-  if ($timestamp < $row['timestamp']) {
-    $player2_score+= $row['player_score'];
+  else {
+    displayAlert("That User does not exist!", "danger");
   }
-}
-
-if ($player2_score == 0) {
-  $player2_score = 0;
-}
-
-$sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='" . $player3Name . "'";
-$player3 = $pdo->query($sql);
-
-foreach($player3 as $row) {
-  if ($timestamp < $row['timestamp']) {
-    $player3_score+= $row['player_score'];
-  }
-}
-
-if ($player3_score == 0) {
-  $player3_score = 0;
-}
-
-$sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='" . $player4Name . "'";
-$player4 = $pdo->query($sql);
-
-foreach($player4 as $row) {
-  if ($timestamp < $row['timestamp']) {
-    $player4_score+= $row['player_score'];
-  }
-}
-
-if ($player4_score == NULL) {
-  $player4_score = 0;
-}
-
-$sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='" . $player5Name . "'";
-$player5 = $pdo->query($sql);
-
-foreach($player5 as $row) {
-  if ($timestamp < $row['timestamp']) {
-    $player5_score+= $row['player_score'];
-  }
-}
-
-if ($player5_score == 0) {
-  $player5_score = 0;
 }
 
 function displayAlert($text,$type)
 {
    echo "<div class=\"col-xs-10 col-xs-offset-1 col-xs-offset-right-1 alert alert-".$type."\" role=\"alert\">
-        <button type=\"button\" class=\"col-xs-10 col-xs-offset-1 col-xs-offset-right-1 close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\" style=\"float: right;\">&times;</span></button>
+        <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\" style=\"float: right;\">&times;</span></button>
             <p>" . $text . "</p>
           </div>";
 }
-
 ?>
-
 
 <html>
 
@@ -160,24 +46,29 @@ function displayAlert($text,$type)
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/app.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="/img/icon.png">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
-<div class="turnDeviceNotification"></div>
 <div class="container-example">
 
     <body class="bg">
     <nav class="navbar navbar-default navbar-static-top">
       <div class="container">
         <div class="navbar-header">
-          <p class="balanceMobile"><?=$balance?></p>
-          <p class="usernameMobile"><a href="userSettings.php"><?=$username?></a></p>
-            <img class="menuLogoMobile" onclick="myFunction()" src="img/menu.svg">
+        <p class="balanceMobile col-xs-4 col-xs-offset-4 col-xs-offset-right-4"><?=$balance?></p>
+          <div class="usernameMobile col-xs-4 col-xs-offset-4 col-xs-offset-right-4">
+            <p><a href="userSettings.php"><?=$username?></a></p>
+          </div>
+          <div class="menuLogoMobile">
+            <img onclick="myFunction()" src="img/menu.svg" style="width: inherit;">
+          </div>  
             <div id="myDropdown" class="dropdownMobile-content">
-              <a href="#">My Team</a>
+              <a href="signinMobile.php">My Team</a>
               <a href="marketMobile.php">Market</a>
-              <a href="#">Leaderboard</a>
-              <a href="#">Next Games</a>
-              <a href="#">Last Games</a>
-              <a href="#">Settings</a>
+              <a href="leaderboardMobile.php">Leaderboard</a>
+              <a href="nextGamesMobile.php">Next Games</a>
+              <a href="lastGamesMobile.php">Last Games</a>
+              <a href="userSettingsMobile.php">Settings</a>
               <a href="logoutMobile.php">Logout</a>
             </div>
           <a id="logoMobile" class="navbar-brand">
@@ -185,234 +76,171 @@ function displayAlert($text,$type)
           </a>
         </div>
     </nav>
-    
-        </nav>
-        <div class="marketInfoMobile">
-            <p> Welcome to your team!<br>Here's your score from this season</p>
-            <p> <?=$score?></p>
+
+
+    <form class="formLeaderboard" action="leaderboard.php" method="POST">
+  <div id="rowLeaderboard" class="row" style="margin-top: -10px;">
+    <div class="col-xs-6 col-md-4" style="width: 100%;">
+      <div id="inputLeaderboard" class="input-group" style="display: table;width: 50%;margin: 0 auto;">
+        <input type="text" class="form-control" placeholder="Search" name="nametxt" id="txtSearch" />
+        <div class="input-group-btn"  id="txtSearch" >
+          <button class="btn btn-primary" type="submit" name="search" id="txtSearch" >
+            <span class="glyphicon glyphicon-search"></span id="txtSearch" >
+          </button>
         </div>
-        <div class="panel-group col-xs-10 col-xs-offset-1 col-xs-offset-right-1">
-        <div class="panel panel-default">
-            <div data-toggle="collapse" href="#collapse1" id="panel-heading-market" class="panel-heading">
-            <h4 class="panel-title">
-                <a><?=$player1Name?><span class="MobileTeamPoints">+<?=$player1_score?></span></a>
-            </h4>
-            </div>
-            <div>
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <ul class="lastGamesMarketMobileCollapse">
-                    <?php
-                        $stmt = $pdo->query("SELECT Team FROM players WHERE name='$player1Name'");
-                        $p = $stmt->fetch();
-                        $team = implode($p);
-
-                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
-                        $p = $stmt->fetchAll();
+      </div>
+    </div>
+  </div>
+</form>
+<?php
 
 
-                        foreach($p as $row){
-                            $id=$row['next_game_id'];
-                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='$player1Name' ORDER BY timestamp DESC LIMIT 5");
-                            $p = $stmt->fetch();
-                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
-                        }
 
-                    ?>
-                    </ul>
-                    <img id="myTeamImgMobileCollapse" src="img<?= $player1Photo ?>">
-                
-                </li>
-                </ul>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div data-toggle="collapse" href="#collapse2" id="panel-heading-market" class="panel-heading">
-            <h4 class="panel-title">
-                <a><?=$player2Name?><span class="MobileTeamPoints">+<?=$player2_score?></span></a>
-            </h4>
-            </div>
-            <div>
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <ul class="lastGamesMarketMobileCollapse">
-                    <?php
-                        $stmt = $pdo->query("SELECT Team FROM players WHERE name='$player2Name'");
-                        $p = $stmt->fetch();
-                        $team = implode($p);
+echo '<div id="tableLeaderboard" class="container" style="background-color:  white;">';
+echo '<div class="row">';
+echo '<div class="table-responsive">';
+echo '<table class="table table-hover">';
+echo
+'<thead>
+<tr>
+<th></th>
+<th>Username</th>
+<th>Score</th>
+<th>Start Date</th>
+</tr>
+</thead>
+<tbody id="myTable">';
+$getUsers = $pdo->query("SELECT username,score,timestamp FROM users ORDER BY score DESC");
+$index = 0;
+foreach ($getUsers as $user) {
+  $date = $user['timestamp'];
+  $createDate = new DateTime($date);
+  $strip = $createDate->format('Y-m-d');
+  $index++;
+  echo "<tr>";
+  echo "<td>".$index."</td>";
+  echo '<td style="cursor:pointer"> <a href="leaderboardMobile.php?username='.$user['username'].'">'.$user['username'].'</a></td>';
+  echo "<td>".$user['score']."</td>";
+  echo "<td>".$strip."</td>";
+  echo "</tr>";
+}
+echo '</tbody>';
+echo '</table>';
+echo '</div>';
+echo '<div class="col-md-12 text-right">';
+echo '<ul class="pagination pagination-lg pager" id="myPager"></ul>';
+echo '</div>';
+echo '</div>';
+echo '</div>';
+?>
+<script>
+$.fn.pageMe = function(opts){
+  var $this = this,
+  defaults = {
+    perPage: 7,
+    showPrevNext: false,
+    hidePageNumbers: false
+  },
+  settings = $.extend(defaults, opts);
 
-                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
-                        $p = $stmt->fetchAll();
+  var listElement = $this;
+  var perPage = settings.perPage;
+  var children = listElement.children();
+  var pager = $('.pager');
 
+  if (typeof settings.childSelector!="undefined") {
+    children = listElement.find(settings.childSelector);
+  }
 
-                        foreach($p as $row){
-                            $id=$row['next_game_id'];
-                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='$player2Name' ORDER BY timestamp DESC LIMIT 5");
-                            $p = $stmt->fetch();
-                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
-                        }
+  if (typeof settings.pagerSelector!="undefined") {
+    pager = $(settings.pagerSelector);
+  }
 
-                    ?>
-                    </ul>
-                    <img id="myTeamImgMobileCollapse" src="img<?= $player2Photo ?>">
-                
-                </li>
-                </ul>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div data-toggle="collapse" href="#collapse3" id="panel-heading-market" class="panel-heading">
-            <h4 class="panel-title">
-                <a><?=$player3Name?><span class="MobileTeamPoints">+<?=$player3_score?></span></a>
-            </h4>
-            </div>
-            <div>
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <ul class="lastGamesMarketMobileCollapse">
-                    <?php
-                        $stmt = $pdo->query("SELECT Team FROM players WHERE name='$player3Name'");
-                        $p = $stmt->fetch();
-                        $team = implode($p);
+  var numItems = children.size();
+  var numPages = Math.ceil(numItems/perPage);
 
-                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
-                        $p = $stmt->fetchAll();
+  pager.data("curr",0);
 
+  if (settings.showPrevNext){
+    $('<li><a href="#" class="prev_link">«</a></li>').appendTo(pager);
+  }
 
-                        foreach($p as $row){
-                            $id=$row['next_game_id'];
-                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='$player3Name' ORDER BY timestamp DESC LIMIT 5");
-                            $p = $stmt->fetch();
-                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
-                        }
+  var curr = 0;
+  while(numPages > curr && (settings.hidePageNumbers==false)){
+    $('<li><a href="#" class="page_link">'+(curr+1)+'</a></li>').appendTo(pager);
+    curr++;
+  }
 
-                    ?>
-                    </ul>
-                    <img id="myTeamImgMobileCollapse" src="img<?= $player3Photo ?>">
-                
-                </li>
-                </ul>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div data-toggle="collapse" href="#collapse4" id="panel-heading-market" class="panel-heading">
-            <h4 class="panel-title">
-                <a><?=$player4Name?><span class="MobileTeamPoints">+<?=$player4_score?></span></a>
-            </h4>
-            </div>
-            <div>
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <ul class="lastGamesMarketMobileCollapse">
-                    <?php
-                        $stmt = $pdo->query("SELECT Team FROM players WHERE name='$player4Name'");
-                        $p = $stmt->fetch();
-                        $team = implode($p);
+  if (settings.showPrevNext){
+    $('<li><a href="#" class="next_link">»</a></li>').appendTo(pager);
+  }
 
-                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
-                        $p = $stmt->fetchAll();
+  pager.find('.page_link:first').addClass('active');
+  pager.find('.prev_link').hide();
+  if (numPages<=1) {
+    pager.find('.next_link').hide();
+  }
+  pager.children().eq(1).addClass("active");
 
+  children.hide();
+  children.slice(0, perPage).show();
 
-                        foreach($p as $row){
-                            $id=$row['next_game_id'];
-                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='$player4Name' ORDER BY timestamp DESC LIMIT 5");
-                            $p = $stmt->fetch();
-                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
-                        }
+  pager.find('li .page_link').click(function(){
+    var clickedPage = $(this).html().valueOf()-1;
+    goTo(clickedPage,perPage);
+    return false;
+  });
+  pager.find('li .prev_link').click(function(){
+    previous();
+    return false;
+  });
+  pager.find('li .next_link').click(function(){
+    next();
+    return false;
+  });
 
-                    ?>
-                    </ul>
-                    <img id="myTeamImgMobileCollapse" src="img<?= $player4Photo ?>">
-                
-                </li>
-                </ul>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div data-toggle="collapse" href="#collapse5" id="panel-heading-market" class="panel-heading">
-            <h4 class="panel-title">
-                <a><?=$player5Name?><span class="MobileTeamPoints">+<?=$player5_score?></span></a>
-            </h4>
-            </div>
-            <div>
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <ul class="lastGamesMarketMobileCollapse">
-                    <?php
-                        $stmt = $pdo->query("SELECT Team FROM players WHERE name='$player5Name'");
-                        $p = $stmt->fetch();
-                        $team = implode($p);
+  function previous(){
+    var goToPage = parseInt(pager.data("curr")) - 1;
+    goTo(goToPage);
+  }
 
-                        $stmt = $pdo->query("SELECT team1,team2,next_game_id FROM results WHERE team1='$team' OR team2='$team' ORDER BY timestamp DESC LIMIT 5");
-                        $p = $stmt->fetchAll();
+  function next(){
+    goToPage = parseInt(pager.data("curr")) + 1;
+    goTo(goToPage);
+  }
 
+  function goTo(page){
+    var startAt = page * perPage,
+    endOn = startAt + perPage;
 
-                        foreach($p as $row){
-                            $id=$row['next_game_id'];
-                            $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='$player5Name' ORDER BY timestamp DESC LIMIT 5");
-                            $p = $stmt->fetch();
-                            echo '<li>'.$row['team1'].' vs '.$row['team2'].' <span>(+'.implode($p).')</span></li>';
-                        }
+    children.css('display','none').slice(startAt, endOn).show();
 
-                    ?>
-                    </ul>
-                    <img id="myTeamImgMobileCollapse" src="img<?= $player5Photo ?>">
-                
-                </li>
-                </ul>
-            </div>
-        </div>
-        </div>
-        <script>
-            jQuery(window).bind('orientationchange', function(e) {
-            switch ( window.orientation ) {
-            case 0:
-                $('.turnDeviceNotification').css('display', 'none');
-                // The device is in portrait mode now
-            break;
+    if (page>=1) {
+      pager.find('.prev_link').show();
+    }
+    else {
+      pager.find('.prev_link').hide();
+    }
 
-            case 180:
-                $('.turnDeviceNotification').css('display', 'none');
-                // The device is in portrait mode now
-            break;
+    if (page<(numPages-1)) {
+      pager.find('.next_link').show();
+    }
+    else {
+      pager.find('.next_link').hide();
+    }
 
-            case 90:
-                // The device is in landscape now
-                $('.turnDeviceNotification').css('display', 'block');
-            break;
+    pager.data("curr",page);
+    pager.children().removeClass("active");
+    pager.children().eq(page+1).addClass("active");
 
-            case -90:
-                // The device is in landscape now
-                $('.turnDeviceNotification').css('display', 'block');
-            break;
-            }
-            });
-        </script>
-        <script>
-                /* When the user clicks on the button, 
-        toggle between hiding and showing the dropdown content */
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
+  }
+};
 
-        // Close the dropdown menu if the user clicks outside of it
-        window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')) {
+$(document).ready(function(){
 
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-                }
-            }
-            }
-        }
-        </script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-</div>
+  $('#myTable').pageMe({pagerSelector:'#myPager',showPrevNext:true,hidePageNumbers:false,perPage:10});
+
+});
+</script>
 </body>
-
 </html>

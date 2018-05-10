@@ -140,8 +140,6 @@ function displayAlert($text,$type)
           </a>
         </div>
     </nav>
-    
-        </nav>
         <div class="marketInfoMobile">
             <p style="margin-left: 5%;"> Welcome to the market!</p>
             <p style="margin-left: 5%;"> Here you can buy players to join your team.</p>
