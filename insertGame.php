@@ -1,3 +1,8 @@
+<script type="text/javascript">
+  if (screen.width <= 800) {
+  document.location = "signinMobile.php";
+  }
+</script>
 <?php
 session_start();
 require 'connect.php';
@@ -641,6 +646,7 @@ function displayAlert($text,$type)
       }
     }
     </script>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>

@@ -1,3 +1,8 @@
+<script type="text/javascript">
+  if (screen.width <= 800) {
+  document.location = "signinMobile.php";
+  }
+</script>
 <?php
 session_start();
 require 'connect.php';
@@ -7,7 +12,7 @@ $username = $_SESSION["username"];
 if ($_GET['username'] != NULL) {
   $user = $_GET['username'];
   $_SESSION["user"] = $user;
-  echo '<script>location="playerTeam.php"</script>';
+  echo '<script>location="playerTeamMobile.php"</script>';
 }
 
 if (isset($_POST['search'])) {
@@ -17,7 +22,7 @@ if (isset($_POST['search'])) {
   $userSearch = $stmt->fetch();
   if ($userSearch != NULL) {
     $_SESSION["user"] = $user;
-    echo '<script>location="playerTeam.php"</script>';
+    echo '<script>location="playerTeamMobile.php"</script>';
   }
   else {
     displayAlert("That User does not exist!", "danger");

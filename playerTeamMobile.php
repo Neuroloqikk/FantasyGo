@@ -1,21 +1,20 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <?php
 session_start();
 require 'connect.php';
 
-unset($_SESSION['1sttime']);
+$user = $_SESSION["user"];
 $username = $_SESSION["username"];
-$stmt = $pdo->query("SELECT `score`,`balance` FROM `users`.`users` WHERE username='$username'");
+$stmt = $pdo->query("SELECT `score`,`balance`,timestamp FROM `users`.`users` WHERE username='$user'");
 $p = $stmt->fetch();
-$balance = $p['balance']."$";
+$balance = $p['balance'];
 $score = $p['score'];
-$stmt = $pdo->query("SELECT player1_id, player2_id, player3_id, player4_id, player5_id FROM `users`.`users_players` WHERE username = '$username'");
+$timestamp = $p['timestamp'];
+$stmt = $pdo->query("SELECT player1_id, player2_id, player3_id, player4_id, player5_id FROM `users`.`users_players` WHERE username = '$user'");
 $stmt->execute([20]);
 $arr = $stmt->fetch(PDO::FETCH_NUM);
 list($player1_Id, $player2_Id, $player3_Id, $player4_Id, $player5_Id) = $arr;
-if($username == null){
-    echo '<script>location="signinMobile.php"</script>';
-}
+
+//
 
 $q = $pdo->query("SELECT name,photo FROM `users`.`players` WHERE id= '" . $player1_Id . "'");
 $t = $q->fetch();
@@ -23,7 +22,7 @@ $player1Name = $t['name'];
 $player1Photo = $t['photo'];
 
 if ($player1Name == NULL) {
-  $player1Name = "Buy another player.";
+  $player1Name = "Player Missing";
   $player1Photo = "/BlackPlayer.png";
 }
 
@@ -35,7 +34,7 @@ $player2Name = $t['name'];
 $player2Photo = $t['photo'];
 
 if ($player2Name == "") {
-  $player2Name = "Buy another player.";
+  $player2Name = "Player Missing.";
   $player2Photo = "/BlackPlayer.png";
 }
 
@@ -47,7 +46,7 @@ $player3Name = $t['name'];
 $player3Photo = $t['photo'];
 
 if ($player3Name == "") {
-  $player3Name = "Buy another player.";
+  $player3Name = "Player Missing.";
   $player3Photo = "/BlackPlayer.png";
 }
 
@@ -57,7 +56,7 @@ $player4Name = $t['name'];
 $player4Photo = $t['photo'];
 
 if ($player4Name == "") {
-  $player4Name = "Buy another player.";
+  $player4Name = "Player Missing.";
   $player4Photo = "/BlackPlayer.png";
 }
 
@@ -67,7 +66,7 @@ $player5Name = $t['name'];
 $player5Photo = $t['photo'];
 
 if ($player5Name == "") {
-  $player5Name = "Buy another player.";
+  $player5Name = "Player Missing.";
   $player5Photo = "/BlackPlayer.png";
 }
 
@@ -136,17 +135,15 @@ if ($player5_score == 0) {
   $player5_score = 0;
 }
 
+
 function displayAlert($text,$type)
 {
    echo "<div class=\"col-xs-10 col-xs-offset-1 col-xs-offset-right-1 alert alert-".$type."\" role=\"alert\">
-        <button type=\"button\" class=\"col-xs-10 col-xs-offset-1 col-xs-offset-right-1 close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\" style=\"float: right;\">&times;</span></button>
+        <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\" style=\"float: right;\">&times;</span></button>
             <p>" . $text . "</p>
           </div>";
 }
-
 ?>
-
-
 <html>
 
 <head>
@@ -168,9 +165,9 @@ function displayAlert($text,$type)
     <nav class="navbar navbar-default navbar-static-top">
       <div class="container">
         <div class="navbar-header">
-          <p class="balanceMobile col-xs-4 col-xs-offset-4 col-xs-offset-right-4"><?=$balance?></p>
+          <p class="balanceMobile col-xs-4 col-xs-offset-4 col-xs-offset-right-4"><?=$user?></p>
           <div class="usernameMobile col-xs-4 col-xs-offset-4 col-xs-offset-right-4">
-            <p><a href="userSettings.php"><?=$username?></a></p>
+          <p>Player</p>
           </div>
           <div class="menuLogoMobile">
             <img onclick="myFunction()" src="img/menu.svg" style="width: inherit;">
@@ -181,7 +178,7 @@ function displayAlert($text,$type)
               <a href="leaderboardMobile.php">Leaderboard</a>
               <a href="nextGamesMobile.php">Next Games</a>
               <a href="lastGamesMobile.php">Last Games</a>
-              <a href="userSettings.php">Settings</a>
+              <a href="userSettingsMobile.php">Settings</a>
               <a href="logoutMobile.php">Logout</a>
             </div>
           <a id="logoMobile" class="navbar-brand">
@@ -192,7 +189,7 @@ function displayAlert($text,$type)
     
         </nav>
         <div class="marketInfoMobile">
-            <p> Welcome to your team!<br>Here's your score from this season</p>
+            <p> Welcome to <?=$user?>'s' team!<br>Here's his score from this season</p>
             <p> <?=$score?></p>
         </div>
         <div class="panel-group col-xs-10 col-xs-offset-1 col-xs-offset-right-1">

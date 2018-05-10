@@ -2116,7 +2116,9 @@ input {
   margin-bottom: 10px;
   margin-top: 10px;
 }
-
+.panel{
+  border: 0px;
+}
 
 @media (min-width: 410px) and (max-width: 480px) {
   .MobileTeamPoints {
@@ -2497,7 +2499,6 @@ input {
   .menuLogoMobile{
     width: 70px;
     float: right;
-    margin-top: -18%;
     margin-right: 5%;
   }
   .list-group-item button{

@@ -1,3 +1,8 @@
+<script type="text/javascript">
+  if (screen.width <= 800) {
+  document.location = "mobile.html";
+  }
+</script>
 <?php
 session_start();
 require 'connect.php';

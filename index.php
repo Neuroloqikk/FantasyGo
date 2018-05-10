@@ -1,4 +1,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript">
+  if (screen.width <= 800) {
+  document.location = "indexMobile.php";
+  }
+</script>
 <?php
 require '/vendor/autoload.php';
 

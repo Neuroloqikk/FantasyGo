@@ -1,3 +1,8 @@
+<script type="text/javascript">
+  if (screen.width <= 800) {
+  document.location = "signinMobile.php";
+  }
+</script>
 <?php
 session_start();
 require 'connect.php';
