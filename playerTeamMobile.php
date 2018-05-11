@@ -185,8 +185,6 @@ function displayAlert($text,$type)
             <img src="img/logo.png">
           </a>
         </div>
-    </nav>
-    
         </nav>
         <div class="marketInfoMobile">
             <p> Welcome to <?=$user?>'s' team!<br>Here's his score from this season</p>

@@ -1580,6 +1580,46 @@ input {
 }
 
 @media (min-width: 0px) and (max-width: 360px) {
+  .team1Insert {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+  
+  #img1LastGame{
+    width: 48%;
+    float:left;
+  }
+  #img2LastGame{
+    width:48%;
+    float:right;
+  }
+  #infoLastGame{
+    text-align:Center;
+    color:white;
+  }
+  .team1LastGameNameMobile{
+    width: 48%;
+    text-align: center;
+    font-size: 22px;
+    color: white;
+  }
+  .team2LastGameNameMobile{
+    text-align: center;
+    font-size: 22px;
+    width: 48%;
+    float: right;
+    margin-top: -8.9%;
+    color: white;
+  }
+  .vsLastGameMobile{
+    text-align: center;
+    font-size: 15px;
+    margin-top: -7%;
+    color: white;
+  }
+  #tdDateMobile{
+    display:none;
+  }
   .MobileTeamPoints {
     margin-top: -10%;
   }

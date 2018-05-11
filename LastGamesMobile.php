@@ -7,7 +7,7 @@ $username = $_SESSION["username"];
 if ($_GET['username'] != NULL) {
   $user = $_GET['username'];
   $_SESSION["user"] = $user;
-  echo '<script>location="playerTeamMobile.php"</script>';
+  echo '<script>location="playerTeam.php"</script>';
 }
 
 if (isset($_POST['search'])) {
@@ -17,7 +17,7 @@ if (isset($_POST['search'])) {
   $userSearch = $stmt->fetch();
   if ($userSearch != NULL) {
     $_SESSION["user"] = $user;
-    echo '<script>location="playerTeamMobile.php"</script>';
+    echo '<script>location="playerTeam.php"</script>';
   }
   else {
     displayAlert("That User does not exist!", "danger");
@@ -31,7 +31,9 @@ function displayAlert($text,$type)
             <p>" . $text . "</p>
           </div>";
 }
+
 ?>
+
 
 <html>
 
@@ -47,7 +49,7 @@ function displayAlert($text,$type)
     <link href="css/app.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="/img/icon.png">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 <div class="container-example">
 
@@ -77,21 +79,6 @@ function displayAlert($text,$type)
         </div>
     </nav>
 
-
-    <form class="formLeaderboard" action="leaderboardMobile.php" method="POST">
-  <div id="rowLeaderboard" class="row" style="margin-top: -10px;">
-    <div class="col-xs-6 col-md-4" style="width: 100%;">
-      <div id="inputLeaderboard" class="input-group" style="display: table;width: 50%;margin: 0 auto;">
-        <input type="text" class="form-control" placeholder="Search" name="nametxt" id="txtSearch" />
-        <div class="input-group-btn"  id="txtSearch" >
-          <button class="btn btn-primary" type="submit" name="search" id="txtSearch" >
-            <span class="glyphicon glyphicon-search"></span id="txtSearch" >
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</form>
 <?php
 
 
@@ -103,25 +90,27 @@ echo '<table class="table table-hover">';
 echo
 '<thead>
 <tr>
+<th>Team 1</th>
 <th></th>
-<th>Username</th>
+<th>Team 2</th>
+
 <th>Score</th>
-<th>Start Date</th>
+<th id="tdDateMobile">Date</th>
 </tr>
 </thead>
 <tbody id="myTable">';
-$getUsers = $pdo->query("SELECT username,score,timestamp FROM users ORDER BY score DESC");
-$index = 0;
-foreach ($getUsers as $user) {
-  $date = $user['timestamp'];
-  $createDate = new DateTime($date);
-  $strip = $createDate->format('Y-m-d');
-  $index++;
+$getGames = $pdo->query("SELECT id,team1,team2,score_team1,score_team2,timestamp,next_game_id FROM results ORDER BY timestamp DESC");
+          foreach ($getGames as $user) {
+  $timestamp = $user['timestamp'];
+  $datetime = new DateTime($timestamp);
+  $date = $datetime->format('Y/m/d');
+  
   echo "<tr>";
-  echo "<td>".$index."</td>";
-  echo '<td style="cursor:pointer"> <a href="leaderboardMobile.php?username='.$user['username'].'">'.$user['username'].'</a></td>';
-  echo "<td>".$user['score']."</td>";
-  echo "<td>".$strip."</td>";
+  echo '<td style="cursor:pointer"> <a href="lastGameMobile.php?id='.$user['next_game_id'].'">'.$user['team1'].'</a></td>';
+  echo '<td style="cursor:pointer"> <a href="lastGameMobile.php?id='.$user['next_game_id'].'">vs</a></td>';
+  echo '<td style="cursor:pointer"> <a href="lastGameMobile.php?id='.$user['next_game_id'].'">'.$user['team2'].'</a></td>';
+  echo '<td>'.$user['score_team1'].'-'.$user['score_team2'].'</td>';
+  echo '<td id="tdDateMobile">'.$date.'</td>';
   echo "</tr>";
 }
 echo '</tbody>';
@@ -242,5 +231,37 @@ $(document).ready(function(){
 
 });
 </script>
+<script>
+function showGames() {
+  var x = document.getElementById("sidebarShowBtn");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+<script>
+            /* When the user clicks on the button, 
+      toggle between hiding and showing the dropdown content */
+      function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      // Close the dropdown menu if the user clicks outside of it
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+      </script>
 </body>
 </html>

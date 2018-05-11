@@ -127,7 +127,7 @@ function displayAlert($text,$type)
             <img onclick="myFunction()" src="img/menu.svg" style="width: inherit;">
           </div>  
             <div id="myDropdown" class="dropdownMobile-content">
-              <a href="signinMobile.php">My Team</a>
+              <a href="myTeamMobile.php">My Team</a>
               <a href="marketMobile.php">Market</a>
               <a href="leaderboardMobile.php">Leaderboard</a>
               <a href="nextGamesMobile.php">Next Games</a>

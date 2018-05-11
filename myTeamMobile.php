@@ -189,8 +189,6 @@ function displayAlert($text,$type)
           </a>
         </div>
     </nav>
-    
-        </nav>
         <div class="marketInfoMobile">
             <p> Welcome to your team!<br>Here's your score from this season</p>
             <p> <?=$score?></p>

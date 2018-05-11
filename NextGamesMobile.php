@@ -64,7 +64,7 @@ function displayAlert($text,$type)
             <img onclick="myFunction()" src="img/menu.svg" style="width: inherit;">
           </div>  
             <div id="myDropdown" class="dropdownMobile-content">
-              <a href="signinMobile.php">My Team</a>
+              <a href="myTeamMobile.php">My Team</a>
               <a href="marketMobile.php">Market</a>
               <a href="leaderboardMobile.php">Leaderboard</a>
               <a href="nextGamesMobile.php">Next Games</a>
@@ -237,5 +237,27 @@ function showGames() {
   }
 }
 </script>
+<script>
+            /* When the user clicks on the button, 
+      toggle between hiding and showing the dropdown content */
+      function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      // Close the dropdown menu if the user clicks outside of it
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+      </script>
 </body>
 </html>
