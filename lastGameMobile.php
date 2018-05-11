@@ -87,7 +87,7 @@ function displayAlert($text,$type)
 <div class="turnDeviceNotification"></div>
 <div class="container-example">
 
-    <body class="bg" id="landingBG" style="overflow: scroll;">
+    <body id="landingBG" style="overflow: scroll;">
     <nav class="navbar navbar-default navbar-static-top">
       <div class="container">
         <div class="navbar-header">
