@@ -69,7 +69,7 @@ function displayAlert($text,$type)
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
 
-            <p>Forgot your username/password? <a href="index.php" style="color:dodgerblue">Click here!</a></p>
+            <p>Forgot your username/password? <a href="recoverMobile.php" style="color:dodgerblue">Click here!</a></p>
             <p>Don't have an account? <a href="indexMobile.php" style="color:dodgerblue">Register</a></p>
             <div class="clearfix">
               <button type="button" class="cancelbtn">Cancel</button>
