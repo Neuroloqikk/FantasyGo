@@ -117,26 +117,28 @@ function displayAlert($text,$type)
               <img class="menu-icon" src="img/menu.svg">
             </a>
             <ul class="dropdown-menu">
-              <li>
-                <a href="myteam.php">My Team</a>
-              </li>
-              <li>
-                <a href="market.php">Market</a>
-              </li>
-              <li>
-                <a href="leaderboard.php">Leaderboard</a>
-              </li>
-              <li>
-                <a href="#">Next Games</a>
-              </li>
-              <li>
-                <a href="#">Last Games</a>
-              </li>
-              <li>
-                <a href="logout.php" onClick>Logout</a>
-              </li>
-
-            </ul>
+                <li>
+                  <a href="myteam.php">My Team</a>
+                </li>
+                <li>
+                  <a href="market.php">Market</a>
+                </li>
+                <li>
+                  <a href="leaderboard.php">Leaderboard</a>
+                </li>
+                <li>
+                  <a href="NextGames.php">Next Games</a>
+                </li>
+                <li>
+                  <a href="LastGames.php">Last Games</a>
+                </li>
+                <li>
+                  <a href="userSettings.php">Settings</a>
+                </li>
+                <li>
+                  <a href="logout.php">Logout</a>
+                </li>
+              </ul>
           </li>
         </ul>
       </div>
@@ -185,7 +187,7 @@ function displayAlert($text,$type)
         <label for="username"><b>Username</b></label>
         <input class="txtcolorinput" type="text" placeholder="<?=$username?>" name="username" disabled>
 
-        <label for="currentEmail"><b>Current email</b></labek>
+        <label for="currentEmail"><b>Current email</b></label>
           <input class ="txtcolorinput" type="text" placeholder="<?=$email?>" name="currentEmail" disabled>
 
           <label for="email"><b>New email</b></label>

@@ -66,7 +66,7 @@ function displayAlert($text,$type)
 </head>
 <div class="container-example">
 
-  <body class="yui3-skin-sam">
+  <body class="yui3-skin-sam" style="background-image: url('img/nuke.jpg');background-repeat: no-repeat;background-position: center;background-size: cover;">
     <nav class="navbar navbar-default navbar-static-top">
       <div class="container">
         <div class="navbar-header">
@@ -109,10 +109,10 @@ function displayAlert($text,$type)
                   <a href="leaderboard.php">Leaderboard</a>
                 </li>
                 <li>
-                  <a href="#">Next Games</a>
+                  <a href="NextGames.php">Next Games</a>
                 </li>
                 <li>
-                  <a href="#">Last Games</a>
+                  <a href="LastGames.php">Last Games</a>
                 </li>
                 <li>
                   <a href="userSettings.php">Settings</a>

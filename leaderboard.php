@@ -81,11 +81,35 @@ function displayAlert($text,$type)
                 <?= $username ?>
               </a>
             </li>
-
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
             <li class="dropdown">
-              <a href="myteam.php" id="menuDropdown" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                 <img class="menu-icon" src="img/menu.svg">
               </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="myteam.php">My Team</a>
+                </li>
+                <li>
+                  <a href="market.php">Market</a>
+                </li>
+                <li>
+                  <a href="leaderboard.php">Leaderboard</a>
+                </li>
+                <li>
+                  <a href="NextGames.php">Next Games</a>
+                </li>
+                <li>
+                  <a href="LastGames.php">Last Games</a>
+                </li>
+                <li>
+                  <a href="userSettings.php">Settings</a>
+                </li>
+                <li>
+                  <a href="logout.php">Logout</a>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -300,5 +324,6 @@ function showGames() {
   }
 }
 </script>
+
 </body>
 </html>

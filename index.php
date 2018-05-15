@@ -55,7 +55,7 @@ else {
       $mg->sendMessage($domain, array(
         'from' => 'FantasyGo@FantasyLeague.com',
         'to' => '' . $email . '',
-        'subject' => 'The PHP SDK is awesome!',
+        'subject' => 'Welcome to FantasyGo!',
         'text' => '
         Thanks for signing up!
         Your account has been created, you can login with the following username after you have activated your account by pressing the url below.

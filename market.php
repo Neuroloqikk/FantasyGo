@@ -29,6 +29,7 @@ if (!empty($_GET)) {
    $first_name = $t['first_name'];
    $last_name = $t['last_name'];
    $player_photo = $t['photo'];
+   $teamPlayerModal = $t['team'];
    $team_photo = $t['team_photo'];
    $price = $t['price'];
    if ($_GET['buy'] != NULL and $username != null) {
@@ -157,26 +158,28 @@ function displayAlert($text,$type)
                                 <img class="menu-icon" src="img/menu.svg">
                             </a>
                             <ul class="dropdown-menu">
-                                <li>
-                                    <a href="myteam.php">My Team</a>
-                                </li>
-                                <li>
-                                    <a href="leaderboard.php">Leaderboard</a>
-                                </li>
-                                <li>
-                                    <a href="#">Next Games</a>
-                                </li>
-                                <li>
-                                    <a href="#">Last Games</a>
-                                </li>
-
-                                <li>
-                                    <a href="userSettings.php">Settings</a>
-                                </li>
-                                <li>
-                                    <a href="logout.php">Logout</a>
-                                </li>
-                            </ul>
+                <li>
+                  <a href="myteam.php">My Team</a>
+                </li>
+                <li>
+                  <a href="market.php">Market</a>
+                </li>
+                <li>
+                  <a href="leaderboard.php">Leaderboard</a>
+                </li>
+                <li>
+                  <a href="NextGames.php">Next Games</a>
+                </li>
+                <li>
+                  <a href="LastGames.php">Last Games</a>
+                </li>
+                <li>
+                  <a href="userSettings.php">Settings</a>
+                </li>
+                <li>
+                  <a href="logout.php">Logout</a>
+                </li>
+              </ul>
                         </li>
                     </ul>
                 </div>
@@ -248,26 +251,21 @@ function displayAlert($text,$type)
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>NiP vs SK</td>
-                                            <td>16-10</td>
-                                            <td>+20</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NiP vs SK</td>
-                                            <td>16-10</td>
-                                            <td>+20</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NiP vs SK</td>
-                                            <td>16-10</td>
-                                            <td>+20</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NiP vs SK</td>
-                                            <td>16-10</td>
-                                            <td>+20</td>
-                                        </tr>
+                                    <?php
+                                            $stmt = $pdo->query("SELECT team1,team2,score_team1,score_team2,next_game_id FROM results WHERE team1='$teamPlayerModal' OR team2='$teamPlayerModal' ORDER BY timestamp DESC LIMIT 4");
+                                            $p = $stmt->fetchAll();
+                                            foreach($p as $row){
+                                                $id=$row['next_game_id'];
+                                                $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='$playerName' ORDER BY timestamp DESC LIMIT 4");
+                                                $p = $stmt->fetch();
+                                                echo '<tr>';
+                                                echo '<td>'.$row['team1'].' vs '.$row['team2'].'</td>';
+                                                echo '<td>'.$row['score_team1']. ' vs '.$row['score_team2'].'</td>';
+                                                echo '<td>+<span id="win">'.implode($p).'</span></td>';
+
+                                                echo '</tr>';
+                                            }
+                                        ?>
                                     </tbody>
                                 </table>
                             </div>
@@ -279,26 +277,17 @@ function displayAlert($text,$type)
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>NiP vs SK</td>
-                                            <td>17/03/2018</td>
-                                            <td>17:30</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NiP vs SK</td>
-                                            <td>17/03/2018</td>
-                                            <td>17:30</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NiP vs SK</td>
-                                            <td>17/03/2018</td>
-                                            <td>17:30</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NiP vs SK</td>
-                                            <td>17/03/2018</td>
-                                            <td>17:30</td>
-                                        </tr>
+                                    <?php
+                                        $stmt = $pdo->query("SELECT * FROM next_games WHERE team1='$teamPlayerModal' OR team2='$teamPlayerModal' AND Inserted IS NULL ORDER BY Date DESC LIMIT 4");
+                                        $p = $stmt->fetchAll();
+                                        foreach($p as $row){
+                                            echo '<tr>';
+                                            echo '<td>'.$row['team1'].' vs '.$row['team2'].'</td>';
+                                            echo '<td>'.$row['Date'].'</td>';
+                                            echo '<td>'.$row['Hour'].'</td>';
+                                            echo '</tr>';
+                                        }
+                                    ?>
                                     </tbody>
                                 </table>
                             </div>

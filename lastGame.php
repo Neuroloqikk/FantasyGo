@@ -133,10 +133,10 @@ function displayAlert($text,$type)
                   <a href="leaderboard.php">Leaderboard</a>
                 </li>
                 <li>
-                  <a href="#">Next Games</a>
+                  <a href="NextGames.php">Next Games</a>
                 </li>
                 <li>
-                  <a href="#">Last Games</a>
+                  <a href="LastGames.php">Last Games</a>
                 </li>
                 <li>
                   <a href="userSettings.php">Settings</a>

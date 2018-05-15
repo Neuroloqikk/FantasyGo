@@ -9,26 +9,6 @@ require 'connect.php';
 
 $username = $_SESSION["username"];
 
-if ($_GET['username'] != NULL) {
-  $user = $_GET['username'];
-  $_SESSION["user"] = $user;
-  echo '<script>location="playerTeam.php"</script>';
-}
-
-if (isset($_POST['search'])) {
-  $user = $_POST['nametxt'];
-  $stmt = $pdo->prepare("SELECT * FROM users WHERE username=:id");
-  $stmt->execute(['id' => $user]);
-  $userSearch = $stmt->fetch();
-  if ($userSearch != NULL) {
-    $_SESSION["user"] = $user;
-    echo '<script>location="playerTeam.php"</script>';
-  }
-  else {
-    displayAlert("That User does not exist!", "danger");
-  }
-}
-
 function displayAlert($text,$type)
 {
    echo "<div class=\"col-xs-10 col-xs-offset-1 col-xs-offset-right-1 alert alert-".$type."\" role=\"alert\">
@@ -83,10 +63,35 @@ function displayAlert($text,$type)
               </a>
             </li>
 
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
             <li class="dropdown">
-              <a href="myteam.php" id="menuDropdown" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                 <img class="menu-icon" src="img/menu.svg">
               </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="myteam.php">My Team</a>
+                </li>
+                <li>
+                  <a href="market.php">Market</a>
+                </li>
+                <li>
+                  <a href="leaderboard.php">Leaderboard</a>
+                </li>
+                <li>
+                  <a href="NextGames.php">Next Games</a>
+                </li>
+                <li>
+                  <a href="LastGames.php">Last Games</a>
+                </li>
+                <li>
+                  <a href="userSettings.php">Settings</a>
+                </li>
+                <li>
+                  <a href="logout.php">Logout</a>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -127,20 +132,6 @@ function displayAlert($text,$type)
     </nav>
   </div>
 </div>
-  <form class="formLeaderboard" action="leaderboard.php" method="POST">
-  <div id="rowLeaderboard" class="row">
-    <div class="col-xs-6 col-md-4">
-      <div id="inputLeaderboard" class="input-group">
-        <input type="text" class="form-control" placeholder="Search" name="nametxt" id="txtSearch" />
-        <div class="input-group-btn"  id="txtSearch" >
-          <button class="btn btn-primary" type="submit" name="search" id="txtSearch" >
-            <span class="glyphicon glyphicon-search"></span id="txtSearch" >
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</form>
 <?php
 
 
@@ -160,12 +151,12 @@ echo
 </tr>
 </thead>
 <tbody id="myTable">';
-$getGames = $pdo->query("SELECT team1,team2,Date,Hour FROM next_games ORDER BY Hour DESC");
+$getGames = $pdo->query("SELECT team1,team2,Date,Hour FROM next_games WHERE Inserted IS NULL ORDER BY Hour DESC");
           foreach ($getGames as $user) {
   $date = $user['Date'];
   $hour = $user['Hour'];
   echo "<tr>";
-  echo '<td style="cursor:pointer"> <a href="leaderboard.php?username='.$user['team1'].'">'.$user['team1'].'</a></td>';
+  echo '<td style="cursor:pointer"> <a href="#">'.$user['team1'].'</a></td>';
   echo "<td>vs</td>";
   echo '<td style="cursor:pointer"> <a href="leaderboard.php?username='.$user['username'].'">'.$user['team2'].'</a></td>';
   echo '<td>'.$date.'</td>';

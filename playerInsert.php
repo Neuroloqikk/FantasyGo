@@ -75,16 +75,16 @@ function displayAlert($text,$type)
                   <a href="myteam.php">My Team</a>
                 </li>
                 <li>
-                  <a href="#">Market</a>
+                  <a href="market.php">Market</a>
                 </li>
                 <li>
                   <a href="leaderboard.php">Leaderboard</a>
                 </li>
                 <li>
-                  <a href="#">Next Games</a>
+                  <a href="NextGames.php">Next Games</a>
                 </li>
                 <li>
-                  <a href="#">Last Games</a>
+                  <a href="LastGames.php">Last Games</a>
                 </li>
                 <li>
                   <a href="userSettings.php">Settings</a>
