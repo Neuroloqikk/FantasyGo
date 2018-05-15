@@ -2,16 +2,6 @@
 session_start();
 require 'connect.php';
 
-if (isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['hash']) && !empty($_GET['hash'])) {
-  $email = ($_GET['email']);
-  $hash = ($_GET['hash']);
-  $sql = "SELECT recover FROM `users`.`users` WHERE email= '" . $email . "' AND recover='" . $hash . "'";
-  
-  $res = $pdo->query($sql);
-  if ($res->fetchColumn() > 0) {
-  }
-  else echo '<script>location="signin.php"</script>';
-}
 if (isset($_POST['register'])) {
   $email = !empty($_POST['email']) ? trim($_POST['email']) : null;
   $pass = !empty($_POST['psw']) ? trim($_POST['psw']) : null;
