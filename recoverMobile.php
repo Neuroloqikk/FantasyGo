@@ -1,4 +1,8 @@
 <?php
+
+require '/vendor/autoload.php';
+
+use Mailgun\Mailgun;
 session_start();
 require 'connect.php';
 
