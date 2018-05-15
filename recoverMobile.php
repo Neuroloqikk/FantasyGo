@@ -33,7 +33,7 @@ if (isset($_POST['login'])) {
         
 
         Please click this link to recover your password:
-        http://www.neuroloq1kk.me/FantasyGo/recoverPasswordMobile.php?email=' . $email . '&hash=' . $hash . '.'
+        http://www.neuroloq1kk.me/FantasyGo/recoverPassword.php?email=' . $email . '&hash=' . $hash . '.'
       ));
 
 
