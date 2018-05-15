@@ -69,7 +69,7 @@ function displayAlert($text,$type)
         <h1>Password Recover</h1>
         <hr>
           <label for="currentEmail"><b>Current email</b></label>
-          <input class ="txtcolorinput" type="text" value="<?$email?>" placeholder="<?=$email?>" name="currentEmail" disabled>
+          <input class ="txtcolorinput" type="text" value="<?=$email?>" placeholder="<?=$email?>" name="currentEmail" disabled>
          
           <label for="psw"><b>New password</b></label>
           <input class="txtcolorinput" type="password" placeholder="Enter new password" name="psw" >
