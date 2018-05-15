@@ -11,7 +11,7 @@ if($email == null){
   echo '<script>location="signin.php"</script>';
 }
 if (isset($_POST['register'])) {
-  $email = !empty($_POST['email']) ? trim($_POST['email']) : null;
+  $email = $_GET['email'];
   $pass = !empty($_POST['psw']) ? trim($_POST['psw']) : null;
   $passVerify = !empty($_POST['psw-repeat']) ? trim($_POST['psw-repeat']) : null;
 
