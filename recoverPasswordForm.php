@@ -22,9 +22,6 @@ if (isset($_POST['register'])) {
     $sql = "UPDATE `users`.`users` SET psw=?,recover=? WHERE email=?";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$passwordHash, $recover,$email]);
-    echo '<script type="text/javascript">alert("'.$passwordHash.'");</script>';
-    echo '<script type="text/javascript">alert("'.$recover.'");</script>';
-    echo '<script type="text/javascript">alert("'.$email.'");</script>';
     displayAlert("Your password was updated!", "success");
   }
 }
