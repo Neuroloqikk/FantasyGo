@@ -1,8 +1,17 @@
+<script type="text/javascript">
+  if (screen.width <= 800) {
+  document.location = "signinMobile.php";
+  }
+</script>
 <?php
 session_start();
 require 'connect.php';
 
 $username = $_SESSION["username"];
+
+$stmt = $pdo->query("SELECT `isAdmin` FROM `users`.`users` WHERE username='$username'");
+$p = $stmt->fetch();
+$Admin = $p['isAdmin'];
 
 
 function displayAlert($text,$type)
@@ -16,56 +25,48 @@ function displayAlert($text,$type)
 <html>
 
 <head>
-
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fantasy GO</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/app.css" rel="stylesheet">
-  <link rel="icon" type="image/png" href="/img/icon.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 </head>
 
-<div class="container-example">
-
-  <body class="bg">
-    <nav class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-
-          <a class="navbar-brand">
-            <img src="img/logo.svg">
-          </a>
-          <a href="#" class="navbar-brand" id="sidebarShow" onclick="showGames()">
-            <img src="img/eye.svg">
-          </a>
-          <a class="navbar-brand" id="balance">
-            <h4>Balance</h4>
-            <h2>300000$</h2>
-          </a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-          <ul class="nav navbar-nav navbar-right">
-
-            <li class="usernameIndex">
-              <a>
-                <?= $username ?>
-              </a>
-            </li>
-
-            <li class="dropdown">
-              <a href="#" id="menuDropdown" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                <img class="menu-icon" src="img/menu.svg">
-              </a>
-              <ul class="dropdown-menu">
+<body class="bg">
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand">
+          <img src="img/logo.svg">
+        </a>
+        <a href="#" class="navbar-brand" id="sidebarShow" onclick="showGames()">
+          <img src="img/eye.svg">
+        </a>
+        <a class="navbar-brand" id="balance">
+          <h4>Balance</h4>
+          <h2>
+            <?= $balance ?>$</h2>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li id="usernameIndex" class="font">
+                <a href="userSettings.php">
+                  <?= $username ?>
+                </a>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  <img class="menu-icon" src="img/menu.svg">
+                </a>
+                <ul class="dropdown-menu">
+                <?php if ($Admin == 0):?>
                 <li>
                   <a href="myteam.php">My Team</a>
                 </li>
@@ -76,25 +77,61 @@ function displayAlert($text,$type)
                   <a href="leaderboard.php">Leaderboard</a>
                 </li>
                 <li>
-                  <a href="#">Next Games</a>
+                  <a href="NextGames.php">Next Games</a>
                 </li>
                 <li>
-                  <a href="#">Last Games</a>
+                  <a href="LastGames.php">Last Games</a>
                 </li>
                 <li>
                   <a href="userSettings.php">Settings</a>
                 </li>
                 <li>
-                  <a href="signin.php">Logout</a>
+                  <a href="logout.php">Logout</a>
                 </li>
+                <?php elseif ($Admin == 1):?>
+                  <li>
+                  <a href="insertNextGame.php">Insert Next Game</a>
+                </li>
+                <li>
+                  <a href="insertGame.php">Insert Last Game</a>
+                </li>
+                <li>
+                  <a href="leaderboard.php">LeaderBoard</a>
+                </li>
+                <li>
+                  <a href="NextGames.php">Next Games</a>
+                </li>
+                <li>
+                  <a href="LastGames.php">Last Games</a>
+                </li>
+                <li>
+                  <a href="LastGames.php">Change Player Prices</a>
+                </li>
+                <li>
+                  <a href="LastGames.php">Change Available Teams</a>
+                </li>
+                <li>
+                  <a href="LastGames.php">Insert New Team</a>
+                </li>
+                <li>
+                  <a href="LastGames.php">Update Tournament</a>
+                </li>
+                <li>
+                  <a href="changeRoles.php">Change Roles</a>
+                </li>
+                <li>
+                  <a href="userSettings.php">Settings</a>
+                </li>
+                <li>
+                  <a href="logout.php">Logout</a>
+                </li>
+              <?php endif;?>
               </ul>
-            </li>
-          </ul>
-
+              </li>
+            </ul>
+          </div>
         </div>
-
-      </div>
-      <div class="sidenav" id="sidebarShowBtn" style="display: none;">
+        <div class="sidenav" id="sidebarShowBtn" style="display: none;">
         <a id="SidebarTitle"><b>Coming Games</b></a>
         <?php 
          $stmt = $pdo->query("SELECT team1,team2,Date,Hour FROM next_games ORDER BY Date DESC LIMIT 5");
@@ -127,16 +164,21 @@ function displayAlert($text,$type)
 
          <?php }?>
       </div>
-    </nav>
-    <script>
-    function showGames() {
-      var x = document.getElementById("sidebar123");
-      if (x.style.display === "none") {
-        x.style.display = "block";
-      } else {
-        x.style.display = "none";
+      </nav>
+     
+     
+      <script>
+      function showGames() {
+        var x = document.getElementById("sidebarShowBtn");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
       }
-    }
-    </script>
-  </body>
-  </html>
+      </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+    </body>
+
+    </html>

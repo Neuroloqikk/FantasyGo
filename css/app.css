@@ -2915,3 +2915,51 @@ input {
 .pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover{
   z-index:0;
 }
+
+.dropdownUserRole{
+  width: 100;
+  margin-top: -1%;
+  margin-left: -150%;
+}
+
+.dropdownMenuUserRole{
+  margin-left: -150%;
+}
+
+.okUserRole{
+  float: right;
+  margin-right: 10%;
+  margin-top: 3%;
+}
+@media (min-width: 1440px){ 
+  .adminPaneluserRole{
+    position:absolute;
+    margin-left:4%;
+  }
+}
+
+
+.containerAdminPanel{
+  width:inherit;
+}
+.formAdminPanel{
+  width: 30%;
+  margin-left: 56%;
+  margin-top: 1.5%;
+}
+.formSearchAdminPanel{
+  width: 50%;
+  margin-left: 35%;
+}
+.btnAdminPanel{
+  margin-top: 10%;
+  margin-left: 24%;
+}
+.btnAdminPanelInsert{
+  margin-left: 24%;
+}
+.dropdownAdminPanel{
+  width: 240%;
+  margin-top: -3%;
+  margin-left: 17%;
+}

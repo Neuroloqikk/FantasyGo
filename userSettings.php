@@ -8,6 +8,9 @@ session_start();
 require 'connect.php';
 
 $username = $_SESSION["username"];
+$stmt = $pdo->query("SELECT `isAdmin` FROM `users`.`users` WHERE username='$username'");
+$p = $stmt->fetch();
+$Admin = $p['isAdmin'];
 $q = $pdo->query("SELECT email,psw FROM `users`.`users` WHERE username= '" . $username . "'");
 $t = $q->fetch();
 $email = $t['email'];
@@ -117,6 +120,7 @@ function displayAlert($text,$type)
               <img class="menu-icon" src="img/menu.svg">
             </a>
             <ul class="dropdown-menu">
+            <?php if ($Admin == 0):?>
                 <li>
                   <a href="myteam.php">My Team</a>
                 </li>
@@ -138,6 +142,44 @@ function displayAlert($text,$type)
                 <li>
                   <a href="logout.php">Logout</a>
                 </li>
+                <?php elseif ($Admin == 1):?>
+                  <li>
+                  <a href="insertNextGame.php">Insert Next Game</a>
+                </li>
+                <li>
+                  <a href="insertGame.php">Insert Last Game</a>
+                </li>
+                <li>
+                  <a href="leaderboard.php">LeaderBoard</a>
+                </li>
+                <li>
+                  <a href="NextGames.php">Next Games</a>
+                </li>
+                <li>
+                  <a href="LastGames.php">Last Games</a>
+                </li>
+                <li>
+                  <a href="LastGames.php">Change Player Prices</a>
+                </li>
+                <li>
+                  <a href="LastGames.php">Change Available Teams</a>
+                </li>
+                <li>
+                  <a href="LastGames.php">Insert New Team</a>
+                </li>
+                <li>
+                  <a href="LastGames.php">Update Tournament</a>
+                </li>
+                <li>
+                  <a href="changeRoles.php">Change Roles</a>
+                </li>
+                <li>
+                  <a href="userSettings.php">Settings</a>
+                </li>
+                <li>
+                  <a href="logout.php">Logout</a>
+                </li>
+              <?php endif;?>
               </ul>
           </li>
         </ul>

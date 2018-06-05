@@ -8,28 +8,47 @@ session_start();
 require 'connect.php';
 
 $username = $_SESSION["username"];
+
 $stmt = $pdo->query("SELECT `isAdmin` FROM `users`.`users` WHERE username='$username'");
 $p = $stmt->fetch();
 $Admin = $p['isAdmin'];
-if ($_GET['username'] != NULL) {
-  $user = $_GET['username'];
-  $_SESSION["user"] = $user;
-  echo '<script>location="playerTeam.php"</script>';
+
+$stmt = $pdo->query("SELECT Name,Place,Prize FROM Tournament WHERE Active='1'");
+$p = $stmt->fetch();
+$NameCurrent = $p['Name'];
+$PlaceCurrent = $p['Place'];
+$PrizeCurrent = $p['Prize'];
+
+
+if (isset($_POST['insert'])) {
+  $tournamentName = !empty($_POST['tournamentName']) ? trim($_POST['tournamentName']) : null;
+  $tournamentPlace = !empty($_POST['tournamentPlace']) ? trim($_POST['tournamentPlace']) : null;
+  $tournamentPrize = !empty($_POST['tournamentPrize']) ? trim($_POST['tournamentPrize']) : null;
+  $Active = 1;
+
+  
+  $sql = "Update Tournament Set Active = 0;";
+  $stmt = $pdo->prepare($sql);
+  $result = $stmt->execute();
+  $sql = "INSERT INTO Tournament (Name,Place,Prize,Active) VALUES ('$tournamentName','$tournamentPlace','$tournamentPrize','$Active');";
+  $stmt = $pdo->prepare($sql);
+  $result = $stmt->execute();
 }
 
-if (isset($_POST['search'])) {
-  $user = $_POST['nametxt'];
-  $stmt = $pdo->prepare("SELECT * FROM users WHERE username=:id");
-  $stmt->execute(['id' => $user]);
-  $userSearch = $stmt->fetch();
-  if ($userSearch != NULL) {
-    $_SESSION["user"] = $user;
-    echo '<script>location="playerTeam.php"</script>';
+
+if (isset($_GET["role"]) && isset($_GET["username"])){
+  if ($_GET['role'] == "User"){
+    $isAdmin = 0;
   }
-  else {
-    displayAlert("That User does not exist!", "danger");
+  else{
+    $isAdmin = 1;
   }
+  $sql = "UPDATE `users`.`users` SET isAdmin=? WHERE username=?";
+  $stmt = $pdo->prepare($sql);
+  $stmt->execute([$isAdmin, $_GET["username"]]);
+  displayAlert("User role was updated!", "success");
 }
+
 
 function displayAlert($text,$type)
 {
@@ -39,8 +58,6 @@ function displayAlert($text,$type)
           </div>";
 }
 ?>
-
-
 <html>
 
 <head>
@@ -54,43 +71,39 @@ function displayAlert($text,$type)
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
-<div class="container-example">
 
-  <body class="bg" >
-    <nav class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-
-          <a class="navbar-brand">
-            <img src="img/logo.svg">
-          </a>
-          <a href="#" class="navbar-brand" id="sidebarShow" onclick="showGames()">
-            <img src="img/eye.svg">
-          </a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-          <ul class="nav navbar-nav navbar-right">
-
-            <li id="usernameInsertGame" class="font">
-              <a href="userSettings.php">
-                <?= $username ?>
-              </a>
-            </li>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<body class="bg">
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand">
+          <img src="img/logo.svg">
+        </a>
+        <a href="#" class="navbar-brand" id="sidebarShow" onclick="showGames()">
+          <img src="img/eye.svg">
+        </a>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li id="usernameIndex" class="font">
+                <a href="userSettings.php">
+                  <?= $username ?>
+                </a>
+              </li>
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
             <script src="js/bootstrap.min.js"></script>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                <img class="menu-icon" src="img/menu.svg">
-              </a>
-              <ul class="dropdown-menu">
-              <?php if ($Admin == 0):?>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  <img class="menu-icon" src="img/menu.svg">
+                </a>
+                <ul class="dropdown-menu">
+                <?php if ($Admin == 0):?>
                 <li>
                   <a href="myteam.php">My Team</a>
                 </li>
@@ -151,11 +164,11 @@ function displayAlert($text,$type)
                 </li>
               <?php endif;?>
               </ul>
-            </li>
-          </ul>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="sidenav" id="sidebarShowBtn" style="display: none;">
+        <div class="sidenav" id="sidebarShowBtn" style="display: none;">
         <a id="SidebarTitle"><b>Coming Games</b></a>
         <?php 
          $stmt = $pdo->query("SELECT team1,team2,Date,Hour FROM next_games ORDER BY Date DESC LIMIT 5");
@@ -188,10 +201,9 @@ function displayAlert($text,$type)
 
          <?php }?>
       </div>
-    </nav>
-  </div>
-</div>
-<form class="formLeaderboard" action="leaderboard.php" method="POST">
+      </nav>
+     <div class="col-xs-6 col-md-4 adminPaneluserRole">
+      <form class="formLeaderboard formSearchAdminPanel" action="adminPanel.php" method="POST" style="width: 50%;">
   <div id="rowLeaderboard" class="row">
     <div class="col-xs-6 col-md-4">
       <div id="inputLeaderboard" class="input-group">
@@ -209,7 +221,7 @@ function displayAlert($text,$type)
 
 
 
-echo '<div id="tableLeaderboard" class="container">';
+echo '<div id="tableLeaderboard" class="container" style="width: 100%;">';
 echo '<div class="row">';
 echo '<div class="table-responsive">';
 echo '<table class="table table-hover">';
@@ -218,25 +230,49 @@ echo
 <tr>
 <th></th>
 <th>Username</th>
-<th>Score</th>
-<th>Start Date</th>
+<th>Role</th>
 </tr>
 </thead>
 <tbody id="myTable">';
-$getUsers = $pdo->query("SELECT username,score,timestamp FROM users ORDER BY score DESC");
-$index = 0;
+
+if (isset($_POST["search"])){
+  $searchUser = !empty($_POST['nametxt']) ? trim($_POST['nametxt']) : null;
+  $getUsers = $pdo->query('SELECT username,isAdmin FROM users Where username = "'.$searchUser.'"');
+  $index = 0;
+}
+else if ($_POST["search"] == ""){
+  $getUsers = $pdo->query("SELECT username,isAdmin FROM users ORDER BY isAdmin DESC");
+  $index = 0; 
+}
+else{
+  $getUsers = $pdo->query("SELECT username,isAdmin FROM users ORDER BY isAdmin DESC");
+  $index = 0; 
+}
 foreach ($getUsers as $user) {
-  $date = $user['timestamp'];
-  $createDate = new DateTime($date);
-  $strip = $createDate->format('Y-m-d');
   $index++;
+  if ($user['isAdmin'] == 1){
+    $Admin = "Admin";
+    $secondOption = "User";
+  }
+  else{
+    $Admin = "User";
+    $secondOption = "Admin";
+  }
+
   echo "<tr>";
   echo "<td>".$index."</td>";
   echo '<td style="cursor:pointer"> <a href="leaderboard.php?username='.$user['username'].'">'.$user['username'].'</a></td>';
-  echo "<td>".$user['score']."</td>";
-  echo "<td>".$strip."</td>";
+  echo '<td>';
+
+  echo ' <select data-userid="'.$user['username'].'" onchange="changeRole(this)" style="width: 50%;"> id="roleChooser"';
+  echo ' <option value="'.$Admin.'" selected="selected">'.$Admin.'</option>';
+  echo'  <option value="'.$secondOption.'">'.$secondOption.'</option>';
+  echo '</select>';
+  echo '<span id="roleChoose" name=" class="glyphicon glyphicon-ok okUserRole"></span>';
+  echo'</td>';
   echo "</tr>";
 }
+
 echo '</tbody>';
 echo '</table>';
 echo '</div>';
@@ -246,6 +282,7 @@ echo '</div>';
 echo '</div>';
 echo '</div>';
 ?>
+</div>
 <script>
 $.fn.pageMe = function(opts){
   var $this = this,
@@ -348,23 +385,93 @@ $.fn.pageMe = function(opts){
 
   }
 };
-
+;
 $(document).ready(function(){
-
+;
   $('#myTable').pageMe({pagerSelector:'#myPager',showPrevNext:true,hidePageNumbers:false,perPage:10});
 
 });
 </script>
-<script>
-function showGames() {
-  var x = document.getElementById("sidebarShowBtn");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-</script>
+<ul class="nav nav-tabs" style="margin-top: 1%;margin-left: 62%;width: 304px;">
+  <li class="active"><a data-toggle="tab" href="#menu1" style="background-color: white;">Insert Tournament</a></li>
+  <li><a data-toggle="tab" href="#menu2" style="background-color: white;">Update Tournament</a></li>
+</ul>
 
-</body>
-</html>
+<div class="tab-content">
+  <div id="menu1" class="tab-pane fade in active">
+     <form class="SignIn formAdminPanel " action="adminPanel.php" method="POST" style="border:1px solid #ccc">
+        <div class="txtcolor">
+          <div class="container containerAdminPanel">
+            <h1>Insert Tournament</h1>
+            <hr>
+
+            <label for="tournamentName"><b>Tournament Name</b></label>
+            <input type="text" placeholder="Enter Tournament Name" name="tournamentName" required>
+            <label for="tournamentPlace"><b>Tournament Place</b></label>
+            <input type="text" placeholder="Enter Tournament Place" name="tournamentPlace" required>
+            <label for="tournamentPrize"><b>Tournament Prize</b></label>
+            <input type="text" placeholder="Enter Tournament Prize" name="tournamentPrize" required>
+            <div class="clearfix">
+              <button type="submit" class="signupbtn btnAdminPanelInsert" name="insert">Insert</button>
+            </div>
+          </div>
+        </div>
+      </form>
+  </div>
+  <div id="menu2" class="tab-pane fade">
+  <form class="SignIn formAdminPanel " action="signin.php" method="POST" style="border:1px solid #ccc">
+        <div class="txtcolor">
+          <div class="container containerAdminPanel">
+            <h1>Update Tournament</h1>
+            <h3>Current Tournament:</h3><p> <?=$NameCurrent;?>, <?=$PlaceCurrent;?>, <?=$PrizeCurrent;?></p>
+            <hr>
+            <div class="dropdown" style="width: 50%;margin-left: 24%;">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Select a Tournament
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <?php
+              $stmt = $pdo->query("SELECT Name,Place,Prize FROM Tournament WHERE Active !='1'");
+              $p = $stmt->fetchAll();
+              foreach($p as $row){?>
+                 <li><a href="#"><?=$row['Name'];?> ,<?=$row['Place'];?>, <?=$row['Prize'];?></a></li>
+             <?php }?>
+              </ul>
+            </div>
+            <div class="clearfix">
+              <button type="submit" class="signupbtn btnAdminPanel" name="login">Update</button>
+            </div>
+          </div>
+        </div>
+      </form>
+  </div>
+</div>
+
+
+      
+<script>
+  function changeRole(sel){
+    var role = sel.options[sel.selectedIndex].text;
+    var username = $(sel).data('userid');
+
+    if (confirm('Are you sure you want to save '+username+' as an '+role+'?')) {
+      window.location.href="adminPanel.php?role="+role+"&username="+username;
+    } else {
+      location.reload();
+    }
+  }
+</script>
+      <script>
+      function showGames() {
+        var x = document.getElementById("sidebarShowBtn");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+      </script>
+    </body>
+
+    </html>
