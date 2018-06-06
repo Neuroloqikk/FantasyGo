@@ -60,7 +60,7 @@ function displayAlert($text,$type)
           </a>
         </div>
     </nav>
-    <form class="SignUp" method="POST" style="border:1px solid black">
+    <form class="SignUp" action="recoverPasswordForm.php" method="POST" style="border:1px solid black">
     <div class="txtcolor">
       <div class="container">
         <h1>Password Recover</h1>
