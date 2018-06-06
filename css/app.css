@@ -730,6 +730,18 @@ input {
   border: 1px solid black;
 }
 
+.team1InsertMobile table {
+  background-color: white;
+  border: 3px solid black;
+}
+
+.team1InsertMobile table td {
+  border: 1px solid black;
+}
+
+.team1InsertMobile table th {
+  border: 1px solid black;
+}
 #tableShadow{
   box-shadow:5px 5px grey;
 }
@@ -1590,11 +1602,12 @@ input {
     text-align:Center;
     color:white;
   }
-  .team1LastGameNameMobile{
-    width: 48%;
+  /*
+  #team1LastGameNameMobile{
+    width: 206px;
     text-align: center;
-    font-size: 22px;
     color: white;
+    font-size: 22px;
   }
   .team2LastGameNameMobile{
     text-align: center;
@@ -1609,7 +1622,7 @@ input {
     font-size: 15px;
     margin-top: -7%;
     color: white;
-  }
+  }*/
   #tdDateMobile{
     display:none;
   }
@@ -2962,4 +2975,13 @@ input {
   width: 240%;
   margin-top: -3%;
   margin-left: 17%;
+}
+
+#img1LastGameMobile{
+  float:left;
+  width:50%;
+}
+#img2LastGameMobile{
+  float:right;
+  width:50%;
 }

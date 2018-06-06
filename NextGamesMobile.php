@@ -4,25 +4,7 @@ require 'connect.php';
 
 $username = $_SESSION["username"];
 
-if ($_GET['username'] != NULL) {
-  $user = $_GET['username'];
-  $_SESSION["user"] = $user;
-  echo '<script>location="playerTeam.php"</script>';
-}
 
-if (isset($_POST['search'])) {
-  $user = $_POST['nametxt'];
-  $stmt = $pdo->prepare("SELECT * FROM users WHERE username=:id");
-  $stmt->execute(['id' => $user]);
-  $userSearch = $stmt->fetch();
-  if ($userSearch != NULL) {
-    $_SESSION["user"] = $user;
-    echo '<script>location="playerTeam.php"</script>';
-  }
-  else {
-    displayAlert("That User does not exist!", "danger");
-  }
-}
 
 function displayAlert($text,$type)
 {
@@ -102,9 +84,9 @@ $getGames = $pdo->query("SELECT team1,team2,Date,Hour FROM next_games ORDER BY H
   $date = $user['Date'];
   $hour = $user['Hour'];
   echo "<tr>";
-  echo '<td style="cursor:pointer"> <a href="leaderboard.php?username='.$user['team1'].'">'.$user['team1'].'</a></td>';
+  echo '<td style="cursor:pointer">'.$user['team1'].'</td>';
   echo "<td>vs</td>";
-  echo '<td style="cursor:pointer"> <a href="leaderboard.php?username='.$user['username'].'">'.$user['team2'].'</a></td>';
+  echo '<td style="cursor:pointer">'.$user['team2'].'</td>';
   echo '<td>'.$date.'</td>';
   echo '<td>'.$hour.'</td>';
   echo "</tr>";

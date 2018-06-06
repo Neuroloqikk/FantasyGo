@@ -85,7 +85,7 @@ function displayAlert($text,$type)
     <link rel="icon" type="image/png" href="/img/icon.png">
 </head>
 <div class="turnDeviceNotification"></div>
-<div class="container-example">
+<!--<div class="container-example">-->
 
     <body id="landingBG" style="overflow: scroll;height: 115%;">
     <nav class="navbar navbar-default navbar-static-top">
@@ -112,24 +112,24 @@ function displayAlert($text,$type)
           </a>
         </div>
     </nav>
-    <div id ="img1LastGame" class="imgLastGame">
+    <div id ="img1LastGameMobile" class="imgLastGame">
           <img src="img/<?=$team1?>/<?=$team1?>.svg">
           
     </div>
     
-    <div id ="img2LastGame" class="imgLastGame">
+    <div id ="img2LastGameMobile" class="imgLastGame">
           <img src="img/<?=$team2?>/<?=$team2?>.svg">
           
     </div>
-    <div class="team1LastGameNameMobile"><?=$team1?></div>
-    <div class="vsLastGameMobile">vs</div>
-    <div class="team2LastGameNameMobile"><?=$team2?></div>
+    <div id="team1LastGameNameMobile" class="team1LastGameNameMobile" style="width: 206px;text-align: center;color: white;font-size: 22px;"><?=$team1?></div>
+    <div class="vsLastGameMobile" style="text-align: center;margin-top: -27px;font-size: 18px;color: white;">vs</div>
+    <div class="team2LastGameNameMobile" style="float: right;margin-right: 76px;color: white;font-size: 22px;margin-top: -28px;"><?=$team2?></div>
     <div id="infoLastGame">
-      <h2> <span id="<?=$t1?>"><?=$score1?></span> - <span id="<?=$t2?>"><?=$score2?></span> </h2>
-      <h3> <?=$day?>/<?=$month?>/<?=$year?> <?=$hour?> </h3>
+      <h2 style="text-align: center;"> <span id="<?=$t1?>"><?=$score1?></span> - <span id="<?=$t2?>"><?=$score2?></span> </h2>
+      <h3 style="text-align: center;color:white;"> <?=$day?>/<?=$month?>/<?=$year?> <?=$hour?> </h3>
     </div>
     
-      <div id="team1InsertLastGame"class="team1Insert">
+      <div id="team1InsertLastGame"class="team1InsertMobile">
         <table id="tableShadow" class="table table-hover">
           <thead>
             <tr>
@@ -233,7 +233,7 @@ function displayAlert($text,$type)
             </tbody>
           </table>
         </div>
-      </div>
+      <!--</div>-->
       <script>
       function team(teams){
         var input = teams;

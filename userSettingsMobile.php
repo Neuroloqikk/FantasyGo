@@ -3,6 +3,9 @@ session_start();
 require 'connect.php';
 
 $username = $_SESSION["username"];
+if ($username == null){
+  echo '<script>location="signinMobile.php"</script>';
+}
 $q = $pdo->query("SELECT email,psw FROM `users`.`users` WHERE username= '" . $username . "'");
 $t = $q->fetch();
 $email = $t['email'];
