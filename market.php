@@ -212,7 +212,7 @@ function displayAlert($text,$type)
                   <a href="LastGames.php">Update Tournament</a>
                 </li>
                 <li>
-                  <a href="changeRoles.php">Change Roles</a>
+                  <a href="adminPanel.php">Change Roles</a>
                 </li>
                 <li>
                   <a href="userSettings.php">Settings</a>

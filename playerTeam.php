@@ -252,7 +252,7 @@ function displayAlert($text,$type)
                   <a href="changeRoles.php">Change Roles</a>
                 </li>
                 <li>
-                  <a href="userSettings.php">Settings</a>
+                  <a href="adminPanel.php">Settings</a>
                 </li>
                 <li>
                   <a href="logout.php">Logout</a>
