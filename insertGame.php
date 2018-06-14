@@ -13,6 +13,7 @@ $p = $stmt->fetch();
 $Admin = $p['isAdmin'];
 
 if (isset($_GET["r1"]) && isset($_GET["r2"]) && isset($_GET["r3"]) && isset($_GET["r4"]) && isset($_GET["r5"]) && isset($_GET["r6"]) && isset($_GET["r7"]) && isset($_GET["r8"]) && isset($_GET["r9"]) && isset($_GET["r10"]) && isset($_GET["t1_score"]) && isset($_GET["t2_score"])) {
+ 
   $team1 = $_SESSION['team1'];
   $team1_score = $_GET["t1_score"];
   $team1_player1_rating = $_GET["r1"] * 100;
@@ -20,6 +21,7 @@ if (isset($_GET["r1"]) && isset($_GET["r2"]) && isset($_GET["r3"]) && isset($_GE
   $team1_player3_rating = $_GET["r3"] * 100;
   $team1_player4_rating = $_GET["r4"] * 100;
   $team1_player5_rating = $_GET["r5"] * 100;
+
   $team2 = $_SESSION['team2'];
   $team2_score = $_GET["t2_score"];
   $team2_player1_rating = $_GET["r6"] * 100;

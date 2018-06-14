@@ -201,7 +201,7 @@ function displayAlert($text,$type)
           <p><span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Fantasy Go leaderboards!</span></p>
         </div>
         <div class="landingImgPart4">
-          <img src="img/Landing/signin.jpg">
+          <img src="img/Landing/leaderboard.jpg">
         </div>
       </div>
     </div>
