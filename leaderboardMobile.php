@@ -38,10 +38,7 @@ function displayAlert($text,$type)
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta 
-     name='viewport' 
-     content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' 
-     />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
     <title>Fantasy GO</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/app.css" rel="stylesheet">
@@ -59,6 +56,8 @@ function displayAlert($text,$type)
           <div class="usernameMobile col-xs-4 col-xs-offset-4 col-xs-offset-right-4">
             <p><a href="userSettings.php"><?=$username?></a></p>
           </div>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
           <div class="menuLogoMobile">
             <img onclick="myFunction()" src="img/menu.svg" style="width: inherit;">
           </div>  
