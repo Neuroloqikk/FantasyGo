@@ -92,7 +92,7 @@ function displayAlert($text,$type)
 </head>
 <div class="container-example">
 
-  <body class="bg" id="landingBG">
+  <body class="bg" id="landingBG" style="overflow:visible;">
     <nav class="navbar navbar-default navbar-static-top">
       <div class="container">
         <div class="navbar-header">
