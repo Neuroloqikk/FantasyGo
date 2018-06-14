@@ -131,19 +131,7 @@ function displayAlert($text,$type)
                   <a href="LastGames.php">Last Games</a>
                 </li>
                 <li>
-                  <a href="LastGames.php">Change Player Prices</a>
-                </li>
-                <li>
-                  <a href="LastGames.php">Change Available Teams</a>
-                </li>
-                <li>
-                  <a href="LastGames.php">Insert New Team</a>
-                </li>
-                <li>
-                  <a href="LastGames.php">Update Tournament</a>
-                </li>
-                <li>
-                  <a href="adminPanel.php">Change Roles</a>
+                  <a href="adminPanel.php">Roles/Tournaments</a>
                 </li>
                 <li>
                   <a href="userSettings.php">Settings</a>
