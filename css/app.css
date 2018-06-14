@@ -649,7 +649,7 @@ input {
 .marketModalTableL {
   display: inline-block;
   padding-top: 5%;
-  padding-left: 10%;
+  padding-left: 4%;
 }
 
 .marketModalTableL table {
@@ -664,7 +664,7 @@ input {
 .marketModalTableN {
   display: inline-block;
   padding-top: 5%;
-  padding-left: 10%;
+  padding-left: 4%;
 }
 
 .marketModalTableN table {
