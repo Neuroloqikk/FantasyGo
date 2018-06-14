@@ -184,6 +184,12 @@ function displayAlert($text,$type)
                   <a href="logout.php">Logout</a>
                 </li>
                 <?php elseif ($Admin == 1):?>
+                <li>
+                  <a href="myteam.php">My Team</a>
+                </li>
+                <li>
+                  <a href="market.php">Market</a>
+                </li>
                   <li>
                   <a href="insertNextGame.php">Insert Next Game</a>
                 </li>
