@@ -12,7 +12,7 @@ $stmt = $pdo->query("SELECT `isAdmin` FROM `users`.`users` WHERE username='$user
 $p = $stmt->fetch();
 $Admin = $p['isAdmin'];
 
-if (isset($_GET["r1"]) && isset($_GET["r2"]) && isset($_GET["r3"]) && isset($_GET["r4"]) && isset($_GET["r5"]) && isset($_GET["r6"]) && isset($_GET["r7"]) && isset($_GET["r8"]) && isset($_GET["r9"]) && isset($_GET["r10"]) && isset($_GET["t1_score"]) && isset($_GET["t2_score"])) {
+if (isset($_GET["r1"]) && isset($_GET["r2"]) && isset($_GET["r3"]) && isset($_GET["r4"]) && isset($_GET["r5"]) && isset($_GET["r6"]) && isset($_GET["r7"]) && isset($_GET["r8"]) && isset($_GET["r9"]) && isset($_GET["r10"]) && $_GET["t1_score"] != "" && $_GET["t2_score"]!="") {
  
   $team1 = $_SESSION['team1'];
   $team1_score = $_GET["t1_score"];
