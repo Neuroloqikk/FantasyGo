@@ -181,6 +181,7 @@ function displayAlert($text,$type)
               <a href="leaderboardMobile.php">Leaderboard</a>
               <a href="NextGamesMobile.php">Next Games</a>
               <a href="LastGamesMobile.php">Last Games</a>
+              <a href="GraphInfoMobile.php">Market Stats</a>
               <a href="userSettingsMobile.php">Settings</a>
               <a href="logoutMobile.php">Logout</a>
             </div>
