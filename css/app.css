@@ -46,7 +46,7 @@
 .alert {
   position: absolute;
   margin-left: 45%;
-  z-index: 9999;
+  z-index: 10000;
   text-align:center;
 }
 @media (min-width: 320px) and (max-width: 480px) {
@@ -55,7 +55,7 @@
   }
   .alert {
     position: absolute;
-    z-index: 9999;
+    z-index: 10000;
     margin-top: 20%;
     margin-left: 155;
   }
@@ -1401,7 +1401,7 @@ input {
   }
   .alert {
     position: absolute;
-    z-index: 9999;
+    z-index: 10000;
     margin-top: 11%;
     margin-left: 315;
   }
@@ -1631,7 +1631,7 @@ input {
   }
   .alert {
     position: fixed;
-    z-index: 9999;
+    z-index: 10000;
     margin-top: 25%;
     margin-left: 105;
   }
@@ -1808,7 +1808,7 @@ input {
   }
   .alert {
     position: fixed;
-    z-index: 9999;
+    z-index: 10000;
     margin-top: 25%;
     margin-left: 105;
   }
@@ -1988,7 +1988,7 @@ input {
   }
   .alert {
     position: absolute;
-    z-index: 9999;
+    z-index: 10000;
     margin-top: 22%;
     margin-left: 125;
   }
@@ -2172,7 +2172,7 @@ input {
   }
   .alert {
     position: absolute;
-    z-index: 9999;
+    z-index: 10000;
     margin-top: 20%;
     margin-left: 155;
   }
@@ -2354,7 +2354,7 @@ input {
   }
   .alert {
     position: absolute;
-    z-index: 9999;
+    z-index: 10000;
     margin-top: 8%;
     margin-left: 453;
   }
@@ -2538,7 +2538,7 @@ input {
   }
   .alert {
     position: absolute;
-    z-index: 9999;
+    z-index: 10000;
     margin-top: 20%;
     margin-left: 155;
   }
@@ -2748,7 +2748,7 @@ input {
   }
   .alert {
     position: absolute;
-    z-index: 9999;
+    z-index: 10000;
     margin-top: 20%;
     margin-left: 155;
   }
