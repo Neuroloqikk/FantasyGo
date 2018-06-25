@@ -107,6 +107,9 @@ function displayAlert($text,$type)
                   <a href="LastGames.php">Last Games</a>
                 </li>
                 <li>
+                  <a href="graphinfo.php">Informational graphs</a>
+                </li>
+                <li>
                   <a href="userSettings.php">Settings</a>
                 </li>
                 <li>
@@ -136,6 +139,9 @@ function displayAlert($text,$type)
                 </li>
                 <li>
                   <a href="adminPanel.php">Roles/Tournaments</a>
+                </li>
+                <li>
+                  <a href="graphinfo.php">Informational graphs</a>
                 </li>
                 <li>
                   <a href="userSettings.php">Settings</a>

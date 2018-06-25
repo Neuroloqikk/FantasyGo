@@ -11,25 +11,7 @@ $username = $_SESSION["username"];
 $stmt = $pdo->query("SELECT `isAdmin` FROM `users`.`users` WHERE username='$username'");
 $p = $stmt->fetch();
 $Admin = $p['isAdmin'];
-if ($_GET['username'] != NULL) {
-  $user = $_GET['username'];
-  $_SESSION["user"] = $user;
-  echo '<script>location="playerTeam.php"</script>';
-}
 
-if (isset($_POST['search'])) {
-  $user = $_POST['nametxt'];
-  $stmt = $pdo->prepare("SELECT * FROM users WHERE username=:id");
-  $stmt->execute(['id' => $user]);
-  $userSearch = $stmt->fetch();
-  if ($userSearch != NULL) {
-    $_SESSION["user"] = $user;
-    echo '<script>location="playerTeam.php"</script>';
-  }
-  else {
-    displayAlert("That User does not exist!", "danger");
-  }
-}
 
 function displayAlert($text,$type)
 {
@@ -109,6 +91,9 @@ function displayAlert($text,$type)
                   <a href="LastGames.php">Last Games</a>
                 </li>
                 <li>
+                  <a href="graphinfo.php">Informational graphs</a>
+                </li>
+                <li>
                   <a href="userSettings.php">Settings</a>
                 </li>
                 <li>
@@ -138,6 +123,9 @@ function displayAlert($text,$type)
                 </li>
                 <li>
                   <a href="adminPanel.php">Roles/Tournaments</a>
+                </li>
+                <li>
+                  <a href="graphinfo.php">Informational graphs</a>
                 </li>
                 <li>
                   <a href="userSettings.php">Settings</a>
@@ -187,20 +175,7 @@ function displayAlert($text,$type)
     </nav>
   </div>
 </div>
-  <form class="formLeaderboard" action="leaderboard.php" method="POST">
-  <div id="rowLeaderboard" class="row">
-    <div class="col-xs-6 col-md-4">
-      <div id="inputLeaderboard" class="input-group">
-        <input type="text" class="form-control" placeholder="Search" name="nametxt" id="txtSearch" />
-        <div class="input-group-btn"  id="txtSearch" >
-          <button class="btn btn-primary" type="submit" name="search" id="txtSearch" >
-            <span class="glyphicon glyphicon-search"></span id="txtSearch" >
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</form>
+  
 <?php
 
 

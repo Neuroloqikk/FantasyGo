@@ -178,7 +178,7 @@ function displayAlert($text,$type)
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-              <li id="usernameIndex" class="font">
+              <li id="usernameInsertGame" class="font">
                 <a href="userSettings.php">
                   <?= $username ?>
                 </a>

@@ -89,6 +89,9 @@ function displayAlert($text,$type)
                   <a href="LastGames.php">Last Games</a>
                 </li>
                 <li>
+                  <a href="graphinfo.php">Informational graphs</a>
+                </li>
+                <li>
                   <a href="userSettings.php">Settings</a>
                 </li>
                 <li>
@@ -118,6 +121,9 @@ function displayAlert($text,$type)
                 </li>
                 <li>
                   <a href="adminPanel.php">Roles/Tournaments</a>
+                </li>
+                <li>
+                  <a href="graphinfo.php">Informational graphs</a>
                 </li>
                 <li>
                   <a href="userSettings.php">Settings</a>
@@ -193,7 +199,7 @@ $getGames = $pdo->query("SELECT team1,team2,Date,Hour FROM next_games WHERE Inse
   echo "<tr>";
   echo '<td style="cursor:pointer"> <a href="#">'.$user['team1'].'</a></td>';
   echo "<td>vs</td>";
-  echo '<td style="cursor:pointer"> <a href="leaderboard.php?username='.$user['username'].'">'.$user['team2'].'</a></td>';
+  echo '<td style="cursor:pointer"> <a href="#">'.$user['team2'].'</a></td>';
   echo '<td>'.$date.'</td>';
   echo '<td>'.$hour.'</td>';
   echo "</tr>";

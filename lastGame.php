@@ -92,7 +92,7 @@ function displayAlert($text,$type)
 </head>
 <div class="container-example">
 
-  <body class="bg" id="landingBG" style="overflow:visible;">
+  <body class="bg" id="landingBG" style="overflow:visible;overflow-x:hidden;">
     <nav class="navbar navbar-default navbar-static-top">
       <div class="container">
         <div class="navbar-header">
@@ -142,6 +142,9 @@ function displayAlert($text,$type)
                   <a href="LastGames.php">Last Games</a>
                 </li>
                 <li>
+                  <a href="graphinfo.php">Informational graphs</a>
+                </li>
+                <li>
                   <a href="userSettings.php">Settings</a>
                 </li>
                 <li>
@@ -171,6 +174,9 @@ function displayAlert($text,$type)
                 </li>
                 <li>
                   <a href="adminPanel.php">Roles/Tournaments</a>
+                </li>
+                <li>
+                  <a href="graphinfo.php">Informational graphs</a>
                 </li>
                 <li>
                   <a href="userSettings.php">Settings</a>

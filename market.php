@@ -151,9 +151,15 @@ function displayAlert($text,$type)
                     <ul class="nav navbar-nav navbar-right">
 
                         <li id="usernameInsertGame" class="font">
+                        <?php if ($username == "Login"):?>
+                            <a href="signin.php">
+                                <?= $username ?>
+                            </a>
+                            <?php else:?>
                             <a href="userSettings.php">
                                 <?= $username ?>
                             </a>
+                            <?php endif;?>
                         </li>
 
                         <li class="dropdown">
@@ -176,6 +182,9 @@ function displayAlert($text,$type)
                 </li>
                 <li>
                   <a href="LastGames.php">Last Games</a>
+                </li>
+                <li>
+                  <a href="graphinfo.php">Informational graphs</a>
                 </li>
                 <li>
                   <a href="userSettings.php">Settings</a>
@@ -207,6 +216,9 @@ function displayAlert($text,$type)
                 </li>
                 <li>
                   <a href="adminPanel.php">Roles/Tournaments</a>
+                </li>
+                <li>
+                  <a href="graphinfo.php">Informational graphs</a>
                 </li>
                 <li>
                   <a href="userSettings.php">Settings</a>
@@ -291,8 +303,8 @@ function displayAlert($text,$type)
                                             $stmt = $pdo->query("SELECT team1,team2,score_team1,score_team2,next_game_id FROM results WHERE team1='$teamPlayerModal' OR team2='$teamPlayerModal' ORDER BY timestamp DESC LIMIT 4");
                                             $p = $stmt->fetchAll();
                                             foreach($p as $row){
-                                                $id=$row['next_game_id'];
-                                                $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$id' AND player_name='$playerName' ORDER BY timestamp DESC LIMIT 4");
+                                                $resultsid=$row['next_game_id'];
+                                                $stmt = $pdo->query("SELECT player_score FROM results_player WHERE results_id ='$resultsid' AND player_name='$playerName' ORDER BY timestamp DESC LIMIT 4");
                                                 $p = $stmt->fetch();
                                                 echo '<tr>';
                                                 echo '<td>'.$row['team1'].' vs '.$row['team2'].'</td>';
@@ -493,7 +505,6 @@ function displayAlert($text,$type)
             function idPlayer(elem) {
                 var name = elem.id;
                 window.location.href="market.php?name=" + name;
-
             }
             function buyButton(id) {
                 var buy = id.id;
