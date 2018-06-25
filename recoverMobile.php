@@ -87,7 +87,7 @@ function displayAlert($text,$type)
             <p>Don't have an account? <a href="indexMobile.php" style="color:dodgerblue">Register</a></p>
             <div class="clearfix">
               <button type="button" class="cancelbtn">Cancel</button>
-              <button type="submit" value ="login" class="signupbtn" name="login">Sign In</button>
+              <button type="submit" value ="login" class="signupbtn" name="login">Send email</button>
             </div>
           </div>
         </div>
