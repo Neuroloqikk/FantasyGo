@@ -5,56 +5,27 @@
 </script>
 <?php
 session_start();
-
 require 'connect.php';
 
 $username = $_SESSION["username"];
 $stmt = $pdo->query("SELECT `isAdmin` FROM `users`.`users` WHERE username='$username'");
 $p = $stmt->fetch();
 $Admin = $p['isAdmin'];
-//$img1 = "none";
-//$img2 = "none";
-if($_SESSION["team1"] == null){
-  $img1 = "none";
-}
-if($_SESSION["team2"] == null){
-  $img2 = "none";
-}
-if($_SESSION["team1"] != null and $_SESSION["team2"] != null){
- $img1 = "block";
- $img2 = "block";
-}
-var_dump($_SESSION["team1"]);
-var_dump($_SESSION["team2"]);
-if (isset($_GET['t1'])){
-  $_SESSION["team1"] = $_GET['t1'];
-  header( "Location: insertNextGame.php" );
-}
-if (isset($_GET['t2'])){
-  $_SESSION["team2"] = $_GET['t2'];
-  header( "Location: insertNextGame.php" );
-}
-if (isset($_GET['hour']) AND isset($_GET['date'])){
-  $_SESSION["hour"] = $_GET['hour'];
-  $_SESSION["date"] = $_GET['date'];
-}
+if (isset($_POST['update'])) {
+  $team1 = !empty($_POST['team1']) ? trim($_POST['team1']) : null;
+  $team2 = !empty($_POST['team2']) ? trim($_POST['team2']) : null;
 
-$hour = $_SESSION["hour"];
-$date = $_SESSION['date'];
-$teamOne = $_SESSION["team1"];
-$teamTwo = $_SESSION["team2"];
-if ($hour != null and $date != null and $teamOne != null and $teamTwo != null){
-  $sql = 'INSERT INTO `next_games` (team1,team2,Date,Hour) VALUES ("'.$teamOne.'","'.$teamTwo.'","'.$date.'","'.$hour.'")';
+  $sql = "UPDATE `users`.`teams` SET active=? WHERE team=?";
   $stmt = $pdo->prepare($sql);
-  $result = $stmt->execute();
-  echo '<script type="text/javascript">alert("Game Inserted!");</script>';
-  unset($_SESSION['team1']);
-  unset($_SESSION['team2']);
-  unset($_SESSION['hour']);
-  unset($_SESSION['date']);
-  header("Refresh:0");
-}
+  $stmt->execute(["1", $team2]);
 
+  $sql = "UPDATE `users`.`teams` SET active=? WHERE team=?";
+  $stmt = $pdo->prepare($sql);
+  $stmt->execute(["0", $team1]);
+
+  displayAlert("Teams Updated", "success");
+
+}
 function displayAlert($text,$type)
 {
    echo "<div class=\"col-xs-10 col-xs-offset-1 col-xs-offset-right-1 alert alert-".$type."\" role=\"alert\">
@@ -183,7 +154,7 @@ function displayAlert($text,$type)
           </ul>
         </div>
       </div>
-      <div class="sidenav" id="sidebarShowBtn" style="display: block;">
+      <div class="sidenav" id="sidebarShowBtn" style="display: none;">
         <a id="SidebarTitle"><b>Coming Games</b></a>
         <?php 
          $stmt = $pdo->query("SELECT team1,team2,Date,Hour FROM next_games ORDER BY Date DESC LIMIT 5");
@@ -217,123 +188,59 @@ function displayAlert($text,$type)
          <?php }?>
       </div>
     </nav>
-    <div id="nextGameDrop1" class="dropdown">
-      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Team 1
-        <span class="caret"></span></button>
-        <ul class="dropdown-menu dropdown-menu-center">
-         
-          <?php 
-              $stmt = $pdo->query("SELECT team from teams where active = '1'");
-              $p = $stmt->fetchAll();
-              foreach($p as $row){
-            ?>
-               <li><a href="#" id="<?=$row['team']?>" onClick="return team(this.id)"><?=$row['team']?></a></li>
-              <?php }?>
-        </ul>
-        <img class="imgTeamNext" style="display:<?=$img1?>;" src="img/<?=$_SESSION["team1"]?>/<?=$_SESSION["team1"]?>.svg">
-      </div>
-      <div id="nextGameDrop2" class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Team 2
-          <span class="caret"></span></button>
-          <ul class="dropdown-menu ">
-          <?php 
-              $stmt = $pdo->query("SELECT team from teams where active = '1'");
-              $p = $stmt->fetchAll();
-              foreach($p as $row){
-            ?>
-               <li><a href="#" id="<?=$row['team']?>" onClick="return team2(this.id)"><?=$row['team']?></a></li>
-              <?php }?>
-          </ul>
-          <img class="imgTeamNext" style="display:<?=$img2?>" src="img/<?=$_SESSION["team2"]?>/<?=$_SESSION["team2"]?>.svg">
-        </div>
-        <div id="panelNextGame" class="panel panel-default">
-          <div class="panel-body" style="text-align:center;">Game Hour<input type="time" id="Hour" class="form-control" placeholder="Enter Hour">
-        </div>
-      
+    <form class="SignUp" method="POST" style="border:1px solid black;width: 70%;margin-left: 16%;">
+    <div class="txtcolor">
+      <div class="container" style="width: 83%;">
+        <h1>Updating Market,
+          <h2>pick a team to become inactive and another team to replace!</h2>
+        </h1>
+        <hr>
+        <div class="pickPlayerTeam" style="margin-left: 27%;">
+        <label for="teamname"><b>Team active</b></label><br>
         
-      </div>
-
-      <div id="calendar" class="yui3-skin-sam yui3-g"> <!-- You need this skin class -->
-
-        <div id="leftcolumn" class="yui3-u">
-          <!-- Container for the calendar -->
-          <div id="mycalendar"></div>
-        </div>
-        <div id="rightcolumn" class="yui3-u">
-        
-        </div>
-      </div>
-      <div id="DateNextGame" style="padding-left:20px;">
-            <!-- The buttons are created simply by assigning the correct CSS class -->
-            <label for="Date" style="display:none;">Selected date: <span id="selecteddate"></span></label>
+        <div name="teamname" class="col-lg-2" class="selectpicker control-label" >
+          <select id="team1" class="form-control" name="team1" style="width: 152px;height: 39px;margin-left:-15%;">
+            <option value="#" selected="">Choose One:</option>
             
+            <?php 
+              $stmt = $pdo->query("SELECT team from teams where active = '1'");
+              $p = $stmt->fetchAll();
+              foreach($p as $row){
+            ?>
+              <option value=<?=$row['team']?>><?=$row['team']?></option>
+              <?php }?>
+          </select>
         </div>
         
-      <script type="text/javascript">
-        YUI().use('calendar', 'datatype-date', 'cssbutton',  function(Y) {
-
-            // Create a new instance of calendar, placing it in
-            // #mycalendar container, setting its width to 340px,
-            // the flags for showing previous and next month's
-            // dates in available empty cells to true, and setting
-            // the date to today's date.
-            var calendar = new Y.Calendar({
-              contentBox: "#mycalendar",
-              width:'340px',
-              showPrevMonth: true,
-              showNextMonth: true,
-              date: new Date()}).render();
-
-            // Get a reference to Y.DataType.Date
-            var dtdate = Y.DataType.Date;
-
-            // Listen to calendar's selectionChange event.
-            calendar.on("selectionChange", function (ev) {
-
-              // Get the date from the list of selected
-              // dates returned with the event (since only
-              // single selection is enabled by default,
-              // we expect there to be only one date)
-              var newDate = ev.newSelection[0];
-
-              // Format the date and output it to a DOM
-              // element.
-              Y.one("#selecteddate").setHTML(dtdate.format(newDate));
-            });
-
-
-            // When the 'Show Previous Month' link is clicked,
-            // modify the showPrevMonth property to show or hide
-            // previous month's dates
-            Y.one("#togglePrevMonth").on('click', function (ev) {
-              ev.preventDefault();
-              calendar.set('showPrevMonth', !(calendar.get("showPrevMonth")));
-            });
-
-            // When the 'Show Next Month' link is clicked,
-            // modify the showNextMonth property to show or hide
-            // next month's dates
-            Y.one("#toggleNextMonth").on('click', function (ev) {
-              ev.preventDefault();
-              calendar.set('showNextMonth', !(calendar.get("showNextMonth")));
-            });
-        });
-      </script>
-      <input type="submit" id="insertTeamsSucess" class="btn btn-primary" onClick="insert()" value="Submit">
+        <label for="playername" style="margin-top: -5%;margin-left: 16%;"><b>Team inactive</b></label><br>
+        
+        <div name="playername" class="col-lg-2" class="selectpicker control-label" style="margin-left: 15%;margin-top: 0%;">
+          <select class="form-control" id="team2" name="team2" style="width: 152px;height: 39px;margin-left:-15%;">
+          <option value="#" selected="">Choose One:</option>
+            
+            <?php 
+              $stmt = $pdo->query("SELECT team from teams where active = '0'");
+              $p = $stmt->fetchAll();
+              foreach($p as $row){
+            ?>
+              <option value=<?=$row['team']?>><?=$row['team']?></option>
+              <?php }?>
+          </select>
+        </div>
+        </div>
+        <br>
+        <br>
+          <br>
+          <div id="playerInfo">
+          </div>
+        
+          <div class="clearfix">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <button type="submit" value="update" class="signupbtn" name="update">Update</button>
+          </div>
+        </div>
       </div>
-    <script>
-      function team(team1){
-        window.location.href="insertNextGame.php?t1=" + team1;
-      }
-      function team2(team2){
-        window.location.href="insertNextGame.php?t2=" + team2;
-      }
-      function insert(){
-        var DateGame = document.getElementById("selecteddate").innerText;
-        var hour = document.getElementById('Hour').value;
-        window.location.href="insertNextGame.php?hour=" + hour + "&date=" + DateGame;
-      }
-    </script>
+    </form>
     <script>
     function showGames() {
       var x = document.getElementById("sidebarShowBtn");

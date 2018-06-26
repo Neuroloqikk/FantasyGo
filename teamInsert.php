@@ -11,26 +11,22 @@ $username = $_SESSION["username"];
 $stmt = $pdo->query("SELECT `isAdmin` FROM `users`.`users` WHERE username='$username'");
 $p = $stmt->fetch();
 $Admin = $p['isAdmin'];
-if (isset($_POST['register'])) {
-  $name = !empty($_POST['name']) ? trim($_POST['name']) : null;
-  $price = !empty($_POST['price']) ? trim($_POST['price']) : null;
-  $team = !empty($_POST['teamname']) ? trim($_POST['teamname']) : null;
-  $firstname = !empty($_POST['firstname']) ? trim($_POST['firstname']) : null;
-  $lastname = !empty($_POST['lastname']) ? trim($_POST['lastname']) : null;
-  $target_dir = "img/$team/";
-  $target_file = $target_dir . basename($_FILES["Photo"]["name"]);
 
-    move_uploaded_file($_FILES["Photo"]["tmp_name"], $target_file);
-    $photo = "/$team/$name.png";
-    $teamphoto = "/$team/$team.svg";
+if (isset($_POST['insert'])) {
+  $teamname = !empty($_POST['teamname']) ? trim($_POST['teamname']) : null;
 
-  $sql = "INSERT INTO `users`.`players` (name,price,team,photo,first_name,last_name,team_photo) VALUES ('$name','$price','$team','$photo','$firstname','$lastname','$teamphoto')";
-  $stmt = $pdo->prepare($sql);
-  $result = $stmt->execute();
-  if ($result == 1) {
-    displayAlert("Player Inserted", "success");
+  mkdir("img/$teamname", 0700);
+  
+  $target_dir = "img/$teamname/";
+  $target_file = $target_dir . basename($_FILES["teamimage"]["name"]);
+
+    move_uploaded_file($_FILES["teamimage"]["tmp_name"], $target_file);
+
+    $sql = "INSERT INTO `users`.`teams` (team) VALUES ('$teamname');";
+    $stmt = $pdo->prepare($sql);
+    $result = $stmt->execute();
   }
-}
+  
 
 function displayAlert($text,$type)
 {
@@ -39,6 +35,7 @@ function displayAlert($text,$type)
             <p>" . $text . "</p>
           </div>";
 }
+
 ?>
 <html>
 
@@ -50,38 +47,37 @@ function displayAlert($text,$type)
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/app.css" rel="stylesheet">
 </head>
-<div class="container-example">
 
-  <body class="bg">
-    <nav class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand">
-            <img src="img/logo.svg">
-          </a>
-          <a href="#" class="navbar-brand" id="sidebarShow" onclick="showGames()">
-            <img src="img/eye.svg">
-          </a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            <li id="usernameInsertGame" class="font">
-              <a>
-                <?= $username ?>
-              </a>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                <img class="menu-icon" src="img/menu.svg">
-              </a>
-              <ul class="dropdown-menu">
-              <?php if ($Admin == 0):?>
+<body class="bg" id="userSettings">
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand">
+          <img src="img/logo.svg">
+        </a>
+        <a href="#" class="navbar-brand" id="sidebarShow" onclick="showGames()">
+          <img src="img/eye.svg">
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li id="usernameInsertGame" class="font">
+            <a href="myteam.php">
+              <?= $username ?>
+            </a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <img class="menu-icon" src="img/menu.svg">
+            </a>
+            <ul class="dropdown-menu">
+            <?php if ($Admin == 0):?>
                 <li>
                   <a href="myteam.php">My Team</a>
                 </li>
@@ -142,11 +138,11 @@ function displayAlert($text,$type)
                 </li>
               <?php endif;?>
               </ul>
-            </li>
-          </ul>
-        </div>
+          </li>
+        </ul>
       </div>
-      <div class="sidenav" id="sidebarShowBtn" style="display: none;">
+    </div>
+    <div class="sidenav" id="sidebarShowBtn" style="display: none;">
         <a id="SidebarTitle"><b>Coming Games</b></a>
         <?php 
          $stmt = $pdo->query("SELECT team1,team2,Date,Hour FROM next_games ORDER BY Date DESC LIMIT 5");
@@ -179,47 +175,25 @@ function displayAlert($text,$type)
 
          <?php }?>
       </div>
-    </nav>
-    <form class="SignUp" method="POST" style="border:1px solid #ccc">
-      <div class="txtcolor">
-        <div class="container">
-          <h1>Insert a new player</h1>
-          <hr>
-
-          <label for="name"><b>Name</b></label>
-          <input class="txtcolorinput" type="text" placeholder="Enter name" name="name" required>
-
-          <label for="price"><b>Price</b></label>
-          <input class="txtcolorinput" type="text" placeholder="Enter price" name="price" required>
-
-          <label for="firstname"><b>First Name</b></label>
-          <input class="txtcolorinput" type="text" placeholder="Enter Player First Name" name="firstname" required>
-
-          <label for="lastname"><b>Last Name</b></label>
-          <input class="txtcolorinput" type="text" placeholder="Enter Player Last Name" name="lastname" required>
-
-          <label for="Team"><b>Team</b></label>
-          <select id="teamname" class="form-control" name="teamname" style="width: 152px;height: 39px;margin-left:0%;">
-            <option value="#" selected="">Choose One:</option>
-            
-            <?php 
-              $stmt = $pdo->query("SELECT team from teams ");
-              $p = $stmt->fetchAll();
-              foreach($p as $row){
-            ?>
-              <option value=<?=$row['team']?>><?=$row['team']?></option>
-              <?php }?>
-          </select>
-
-          <label for="Photo"><b>Photo</b></label>
-          <input class="txtcolorinput" type="file" placeholder="Enter Photo" name="Photo" required>
-          <div class="clearfix">
+  </nav>
+  <form class="SignUp" method="POST" enctype="multipart/form-data" style="border:1px solid black;width: 70%;margin-left: 16%;">
+    <div class="txtcolor">
+      <div class="container" style="width: 83%;">
+        <h1>Inserting a new team,
+          <h2>fill the fields that are needed!</h2>
+        </h1>
+        <hr>
+        <label for="teamname"><b>Team Name</b></label>
+        <input class="txtcolorinput" type="text" placeholder="Insert the team name" name="teamname">
+        <label for="teamimage"><b>Team Image</b></label>
+        <input class="txtcolorinput" type="file" name="teamimage" id="teamimage">
             <button type="button" class="cancelbtn">Cancel</button>
-            <button type="submit" value="Register" class="signupbtn" name="register">Insert</button>
+            <button type="submit" value="insert" class="signupbtn" name="insert">Insert</button>
           </div>
         </div>
       </div>
     </form>
+
     <script>
     function showGames() {
       var x = document.getElementById("sidebarShowBtn");
@@ -232,8 +206,6 @@ function displayAlert($text,$type)
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-  </div>
-</body>
+  </body>
 
-
-</html>
+  </html>

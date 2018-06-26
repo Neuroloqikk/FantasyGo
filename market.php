@@ -347,156 +347,189 @@ function displayAlert($text,$type)
                 </div>
             </div>
         </div>
+        <?php 
+         $stmt = $pdo->query("SELECT team FROM teams where active = '1'");
+         $p = $stmt->fetchAll();
+         $team1 = implode($p[0]);
+         $team2 = implode($p[1]);
+         $team3 = implode($p[2]);
+         $team4 = implode($p[3]);
+         $team5 = implode($p[4]);
+         $team6 = implode($p[5]);
+         $team7 = implode($p[6]);
+         $team8 = implode($p[7]);
+         $team9 = implode($p[8]);
+         $team10 = implode($p[9]);
+         ?>
         <div class="marketGrid">
             <div class="nipContainer">
                 <ul id="nipList">
-
-                    <li><a href="#" id="F0rest" onClick="idPlayer(this)"><span>F0rest&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $180.000<span></a></li>
-                    <li><a href="#" id="Get_Right" onClick="idPlayer(this)"><span>Get_Right&nbsp;| $180.000<span></a></li>
-                    <li><a href="#" id="Dennis" onClick="idPlayer(this)"><span>Dennis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $120.000<span></a></li>
-                    <li><a href="#" id="Draken" onClick="idPlayer(this)"><span>Draken&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $130.000<span></a></li>
-                    <li><a href="#" id="Rez" onClick="idPlayer(this)"><span>Rez&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $130.000<span></a></li>
+                <?php 
+                    $stmt = $pdo->query("SELECT name,price FROM players where team= '$team1'");
+                    $p = $stmt->fetchAll();
+                    foreach($p as $row){
+                        ?>
+                    <li><a href="#" id="<?=$row['name']?>" onClick="idPlayer(this)"><span><?=$row['name']?> | <?=$row['price']?> $<span></a></li>
+                <?php }?>
                 </ul>
                 <div class="marketTeam" id="nip">
                     <div class="nipLogo">
-                        <h3 class="teamName">NiP</h3>
-                        <img src="img/NiP/NiP.svg" />
+                        <h3 class="teamName"><?=$team1?></h3>
+                        <img src="img/<?=$team1?>/<?=$team1?>.svg" />
                     </div>
                 </div>
 
             </div>
             <div class="liquidContainer">
                 <ul id="liquidList">
-                    <li><a href="#" id="Steel" onClick="idPlayer(this)"><span>Steel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $120.000<span></a></li>
-                    <li><a href="#" id="Twistzz" onClick="idPlayer(this)"><span>Twistzz&nbsp;| $170.000<span></a></li>
-                    <li><a href="#" id="Elige" onClick="idPlayer(this)"><span>Elige&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $190.000<span></a></li>
-                    <li><a href="#" id="Nafly" onClick="idPlayer(this)"><span>Nafly&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $130.000<span></a></li>
-                    <li><a href="#" id="Nitro" onClick="idPlayer(this)"><span>Nitro&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $120.000<span></a></li>
+                <?php 
+                    $stmt = $pdo->query("SELECT name,price FROM players where team= '$team2'");
+                    $p = $stmt->fetchAll();
+                    foreach($p as $row){
+                        ?>
+                    <li><a href="#" id="<?=$row['name']?>" onClick="idPlayer(this)"><span><?=$row['name']?> | <?=$row['price']?> $<span></a></li>
+                <?php }?>
                 </ul>
                 <div class="marketTeam">
                     <div class="liquidLogo">
-                        <h3 class="teamName">Liquid</h3>
-                        <img src="img/Liquid/Liquid.svg" />
+                        <h3 class="teamName"><?=$team2?></h3>
+                        <img src="img/<?=$team2?>/<?=$team2?>.svg" />
                     </div>
                 </div>
             </div>
             <div class="naviContainer">
                 <ul id="naviList">
-                    <li><a href="#" id="Zeus" onClick="idPlayer(this)"><span>Zeus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $50.000<span></a></li>
-                    <li><a href="#" id="S1mple" onClick="idPlayer(this)"><span>S1mple&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $200.000<span></a></li>
-                    <li><a href="#" id="Flamie" onClick="idPlayer(this)"><span>Flamie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $150.000<span></a></li>
-                    <li><a href="#" id="Edward" onClick="idPlayer(this)"><span>Edward&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $90.000<span></a></li>
-                    <li><a href="#" id="Electronic" onClick="idPlayer(this)"><span>Electronic&nbsp;| $150.000<span></a></li>
+                <?php 
+                    $stmt = $pdo->query("SELECT name,price FROM players where team= '$team3'");
+                    $p = $stmt->fetchAll();
+                    foreach($p as $row){
+                        ?>
+                    <li><a href="#" id="<?=$row['name']?>" onClick="idPlayer(this)"><span><?=$row['name']?> | <?=$row['price']?> $<span></a></li>
+                <?php }?>
                 </ul>
                 <div class="marketTeam">
                     <div class="naviLogo">
-                        <h3 class="teamName">Navi</h3>
-                        <img src="img/Navi/Navi.svg" />
+                        <h3 class="teamName"><?=$team3?></h3>
+                        <img src="img/<?=$team3?>/<?=$team3?>.svg" />
                     </div>
                 </div>
             </div>
             <div class="mouseContainer">
                 <ul id="mouseList">
-                    <li><a href="#" id="Styko" onClick="idPlayer(this)"><span>Styko&nbsp;&nbsp;&nbsp;| $90.000<span></a></li>
-                    <li><a href="#" id="ChrisJ" onClick="idPlayer(this)"><span>Chris J&nbsp;| $110.000<span></a></li>
-                    <li><a href="#" id="Sunny" onClick="idPlayer(this)"><span>Sunny&nbsp;&nbsp;| $140.000<span></a></li>
-                    <li><a href="#" id="Oskar" onClick="idPlayer(this)"><span>Oskar&nbsp;&nbsp;&nbsp;| $170.000<span></a></li>
-                    <li><a href="#" id="Ropz" onClick="idPlayer(this)"><span>Ropz&nbsp;&nbsp;&nbsp;&nbsp;| $140.000<span></a></li>
+                <?php 
+                    $stmt = $pdo->query("SELECT name,price FROM players where team= '$team4'");
+                    $p = $stmt->fetchAll();
+                    foreach($p as $row){
+                        ?>
+                    <li><a href="#" id="<?=$row['name']?>" onClick="idPlayer(this)"><span><?=$row['name']?> | <?=$row['price']?> $<span></a></li>
+                <?php }?>
                 </ul>
                 <div class="marketTeam">
                     <div class="mouseLogo">
-                        <h3 class="teamName">Mousesports</h3>
-                        <img src="img/Mousesports/Mousesports.svg" />
+                        <h3 class="teamName"><?=$team4?></h3>
+                        <img src="img/<?=$team4?>/<?=$team4?>.svg" />
                     </div>
                 </div>
             </div>
             <div class="cloud9Container">
                 <ul id="cloud9List">
-                    <li><a href="#" id="Tarik" onClick="idPlayer(this)"><span>Tarik&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $120.000<span></a></li>
-                    <li><a href="#" id="Stewie2K" onClick="idPlayer(this)"><span>Stewie2K&nbsp;&nbsp;| $130.000<span></a></li>
-                    <li><a href="#" id="Autimatic" onClick="idPlayer(this)"><span>Autimatic&nbsp;&nbsp;| $170.000<span></a></li>
-                    <li><a href="#" id="Rush" onClick="idPlayer(this)"><span>Rush&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $120.000<span></a></li>
-                    <li><a href="#" id="Skadoodle" onClick="idPlayer(this)"><span>Skadoodle&nbsp;| $130.000<span></a></li>
+                <?php 
+                    $stmt = $pdo->query("SELECT name,price FROM players where team= '$team5'");
+                    $p = $stmt->fetchAll();
+                    foreach($p as $row){
+                        ?>
+                    <li><a href="#" id="<?=$row['name']?>" onClick="idPlayer(this)"><span><?=$row['name']?> | <?=$row['price']?> $<span></a></li>
+                <?php }?>
                 </ul>
                 <div class="marketTeam">
                     <div class="cloud9Logo">
-                        <h3 class="teamName">Cloud9</h3>
-                        <img src="img/Cloud9/Cloud9.svg" />
+                        <h3 class="teamName"><?=$team5?></h3>
+                        <img src="img/<?=$team5?>/<?=$team5?>.svg" />
                     </div>
                 </div>
             </div>
             <div class="skContainer">
                 <ul id="skList">
-                    <li><a href="#" id="Coldzera" onClick="idPlayer(this)"><span>Coldzera&nbsp;| $250.000<span></a></li>
-                    <li><a href="#" id="Fallen" onClick="idPlayer(this)"><span>Fallen&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $200.000<span></a></li>
-                    <li><a href="#" id="Taco" onClick="idPlayer(this)"><span>Taco&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $90.000<span></a></li>
-                    <li><a href="#" id="Fer" onClick="idPlayer(this)"><span>Fer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $220.000<span></a></li>
-                    <li><a href="#" id="Boltz" onClick="idPlayer(this)"><span>Boltz&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $160.000<span></a></li>
+                <?php 
+                    $stmt = $pdo->query("SELECT name,price FROM players where team= '$team6'");
+                    $p = $stmt->fetchAll();
+                    foreach($p as $row){
+                        ?>
+                    <li><a href="#" id="<?=$row['name']?>" onClick="idPlayer(this)"><span><?=$row['name']?> | <?=$row['price']?> $<span></a></li>
+                <?php }?>
                 </ul>
                 <div class="marketTeam">
                     <div class="skLogo">
-                        <h3 class="teamName">SK</h3>
-                        <img src="img/SK/SK.svg" />
+                        <h3 class="teamName"><?=$team6?></h3>
+                        <img src="img/<?=$team6?>/<?=$team6?>.svg" />
                     </div>
                 </div>
             </div>
             <div class="astralisContainer">
                 <ul id="astralisList">
-                    <li><a href="#" id="Dupreeh" onClick="idPlayer(this)"><span>Dupreeh&nbsp;| $200.000<span></a></li>
-                    <li><a href="#" id="Device" onClick="idPlayer(this)"><span>Device&nbsp;&nbsp;&nbsp;&nbsp;| $230.000<span></a></li>
-                    <li><a href="#" id="Glaive" onClick="idPlayer(this)"><span>Glaive&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $80.000<span></a></li>
-                    <li><a href="#" id="Magisk" onClick="idPlayer(this)"><span>Magisk&nbsp;&nbsp;&nbsp;&nbsp;| $130.000<span></a></li>
-                    <li><a href="#" id="Xyp9x" onClick="idPlayer(this)"><span>Xyp9x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $180.000<span></a></li>
+                <?php 
+                    $stmt = $pdo->query("SELECT name,price FROM players where team= '$team7'");
+                    $p = $stmt->fetchAll();
+                    foreach($p as $row){
+                        ?>
+                    <li><a href="#" id="<?=$row['name']?>" onClick="idPlayer(this)"><span><?=$row['name']?> | <?=$row['price']?> $<span></a></li>
+                <?php }?>
                 </ul>
                 <div class="marketTeam">
                     <div class="astralisLogo">
-                        <h3 class="teamName">Astralis</h3>
-                        <img src="img/Astralis/Astralis.svg" />
+                        <h3 class="teamName"><?=$team7?></h3>
+                        <img src="img/<?=$team7?>/<?=$team7?>.svg" />
                     </div>
                 </div>
             </div>
             <div class="fnaticContainer">
                 <ul id="fnaticList">
-                    <li><a href="#" id="Lekro" onClick="idPlayer(this)"><span>Lekro&nbsp;&nbsp;&nbsp;| $130.000<span></a></li>
-                    <li><a href="#" id="Flusha" onClick="idPlayer(this)"><span>Flusha&nbsp;| $150.000<span></a></li>
-                    <li><a href="#" id="Krimz" onClick="idPlayer(this)"><span>Krimz&nbsp;&nbsp;&nbsp;| $130.000<span></a></li>
-                    <li><a href="#" id="Golden" onClick="idPlayer(this)"><span>Golden&nbsp;| $80.000<span></a></li>
-                    <li><a href="#" id="JW" onClick="idPlayer(this)"><span>JW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $100.000<span></a></li>
+                <?php 
+                    $stmt = $pdo->query("SELECT name,price FROM players where team= '$team8'");
+                    $p = $stmt->fetchAll();
+                    foreach($p as $row){
+                        ?>
+                    <li><a href="#" id="<?=$row['name']?>" onClick="idPlayer(this)"><span><?=$row['name']?> | <?=$row['price']?> $<span></a></li>
+                <?php }?>
                 </ul>
                 <div class="marketTeam">
                     <div class="fnaticLogo">
-                        <h3 class="teamName">Fnatic</h3>
-                        <img src="img/Fnatic/Fnatic.svg" />
+                        <h3 class="teamName"><?=$team8?></h3>
+                        <img src="img/<?=$team8?>/<?=$team8?>.svg" />
                     </div>
                 </div>
             </div>
             <div class="g2Container">
                 <ul id="g2List">
-                    <li><a href="#" id="Shox" onClick="idPlayer(this)"><span>Shox&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $180.000<span></a></li>
-                    <li><a href="#" id="KennyS" onClick="idPlayer(this)"><span>KennyS&nbsp;| $200.000<span></a></li>
-                    <li><a href="#" id="Apex" onClick="idPlayer(this)"><span>Apex&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $150.000<span></a></li>
-                    <li><a href="#" id="Bodyy" onClick="idPlayer(this)"><span>Bodyy&nbsp;&nbsp;&nbsp;&nbsp;| $120.000<span></a></li>
-                    <li><a href="#" id="NBK" onClick="idPlayer(this)"><span>NBK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $150.000<span></a></li>
+                <?php 
+                    $stmt = $pdo->query("SELECT name,price FROM players where team= '$team9'");
+                    $p = $stmt->fetchAll();
+                    foreach($p as $row){
+                        ?>
+                    <li><a href="#" id="<?=$row['name']?>" onClick="idPlayer(this)"><span><?=$row['name']?> | <?=$row['price']?> $<span></a></li>
+                <?php }?>
                 </ul>
                 <div class="marketTeam">
                     <div class="g2Logo">
-                        <h3 class="teamName">G2</h3>
-                        <img src="img/G2/G2.svg" />
+                        <h3 class="teamName"><?=$team9?></h3>
+                        <img src="img/<?=$team9?>/<?=$team9?>.svg" />
                     </div>
                 </div>
             </div>
             <div class="fazeContainer">
                 <ul id="fazeList">
-                    <li><a href="#" id="Olofmeister" onClick="idPlayer(this)"><span>Olofmeister&nbsp;| $160.000<span></a></li>
-                    <li><a href="#" id="Guardian" onClick="idPlayer(this)"><span>Guardian&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $200.000<span></a></li>
-                    <li><a href="#" id="Niko" onClick="idPlayer(this)"><span>Niko&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $230.000<span></a></li>
-                    <li><a href="#" id="Rain" onClick="idPlayer(this)"><span>Rain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $210.000<span></a></li>
-                    <li><a href="#" id="Karrigan" onClick="idPlayer(this)"><span>Karrigan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $80.000<span></a></li>
+                <?php 
+                    $stmt = $pdo->query("SELECT name,price FROM players where team= '$team10'");
+                    $p = $stmt->fetchAll();
+                    foreach($p as $row){
+                        ?>
+                    <li><a href="#" id="<?=$row['name']?>" onClick="idPlayer(this)"><span><?=$row['name']?> | <?=$row['price']?> $<span></a></li>
+                <?php }?>
                 </ul>
                 <div class="marketTeam">
                     <div class="fazeLogo">
-                        <h3 class="teamName">Faze</h3>
-                        <img src="img/Faze/Faze.svg" />
+                        <h3 class="teamName"><?=$team10?></h3>
+                        <img src="img/<?=$team10?>/<?=$team10?>.svg" />
                     </div>
                 </div>
             </div>
