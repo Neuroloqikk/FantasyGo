@@ -24,8 +24,6 @@ if($_SESSION["team1"] != null and $_SESSION["team2"] != null){
  $img1 = "block";
  $img2 = "block";
 }
-var_dump($_SESSION["team1"]);
-var_dump($_SESSION["team2"]);
 if (isset($_GET['t1'])){
   $_SESSION["team1"] = $_GET['t1'];
   header( "Location: insertNextGame.php" );

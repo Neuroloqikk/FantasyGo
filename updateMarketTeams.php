@@ -213,7 +213,6 @@ function displayAlert($text,$type)
         </div>
         
         <label for="playername" style="margin-top: -5%;margin-left: 16%;"><b>Team inactive</b></label><br>
-        
         <div name="playername" class="col-lg-2" class="selectpicker control-label" style="margin-left: 15%;margin-top: 0%;">
           <select class="form-control" id="team2" name="team2" style="width: 152px;height: 39px;margin-left:-15%;">
           <option value="#" selected="">Choose One:</option>
