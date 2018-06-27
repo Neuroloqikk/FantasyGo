@@ -176,6 +176,18 @@ function displayAlert($text,$type)
                   <a href="adminPanel.php">Roles/Tournaments</a>
                 </li>
                 <li>
+                  <a href="editPlayers.php">Edit Player's Prices</a>
+                </li>
+                <li>
+                  <a href="teamInsert.php">Insert new team</a>
+                </li>
+                <li>
+                  <a href="playerInsert.php">Insert new player</a>
+                </li>
+                <li>
+                  <a href="updateMarketTeams.php">Update available teams</a>
+                </li>
+                <li>
                   <a href="graphinfo.php">Informational graphs</a>
                 </li>
                 <li>
