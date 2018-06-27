@@ -1,2991 +1,2848 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-
-
 .wrapper {
-  display: flex;
+   display: flex;
 }
 
-.bg{
-  background: url("../img/nuke.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+.bg {
+   background: url("../img/nuke.jpg") no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
 }
 
-#sidebarShow{
-  float:right;
-  margin-left:93%;
-  margin-top:0;
-  width:30px;
-  z-index:9999;
+#sidebarShow {
+   float: right;
+   margin-left: 93%;
+   margin-top: 0;
+   width: 30px;
+   z-index: 9999;
 }
 
-#sidebarShow img{
-  width:30px;
+#sidebarShow img {
+   width: 30px;
 }
 
 #sidebar {
-  min-width: 250px;
-  max-width: 250px;
-  height: 100vh;
+   min-width: 250px;
+   max-width: 250px;
+   height: 100vh;
 }
 
 #landingBG {
-  overflow: hidden;
-  background: url("../img/nuke1.png") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+   overflow: hidden;
+   background: url("../img/nuke1.png") no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
 }
 
 .containerLanding {
-  width: 30%;
+   width: 30%;
 }
 
 .containerLanding form input {
-  width: inherit;
+   width: inherit;
 }
 
 .alert {
-  position: absolute;
-  margin-left: 45%;
-  z-index: 10000;
-  text-align:center;
+   position: absolute;
+   margin-left: 45%;
+   z-index: 10000;
+   text-align: center;
 }
-@media (min-width: 320px) and (max-width: 480px) {
 
-  .alert {
-    position: absolute;
-    z-index: 10000;
-    margin-top: 20%;
-    margin-left: 155;
-  }
+@media (min-width: 320px) and (max-width: 480px) {
+   .alert {
+      position: absolute;
+      z-index: 10000;
+      margin-top: 20%;
+      margin-left: 155;
+   }
 }
+
 .navbar-brand img {
-  height: 100%;
-  width: auto;
-  margin-left: 10%;
-  margin-top: 1% !important;
+   height: 100%;
+   width: auto;
+   margin-left: 10%;
+   margin-top: 1% !important;
 }
 
 .font {
-  margin-top: -8%;
+   margin-top: -8%;
 }
 
 .navbar {
-  z-index: 1;
-  height: 80px;
+   z-index: 1;
+   height: 80px;
 }
 
 .container {
-  height: inherit;
+   height: inherit;
 }
 
 .navbar-header {
-  height: inherit;
+   height: inherit;
 }
 
 .navbar-brand {
-  height: inherit;
-  position: absolute;
-  width: 100%;
-  left: 0;
-  text-align: center;
-  margin: 0 auto;
-  margin-top: -1%;
+   height: inherit;
+   position: absolute;
+   width: 100%;
+   left: 0;
+   text-align: center;
+   margin: 0 auto;
+   margin-top: -1%;
 }
 
 .nav {
-  margin-top: 20px;
+   margin-top: 20px;
 }
 
 .menu-icon {
-  height: 50px;
-  width: auto;
-  margin-top: -18px;
+   height: 50px;
+   width: auto;
+   margin-top: -18px;
 }
 
 #usernameIndex {
-  margin-top: -8%;
-  position: relative;
-  font-weight: 1000;
+   margin-top: -8%;
+   position: relative;
+   font-weight: 1000;
 }
 
 #usernameInsertGame {
-  margin-top: -2%;
-  position: relative;
-  font-weight: 1000;
+   margin-top: -2%;
+   position: relative;
+   font-weight: 1000;
 }
 
 #score {
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  color: white;
-  margin-top: 1%;
-  display: inline-block;
-  padding-right: 0%;
+   text-align: center;
+   font-family: 'Roboto', sans-serif;
+   color: white;
+   margin-top: 1%;
+   display: inline-block;
+   padding-right: 0%;
 }
 
 #week {
-  margin-top: -10px;
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  color: white;
-  margin-top: 1%;
-  display: inline-block;
+   margin-top: -10px;
+   text-align: center;
+   font-family: 'Roboto', sans-serif;
+   color: white;
+   margin-top: 1%;
+   display: inline-block;
 }
 
 .info {
-  background: rgba(0, 0, 0, 0.5);
-  text-align: center;
-  margin-bottom: -25px;
+   background: rgba(0, 0, 0, 0.5);
+   text-align: center;
+   margin-bottom: -25px;
 }
 
 .playerTable td img {
-  height: 400px;
-  width: auto;
-  position: relative;
-  float: left;
-  width: 100%;
-  height: 250%;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
+   height: 400px;
+   width: auto;
+   position: relative;
+   float: left;
+   width: 100%;
+   height: 250%;
+   background-position: 50% 50%;
+   background-repeat: no-repeat;
+   background-size: cover;
 }
 
 .playerTable td {
-  text-align: center;
-  height: 150px;
-  width: 200px;
-  overflow: hidden;
+   text-align: center;
+   height: 150px;
+   width: 200px;
+   overflow: hidden;
 }
 
 @media (min-width: 1700px) {
-  .playerTable td {
-    text-align: center;
-    height: 200px;
-    width: 200px;
-    overflow: hidden;
-  }
+   .playerTable td {
+      text-align: center;
+      height: 200px;
+      width: 200px;
+      overflow: hidden;
+   }
 }
 
 .playerTable td p {
-  color: white;
+   color: white;
 }
 
 .playerTable {
-  margin-top: 2%;
-  margin-left: 0,5%;
-  font-family: 'Roboto', sans-serif;
-  font-size: 30px;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
+   margin-top: 2%;
+   margin-left: 0, 5%;
+   font-family: 'Roboto', sans-serif;
+   font-size: 30px;
+   background: rgba(0, 0, 0, 0.5);
+   color: white;
 }
 
 .form-control {
-  width: 30%;
+   width: 30%;
 }
 
 form {
-  border: 3px solid #f1f1f1;
-  padding-top: 1%;
-  background: rgba(0, 0, 0, 0.5);
+   border: 3px solid #f1f1f1;
+   padding-top: 1%;
+   background: rgba(0, 0, 0, 0.5);
 }
 
-input[type=text], input[type=password] {
-  border: 3px solid #f1f1f1;
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  box-sizing: border-box;
+input[type=text],
+input[type=password] {
+   border: 3px solid #f1f1f1;
+   width: 100%;
+   padding: 12px 20px;
+   margin: 8px 0;
+   display: inline-block;
+   box-sizing: border-box;
 }
 
 button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
+   background-color: #4CAF50;
+   color: white;
+   padding: 14px 20px;
+   margin: 8px 0;
+   border: none;
+   cursor: pointer;
+   width: 100%;
 }
 
 button:hover {
-  opacity: 0.8;
+   opacity: 0.8;
 }
 
 .cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
+   width: auto;
+   padding: 10px 18px;
+   background-color: #f44336;
 }
 
 span.psw {
-  float: right;
-  padding-top: 16px;
+   float: right;
+   padding-top: 16px;
 }
 
 @media screen and (max-width: 300px) {
-  span.psw {
-    display: block;
-    float: none;
-  }
-
-  .cancelbtn {
-    width: 100%;
-  }
+   span.psw {
+      display: block;
+      float: none;
+   }
+   .cancelbtn {
+      width: 100%;
+   }
 }
 
 .close {
-  position: absolute;
-  right: 25px;
-  top: 0;
-  color: #000;
-  font-size: 35px;
-  font-weight: bold;
+   position: absolute;
+   right: 25px;
+   top: 0;
+   color: #000;
+   font-size: 35px;
+   font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-  color: red;
-  cursor: pointer;
-}
-/* The close button */
-.closebutton {
-  margin-left: 18px;
-  color: white;
-  font-weight: bold;
-  float: right;
-  font-size: 22px;
-  line-height: 20px;
-  cursor: pointer;
-  transition: 0.3s;
+   color: red;
+   cursor: pointer;
 }
 
-/* When moving the mouse over the close button */
+.closebutton {
+   margin-left: 18px;
+   color: white;
+   font-weight: bold;
+   float: right;
+   font-size: 22px;
+   line-height: 20px;
+   cursor: pointer;
+   transition: 0.3s;
+}
+
 .closebutton:hover {
-  color: black;
+   color: black;
 }
 
 * {
-  box-sizing: border-box;
+   box-sizing: border-box;
 }
 
-/* Full-width input fields */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 18px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
+input[type=text],
+input[type=password] {
+   width: 100%;
+   padding: 18px;
+   margin: 5px 0 22px 0;
+   display: inline-block;
+   border: none;
+   background: #f1f1f1;
 }
 
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
+input[type=text]:focus,
+input[type=password]:focus {
+   background-color: #ddd;
+   outline: none;
 }
 
 hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
+   border: 1px solid #f1f1f1;
+   margin-bottom: 25px;
 }
 
-/* Set a style for all buttons */
 button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
+   background-color: #4CAF50;
+   color: white;
+   padding: 14px 20px;
+   margin: 8px 0;
+   border: none;
+   cursor: pointer;
+   width: 100%;
+   opacity: 0.9;
 }
 
 button:hover {
-  opacity: 1;
+   opacity: 1;
 }
 
-/* Extra styles for the cancel button */
 .cancelbtn {
-  padding: 14px 20px;
-  background-color: #f44336;
+   padding: 14px 20px;
+   background-color: #f44336;
 }
 
-/* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn {
-  float: left;
-  width: 50%;
+.cancelbtn,
+.signupbtn {
+   float: left;
+   width: 50%;
 }
 
-/* Add padding to container elements */
 .txtcolor {
-  color: white;
+   color: white;
 }
 
-/* Clear floats */
 .clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
+   content: "";
+   clear: both;
+   display: table;
 }
 
-/* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
-    width: 100%;
-  }
+   .cancelbtn,
+   .signupbtn {
+      width: 100%;
+   }
 }
 
 .SignIn {
-  margin-top: 3%;
+   margin-top: 3%;
 }
 
 .SignUp {
-  margin-top: -2%;
+   margin-top: -2%;
 }
 
 input {
-  color: black;
+   color: black;
 }
 
 .marketInfo {
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  color: white;
-  height: 20%;
-  background: rgba(0, 0, 0, 0.5);
-  margin-top: -1%;
+   text-align: center;
+   font-family: 'Roboto', sans-serif;
+   color: white;
+   height: 20%;
+   background: rgba(0, 0, 0, 0.5);
+   margin-top: -1%;
 }
 
 #balance {
-  padding-left: 4%;
+   padding-left: 4%;
 }
 
 .marketGrid {
-  display: grid;
-  grid-template-columns: repeat(5,15%);
-  grid-column-gap: 30px;
-  grid-row-gap: 1px;
-  margin-left: 14%;
-  margin-top: -1%;
-  overflow: hidden;
+   display: grid;
+   grid-template-columns: repeat(5, 15%);
+   grid-column-gap: 30px;
+   grid-row-gap: 1px;
+   margin-left: 14%;
+   margin-top: -1%;
+   overflow: hidden;
 }
 
 .marketGrid .marketTeam {
-  z-index: 1;
-  background: no-repeat center / cover;
-  transition: inherit;
-  margin: 10px;
+   z-index: 1;
+   background: no-repeat center / cover;
+   transition: inherit;
+   margin: 10px;
 }
 
 .marketTeam {
-  height: 95%;
-  margin: 20px;
+   height: 95%;
+   margin: 20px;
 }
 
 .teamName {
-  text-align: center;
-  color: black;
-  font-weight: 600;
+   text-align: center;
+   color: black;
+   font-weight: 600;
 }
 
 .nipContainer:hover .nipLogo img {
-  opacity: 0.1;
+   opacity: 0.1;
 }
 
 .liquidContainer:hover .liquidLogo img {
-  opacity: 0.1;
+   opacity: 0.1;
 }
 
 .g2Container:hover .g2Logo img {
-  opacity: 0.1;
+   opacity: 0.1;
 }
 
 .fazeContainer:hover .fazeLogo img {
-  opacity: 0.1;
+   opacity: 0.1;
 }
 
 .astralisContainer:hover .astralisLogo img {
-  opacity: 0.1;
+   opacity: 0.1;
 }
 
 .skContainer:hover .skLogo img {
-  opacity: 0.1;
+   opacity: 0.1;
 }
 
 .mouseContainer:hover .mouseLogo img {
-  opacity: 0.1;
+   opacity: 0.1;
 }
 
 .fnaticContainer:hover .fnaticLogo img {
-  opacity: 0.1;
+   opacity: 0.1;
 }
 
 .naviContainer:hover .naviLogo img {
-  opacity: 0.1;
+   opacity: 0.1;
 }
 
 .cloud9Container:hover .cloud9Logo img {
-  opacity: 0.1;
+   opacity: 0.1;
 }
 
 .marketGrid #nipList {
-  position: fixed;
-  font-weight: 600;
-  font-size: 18px;
-  padding-top: 5%;
+   position: fixed;
+   font-weight: 600;
+   font-size: 18px;
+   padding-top: 5%;
 }
 
 .nipContainer span {
-  display: none;
+   display: none;
 }
 
 .nipContainer:hover span {
-  display: block;
+   display: block;
 }
 
 .marketGrid #liquidList {
-  position: fixed;
-  font-weight: 600;
-  font-size: 18px;
-  padding-top: 5%;
+   position: fixed;
+   font-weight: 600;
+   font-size: 18px;
+   padding-top: 5%;
 }
 
 .liquidContainer span {
-  display: none;
+   display: none;
 }
 
 .liquidContainer:hover span {
-  display: block;
+   display: block;
 }
 
 .marketGrid #naviList {
-  position: fixed;
-  font-weight: 600;
-  font-size: 18px;
-  padding-top: 5%;
+   position: fixed;
+   font-weight: 600;
+   font-size: 18px;
+   padding-top: 5%;
 }
 
 .naviContainer span {
-  display: none;
+   display: none;
 }
 
 .naviContainer:hover span {
-  display: block;
+   display: block;
 }
 
 .marketGrid #mouseList {
-  position: fixed;
-  font-weight: 600;
-  font-size: 18px;
-  padding-top: 5%;
+   position: fixed;
+   font-weight: 600;
+   font-size: 18px;
+   padding-top: 5%;
 }
 
 .mouseContainer span {
-  display: none;
+   display: none;
 }
 
 .mouseContainer:hover span {
-  display: block;
+   display: block;
 }
 
 .marketGrid #cloud9List {
-  position: fixed;
-  font-weight: 600;
-  font-size: 18px;
-  padding-top: 5%;
+   position: fixed;
+   font-weight: 600;
+   font-size: 18px;
+   padding-top: 5%;
 }
 
 .cloud9Container span {
-  display: none;
+   display: none;
 }
 
 .cloud9Container:hover span {
-  display: block;
+   display: block;
 }
 
 .marketGrid #skList {
-  position: fixed;
-  font-weight: 600;
-  font-size: 18px;
-  padding-top: 5%;
+   position: fixed;
+   font-weight: 600;
+   font-size: 18px;
+   padding-top: 5%;
 }
 
 .skContainer span {
-  display: none;
+   display: none;
 }
 
 .skContainer:hover span {
-  display: block;
+   display: block;
 }
 
 .marketGrid #astralisList {
-  position: fixed;
-  font-weight: 600;
-  font-size: 18px;
-  padding-top: 5%;
+   position: fixed;
+   font-weight: 600;
+   font-size: 18px;
+   padding-top: 5%;
 }
 
 .astralisContainer span {
-  display: none;
+   display: none;
 }
 
 .astralisContainer:hover span {
-  display: block;
+   display: block;
 }
 
 .marketGrid #fnaticList {
-  position: fixed;
-  font-weight: 600;
-  font-size: 18px;
-  padding-top: 5%;
+   position: fixed;
+   font-weight: 600;
+   font-size: 18px;
+   padding-top: 5%;
 }
 
 .fnaticContainer span {
-  display: none;
+   display: none;
 }
 
 .fnaticContainer:hover span {
-  display: block;
+   display: block;
 }
 
 .marketGrid #g2List {
-  position: fixed;
-  font-weight: 600;
-  font-size: 18px;
-  padding-top: 5%;
+   position: fixed;
+   font-weight: 600;
+   font-size: 18px;
+   padding-top: 5%;
 }
 
 .g2Container span {
-  display: none;
+   display: none;
 }
 
 .g2Container:hover span {
-  display: block;
+   display: block;
 }
 
 .marketGrid #fazeList {
-  position: fixed;
-  font-weight: 600;
-  font-size: 18px;
-  padding-top: 5%;
+   position: fixed;
+   font-weight: 600;
+   font-size: 18px;
+   padding-top: 5%;
 }
 
 .fazeContainer span {
-  display: none;
+   display: none;
 }
 
 .fazeContainer:hover span {
-  display: block;
+   display: block;
 }
 
 .marketGrid li {
-  list-style-type: none;
+   list-style-type: none;
 }
 
 .marketGrid li a {
-  color: white;
+   color: white;
 }
 
 .marketGrid li a:visited {
-  text-decoration: none;
-  color: white;
+   text-decoration: none;
+   color: white;
 }
 
 .marketGrid li a:hover {
-  text-decoration: none;
-  color: grey;
+   text-decoration: none;
+   color: grey;
 }
 
 .marketGrid li a:focus {
-  text-decoration: none;
-  color: white;
+   text-decoration: none;
+   color: white;
 }
 
-.marketGrid li a:hover, a:active {
-  text-decoration: none;
-  color: grey;
+.marketGrid li a:hover,
+a:active {
+   text-decoration: none;
+   color: grey;
 }
 
 .marketGrid ul {
-  z-index: 1;
-  text-shadow: -1px -1px 0 rgb(0, 0, 0),1px -1px 0 rgb(0, 0, 0),-1px 1px 0 rgb(0, 0, 0),1px 1px 0 rgb(0, 0, 0);
-  padding-left: 3%;
+   z-index: 1;
+   text-shadow: -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0), 1px 1px 0 rgb(0, 0, 0);
+   padding-left: 3%;
 }
 
 .marketGrid img {
-  z-index: 0;
+   z-index: 0;
 }
 
 .marketModalPlayer img {
-  height: 500px;
-  width: auto;
-  padding: 1px;
-  border: 1px solid #021a40;
-  float: left;
+   height: 500px;
+   width: auto;
+   padding: 1px;
+   border: 1px solid #021a40;
+   float: left;
 }
 
 .modal-title {
-  text-align: center;
+   text-align: center;
 }
 
 .marketModalTable {
-  float: right;
+   float: right;
 }
 
 .modal-dialog {
-  width: 1000px;
-  overflow: inherit;
+   width: 1000px;
+   overflow: inherit;
 }
 
 .modal-content {
-  width: 1000px;
-  overflow: inherit;
-  background: rgb(221, 221, 221);
+   width: 1000px;
+   overflow: inherit;
+   background: rgb(221, 221, 221);
 }
 
 .marketModalTableL {
-  display: inline-block;
-  padding-top: 5%;
-  padding-left: 4%;
+   display: inline-block;
+   padding-top: 5%;
+   padding-left: 4%;
 }
 
 .marketModalTableL table {
-  border-collapse: separate;
-  border-spacing: 20px 0;
+   border-collapse: separate;
+   border-spacing: 20px 0;
 }
 
 .marketModalTableL table td {
-  padding: 3px 0;
+   padding: 3px 0;
 }
 
 .marketModalTableN {
-  display: inline-block;
-  padding-top: 5%;
-  padding-left: 4%;
+   display: inline-block;
+   padding-top: 5%;
+   padding-left: 4%;
 }
 
 .marketModalTableN table {
-  border-collapse: separate;
-  border-spacing: 20px 0;
+   border-collapse: separate;
+   border-spacing: 20px 0;
 }
 
 .marketModalTableN table td {
-  padding: 3px 0;
+   padding: 3px 0;
 }
 
 .marketModalName {
-  width: 500px;
-  height: 20px;
-  padding-left: 50%;
-  text-align: center;
+   width: 500px;
+   height: 20px;
+   padding-left: 50%;
+   text-align: center;
 }
 
 .marketModalName h2 {
-  width: inherit;
-  height: inherit;
+   width: inherit;
+   height: inherit;
 }
 
 .marketGrid ul {
-  margin-left: -2.5%;
+   margin-left: -2.5%;
 }
 
 @media (min-width: 1700px) {
-  .marketGrid ul {
-    margin-left: -1%;
-  }
+   .marketGrid ul {
+      margin-left: -1%;
+   }
 }
 
 .dropdown {
-  float: left;
-  width: 14.8%;
-  height: 5%;
-  margin-left: 20%;
-  margin-bottom: 1%;
-  margin-top: -1%;
+   float: left;
+   width: 14.8%;
+   height: 5%;
+   margin-left: 20%;
+   margin-bottom: 1%;
+   margin-top: -1%;
 }
 
-
 .btn {
-  border: 1px solid black;
+   border: 1px solid black;
 }
 
 .team1Insert {
-  padding-left: 20%;
-  padding-right: 20%;
+   padding-left: 20%;
+   padding-right: 20%;
 }
 
 .team1Insert table {
-  background-color: white;
-  border: 3px solid black;
+   background-color: white;
+   border: 3px solid black;
 }
 
 .team1Insert table td {
-  border: 1px solid black;
+   border: 1px solid black;
 }
 
 .team1Insert table th {
-  border: 1px solid black;
+   border: 1px solid black;
 }
 
 .team1InsertMobile table {
-  background-color: white;
-  border: 3px solid black;
+   background-color: white;
+   border: 3px solid black;
 }
 
 .team1InsertMobile table td {
-  border: 1px solid black;
+   border: 1px solid black;
 }
 
 .team1InsertMobile table th {
-  border: 1px solid black;
+   border: 1px solid black;
 }
-#tableShadow{
-  box-shadow:5px 5px grey;
+
+#tableShadow {
+   box-shadow: 5px 5px grey;
 }
+
 .team2Insert table {
-  background-color: white;
-  border: 3px solid black;
+   background-color: white;
+   border: 3px solid black;
 }
 
 .team2Insert table td {
-  border: 1px solid black;
+   border: 1px solid black;
 }
 
 .team2Insert table th {
-  border: 1px solid black;
+   border: 1px solid black;
 }
 
 #insertTeamsSucess {
-  margin-right: 25%;
-  margin-left: 40%;
-  margin-top: 2%;
+   margin-right: 25%;
+   margin-left: 40%;
+   margin-top: 2%;
 }
 
 #team1_score {
-  padding-left: 70%;
-  padding-right: 20%;
-  margin-top: -1%;
-  position: absolute;
+   padding-left: 70%;
+   padding-right: 20%;
+   margin-top: -1%;
+   position: absolute;
 }
 
 #team1_score input {
-  border: 1px solid black;
+   border: 1px solid black;
 }
 
 .wrapperLanding {
-  margin-top: -37%;
-  margin-left: 60%;
+   margin-top: -37%;
+   margin-left: 60%;
 }
 
 .form-signin {
-  max-width: 380px;
-  padding: 15px 35px 45px;
-  margin: 0 auto;
-  background-color: #fff;
-  border: 1px solid rgba(0,0,0,0.1);
+   max-width: 380px;
+   padding: 15px 35px 45px;
+   margin: 0 auto;
+   background-color: #fff;
+   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .form-signin-heading,
 .checkbox {
-  margin-bottom: 30px;
+   margin-bottom: 30px;
 }
 
 .checkbox {
-  font-weight: normal;
+   font-weight: normal;
 }
 
 .form-control {
-  position: relative;
-  font-size: 16px;
-  height: auto;
-  padding: 10px;
+   position: relative;
+   font-size: 16px;
+   height: auto;
+   padding: 10px;
 }
 
 #textLanding {
-  margin-bottom: -1px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+   margin-bottom: -1px;
+   border-bottom-left-radius: 0;
+   border-bottom-right-radius: 0;
 }
 
 #passLanding {
-  margin-bottom: 20px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+   margin-bottom: 20px;
+   border-top-left-radius: 0;
+   border-top-right-radius: 0;
 }
 
 .imgLanding img {
-  width: 50%;
-  height: auto;
-  margin-left: 10%;
-  margin-top: 1%;
+   width: 50%;
+   height: auto;
+   margin-left: 10%;
+   margin-top: 1%;
 }
 
 @media (min-width: 1270px) {
-  .wrapperLanding {
-    margin-top: -39%;
-    margin-left: 60%;
-  }
-
-  .form-signin {
-    max-width: 380px;
-    padding: 15px 35px 45px;
-    margin: 0 auto;
-    background-color: #fff;
-    border: 1px solid rgba(0,0,0,0.1);
-  }
-
-  .form-signin-heading,
-  .checkbox {
-    margin-bottom: 30px;
-  }
-
-  .checkbox {
-    font-weight: normal;
-  }
-
-  .form-control {
-    position: relative;
-    font-size: 16px;
-    height: 10;
-    padding: 10px;
-  }
-
-  #textLanding {
-    margin-bottom: -1px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
-  #passLanding {
-    margin-bottom: 20px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
-
-  .imgLanding img {
-    width: 47%;
-    height: auto;
-    margin-left: 10%;
-    margin-top: 1%;
-  }
+   .wrapperLanding {
+      margin-top: -39%;
+      margin-left: 60%;
+   }
+   .form-signin {
+      max-width: 380px;
+      padding: 15px 35px 45px;
+      margin: 0 auto;
+      background-color: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+   }
+   .form-signin-heading,
+   .checkbox {
+      margin-bottom: 30px;
+   }
+   .checkbox {
+      font-weight: normal;
+   }
+   .form-control {
+      position: relative;
+      font-size: 16px;
+      height: 10;
+      padding: 10px;
+   }
+   #textLanding {
+      margin-bottom: -1px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+   }
+   #passLanding {
+      margin-bottom: 20px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+   }
+   .imgLanding img {
+      width: 47%;
+      height: auto;
+      margin-left: 10%;
+      margin-top: 1%;
+   }
 }
 
 @media (min-width: 1700px) {
-  .wrapperLanding {
-    margin-top: -35%;
-    margin-left: 60%;
-  }
-
-  .form-signin {
-    max-width: 380px;
-    padding: 15px 35px 45px;
-    margin: 0 auto;
-    background-color: #fff;
-    border: 1px solid rgba(0,0,0,0.1);
-  }
-
-  .form-signin-heading,
-  .checkbox {
-    margin-bottom: 30px;
-  }
-
-  .checkbox {
-    font-weight: normal;
-  }
-
-  .form-control {
-    position: relative;
-    font-size: 16px;
-    height: 10;
-    padding: 10px;
-  }
-
-  #textLanding {
-    margin-bottom: -1px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
-  #passLanding {
-    margin-bottom: 20px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
-
-  .imgLanding img {
-    width: 47%;
-    height: auto;
-    margin-left: 10%;
-    margin-top: 1%;
-  }
+   .wrapperLanding {
+      margin-top: -35%;
+      margin-left: 60%;
+   }
+   .form-signin {
+      max-width: 380px;
+      padding: 15px 35px 45px;
+      margin: 0 auto;
+      background-color: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+   }
+   .form-signin-heading,
+   .checkbox {
+      margin-bottom: 30px;
+   }
+   .checkbox {
+      font-weight: normal;
+   }
+   .form-control {
+      position: relative;
+      font-size: 16px;
+      height: 10;
+      padding: 10px;
+   }
+   #textLanding {
+      margin-bottom: -1px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+   }
+   #passLanding {
+      margin-bottom: 20px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+   }
+   .imgLanding img {
+      width: 47%;
+      height: auto;
+      margin-left: 10%;
+      margin-top: 1%;
+   }
 }
 
 #btnLanding {
-  border: none;
+   border: none;
 }
 
 @media (min-width: 1270px) {
-  .wrapperLanding2 {
-    margin-top: 2%;
-    margin-left: 60%;
-  }
-
-  .siteInfo {
-    float: left;
-    width: 50%;
-    height: 80%;
-    margin-left: 10%;
-    margin-top: 0%;
-    text-shadow: 2px 2px black;
-  }
-
-  .siteInfo span {
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 18px;
-  }
-
-  .siteInfo img {
-    width: 40%;
-    height: auto;
-    border: 1px solid black;
-  }
-
-  .landingTxtPart1 {
-    z-index: 9999;
-    margin-left: 50%;
-    margin-top: -14%;
-    position: relative;
-  }
-
-  .landingTxtPart2 {
-    z-index: 9999;
-    margin-top: 12%;
-    position: relative;
-  }
-
-  .landingImgPart2 img {
-    width: 80%;
-    height: auto;
-  }
-
-  .landingImgPart2 {
-    margin-left: 50%;
-    margin-top: -14%;
-  }
-
-  .landingTxtPart3 {
-    z-index: 9999;
-    margin-left: 50%;
-    margin-top: -13%;
-    position: relative;
-  }
-
-  .landingTxtPart4 {
-    z-index: 9999;
-    margin-top: 10%;
-    position: relative;
-  }
-
-  .landingImgPart4 img {
-    width: 80%;
-    height: auto;
-  }
-
-  .landingImgPart4 {
-    margin-left: 50%;
-    margin-top: -13%;
-  }
+   .wrapperLanding2 {
+      margin-top: 2%;
+      margin-left: 60%;
+   }
+   .siteInfo {
+      float: left;
+      width: 50%;
+      height: 80%;
+      margin-left: 10%;
+      margin-top: 0%;
+      text-shadow: 2px 2px black;
+   }
+   .siteInfo span {
+      color: white;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+   }
+   .siteInfo img {
+      width: 40%;
+      height: auto;
+      border: 1px solid black;
+   }
+   .landingTxtPart1 {
+      z-index: 9999;
+      margin-left: 50%;
+      margin-top: -14%;
+      position: relative;
+   }
+   .landingTxtPart2 {
+      z-index: 9999;
+      margin-top: 12%;
+      position: relative;
+   }
+   .landingImgPart2 img {
+      width: 80%;
+      height: auto;
+   }
+   .landingImgPart2 {
+      margin-left: 50%;
+      margin-top: -14%;
+   }
+   .landingTxtPart3 {
+      z-index: 9999;
+      margin-left: 50%;
+      margin-top: -13%;
+      position: relative;
+   }
+   .landingTxtPart4 {
+      z-index: 9999;
+      margin-top: 10%;
+      position: relative;
+   }
+   .landingImgPart4 img {
+      width: 80%;
+      height: auto;
+   }
+   .landingImgPart4 {
+      margin-left: 50%;
+      margin-top: -13%;
+   }
 }
+
 @media (min-width: 320px) and (max-width: 480px) {
-  .wrapperLanding2 {
-    margin-top: -5%;
-    overflow-x: hidden;
-  }
+   .wrapperLanding2 {
+      margin-top: -5%;
+      overflow-x: hidden;
+   }
 }
+
 @media (min-width: 1700px) {
-  .wrapperLanding2 {
-    margin-top: 6%;
-    margin-left: 60%;
-  }
-
-  .siteInfo {
-    float: left;
-    width: 50%;
-    height: 80%;
-    margin-left: 10%;
-    margin-top: 2%;
-    text-shadow: 2px 2px black;
-  }
-
-  .siteInfo span {
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 18px;
-  }
-
-  .siteInfo img {
-    width: 40%;
-    height: auto;
-    border: 1px solid black;
-  }
-
-  .landingTxtPart1 {
-    z-index: 9999;
-    margin-left: 50%;
-    margin-top: -14%;
-    position: relative;
-  }
-
-  .landingTxtPart2 {
-    z-index: 9999;
-    margin-top: 14%;
-    position: relative;
-  }
-
-  .landingImgPart2 img {
-    width: 80%;
-    height: auto;
-  }
-
-  .landingImgPart2 {
-    margin-left: 50%;
-    margin-top: -14%;
-  }
-
-  .landingTxtPart3 {
-    z-index: 9999;
-    margin-left: 50%;
-    margin-top: -13%;
-    position: relative;
-  }
-
-  .landingTxtPart4 {
-    z-index: 9999;
-    margin-top: 14%;
-    position: relative;
-  }
-
-  .landingImgPart4 img {
-    width: 80%;
-    height: auto;
-  }
-
-  .landingImgPart4 {
-    margin-left: 50%;
-    margin-top: -13%;
-  }
+   .wrapperLanding2 {
+      margin-top: 6%;
+      margin-left: 60%;
+   }
+   .siteInfo {
+      float: left;
+      width: 50%;
+      height: 80%;
+      margin-left: 10%;
+      margin-top: 2%;
+      text-shadow: 2px 2px black;
+   }
+   .siteInfo span {
+      color: white;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+   }
+   .siteInfo img {
+      width: 40%;
+      height: auto;
+      border: 1px solid black;
+   }
+   .landingTxtPart1 {
+      z-index: 9999;
+      margin-left: 50%;
+      margin-top: -14%;
+      position: relative;
+   }
+   .landingTxtPart2 {
+      z-index: 9999;
+      margin-top: 14%;
+      position: relative;
+   }
+   .landingImgPart2 img {
+      width: 80%;
+      height: auto;
+   }
+   .landingImgPart2 {
+      margin-left: 50%;
+      margin-top: -14%;
+   }
+   .landingTxtPart3 {
+      z-index: 9999;
+      margin-left: 50%;
+      margin-top: -13%;
+      position: relative;
+   }
+   .landingTxtPart4 {
+      z-index: 9999;
+      margin-top: 14%;
+      position: relative;
+   }
+   .landingImgPart4 img {
+      width: 80%;
+      height: auto;
+   }
+   .landingImgPart4 {
+      margin-left: 50%;
+      margin-top: -13%;
+   }
 }
 
 @media (min-width: 1270px) {
-  #txtSearch{
-    height:35px;
-  }
-  #tableLeaderboard {
-    background-color: white;
-    margin-top: 5%;
-    /*border: 2px solid;*/
-    border: 2px solid #aaaaaa;
-    box-shadow: 5px 5px 3px #aaaaaa;
-  }
-
-  #rowLeaderboard {
-    width: 250%;
-  }
-
-  .formLeaderboard {
-    background: rgba(0, 0, 0, 0);
-    border: 0px;
-    width: 20%;
-    margin-left: 44%;
-    margin-top: -2%;
-  }
-
-  #inputLeaderboard input {
-    height: 10%;
-    border: 1px solid;
-  }
-
-  .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
-    z-index: 2;
-    margin-left: 5px;
-  }
+   #txtSearch {
+      height: 35px;
+   }
+   #tableLeaderboard {
+      background-color: white;
+      margin-top: 5%;
+      border: 2px solid #aaaaaa;
+      box-shadow: 5px 5px 3px #aaaaaa;
+   }
+   #rowLeaderboard {
+      width: 250%;
+   }
+   .formLeaderboard {
+      background: rgba(0, 0, 0, 0);
+      border: 0px;
+      width: 20%;
+      margin-left: 44%;
+      margin-top: -2%;
+   }
+   #inputLeaderboard input {
+      height: 10%;
+      border: 1px solid;
+   }
+   .input-group-btn:last-child>.btn,
+   .input-group-btn:last-child>.btn-group {
+      z-index: 2;
+      margin-left: 5px;
+   }
 }
-/*SIDEBAR*/
+
 .wrapper {
-  display: block;
+   display: block;
 }
 
 #sidebar {
-  min-width: 250px;
-  max-width: 250px;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  /* top layer */
-  z-index: 9999;
+   min-width: 250px;
+   max-width: 250px;
+   height: 100vh;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 9999;
 }
 
 .overlay {
-  /* full screen */
-  width: 100vw;
-  height: 100vh;
-  /* transparent black */
-  background: rgba(0, 0, 0, 0.8);
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: none;
-  /* middle layer, i.e. appears below the sidebar */
-  z-index: 9998;
+   width: 100vw;
+   height: 100vh;
+   background: rgba(0, 0, 0, 0.8);
+   position: fixed;
+   top: 0;
+   left: 0;
+   display: none;
+   z-index: 9998;
 }
 
 #dismiss {
-  width: 35px;
-  height: 35px;
-  position: absolute;
-  /* top right corner of the sidebar */
-  top: 10px;
-  right: 10px;
+   width: 35px;
+   height: 35px;
+   position: absolute;
+   top: 10px;
+   right: 10px;
 }
 
 .sidenav {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 160px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  right:1;
-  background-color: #f8f8f8; /* Black */
-  overflow-x: hidden; /* Disable horizontal scroll */
+   height: 100%;
+   width: 160px;
+   position: fixed;
+   z-index: 1;
+   right: 1;
+   background-color: #f8f8f8;
+   overflow-x: hidden;
 }
-/* The navigation menu links */
+
 .sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 13px;
-  text-align:center;
-  color: black;
-  display: block;
-  font-family: 'Roboto', sans-serif;
+   padding: 6px 8px 6px 16px;
+   text-decoration: none;
+   font-size: 13px;
+   text-align: center;
+   color: black;
+   display: block;
+   font-family: 'Roboto', sans-serif;
 }
-/* When you mouse over the navigation links, change their color */
+
 .sidenav a:hover:not(#SidebarTitle) {
-  color: grey;
+   color: grey;
 }
 
-/* Style page content */
 .main {
-  margin-left: 160px; /* Same as the width of the sidebar */
-  padding: 0px 10px;
+   margin-left: 160px;
+   padding: 0px 10px;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-#SidebarTitle{
-  font-size:16px;
-  padding-bottom:10px;
-}
-@media (min-width: 1270px) {
-  #team1InsertLastGame{
-    padding-top:0%;
-  }
-  .team2Insert {
-    padding-left: 20%;
-    padding-right: 20%;
-    padding-top:2%;
-  }
-}
-@media (min-width: 1700px) {
-  #team1InsertLastGame{
-    padding-top:1.3%;
-  }
-  .team2Insert {
-    padding-left: 20%;
-    padding-right: 20%;
-    padding-top:1.3%;
-  }
+   .sidenav {
+      padding-top: 15px;
+   }
+   .sidenav a {
+      font-size: 18px;
+   }
 }
 
+#SidebarTitle {
+   font-size: 16px;
+   padding-bottom: 10px;
+}
 
 @media (min-width: 1270px) {
-  #infoLastGame{
-    width:100%;
-    text-align:center;
-    color:white;
-  }
-  #infoLastGame h1{
-    font-size:40px;
-  }
-  #infoLastGame h2{
-    font-size:20px;
-  }
-  #infoLastGame h3{
-    font-size:20px;
-  }
-}
-@media (min-width: 1700px) {
-  #infoLastGame{
-    width:100%;
-    text-align:center;
-    color:white;
-  }
-  #infoLastGame h1{
-    font-size:40px;
-  }
-  #infoLastGame h2{
-    font-size:40px;
-  }
-  #infoLastGame h3{
-    font-size:40px;
-  }
-}
-#winLastGame{
-  color:greenyellow;
-}
-#loose{
-  color:red;
-}
-#win{
-  color:green;
-}
-#loose{
-  color:red;
+   #team1InsertLastGame {
+      padding-top: 0%;
+   }
+   .team2Insert {
+      padding-left: 20%;
+      padding-right: 20%;
+      padding-top: 2%;
+   }
 }
 
-#t1_player1 td{
-  width:50%;
+@media (min-width: 1700px) {
+   #team1InsertLastGame {
+      padding-top: 1.3%;
+   }
+   .team2Insert {
+      padding-left: 20%;
+      padding-right: 20%;
+      padding-top: 1.3%;
+   }
 }
-#t2_player1 td{
-  width:50%;
-}
+
 @media (min-width: 1270px) {
-  .imgLastGame img{
-    width:8%;
-    height:auto;
-    z-index:9999;
-    padding-top:-100%;
-  }
-  #img1LastGame img{
-    margin-left: 30%;
-    margin-top:-1%;
-  }
-  #img2LastGame img{
-    margin-left: 62%;
-    margin-top:-8%;
-  }
-  #infoLastGame{
-    margin-top:-9%;
-  }
+   #infoLastGame {
+      width: 100%;
+      text-align: center;
+      color: white;
+   }
+   #infoLastGame h1 {
+      font-size: 40px;
+   }
+   #infoLastGame h2 {
+      font-size: 20px;
+   }
+   #infoLastGame h3 {
+      font-size: 20px;
+   }
 }
+
 @media (min-width: 1700px) {
-  .imgLastGame img{
-    width:8%;
-    height:auto;
-    z-index:9999;
-    margin-bottom:0;
-  }
-  #img1LastGame{
-    margin-left: 0%;
-    margin-top:2%;
-  }
-  #img2LastGame{
-    width:100%;
-    margin-left:3%;
-  }
+   #infoLastGame {
+      width: 100%;
+      text-align: center;
+      color: white;
+   }
+   #infoLastGame h1 {
+      font-size: 40px;
+   }
+   #infoLastGame h2 {
+      font-size: 40px;
+   }
+   #infoLastGame h3 {
+      font-size: 40px;
+   }
 }
 
-#Hour{
-  width: 100%;
-  height: 35%;
-  margin-top: 5%;
-  margin-right: 0;
-  margin-left: 8;
+#winLastGame {
+   color: greenyellow;
 }
+
+#loose {
+   color: red;
+}
+
+#win {
+   color: green;
+}
+
+#loose {
+   color: red;
+}
+
+#t1_player1 td {
+   width: 50%;
+}
+
+#t2_player1 td {
+   width: 50%;
+}
+
+@media (min-width: 1270px) {
+   .imgLastGame img {
+      width: 8%;
+      height: auto;
+      z-index: 9999;
+      padding-top: -100%;
+   }
+   #img1LastGame img {
+      margin-left: 30%;
+      margin-top: -1%;
+   }
+   #img2LastGame img {
+      margin-left: 62%;
+      margin-top: -8%;
+   }
+   #infoLastGame {
+      margin-top: -9%;
+   }
+}
+
 @media (min-width: 1700px) {
-  #Hour{
-    width: 100%;
-  height: 35%;
-  margin-top: 5%;
-  margin-right: 0;
-  margin-left: 8;
-  }
-}
-#insertTeamsSucess{
-  margin-right:25%;
-  margin-left:42%;
-  width:10%;
-}
-#nextGameDrop1{
-  margin-left:30%;
-  margin-top:3%;
-}
-#nextGameDrop2{
-  margin-left:3%;
-  margin-top:3%;
+   .imgLastGame img {
+      width: 8%;
+      height: auto;
+      z-index: 9999;
+      margin-bottom: 0;
+   }
+   #img1LastGame {
+      margin-left: 0%;
+      margin-top: 2%;
+   }
+   #img2LastGame {
+      width: 100%;
+      margin-left: 3%;
+   }
 }
 
-#calendar{
-  margin-left:47%;
-  margin-top:-8.5%;
-}
-#DateNextGame label{
-  text-align: center;
-  width:17%;
-  margin-left:45%;
-  font-size:20px;
-  color:black;
-  background: rgba(255, 255, 255, 0.8);
-}
-.imgTeamNext{
-  margin-left: auto;
-	margin-right: auto;
-	display: block;
-  margin-top:10%;
-  width:60%;
-  height:auto;
+#Hour {
+   width: 100%;
+   height: 35%;
+   margin-top: 5%;
+   margin-right: 0;
+   margin-left: 8;
 }
 
-#panelNextGame{
-  width: 10%;
-  margin-left: 32%;
-  margin-top: 20%;
-  height: 15%;
-  font-size:18px;
-  border: 1px solid black;
+@media (min-width: 1700px) {
+   #Hour {
+      width: 100%;
+      height: 35%;
+      margin-top: 5%;
+      margin-right: 0;
+      margin-left: 8;
+   }
 }
 
-.panel-body input{
-  width:20%;
+#insertTeamsSucess {
+   margin-right: 25%;
+   margin-left: 42%;
+   width: 10%;
 }
 
-.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
-  color: #555;
-  background-color: #e7e7e7;
-  width: 80;
-  height: 50;
+#nextGameDrop1 {
+   margin-left: 30%;
+   margin-top: 3%;
+}
+
+#nextGameDrop2 {
+   margin-left: 3%;
+   margin-top: 3%;
+}
+
+#calendar {
+   margin-left: 47%;
+   margin-top: -8.5%;
+}
+
+#DateNextGame label {
+   text-align: center;
+   width: 17%;
+   margin-left: 45%;
+   font-size: 20px;
+   color: black;
+   background: rgba(255, 255, 255, 0.8);
+}
+
+.imgTeamNext {
+   margin-left: auto;
+   margin-right: auto;
+   display: block;
+   margin-top: 10%;
+   width: 60%;
+   height: auto;
+}
+
+#panelNextGame {
+   width: 10%;
+   margin-left: 32%;
+   margin-top: 20%;
+   height: 15%;
+   font-size: 18px;
+   border: 1px solid black;
+}
+
+.panel-body input {
+   width: 20%;
+}
+
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:focus,
+.navbar-default .navbar-nav>.open>a:hover {
+   color: #555;
+   background-color: #e7e7e7;
+   width: 80;
+   height: 50;
 }
 
 .navbar-nav>li>.dropdown-menu {
-  margin-top: 40;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  margin-right: -67;
+   margin-top: 40;
+   border-top-left-radius: 0;
+   border-top-right-radius: 0;
+   margin-right: -67;
 }
 
+.show {
+   display: block;
+}
 
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
-
-
-
-#panel-heading-market{
-  text-align:center;
-} 
-
+#panel-heading-market {
+   text-align: center;
+}
 
 @media (min-width: 481px) and (max-width: 780px) {
-  .marketInfoMobile p{
-    margin-left:5%;
-  }
-  .MobileTeamPoints {
-    margin-top: -3%;
-  }
-  .alert {
-    position: absolute;
-    z-index: 10000;
-    margin-top: 11%;
-    margin-left: 315;
-  }
-  .menuLogoMobile{
-    width: 90px;
-    margin-left: 600;
-    margin-top: -1%;
-  }
-  .list-group-item button{
-    width:50%;
-  }
-  
-  #logoSigninMobile{
-    height: 250;
-    width: auto;
-    margin-left: -6%;
-    margin-top: -10%;
-  }
-  
-  .playerPriceCollapse{
-    margin-left: 23%;
-    margin-top: -13%;
-    font-size: 20px;
-  }
-  
-  .playerNameCollapse{
-    font-size: 20px;
-    width: 30%;
-    margin-left: 9%;
-    text-align: center;
-  }
-  
-  .lastGamesMarketMobileCollapse{
-    text-decoration: none;
-    list-style: none;
-    margin-left: 0;
-  }
-  
-  #btnMarketMobileCollapse{
-    width: 48%;
-    margin-top: 5%;
-    margin-left: 2%;
-  }
-  
-  #marketImgMobileCollapse{
-    height: 25%;
-    margin-left: 58%;
-    margin-top: -34%;
-  }
-  #myTeamImgMobileCollapse{
-    height: 15%;
-    margin-left: 65%;
-    margin-top: -20%;
-  }
-  .lastGamesMarketMobileCollapse span{
-    color:green;
-  }
-  .menuMobile{
-    float:right;
-    padding:20;
-    width:25%;
-    margin-top:-19%;
-  }
-  .usernameMobile{
-    font-weight: 600;
-    text-align: center;
-    font-size: 20px;
-    z-index: 9999;
-    position: absolute;
-    margin-top: 1%;
-  }
-  
-  #logoMobile{
-    margin-top: -11%;
-    width: 20%;
-    margin-left: 60;
-  }
-  
-  .dropbtnMobile {
-    background-repeat: no-repeat, repeat;
-    background-color:transparent;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  /* The container <div> - needed to position the dropdown content */
-  .dropdownMobile {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdownMobile-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    margin-left: 61%;
-    right: 0;
-    margin-top: -1%;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdownMobile-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdownMobile-content a:hover {background-color: #ddd}
-  .marketInfoMobile{
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    height: 12%;
-    font-size:20px;
-    background: rgba(0, 0, 0, 0.5);
-    margin-top: -1%;
-  }
-
-  .balanceMobile{
-    margin-top: 5%;
-    position: absolute;
-    z-index: 9999;
-    font-size: 20px;
-    text-align: center;
-  }
-  #dropdownMarketMobile{
-    width:100%;
-    margin-left:0;
-    margin-top:0%;
-  }
-  #dropdown-menuMarketMobile{
-    width:100%;
-    margin-top:3%;
-    z-index:1;
-  }
-  .playerMarketMobile{
-    margin-top: 5%;
-    margin-bottom: 20%;
-  }
-  .playerMarketMobile img{
-    height: 230px;
-    width: auto;
-  }
-  .playerMarketMobile li a{
-    text-decoration: none;
+   .marketInfoMobile p {
+      margin-left: 5%;
+   }
+   .MobileTeamPoints {
+      margin-top: -3%;
+   }
+   .alert {
+      position: absolute;
+      z-index: 10000;
+      margin-top: 11%;
+      margin-left: 315;
+   }
+   .menuLogoMobile {
+      width: 90px;
+      margin-left: 600;
+      margin-top: -1%;
+   }
+   .list-group-item button {
+      width: 50%;
+   }
+   #logoSigninMobile {
+      height: 250;
+      width: auto;
+      margin-left: -6%;
+      margin-top: -10%;
+   }
+   .playerPriceCollapse {
+      margin-left: 23%;
+      margin-top: -13%;
+      font-size: 20px;
+   }
+   .playerNameCollapse {
+      font-size: 20px;
+      width: 30%;
+      margin-left: 9%;
+      text-align: center;
+   }
+   .lastGamesMarketMobileCollapse {
+      text-decoration: none;
+      list-style: none;
+      margin-left: 0;
+   }
+   #btnMarketMobileCollapse {
+      width: 48%;
+      margin-top: 5%;
+      margin-left: 2%;
+   }
+   #marketImgMobileCollapse {
+      height: 25%;
+      margin-left: 58%;
+      margin-top: -34%;
+   }
+   #myTeamImgMobileCollapse {
+      height: 15%;
+      margin-left: 65%;
+      margin-top: -20%;
+   }
+   .lastGamesMarketMobileCollapse span {
+      color: green;
+   }
+   .menuMobile {
+      float: right;
+      padding: 20;
+      width: 25%;
+      margin-top: -19%;
+   }
+   .usernameMobile {
+      font-weight: 600;
+      text-align: center;
+      font-size: 20px;
+      z-index: 9999;
+      position: absolute;
+      margin-top: 1%;
+   }
+   #logoMobile {
+      margin-top: -11%;
+      width: 20%;
+      margin-left: 60;
+   }
+   .dropbtnMobile {
+      background-repeat: no-repeat, repeat;
+      background-color: transparent;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+   }
+   .dropdownMobile {
+      position: relative;
+      display: inline-block;
+   }
+   .dropdownMobile-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      margin-left: 61%;
+      right: 0;
+      margin-top: -1%;
+   }
+   .dropdownMobile-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+   }
+   .dropdownMobile-content a:hover {
+      background-color: #ddd
+   }
+   .marketInfoMobile {
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      height: 12%;
+      font-size: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      margin-top: -1%;
+   }
+   .balanceMobile {
+      margin-top: 5%;
+      position: absolute;
+      z-index: 9999;
+      font-size: 20px;
+      text-align: center;
+   }
+   #dropdownMarketMobile {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 0%;
+   }
+   #dropdown-menuMarketMobile {
+      width: 100%;
+      margin-top: 3%;
+      z-index: 1;
+   }
+   .playerMarketMobile {
+      margin-top: 5%;
+      margin-bottom: 20%;
+   }
+   .playerMarketMobile img {
+      height: 230px;
+      width: auto;
+   }
+   .playerMarketMobile li a {
+      text-decoration: none;
       text-align: center;
       margin-left: 15%;
       color: black;
-  }
-  .playerNameMobile{
-    font-size: 20px;
-    text-align: center;
-    margin-left: 7%;
-  }
-  .lastGamesMarketMobile{
-    font-size: 15px;
-    margin-left: 11%;
-    list-style-type: none;
-  }
-  .lastGamesMarketMobile span{
-    color:green;
-  }
-  #btnMarketMobile{
-    width: 34%;
-    margin-left: 17%;
-    position: absolute;
-    margin-top: 5%;
-  }
-  #marketImgMobile{
-    float: right;
+   }
+   .playerNameMobile {
+      font-size: 20px;
+      text-align: center;
+      margin-left: 7%;
+   }
+   .lastGamesMarketMobile {
+      font-size: 15px;
+      margin-left: 11%;
+      list-style-type: none;
+   }
+   .lastGamesMarketMobile span {
+      color: green;
+   }
+   #btnMarketMobile {
+      width: 34%;
+      margin-left: 17%;
+      position: absolute;
+      margin-top: 5%;
+   }
+   #marketImgMobile {
+      float: right;
       padding-top: 2%;
       margin-top: -35%;
-  }
+   }
 }
 
 @media (min-width: 0px) and (max-width: 360px) {
-  .team1Insert {
-    padding-left: 0%;
-    padding-right: 0%;
-  }
-  
-  #img1LastGame{
-    width: 48%;
-    float:left;
-  }
-  #img2LastGame{
-    width:48%;
-    float:right;
-  }
-  #infoLastGame{
-    text-align:Center;
-    color:white;
-  }
-  /*
-  #team1LastGameNameMobile{
-    width: 206px;
-    text-align: center;
-    color: white;
-    font-size: 22px;
-  }
-  .team2LastGameNameMobile{
-    text-align: center;
-    font-size: 22px;
-    width: 48%;
-    float: right;
-    margin-top: -8.9%;
-    color: white;
-  }
-  .vsLastGameMobile{
-    text-align: center;
-    font-size: 15px;
-    margin-top: -7%;
-    color: white;
-  }*/
-  #tdDateMobile{
-    display:none;
-  }
-  .MobileTeamPoints {
-    margin-top: -10%;
-  }
-  .alert {
-    position: fixed;
-    z-index: 10000;
-    margin-top: 25%;
-    margin-left: 105;
-  }
-  .menuLogoMobile{
-    width: 70px;
-    float: right;
-    margin-right: 5%;
-  }
-  
-  
-  #logoSigninMobile{
-    height: 200;
-    width: auto;
-    margin-left: 0;
-    margin-top: -19%;
-  }
-  
-  .playerPriceCollapse{
-    margin-left: 23%;
-    margin-top: -13%;
-    font-size: 20px;
-  }
-  
-  .playerNameCollapse{
-    font-size: 20px;
-    width: 100%;
-    margin-left: 0%;
-    text-align: center;
-  }
-  
-  .lastGamesMarketMobileCollapse{
-    text-decoration: none;
-    list-style: none;
-    margin-left: -15%;
-  }
-  #marketImgMobileCollapse{
-    height: 20%;
-    margin-left: 55%;
-    margin-top: -65%;
-    display: none;
-  }
-  #myTeamImgMobileCollapse{
-    height: 15%;
-    margin-left: 65%;
-    margin-top: -38%;
-    display:none;
-  }
-  .lastGamesMarketMobileCollapse span{
-    color:green;
-  }
-  .menuMobile{
-    float:right;
-    padding:20;
-    width:25%;
-    margin-top:-19%;
-  }
-  .usernameMobile{
-    margin-top: 5%;
-    font-weight: 600;
-    text-align: center;
-  }
-  
-  #logoMobile{
-    margin-right: 80%;
-    width: 20%;
-    margin-left: 20;
-  }
-  
-  .dropbtnMobile {
-    background-repeat: no-repeat, repeat;
-    background-color:transparent;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  /* The container <div> - needed to position the dropdown content */
-  .dropdownMobile {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdownMobile-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    margin-left: 61%;
-    right: 0;
-    margin-top: 20%;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdownMobile-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdownMobile-content a:hover {background-color: #ddd}
-  .marketInfoMobile{
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    height: 16%;
-    font-size:20px;
-    background: rgba(0, 0, 0, 0.5);
-    margin-top: -1%;
-    
-  }
-
-  .balanceMobile{
-    margin-top: 15%;
-    position: absolute;
-    z-index: 9999;
-    text-align: center;
-  }
-  #dropdownMarketMobile{
-    width:100%;
-    margin-left:0;
-    margin-top:0%;
-  }
-  #dropdown-menuMarketMobile{
-    width:100%;
-    margin-top:3%;
-    z-index:1;
-  }
-  .playerMarketMobile{
-    margin-top: 5%;
-    margin-bottom: 20%;
-  }
-  .playerMarketMobile img{
-    height: 230px;
-    width: auto;
-  }
-  .playerMarketMobile li a{
-    text-decoration: none;
+   .team1Insert {
+      padding-left: 0%;
+      padding-right: 0%;
+   }
+   #img1LastGame {
+      width: 48%;
+      float: left;
+   }
+   #img2LastGame {
+      width: 48%;
+      float: right;
+   }
+   #infoLastGame {
+      text-align: Center;
+      color: white;
+   }
+   #tdDateMobile {
+      display: none;
+   }
+   .MobileTeamPoints {
+      margin-top: -10%;
+   }
+   .alert {
+      position: fixed;
+      z-index: 10000;
+      margin-top: 25%;
+      margin-left: 105;
+   }
+   .menuLogoMobile {
+      width: 70px;
+      float: right;
+      margin-right: 5%;
+   }
+   #logoSigninMobile {
+      height: 200;
+      width: auto;
+      margin-left: 0;
+      margin-top: -19%;
+   }
+   .playerPriceCollapse {
+      margin-left: 23%;
+      margin-top: -13%;
+      font-size: 20px;
+   }
+   .playerNameCollapse {
+      font-size: 20px;
+      width: 100%;
+      margin-left: 0%;
+      text-align: center;
+   }
+   .lastGamesMarketMobileCollapse {
+      text-decoration: none;
+      list-style: none;
+      margin-left: -15%;
+   }
+   #marketImgMobileCollapse {
+      height: 20%;
+      margin-left: 55%;
+      margin-top: -65%;
+      display: none;
+   }
+   #myTeamImgMobileCollapse {
+      height: 15%;
+      margin-left: 65%;
+      margin-top: -38%;
+      display: none;
+   }
+   .lastGamesMarketMobileCollapse span {
+      color: green;
+   }
+   .menuMobile {
+      float: right;
+      padding: 20;
+      width: 25%;
+      margin-top: -19%;
+   }
+   .usernameMobile {
+      margin-top: 5%;
+      font-weight: 600;
+      text-align: center;
+   }
+   #logoMobile {
+      margin-right: 80%;
+      width: 20%;
+      margin-left: 20;
+   }
+   .dropbtnMobile {
+      background-repeat: no-repeat, repeat;
+      background-color: transparent;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+   }
+   .dropdownMobile {
+      position: relative;
+      display: inline-block;
+   }
+   .dropdownMobile-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      margin-left: 61%;
+      right: 0;
+      margin-top: 20%;
+   }
+   .dropdownMobile-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+   }
+   .dropdownMobile-content a:hover {
+      background-color: #ddd
+   }
+   .marketInfoMobile {
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      height: 16%;
+      font-size: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      margin-top: -1%;
+   }
+   .balanceMobile {
+      margin-top: 15%;
+      position: absolute;
+      z-index: 9999;
+      text-align: center;
+   }
+   #dropdownMarketMobile {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 0%;
+   }
+   #dropdown-menuMarketMobile {
+      width: 100%;
+      margin-top: 3%;
+      z-index: 1;
+   }
+   .playerMarketMobile {
+      margin-top: 5%;
+      margin-bottom: 20%;
+   }
+   .playerMarketMobile img {
+      height: 230px;
+      width: auto;
+   }
+   .playerMarketMobile li a {
+      text-decoration: none;
       text-align: center;
       margin-left: 15%;
       color: black;
-  }
-  .playerNameMobile{
-    font-size: 20px;
-    margin-left:-5%;
-  }
-  .lastGamesMarketMobile{
-    font-size: 15px;
-    margin-left: 11%;
-    list-style-type: none;
-  }
-  .lastGamesMarketMobile span{
-    color:green;
-  }
-  #btnMarketMobile{
-    width: 100%;
-    margin-left: 17%;
-    position: absolute;
-    margin-top: 5%;
-  }
-  #marketImgMobile{
-    float: right;
+   }
+   .playerNameMobile {
+      font-size: 20px;
+      margin-left: -5%;
+   }
+   .lastGamesMarketMobile {
+      font-size: 15px;
+      margin-left: 11%;
+      list-style-type: none;
+   }
+   .lastGamesMarketMobile span {
+      color: green;
+   }
+   #btnMarketMobile {
+      width: 100%;
+      margin-left: 17%;
+      position: absolute;
+      margin-top: 5%;
+   }
+   #marketImgMobile {
+      float: right;
       padding-top: 2%;
       margin-top: -35%;
-  }
+   }
 }
+
 @media (min-width: 320px) and (max-width: 360px) {
-  .MobileTeamPoints {
-    margin-top: -9%;
-  }
-  .alert {
-    position: fixed;
-    z-index: 10000;
-    margin-top: 25%;
-    margin-left: 105;
-  }
-  .menuLogoMobile{
-    width: 70px;
-    float: right;
-    margin-right: 5%;
-  }
-  
-  
-  #logoSigninMobile{
-    height: 200;
-    width: auto;
-    margin-left: 0;
-    margin-top: -19%;
-  }
-  
-  .playerPriceCollapse{
-    margin-left: 23%;
-    margin-top: -13%;
-    font-size: 20px;
-  }
-  
-  .playerNameCollapse{
-    font-size: 20px;
-    width: 100%;
-    margin-left: 0%;
-    text-align: center;
-  }
-  
-  .lastGamesMarketMobileCollapse{
-    text-decoration: none;
-    list-style: none;
-    margin-left: -15%;
-  }
-  #marketImgMobileCollapse{
-    height: 20%;
-    margin-left: 55%;
-    margin-top: -65%;
-    display: none;
-  }
-  #myTeamImgMobileCollapse{
-    height: 15%;
-    margin-left: 65%;
-    margin-top: -38%;
-    display:none;
-  }
-  .lastGamesMarketMobileCollapse span{
-    color:green;
-  }
-  .menuMobile{
-    float:right;
-    padding:20;
-    width:25%;
-    margin-top:-19%;
-  }
-  .usernameMobile{
-    margin-top: 5%;
-    font-weight: 600;
-    text-align: center;
-  }
-  
-  #logoMobile{
-    margin-right: 80%;
-    width: 20%;
-    margin-left: 20;
-  }
-  
-  .dropbtnMobile {
-    background-repeat: no-repeat, repeat;
-    background-color:transparent;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  /* The container <div> - needed to position the dropdown content */
-  .dropdownMobile {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdownMobile-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    margin-left: 61%;
-    right: 0;
-    margin-top: 20%;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdownMobile-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdownMobile-content a:hover {background-color: #ddd}
-  .marketInfoMobile{
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    height: 12%;
-    font-size:20px;
-    background: rgba(0, 0, 0, 0.5);
-    margin-top: -1%;
-  }
-
-  .balanceMobile{
-    margin-top: 15%;
-    position: absolute;
-    z-index: 9999;
-    text-align: center;
-  }
-  #dropdownMarketMobile{
-    width:100%;
-    margin-left:0;
-    margin-top:0%;
-  }
-  #dropdown-menuMarketMobile{
-    width:100%;
-    margin-top:3%;
-    z-index:1;
-  }
-  .playerMarketMobile{
-    margin-top: 5%;
-    margin-bottom: 20%;
-  }
-  .playerMarketMobile img{
-    height: 230px;
-    width: auto;
-  }
-  .playerMarketMobile li a{
-    text-decoration: none;
+   .MobileTeamPoints {
+      margin-top: -9%;
+   }
+   .alert {
+      position: fixed;
+      z-index: 10000;
+      margin-top: 25%;
+      margin-left: 105;
+   }
+   .menuLogoMobile {
+      width: 70px;
+      float: right;
+      margin-right: 5%;
+   }
+   #logoSigninMobile {
+      height: 200;
+      width: auto;
+      margin-left: 0;
+      margin-top: -19%;
+   }
+   .playerPriceCollapse {
+      margin-left: 23%;
+      margin-top: -13%;
+      font-size: 20px;
+   }
+   .playerNameCollapse {
+      font-size: 20px;
+      width: 100%;
+      margin-left: 0%;
+      text-align: center;
+   }
+   .lastGamesMarketMobileCollapse {
+      text-decoration: none;
+      list-style: none;
+      margin-left: -15%;
+   }
+   #marketImgMobileCollapse {
+      height: 20%;
+      margin-left: 55%;
+      margin-top: -65%;
+      display: none;
+   }
+   #myTeamImgMobileCollapse {
+      height: 15%;
+      margin-left: 65%;
+      margin-top: -38%;
+      display: none;
+   }
+   .lastGamesMarketMobileCollapse span {
+      color: green;
+   }
+   .menuMobile {
+      float: right;
+      padding: 20;
+      width: 25%;
+      margin-top: -19%;
+   }
+   .usernameMobile {
+      margin-top: 5%;
+      font-weight: 600;
+      text-align: center;
+   }
+   #logoMobile {
+      margin-right: 80%;
+      width: 20%;
+      margin-left: 20;
+   }
+   .dropbtnMobile {
+      background-repeat: no-repeat, repeat;
+      background-color: transparent;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+   }
+   .dropdownMobile {
+      position: relative;
+      display: inline-block;
+   }
+   .dropdownMobile-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      margin-left: 61%;
+      right: 0;
+      margin-top: 20%;
+   }
+   .dropdownMobile-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+   }
+   .dropdownMobile-content a:hover {
+      background-color: #ddd
+   }
+   .marketInfoMobile {
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      height: 12%;
+      font-size: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      margin-top: -1%;
+   }
+   .balanceMobile {
+      margin-top: 15%;
+      position: absolute;
+      z-index: 9999;
+      text-align: center;
+   }
+   #dropdownMarketMobile {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 0%;
+   }
+   #dropdown-menuMarketMobile {
+      width: 100%;
+      margin-top: 3%;
+      z-index: 1;
+   }
+   .playerMarketMobile {
+      margin-top: 5%;
+      margin-bottom: 20%;
+   }
+   .playerMarketMobile img {
+      height: 230px;
+      width: auto;
+   }
+   .playerMarketMobile li a {
+      text-decoration: none;
       text-align: center;
       margin-left: 15%;
       color: black;
-  }
-  .playerNameMobile{
-    font-size: 20px;
-    margin-left:-5%;
-  }
-  .lastGamesMarketMobile{
-    font-size: 15px;
-    margin-left: 11%;
-    list-style-type: none;
-  }
-  .lastGamesMarketMobile span{
-    color:green;
-  }
-  #btnMarketMobile{
-    width: 100%;
-    margin-left: 17%;
-    position: absolute;
-    margin-top: 5%;
-  }
-  #marketImgMobile{
-    float: right;
+   }
+   .playerNameMobile {
+      font-size: 20px;
+      margin-left: -5%;
+   }
+   .lastGamesMarketMobile {
+      font-size: 15px;
+      margin-left: 11%;
+      list-style-type: none;
+   }
+   .lastGamesMarketMobile span {
+      color: green;
+   }
+   #btnMarketMobile {
+      width: 100%;
+      margin-left: 17%;
+      position: absolute;
+      margin-top: 5%;
+   }
+   #marketImgMobile {
+      float: right;
       padding-top: 2%;
       margin-top: -35%;
-  }
+   }
 }
-.panel-group{
-  margin-bottom: 10px;
-  margin-top: 10px;
+
+.panel-group {
+   margin-bottom: 10px;
+   margin-top: 10px;
 }
+
 @media (min-width: 360px) and (max-width: 380px) {
-  .MobileTeamPoints {
-    margin-top: -7%;
-  }
-  .alert {
-    position: absolute;
-    z-index: 10000;
-    margin-top: 22%;
-    margin-left: 125;
-  }
-  .menuLogoMobile{
-    width: 70px;
-    float: right;
-    margin-right: 5%;
-  }
-  
-  
-  #logoSigninMobile{
-    height: 250;
-    width: auto;
-    margin-left: -5%;
-    margin-top: -22%;
-  }
-  
-  .playerPriceCollapse{
-    margin-left: 23%;
-    margin-top: -13%;
-    font-size: 20px;
-  }
-  
-  .playerNameCollapse{
-    font-size: 20px;
-    width: 100%;
-    margin-left: 0%;
-    text-align: center;
-  }
-  
-  .lastGamesMarketMobileCollapse{
-    text-decoration: none;
-    list-style: none;
-    margin-left: -5%;
-  }
-  #marketImgMobileCollapse{
-    height: 20%;
-    margin-left: 55%;
-    margin-top: -65%;
-    display: none;
-  }
-  #myTeamImgMobileCollapse{
-    height: 15%;
-    margin-left: 65%;
-    margin-top: -38%;
-    display:none;
-  }
-  .lastGamesMarketMobileCollapse span{
-    color:green;
-  }
-  .menuMobile{
-    float:right;
-    padding:20;
-    width:25%;
-    margin-top:-19%;
-  }
-  .usernameMobile{
-    margin-top: 2%;
-    font-weight: 600;
-    text-align: center;
-  }
-  
-  #logoMobile{
-    margin-right: 80%;
-    width: 20%;
-    margin-left: 20;
-  }
-  
-  .dropbtnMobile {
-    background-repeat: no-repeat, repeat;
-    background-color:transparent;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  /* The container <div> - needed to position the dropdown content */
-  .dropdownMobile {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdownMobile-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    margin-left: 61%;
-    right: 0;
-    margin-top: 20%;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdownMobile-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdownMobile-content a:hover {background-color: #ddd}
-  .marketInfoMobile{
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    height: 12%;
-    font-size:20px;
-    background: rgba(0, 0, 0, 0.5);
-    margin-top: -1%;
-  }
-
-  .balanceMobile{
-    margin-top: 10%;
-    position: absolute;
-    z-index: 9999;
-    text-align: center;
-  }
-  #dropdownMarketMobile{
-    width:100%;
-    margin-left:0;
-    margin-top:0%;
-  }
-  #dropdown-menuMarketMobile{
-    width:100%;
-    margin-top:3%;
-    z-index:1;
-  }
-  .playerMarketMobile{
-    margin-top: 5%;
-    margin-bottom: 20%;
-  }
-  .playerMarketMobile img{
-    height: 230px;
-    width: auto;
-  }
-  .playerMarketMobile li a{
-    text-decoration: none;
+   .MobileTeamPoints {
+      margin-top: -7%;
+   }
+   .alert {
+      position: absolute;
+      z-index: 10000;
+      margin-top: 22%;
+      margin-left: 125;
+   }
+   .menuLogoMobile {
+      width: 70px;
+      float: right;
+      margin-right: 5%;
+   }
+   #logoSigninMobile {
+      height: 250;
+      width: auto;
+      margin-left: -5%;
+      margin-top: -22%;
+   }
+   .playerPriceCollapse {
+      margin-left: 23%;
+      margin-top: -13%;
+      font-size: 20px;
+   }
+   .playerNameCollapse {
+      font-size: 20px;
+      width: 100%;
+      margin-left: 0%;
+      text-align: center;
+   }
+   .lastGamesMarketMobileCollapse {
+      text-decoration: none;
+      list-style: none;
+      margin-left: -5%;
+   }
+   #marketImgMobileCollapse {
+      height: 20%;
+      margin-left: 55%;
+      margin-top: -65%;
+      display: none;
+   }
+   #myTeamImgMobileCollapse {
+      height: 15%;
+      margin-left: 65%;
+      margin-top: -38%;
+      display: none;
+   }
+   .lastGamesMarketMobileCollapse span {
+      color: green;
+   }
+   .menuMobile {
+      float: right;
+      padding: 20;
+      width: 25%;
+      margin-top: -19%;
+   }
+   .usernameMobile {
+      margin-top: 2%;
+      font-weight: 600;
+      text-align: center;
+   }
+   #logoMobile {
+      margin-right: 80%;
+      width: 20%;
+      margin-left: 20;
+   }
+   .dropbtnMobile {
+      background-repeat: no-repeat, repeat;
+      background-color: transparent;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+   }
+   .dropdownMobile {
+      position: relative;
+      display: inline-block;
+   }
+   .dropdownMobile-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      margin-left: 61%;
+      right: 0;
+      margin-top: 20%;
+   }
+   .dropdownMobile-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+   }
+   .dropdownMobile-content a:hover {
+      background-color: #ddd
+   }
+   .marketInfoMobile {
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      height: 12%;
+      font-size: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      margin-top: -1%;
+   }
+   .balanceMobile {
+      margin-top: 10%;
+      position: absolute;
+      z-index: 9999;
+      text-align: center;
+   }
+   #dropdownMarketMobile {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 0%;
+   }
+   #dropdown-menuMarketMobile {
+      width: 100%;
+      margin-top: 3%;
+      z-index: 1;
+   }
+   .playerMarketMobile {
+      margin-top: 5%;
+      margin-bottom: 20%;
+   }
+   .playerMarketMobile img {
+      height: 230px;
+      width: auto;
+   }
+   .playerMarketMobile li a {
+      text-decoration: none;
       text-align: center;
       margin-left: 15%;
       color: black;
-  }
-  .playerNameMobile{
-    font-size: 20px;
-    margin-left:-5%;
-  }
-  .lastGamesMarketMobile{
-    font-size: 15px;
-    margin-left: 11%;
-    list-style-type: none;
-  }
-  .lastGamesMarketMobile span{
-    color:green;
-  }
-  #btnMarketMobile{
-    width: 100%;
-    margin-left: 17%;
-    position: absolute;
-    margin-top: 5%;
-  }
-  #marketImgMobile{
-    float: right;
+   }
+   .playerNameMobile {
+      font-size: 20px;
+      margin-left: -5%;
+   }
+   .lastGamesMarketMobile {
+      font-size: 15px;
+      margin-left: 11%;
+      list-style-type: none;
+   }
+   .lastGamesMarketMobile span {
+      color: green;
+   }
+   #btnMarketMobile {
+      width: 100%;
+      margin-left: 17%;
+      position: absolute;
+      margin-top: 5%;
+   }
+   #marketImgMobile {
+      float: right;
       padding-top: 2%;
       margin-top: -35%;
-  }
+   }
 }
-.panel-group{
-  margin-bottom: 10px;
-  margin-top: 10px;
+
+.panel-group {
+   margin-bottom: 10px;
+   margin-top: 10px;
 }
-.panel{
-  border: 0px;
+
+.panel {
+   border: 0px;
 }
 
 @media (min-width: 410px) and (max-width: 480px) {
-  .MobileTeamPoints {
-    margin-top: -6%;
-  }
-  .alert {
-    position: absolute;
-    z-index: 10000;
-    margin-top: 20%;
-    margin-left: 155;
-  }
-  .menuLogoMobile{
-    width: 80px;
-    margin-left: 320;
-  }
-  .list-group-item button{
-    width:50%;
-  }
-  
-  #logoSigninMobile{
-    height: 250;
-    width: auto;
-    margin-left: 3%;
-    margin-top: -19%;
-  }
-  
-  .playerPriceCollapse{
-    margin-left: 23%;
-    margin-top: -13%;
-    font-size: 20px;
-  }
-  
-  .playerNameCollapse{
-    font-size: 20px;
-    width: 30%;
-    margin-left: 9%;
-    text-align: center;
-  }
-  
-  .lastGamesMarketMobileCollapse{
-    text-decoration: none;
-    list-style: none;
-    margin-left: -15%;
-  }
-  
-  #btnMarketMobileCollapse{
-    width: 48%;
-    margin-top: 5%;
-    margin-left: 2%;
-  }
-  
-  #marketImgMobileCollapse{
-    height: 20%;
-    margin-left: 55%;
-    margin-top: -65%;
-  }
-  #myTeamImgMobileCollapse{
-    height: 15%;
-    margin-left: 65%;
-    margin-top: -38%;
-  }
-  .lastGamesMarketMobileCollapse span{
-    color:green;
-  }
-  .menuMobile{
-    float:right;
-    padding:20;
-    width:25%;
-    margin-top:-19%;
-  }
-  .usernameMobile{
-    margin-top: 4%;
-    font-weight: 600;
-    text-align: center;
-  }
-  
-  #logoMobile{
-    margin-right: 80%;
-    width: 20%;
-    margin-left: 20;
-    margin-top: -18%;
-  }
-  
-  .dropbtnMobile {
-    background-repeat: no-repeat, repeat;
-    background-color:transparent;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  /* The container <div> - needed to position the dropdown content */
-  .dropdownMobile {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdownMobile-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    margin-left: 61%;
-    right: 0;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdownMobile-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdownMobile-content a:hover {background-color: #ddd}
-  .marketInfoMobile{
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    height: 12%;
-    font-size:20px;
-    background: rgba(0, 0, 0, 0.5);
-    margin-top: -1%;
-  }
-
-  .balanceMobile{
-    margin-top: 10%;
-    position: absolute;
-    z-index: 9999;
-    text-align: center;
-  }
-  #dropdownMarketMobile{
-    width:100%;
-    margin-left:0;
-    margin-top:0%;
-  }
-  #dropdown-menuMarketMobile{
-    width:100%;
-    margin-top:3%;
-    z-index:1;
-  }
-  .playerMarketMobile{
-    margin-top: 5%;
-    margin-bottom: 20%;
-  }
-  .playerMarketMobile img{
-    height: 230px;
-    width: auto;
-  }
-  .playerMarketMobile li a{
-    text-decoration: none;
+   .MobileTeamPoints {
+      margin-top: -6%;
+   }
+   .alert {
+      position: absolute;
+      z-index: 10000;
+      margin-top: 20%;
+      margin-left: 155;
+   }
+   .menuLogoMobile {
+      width: 80px;
+      margin-left: 320;
+   }
+   .list-group-item button {
+      width: 50%;
+   }
+   #logoSigninMobile {
+      height: 250;
+      width: auto;
+      margin-left: 3%;
+      margin-top: -19%;
+   }
+   .playerPriceCollapse {
+      margin-left: 23%;
+      margin-top: -13%;
+      font-size: 20px;
+   }
+   .playerNameCollapse {
+      font-size: 20px;
+      width: 30%;
+      margin-left: 9%;
+      text-align: center;
+   }
+   .lastGamesMarketMobileCollapse {
+      text-decoration: none;
+      list-style: none;
+      margin-left: -15%;
+   }
+   #btnMarketMobileCollapse {
+      width: 48%;
+      margin-top: 5%;
+      margin-left: 2%;
+   }
+   #marketImgMobileCollapse {
+      height: 20%;
+      margin-left: 55%;
+      margin-top: -65%;
+   }
+   #myTeamImgMobileCollapse {
+      height: 15%;
+      margin-left: 65%;
+      margin-top: -38%;
+   }
+   .lastGamesMarketMobileCollapse span {
+      color: green;
+   }
+   .menuMobile {
+      float: right;
+      padding: 20;
+      width: 25%;
+      margin-top: -19%;
+   }
+   .usernameMobile {
+      margin-top: 4%;
+      font-weight: 600;
+      text-align: center;
+   }
+   #logoMobile {
+      margin-right: 80%;
+      width: 20%;
+      margin-left: 20;
+      margin-top: -18%;
+   }
+   .dropbtnMobile {
+      background-repeat: no-repeat, repeat;
+      background-color: transparent;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+   }
+   .dropdownMobile {
+      position: relative;
+      display: inline-block;
+   }
+   .dropdownMobile-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      margin-left: 61%;
+      right: 0;
+   }
+   .dropdownMobile-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+   }
+   .dropdownMobile-content a:hover {
+      background-color: #ddd
+   }
+   .marketInfoMobile {
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      height: 12%;
+      font-size: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      margin-top: -1%;
+   }
+   .balanceMobile {
+      margin-top: 10%;
+      position: absolute;
+      z-index: 9999;
+      text-align: center;
+   }
+   #dropdownMarketMobile {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 0%;
+   }
+   #dropdown-menuMarketMobile {
+      width: 100%;
+      margin-top: 3%;
+      z-index: 1;
+   }
+   .playerMarketMobile {
+      margin-top: 5%;
+      margin-bottom: 20%;
+   }
+   .playerMarketMobile img {
+      height: 230px;
+      width: auto;
+   }
+   .playerMarketMobile li a {
+      text-decoration: none;
       text-align: center;
       margin-left: 15%;
       color: black;
-  }
-  .playerNameMobile{
-    font-size: 20px;
-    margin-left:-5%;
-  }
-  .lastGamesMarketMobile{
-    font-size: 15px;
-    margin-left: 11%;
-    list-style-type: none;
-  }
-  .lastGamesMarketMobile span{
-    color:green;
-  }
-  #btnMarketMobile{
-    width: 34%;
-    margin-left: 17%;
-    position: absolute;
-    margin-top: 5%;
-  }
-  #marketImgMobile{
-    float: right;
+   }
+   .playerNameMobile {
+      font-size: 20px;
+      margin-left: -5%;
+   }
+   .lastGamesMarketMobile {
+      font-size: 15px;
+      margin-left: 11%;
+      list-style-type: none;
+   }
+   .lastGamesMarketMobile span {
+      color: green;
+   }
+   #btnMarketMobile {
+      width: 34%;
+      margin-left: 17%;
+      position: absolute;
+      margin-top: 5%;
+   }
+   #marketImgMobile {
+      float: right;
       padding-top: 2%;
       margin-top: -35%;
-  }
+   }
 }
-@media (min-width: 1000px){
-  .MobileTeamPoints {
 
-  }
-  .alert {
-    position: absolute;
-    z-index: 10000;
-    margin-top: 8%;
-    margin-left: 453;
-  }
-  .menuLogoMobile{
-    width: 20%;
+@media (min-width: 1000px) {
+   .MobileTeamPoints {}
+   .alert {
+      position: absolute;
+      z-index: 10000;
+      margin-top: 8%;
+      margin-left: 453;
+   }
+   .menuLogoMobile {
+      width: 20%;
       float: right;
       margin-top: -18%;
       margin-right: 5%;
-  }
-  .list-group-item button{
-    width:50%;
-  }
-  
-  #logoSigninMobile{
-    height: 250;
-    width: auto;
-    margin-left: 3%;
-    margin-top: -19%;
-  }
-  
-  .playerPriceCollapse{
-    margin-left: 23%;
-    margin-top: -13%;
-    font-size: 20px;
-  }
-  
-  .playerNameCollapse{
-    font-size: 20px;
-    width: 30%;
-    margin-left: 9%;
-    text-align: center;
-  }
-  
-  .lastGamesMarketMobileCollapse{
-    text-decoration: none;
-    list-style: none;
-    margin-left: -15%;
-  }
-  
-  #btnMarketMobileCollapse{
-    width: 48%;
-    margin-top: 5%;
-    margin-left: 2%;
-  }
-  
-  #marketImgMobileCollapse{
-    height: 20%;
-    margin-left: 55%;
-    margin-top: -65%;
-  }
-  #myTeamImgMobileCollapse{
-    height: 15%;
-    margin-left: 65%;
-    margin-top: -38%;
-  }
-  .lastGamesMarketMobileCollapse span{
-    color:green;
-  }
-  .menuMobile{
-    float:right;
-    padding:20;
-    width:25%;
-    margin-top:-19%;
-  }
-  .usernameMobile{
-    margin-top: 10%;
-    font-weight: 600;
-    text-align: center;
-  }
-  
-  #logoMobile{
-    margin-top: -17%;
-    margin-right: 80%;
-    width: 20%;
-    margin-left: 20;
-  }
-  
-  .dropbtnMobile {
-    background-repeat: no-repeat, repeat;
-    background-color:transparent;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  /* The container <div> - needed to position the dropdown content */
-  .dropdownMobile {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdownMobile-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    margin-left: 61%;
-    right: 0;
-    margin-top: 20%;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdownMobile-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdownMobile-content a:hover {background-color: #ddd}
-  .marketInfoMobile{
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    height: 12%;
-    font-size:20px;
-    background: rgba(0, 0, 0, 0.5);
-    margin-top: -1%;
-  }
-
-  .balanceMobile{
-    margin-top:3%;
-    position:absolute;
-    z-index:9999;
-  }
-  #dropdownMarketMobile{
-    width:100%;
-    margin-left:0;
-    margin-top:0%;
-  }
-  #dropdown-menuMarketMobile{
-    width:100%;
-    margin-top:3%;
-    z-index:1;
-  }
-  .playerMarketMobile{
-    margin-top: 5%;
-    margin-bottom: 20%;
-  }
-  .playerMarketMobile img{
-    height: 230px;
-    width: auto;
-  }
-  .playerMarketMobile li a{
-    text-decoration: none;
+   }
+   .list-group-item button {
+      width: 50%;
+   }
+   #logoSigninMobile {
+      height: 250;
+      width: auto;
+      margin-left: 3%;
+      margin-top: -19%;
+   }
+   .playerPriceCollapse {
+      margin-left: 23%;
+      margin-top: -13%;
+      font-size: 20px;
+   }
+   .playerNameCollapse {
+      font-size: 20px;
+      width: 30%;
+      margin-left: 9%;
+      text-align: center;
+   }
+   .lastGamesMarketMobileCollapse {
+      text-decoration: none;
+      list-style: none;
+      margin-left: -15%;
+   }
+   #btnMarketMobileCollapse {
+      width: 48%;
+      margin-top: 5%;
+      margin-left: 2%;
+   }
+   #marketImgMobileCollapse {
+      height: 20%;
+      margin-left: 55%;
+      margin-top: -65%;
+   }
+   #myTeamImgMobileCollapse {
+      height: 15%;
+      margin-left: 65%;
+      margin-top: -38%;
+   }
+   .lastGamesMarketMobileCollapse span {
+      color: green;
+   }
+   .menuMobile {
+      float: right;
+      padding: 20;
+      width: 25%;
+      margin-top: -19%;
+   }
+   .usernameMobile {
+      margin-top: 10%;
+      font-weight: 600;
+      text-align: center;
+   }
+   #logoMobile {
+      margin-top: -17%;
+      margin-right: 80%;
+      width: 20%;
+      margin-left: 20;
+   }
+   .dropbtnMobile {
+      background-repeat: no-repeat, repeat;
+      background-color: transparent;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+   }
+   .dropdownMobile {
+      position: relative;
+      display: inline-block;
+   }
+   .dropdownMobile-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      margin-left: 61%;
+      right: 0;
+      margin-top: 20%;
+   }
+   .dropdownMobile-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+   }
+   .dropdownMobile-content a:hover {
+      background-color: #ddd
+   }
+   .marketInfoMobile {
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      height: 12%;
+      font-size: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      margin-top: -1%;
+   }
+   .balanceMobile {
+      margin-top: 3%;
+      position: absolute;
+      z-index: 9999;
+   }
+   #dropdownMarketMobile {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 0%;
+   }
+   #dropdown-menuMarketMobile {
+      width: 100%;
+      margin-top: 3%;
+      z-index: 1;
+   }
+   .playerMarketMobile {
+      margin-top: 5%;
+      margin-bottom: 20%;
+   }
+   .playerMarketMobile img {
+      height: 230px;
+      width: auto;
+   }
+   .playerMarketMobile li a {
+      text-decoration: none;
       text-align: center;
       margin-left: 15%;
       color: black;
-  }
-  .playerNameMobile{
-    font-size: 20px;
-    margin-left:-5%;
-  }
-  .lastGamesMarketMobile{
-    font-size: 15px;
-    margin-left: 11%;
-    list-style-type: none;
-  }
-  .lastGamesMarketMobile span{
-    color:green;
-  }
-  #btnMarketMobile{
-    width: 34%;
-    margin-left: 17%;
-    position: absolute;
-    margin-top: 5%;
-  }
-  #marketImgMobile{
-    float: right;
+   }
+   .playerNameMobile {
+      font-size: 20px;
+      margin-left: -5%;
+   }
+   .lastGamesMarketMobile {
+      font-size: 15px;
+      margin-left: 11%;
+      list-style-type: none;
+   }
+   .lastGamesMarketMobile span {
+      color: green;
+   }
+   #btnMarketMobile {
+      width: 34%;
+      margin-left: 17%;
+      position: absolute;
+      margin-top: 5%;
+   }
+   #marketImgMobile {
+      float: right;
       padding-top: 2%;
       margin-top: -35%;
-  }
+   }
 }
-@media (min-width: 380px) and (max-width: 410px) {
-  .MobileTeamPoints {
-    margin-top: -7%;
-  }
-  .alert {
-    position: absolute;
-    z-index: 10000;
-    margin-top: 20%;
-    margin-left: 155;
-  }
-  .menuLogoMobile{
-    width: 70px;
-    float: right;
-    margin-right: 5%;
-  }
-  .list-group-item button{
-    width:50%;
-  }
-  
-  #logoSigninMobile{
-    height: 250;
-    width: auto;
-    margin-left: -5%;
-    margin-top: -22%;
-  }
-  
-  .playerPriceCollapse{
-    margin-left: 23%;
-    margin-top: -13%;
-    font-size: 20px;
-  }
-  
-  .playerNameCollapse{
-    font-size: 20px;
-    width: 30%;
-    margin-left: 9%;
-    text-align: center;
-  }
-  
-  .lastGamesMarketMobileCollapse{
-    text-decoration: none;
-    list-style: none;
-    margin-left: -15%;
-  }
-  
-  #btnMarketMobileCollapse{
-    width: 48%;
-    margin-top: 5%;
-    margin-left: 2%;
-  }
-  
-  #marketImgMobileCollapse{
-    height: 20%;
-    margin-left: 55%;
-    margin-top: -65%;
-  }
-  #myTeamImgMobileCollapse{
-    height: 15%;
-    margin-left: 65%;
-    margin-top: -40%;
-  }
-  .lastGamesMarketMobileCollapse span{
-    color:green;
-  }
-  .menuMobile{
-    float:right;
-    padding:20;
-    width:25%;
-    margin-top:-19%;
-  }
-  .usernameMobile{
-    margin-top: 4%;
-    font-weight: 600;
-    text-align: center;
-  }
-  
-  #logoMobile{
-    margin-right: 80%;
-    width: 20%;
-    margin-left: 20;
-  }
-  
-  .dropbtnMobile {
-    background-repeat: no-repeat, repeat;
-    background-color:transparent;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  /* The container <div> - needed to position the dropdown content */
-  .dropdownMobile {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdownMobile-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    margin-left: 61%;
-    right: 0;
-    margin-top: 20%;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdownMobile-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdownMobile-content a:hover {background-color: #ddd}
-  .marketInfoMobile{
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    height: 12%;
-    font-size:20px;
-    background: rgba(0, 0, 0, 0.5);
-    margin-top: -1%;
-  }
 
-  .balanceMobile{
-    margin-top: 10%;
-    position: absolute;
-    z-index: 9999;
-    text-align: center;
-  }
-  #dropdownMarketMobile{
-    width:100%;
-    margin-left:0;
-    margin-top:0%;
-  }
-  #dropdown-menuMarketMobile{
-    width:100%;
-    margin-top:3%;
-    z-index:1;
-  }
-  .playerMarketMobile{
-    margin-top: 5%;
-    margin-bottom: 20%;
-  }
-  .playerMarketMobile img{
-    height: 230px;
-    width: auto;
-  }
-  .playerMarketMobile li a{
-    text-decoration: none;
+@media (min-width: 380px) and (max-width: 410px) {
+   .MobileTeamPoints {
+      margin-top: -7%;
+   }
+   .alert {
+      position: absolute;
+      z-index: 10000;
+      margin-top: 20%;
+      margin-left: 155;
+   }
+   .menuLogoMobile {
+      width: 70px;
+      float: right;
+      margin-right: 5%;
+   }
+   .list-group-item button {
+      width: 50%;
+   }
+   #logoSigninMobile {
+      height: 250;
+      width: auto;
+      margin-left: -5%;
+      margin-top: -22%;
+   }
+   .playerPriceCollapse {
+      margin-left: 23%;
+      margin-top: -13%;
+      font-size: 20px;
+   }
+   .playerNameCollapse {
+      font-size: 20px;
+      width: 30%;
+      margin-left: 9%;
+      text-align: center;
+   }
+   .lastGamesMarketMobileCollapse {
+      text-decoration: none;
+      list-style: none;
+      margin-left: -15%;
+   }
+   #btnMarketMobileCollapse {
+      width: 48%;
+      margin-top: 5%;
+      margin-left: 2%;
+   }
+   #marketImgMobileCollapse {
+      height: 20%;
+      margin-left: 55%;
+      margin-top: -65%;
+   }
+   #myTeamImgMobileCollapse {
+      height: 15%;
+      margin-left: 65%;
+      margin-top: -40%;
+   }
+   .lastGamesMarketMobileCollapse span {
+      color: green;
+   }
+   .menuMobile {
+      float: right;
+      padding: 20;
+      width: 25%;
+      margin-top: -19%;
+   }
+   .usernameMobile {
+      margin-top: 4%;
+      font-weight: 600;
+      text-align: center;
+   }
+   #logoMobile {
+      margin-right: 80%;
+      width: 20%;
+      margin-left: 20;
+   }
+   .dropbtnMobile {
+      background-repeat: no-repeat, repeat;
+      background-color: transparent;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+   }
+   .dropdownMobile {
+      position: relative;
+      display: inline-block;
+   }
+   .dropdownMobile-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      margin-left: 61%;
+      right: 0;
+      margin-top: 20%;
+   }
+   .dropdownMobile-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+   }
+   .dropdownMobile-content a:hover {
+      background-color: #ddd
+   }
+   .marketInfoMobile {
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      height: 12%;
+      font-size: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      margin-top: -1%;
+   }
+   .balanceMobile {
+      margin-top: 10%;
+      position: absolute;
+      z-index: 9999;
+      text-align: center;
+   }
+   #dropdownMarketMobile {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 0%;
+   }
+   #dropdown-menuMarketMobile {
+      width: 100%;
+      margin-top: 3%;
+      z-index: 1;
+   }
+   .playerMarketMobile {
+      margin-top: 5%;
+      margin-bottom: 20%;
+   }
+   .playerMarketMobile img {
+      height: 230px;
+      width: auto;
+   }
+   .playerMarketMobile li a {
+      text-decoration: none;
       text-align: center;
       margin-left: 15%;
       color: black;
-  }
-  .playerNameMobile{
-    font-size: 20px;
-    margin-left:-5%;
-  }
-  .lastGamesMarketMobile{
-    font-size: 15px;
-    margin-left: 11%;
-    list-style-type: none;
-  }
-  .lastGamesMarketMobile span{
-    color:green;
-  }
-  #btnMarketMobile{
-    width: 34%;
-    margin-left: 17%;
-    position: absolute;
-    margin-top: 5%;
-  }
-  #marketImgMobile{
-    float: right;
+   }
+   .playerNameMobile {
+      font-size: 20px;
+      margin-left: -5%;
+   }
+   .lastGamesMarketMobile {
+      font-size: 15px;
+      margin-left: 11%;
+      list-style-type: none;
+   }
+   .lastGamesMarketMobile span {
+      color: green;
+   }
+   #btnMarketMobile {
+      width: 34%;
+      margin-left: 17%;
+      position: absolute;
+      margin-top: 5%;
+   }
+   #marketImgMobile {
+      float: right;
       padding-top: 2%;
       margin-top: -35%;
-  }
+   }
 }
 
 .col-xs-offset-1 {
-  margin-left: 8.33333333% !important;
+   margin-left: 8.33333333% !important;
 }
 
-.MobileTeamPoints{
-  float: right;
-  color: green;
-}
-
-
-.turnDeviceNotification {
-  position:fixed;
-  top: 0;
-  left:0;
-  height:100%;
-  width:100%;
-  display: none;
-  z-index: 999;
+.MobileTeamPoints {
+   float: right;
+   color: green;
 }
 
 .turnDeviceNotification {
-  background-image:url('../img/turn.png');
-  background-size:cover;
-  background-position: center;
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   display: none;
+   z-index: 999;
+}
+
+.turnDeviceNotification {
+   background-image: url('../img/turn.png');
+   background-size: cover;
+   background-position: center;
 }
 
 @media (min-width: 440px) and (max-width: 480px) {
-  .MobileTeamPoints {
-    margin-top: -6%;
-  }
-  .alert {
-    position: absolute;
-    z-index: 10000;
-    margin-top: 20%;
-    margin-left: 155;
-  }
-  .menuLogoMobile{
-    width: 80px;
-    margin-left: 320;
-  }
-  .list-group-item button{
-    width:50%;
-  }
-  
-  #logoSigninMobile{
-    height: 250;
-    width: auto;
-    margin-left: 3%;
-    margin-top: -19%;
-  }
-  
-  .playerPriceCollapse{
-    margin-left: 23%;
-    margin-top: -13%;
-    font-size: 20px;
-  }
-  
-  .playerNameCollapse{
-    font-size: 20px;
-    width: 30%;
-    margin-left: 9%;
-    text-align: center;
-  }
-  
-  .lastGamesMarketMobileCollapse{
-    text-decoration: none;
-    list-style: none;
-    margin-left: -15%;
-  }
-  
-  #btnMarketMobileCollapse{
-    width: 48%;
-    margin-top: 5%;
-    margin-left: 2%;
-  }
-  
-  #marketImgMobileCollapse{
-    height: 20%;
-    margin-left: 55%;
-    margin-top: -65%;
-  }
-  #myTeamImgMobileCollapse{
-    height: 15%;
-    margin-left: 65%;
-    margin-top: -34%;
-  }
-  .lastGamesMarketMobileCollapse span{
-    color:green;
-  }
-  .menuMobile{
-    float:right;
-    padding:20;
-    width:25%;
-    margin-top:-19%;
-  }
-  .usernameMobile{
-    margin-top: 4%;
-    font-weight: 600;
-    text-align: center;
-  }
-  
-  #logoMobile{
-    margin-right: 80%;
-    width: 20%;
-    margin-left: 20;
-    margin-top: -18%;
-  }
-  
-  .dropbtnMobile {
-    background-repeat: no-repeat, repeat;
-    background-color:transparent;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  /* The container <div> - needed to position the dropdown content */
-  .dropdownMobile {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdownMobile-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    margin-left: 61%;
-    right: 0;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdownMobile-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdownMobile-content a:hover {background-color: #ddd}
-  .marketInfoMobile{
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    height: 12%;
-    font-size:20px;
-    background: rgba(0, 0, 0, 0.5);
-    margin-top: -1%;
-  }
-
-  .balanceMobile{
-    margin-top: 10%;
-    position: absolute;
-    z-index: 9999;
-    text-align: center;
-  }
-  #dropdownMarketMobile{
-    width:100%;
-    margin-left:0;
-    margin-top:0%;
-  }
-  #dropdown-menuMarketMobile{
-    width:100%;
-    margin-top:3%;
-    z-index:1;
-  }
-  .playerMarketMobile{
-    margin-top: 5%;
-    margin-bottom: 20%;
-  }
-  .playerMarketMobile img{
-    height: 230px;
-    width: auto;
-  }
-  .playerMarketMobile li a{
-    text-decoration: none;
+   .MobileTeamPoints {
+      margin-top: -6%;
+   }
+   .alert {
+      position: absolute;
+      z-index: 10000;
+      margin-top: 20%;
+      margin-left: 155;
+   }
+   .menuLogoMobile {
+      width: 80px;
+      margin-left: 320;
+   }
+   .list-group-item button {
+      width: 50%;
+   }
+   #logoSigninMobile {
+      height: 250;
+      width: auto;
+      margin-left: 3%;
+      margin-top: -19%;
+   }
+   .playerPriceCollapse {
+      margin-left: 23%;
+      margin-top: -13%;
+      font-size: 20px;
+   }
+   .playerNameCollapse {
+      font-size: 20px;
+      width: 30%;
+      margin-left: 9%;
+      text-align: center;
+   }
+   .lastGamesMarketMobileCollapse {
+      text-decoration: none;
+      list-style: none;
+      margin-left: -15%;
+   }
+   #btnMarketMobileCollapse {
+      width: 48%;
+      margin-top: 5%;
+      margin-left: 2%;
+   }
+   #marketImgMobileCollapse {
+      height: 20%;
+      margin-left: 55%;
+      margin-top: -65%;
+   }
+   #myTeamImgMobileCollapse {
+      height: 15%;
+      margin-left: 65%;
+      margin-top: -34%;
+   }
+   .lastGamesMarketMobileCollapse span {
+      color: green;
+   }
+   .menuMobile {
+      float: right;
+      padding: 20;
+      width: 25%;
+      margin-top: -19%;
+   }
+   .usernameMobile {
+      margin-top: 4%;
+      font-weight: 600;
+      text-align: center;
+   }
+   #logoMobile {
+      margin-right: 80%;
+      width: 20%;
+      margin-left: 20;
+      margin-top: -18%;
+   }
+   .dropbtnMobile {
+      background-repeat: no-repeat, repeat;
+      background-color: transparent;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+   }
+   .dropdownMobile {
+      position: relative;
+      display: inline-block;
+   }
+   .dropdownMobile-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      margin-left: 61%;
+      right: 0;
+   }
+   .dropdownMobile-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+   }
+   .dropdownMobile-content a:hover {
+      background-color: #ddd
+   }
+   .marketInfoMobile {
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      height: 12%;
+      font-size: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      margin-top: -1%;
+   }
+   .balanceMobile {
+      margin-top: 10%;
+      position: absolute;
+      z-index: 9999;
+      text-align: center;
+   }
+   #dropdownMarketMobile {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 0%;
+   }
+   #dropdown-menuMarketMobile {
+      width: 100%;
+      margin-top: 3%;
+      z-index: 1;
+   }
+   .playerMarketMobile {
+      margin-top: 5%;
+      margin-bottom: 20%;
+   }
+   .playerMarketMobile img {
+      height: 230px;
+      width: auto;
+   }
+   .playerMarketMobile li a {
+      text-decoration: none;
       text-align: center;
       margin-left: 15%;
       color: black;
-  }
-  .playerNameMobile{
-    font-size: 20px;
-    margin-left:-5%;
-  }
-  .lastGamesMarketMobile{
-    font-size: 15px;
-    margin-left: 11%;
-    list-style-type: none;
-  }
-  .lastGamesMarketMobile span{
-    color:green;
-  }
-  #btnMarketMobile{
-    width: 34%;
-    margin-left: 17%;
-    position: absolute;
-    margin-top: 5%;
-  }
-  #marketImgMobile{
-    float: right;
+   }
+   .playerNameMobile {
+      font-size: 20px;
+      margin-left: -5%;
+   }
+   .lastGamesMarketMobile {
+      font-size: 15px;
+      margin-left: 11%;
+      list-style-type: none;
+   }
+   .lastGamesMarketMobile span {
+      color: green;
+   }
+   #btnMarketMobile {
+      width: 34%;
+      margin-left: 17%;
+      position: absolute;
+      margin-top: 5%;
+   }
+   #marketImgMobile {
+      float: right;
       padding-top: 2%;
       margin-top: -35%;
-  }
+   }
 }
 
-.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover{
-  z-index:0;
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+   z-index: 0;
 }
 
-.dropdownUserRole{
-  width: 100;
-  margin-top: -1%;
-  margin-left: -150%;
+.dropdownUserRole {
+   width: 100;
+   margin-top: -1%;
+   margin-left: -150%;
 }
 
-.dropdownMenuUserRole{
-  margin-left: -150%;
+.dropdownMenuUserRole {
+   margin-left: -150%;
 }
 
-.okUserRole{
-  float: right;
-  margin-right: 10%;
-  margin-top: 3%;
-}
-@media (min-width: 1440px){ 
-  .adminPaneluserRole{
-    position:absolute;
-    margin-left:4%;
-  }
+.okUserRole {
+   float: right;
+   margin-right: 10%;
+   margin-top: 3%;
 }
 
-
-.containerAdminPanel{
-  width:inherit;
-}
-.formAdminPanel{
-  width: 30%;
-  margin-left: 56%;
-  margin-top: 1.5%;
-}
-.formSearchAdminPanel{
-  width: 50%;
-  margin-left: 35%;
-}
-.btnAdminPanel{
-  margin-top: 10%;
-  margin-left: 24%;
-}
-.btnAdminPanelInsert{
-  margin-left: 24%;
-}
-.dropdownAdminPanel{
-  width: 240%;
-  margin-top: -3%;
-  margin-left: 17%;
+@media (min-width: 1440px) {
+   .adminPaneluserRole {
+      position: absolute;
+      margin-left: 4%;
+   }
 }
 
-#img1LastGameMobile{
-  float:left;
-  width:50%;
-}
-#img2LastGameMobile{
-  float:right;
-  width:50%;
+.containerAdminPanel {
+   width: inherit;
 }
 
+.formAdminPanel {
+   width: 30%;
+   margin-left: 56%;
+   margin-top: 1.5%;
+}
+
+.formSearchAdminPanel {
+   width: 50%;
+   margin-left: 35%;
+}
+
+.btnAdminPanel {
+   margin-top: 10%;
+   margin-left: 24%;
+}
+
+.btnAdminPanelInsert {
+   margin-left: 24%;
+}
+
+.dropdownAdminPanel {
+   width: 240%;
+   margin-top: -3%;
+   margin-left: 17%;
+}
+
+#img1LastGameMobile {
+   float: left;
+   width: 50%;
+}
+
+#img2LastGameMobile {
+   float: right;
+   width: 50%;
+}
+
+body {
+   font-family: 'Roboto', sans-serif;
+}

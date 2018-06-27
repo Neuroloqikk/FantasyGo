@@ -24,6 +24,10 @@ if($username == null){
     $username="Login";
     $loginLink="signinMobile.php";
 }
+if ($_SESSION['Sucess'] == 1){
+    unset($_SESSION['Sucess']);
+    displayAlert("The player was added to your team!", "success");
+}
 if (!empty($_GET)) {
    $playerName = $_GET["name"];
    $stmt = $pdo->query("SELECT `id`,`price`,`photo`,`team`,`team_photo`,`first_name`,`last_name` FROM `users`.`players` WHERE name='$playerName'");
@@ -86,7 +90,9 @@ if (!empty($_GET)) {
                $sql = "UPDATE `users`.`users` SET balance=? WHERE username=?";
                $stmt = $pdo->prepare($sql);
                $stmt->execute([$newBalance, $username]);
-               displayAlert("The player was added to your team!", "success");
+               $_SESSION['Sucess'] = 1;
+               header('Location: market.php');
+               
             }
          }
       }

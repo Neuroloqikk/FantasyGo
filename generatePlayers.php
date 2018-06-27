@@ -1,5 +1,5 @@
 <?php
-//<?=(($selected== $category['id'])?' selected':''); 
+//<?=(($selected== $category['id'])?' selected':'');
 require 'connect.php';
 $sectionid=$_POST['sectionID'];
 $selected = $_POST['selected'];
@@ -11,9 +11,5 @@ ob_start();
 <?php foreach($p as $row){ ?>
   <option value="<?=$row['name'] ?>"><?=$row['name'] ?></option>
 <?php } ?>
-
-
-
-
-<?php echo ob_get_clean(); 
+<?php echo ob_get_clean();
 ?>
