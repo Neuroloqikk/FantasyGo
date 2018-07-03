@@ -187,7 +187,7 @@
    width: 30%;
 }
 
-form {
+form:not(.manage) {
    border: 3px solid #f1f1f1;
    padding-top: 1%;
    background: rgba(0, 0, 0, 0.5);
@@ -2845,4 +2845,8 @@ a:active {
 
 body {
    font-family: 'Roboto', sans-serif;
+}
+
+.btnManage{
+    width:50%;
 }

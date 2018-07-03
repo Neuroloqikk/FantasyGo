@@ -225,7 +225,7 @@ function displayAlert($text,$type)
   function get_section_options(){
     var sectionID = jQuery('#teamname').val();
     jQuery.ajax({
-      url: 'generateplayers.php',
+      url: 'generatePlayers.php',
       type: 'POST',
       data: {sectionID : sectionID},
       success : function(data){
