@@ -367,6 +367,7 @@ function displayAlert($text,$type)
               </p>
               <p>Score:
                 <?= $player2_score ?>
+                <a href="#" class="btn btn-danger" role="button" style="display:<?=$p2Sell?>;">Sell</a>
               </p>
             </td>
             <td>
@@ -376,6 +377,7 @@ function displayAlert($text,$type)
               </p>
               <p>Score:
                 <?= $player3_score ?>
+                <a href="#" class="btn btn-danger" role="button" style="display:<?=$p3Sell?>;">Sell</a>
               </p>
             </td>
             <td>
@@ -385,6 +387,7 @@ function displayAlert($text,$type)
               </p>
               <p>Score:
                 <?= $player4_score ?>
+                <a href="#" class="btn btn-danger" role="button" style="display:<?=$p4Sell?>;">Sell</a>
               </p>
             </td>
             <td>
@@ -394,6 +397,7 @@ function displayAlert($text,$type)
               </p>
               <p>Score:
                 <?= $player5_score ?>
+                <a href="#" class="btn btn-danger" role="button" style="display:<?=$p5Sell?>;">Sell</a>
               </p>
             </td>
           </tr>
