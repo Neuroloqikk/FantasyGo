@@ -39,6 +39,7 @@ $player1Photo = $t['photo'];
 if ($player1Name == NULL) {
   $player1Name = "Buy another player.";
   $player1Photo = "/BlackPlayer.png";
+  $p1Sell = "none";
 }
 
 //
@@ -51,6 +52,7 @@ $player2Photo = $t['photo'];
 if ($player2Name == "") {
   $player2Name = "Buy another player.";
   $player2Photo = "/BlackPlayer.png";
+  $p2Sell = "none";
 }
 
 //
@@ -63,6 +65,7 @@ $player3Photo = $t['photo'];
 if ($player3Name == "") {
   $player3Name = "Buy another player.";
   $player3Photo = "/BlackPlayer.png";
+  $p3Sell = "none";
 }
 
 $q = $pdo->query("SELECT name,photo FROM `users`.`players` WHERE id= '" . $player4_Id . "'");
@@ -73,6 +76,7 @@ $player4Photo = $t['photo'];
 if ($player4Name == "") {
   $player4Name = "Buy another player.";
   $player4Photo = "/BlackPlayer.png";
+  $p4Sell = "none";
 }
 
 $q = $pdo->query("SELECT name,photo FROM `users`.`players` WHERE id= '" . $player5_Id . "'");
@@ -83,6 +87,7 @@ $player5Photo = $t['photo'];
 if ($player5Name == "") {
   $player5Name = "Buy another player.";
   $player5Photo = "/BlackPlayer.png";
+  $p5Sell = "none";
 }
 
 $sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='" . $player1Name . "'";
