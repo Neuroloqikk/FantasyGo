@@ -41,6 +41,24 @@ if ($player1Name == NULL) {
   $player1Photo = "/BlackPlayer.png";
   $p1Sell = "none";
 }
+else{
+  $sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='" . $player1Name . "'";
+  $player1 = $pdo->query($sql);
+  
+  foreach($player1 as $row) {
+    if ($timestamp < $row['timestamp']) {
+      $player1_score+= $row['player_score'];
+    }
+  }
+  
+  if ($player1_score == 0) {
+    $player1_score = 0;
+    $p1Sell = "inline";
+  }
+  else{
+    $p1Sell = "none";
+  }
+}
 
 //
 
@@ -53,6 +71,24 @@ if ($player2Name == "") {
   $player2Name = "Buy another player.";
   $player2Photo = "/BlackPlayer.png";
   $p2Sell = "none";
+}
+else{
+  $sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='" . $player2Name . "'";
+  $player2 = $pdo->query($sql);
+  
+  foreach($player2 as $row) {
+    if ($timestamp < $row['timestamp']) {
+      $player2_score+= $row['player_score'];
+    }
+  }
+  
+  if ($player2_score == 0) {
+    $player2_score = 0;
+    $p2Sell = "inline";
+  }
+  else{
+    $p2Sell = "none";
+  }
 }
 
 //
@@ -67,6 +103,24 @@ if ($player3Name == "") {
   $player3Photo = "/BlackPlayer.png";
   $p3Sell = "none";
 }
+else{
+  $sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='" . $player3Name . "'";
+  $player3 = $pdo->query($sql);
+  
+  foreach($player3 as $row) {
+    if ($timestamp < $row['timestamp']) {
+      $player3_score+= $row['player_score'];
+    }
+  }
+  
+  if ($player3_score == 0) {
+    $player3_score = 0;
+    $p3Sell = "inline";
+  }
+  else{
+    $p3Sell = "none";
+  }  
+}
 
 $q = $pdo->query("SELECT name,photo FROM `users`.`players` WHERE id= '" . $player4_Id . "'");
 $t = $q->fetch();
@@ -77,6 +131,24 @@ if ($player4Name == "") {
   $player4Name = "Buy another player.";
   $player4Photo = "/BlackPlayer.png";
   $p4Sell = "none";
+}
+else{
+  $sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='" . $player4Name . "'";
+  $player4 = $pdo->query($sql);
+  
+  foreach($player4 as $row) {
+    if ($timestamp < $row['timestamp']) {
+      $player4_score+= $row['player_score'];
+    }
+  }
+  
+  if ($player4_score == NULL) {
+    $player4_score = 0;
+    $p4Sell = "inline";
+  }
+  else{
+    $p4Sell = "none";
+  }
 }
 
 $q = $pdo->query("SELECT name,photo FROM `users`.`players` WHERE id= '" . $player5_Id . "'");
@@ -89,94 +161,24 @@ if ($player5Name == "") {
   $player5Photo = "/BlackPlayer.png";
   $p5Sell = "none";
 }
-
-$sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='" . $player1Name . "'";
-$player1 = $pdo->query($sql);
-
-foreach($player1 as $row) {
-  if ($timestamp < $row['timestamp']) {
-    $player1_score+= $row['player_score'];
+else{
+  $sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='" . $player5Name . "'";
+  $player5 = $pdo->query($sql);
+  
+  foreach($player5 as $row) {
+    if ($timestamp < $row['timestamp']) {
+      $player5_score+= $row['player_score'];
+    }
+  }
+  
+  if ($player5_score == 0) {
+    $player5_score = 0;
+    $p5Sell = "inline";
+  }
+  else{
+    $p5Sell = "none";
   }
 }
-
-if ($player1_score == 0) {
-  $player1_score = 0;
-  $p1Sell = "inline";
-}
-else{
-  $p1Sell = "none";
-}
-
-$sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='" . $player2Name . "'";
-$player2 = $pdo->query($sql);
-
-foreach($player2 as $row) {
-  if ($timestamp < $row['timestamp']) {
-    $player2_score+= $row['player_score'];
-  }
-}
-
-if ($player2_score == 0) {
-  $player2_score = 0;
-  $p2Sell = "inline";
-}
-else{
-  $p2Sell = "none";
-}
-
-$sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='" . $player3Name . "'";
-$player3 = $pdo->query($sql);
-
-foreach($player3 as $row) {
-  if ($timestamp < $row['timestamp']) {
-    $player3_score+= $row['player_score'];
-  }
-}
-
-if ($player3_score == 0) {
-  $player3_score = 0;
-  $p3Sell = "inline";
-}
-else{
-  $p3Sell = "none";
-}
-
-$sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='" . $player4Name . "'";
-$player4 = $pdo->query($sql);
-
-foreach($player4 as $row) {
-  if ($timestamp < $row['timestamp']) {
-    $player4_score+= $row['player_score'];
-  }
-}
-
-if ($player4_score == NULL) {
-  $player4_score = 0;
-  $p4Sell = "inline";
-}
-else{
-  $p4Sell = "none";
-}
-
-$sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='" . $player5Name . "'";
-$player5 = $pdo->query($sql);
-
-foreach($player5 as $row) {
-  if ($timestamp < $row['timestamp']) {
-    $player5_score+= $row['player_score'];
-  }
-}
-
-if ($player5_score == 0) {
-  $player5_score = 0;
-  $p5Sell = "inline";
-}
-else{
-  $p5Sell = "none";
-}
-
-
-
 function displayAlert($text,$type)
 {
    echo "<div class=\"col-xs-10 col-xs-offset-1 col-xs-offset-right-1 alert alert-".$type."\" role=\"alert\">
