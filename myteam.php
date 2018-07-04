@@ -96,6 +96,10 @@ foreach($player1 as $row) {
 
 if ($player1_score == 0) {
   $player1_score = 0;
+  $p1Sell = "inline";
+}
+else{
+  $p1Sell = "none";
 }
 
 $sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='" . $player2Name . "'";
@@ -109,6 +113,10 @@ foreach($player2 as $row) {
 
 if ($player2_score == 0) {
   $player2_score = 0;
+  $p2Sell = "inline";
+}
+else{
+  $p2Sell = "none";
 }
 
 $sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='" . $player3Name . "'";
@@ -122,6 +130,10 @@ foreach($player3 as $row) {
 
 if ($player3_score == 0) {
   $player3_score = 0;
+  $p3Sell = "inline";
+}
+else{
+  $p3Sell = "none";
 }
 
 $sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='" . $player4Name . "'";
@@ -135,6 +147,10 @@ foreach($player4 as $row) {
 
 if ($player4_score == NULL) {
   $player4_score = 0;
+  $p4Sell = "inline";
+}
+else{
+  $p4Sell = "none";
 }
 
 $sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='" . $player5Name . "'";
@@ -148,6 +164,10 @@ foreach($player5 as $row) {
 
 if ($player5_score == 0) {
   $player5_score = 0;
+  $p5Sell = "inline";
+}
+else{
+  $p5Sell = "none";
 }
 
 
@@ -337,6 +357,7 @@ function displayAlert($text,$type)
               </p>
               <p>Score:
                 <?= $player1_score ?>
+                <a href="#" class="btn btn-danger" role="button" style="display:<?=$p1Sell?>;">Sell</a>
               </p>
             </td>
             <td>

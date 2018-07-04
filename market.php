@@ -343,7 +343,8 @@ function displayAlert($text,$type)
                                     </thead>
                                     <tbody>
                                     <?php
-                                        $stmt = $pdo->query("SELECT * FROM next_games WHERE team1='$teamPlayerModal' OR team2='$teamPlayerModal' AND Inserted IS NULL ORDER BY Date DESC LIMIT 4");
+                                        $today = date("Y-m-d");  
+                                        $stmt = $pdo->query("SELECT * FROM next_games WHERE (team1='$teamPlayerModal' OR team2='$teamPlayerModal') AND Inserted IS NULL AND Date >= '$today' ORDER BY Date ASC LIMIT 4");
                                         $p = $stmt->fetchAll();
                                         foreach($p as $row){
                                             echo '<tr>';

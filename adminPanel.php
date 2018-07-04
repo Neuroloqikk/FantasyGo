@@ -360,7 +360,7 @@ function displayAlert($text,$type)
       $('#myTable').pageMe({pagerSelector:'#myPager',showPrevNext:true,hidePageNumbers:false,perPage:10});
     });
   </script>
-  <ul class="nav nav-tabs" style="margin-top: 1%;margin-left: 62%;width: 304px;">
+  <ul class="nav nav-tabs" style="margin-top: 1%;margin-left: 62%;width: 308px;">
     <li class="active"><a data-toggle="tab" href="#menu1" style="background-color: white;">Insert Tournament</a></li>
     <li><a data-toggle="tab" href="#menu2" style="background-color: white;">Update Tournament</a></li>
   </ul>
