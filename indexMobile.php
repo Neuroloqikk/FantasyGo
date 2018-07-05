@@ -114,7 +114,7 @@ function displayAlert($text,$type)
         </div>
     </nav>
     <div class="wrapperLanding2">
-      <form class="form-signin" method ="POST">
+      <form class="form-signin" method ="POST" style="color:white;">
         <h2 class="form-signin-heading">Register now and build your team right away!</h2>
         <input id="passText" type="text" class="form-control" name="email" placeholder="Email Address" required="" autofocus="" />
         <input id="passText2" type="text" class="form-control" name="username" placeholder="Username" required="" autofocus="" />
