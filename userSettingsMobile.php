@@ -32,18 +32,22 @@ if (isset($_POST['register'])) {
     }
   }
 
-  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    displayAlert("Please type a valid email!", "danger");
-  }
-  else {
-    if ($email == "") {
-      $updateEmail = false;
+  if ($email <> ""){
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      displayAlert("Please type a valid email!", "danger");
     }
     else {
-      $updateEmail = true;
+      if ($email == "") {
+        $updateEmail = false;
+      }
+      else {
+        $updateEmail = true;
+      }
     }
   }
-
+  else{ 
+    $updateEmail = false;
+  }
   if ($updatePass && $updateEmail) {
     $sql = "UPDATE `users`.`users` SET email=?,psw=? WHERE username=?";
     $stmt = $pdo->prepare($sql);
