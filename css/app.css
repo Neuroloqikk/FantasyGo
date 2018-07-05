@@ -1422,7 +1422,7 @@ a:active {
    #myTeamImgMobileCollapse {
       height: 15%;
       margin-left: 65%;
-      margin-top: -10%;/*20*/
+      margin-top: -20%;
    }
    .lastGamesMarketMobileCollapse span {
       color: green;
@@ -2455,7 +2455,7 @@ a:active {
    #marketImgMobileCollapse {
       height: 20%;
       margin-left: 55%;
-      margin-top: -65%;
+      margin-top: -50%;/*65*/
    }
    #myTeamImgMobileCollapse {
       height: 15%;
