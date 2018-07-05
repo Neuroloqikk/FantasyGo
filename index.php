@@ -65,7 +65,7 @@ else {
         ------------------------
 
         Please click this link to activate your account:
-        http://www.neuroloq1kk.me/FantasyGo/verify.php?email=' . $email . '&hash=' . $hash . '.'
+        http://www.neuroloq1kk.me/FantasyGo/verify.php?email=' . $email . '&hash=' . $hash . ''
       ));
       displayAlert("An email was sent to your email, check it in order to verify your account!", "warning");
     }

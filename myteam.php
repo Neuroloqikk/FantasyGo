@@ -198,7 +198,7 @@ if (isset($_GET["sell1"])){
   $sql = "UPDATE users_players SET player1_id=NULL WHERE username=?";
   $stmt = $pdo->prepare($sql);
   $stmt->execute([$username]);
-  header('Location: /myteam.php');
+  header('Location: FantasyGo/myteam.php');
 }
 else if (isset($_GET["sell2"])){
   $playerNameSell2 = $_GET["sell2"];
@@ -212,7 +212,7 @@ else if (isset($_GET["sell2"])){
   $sql = "UPDATE users_players SET player2_id=NULL WHERE username=?";
   $stmt = $pdo->prepare($sql);
   $stmt->execute([$username]);
-  header('Location: /myteam.php');
+  header('Location: FantasyGo/myteam.php');
 }
 else if (isset($_GET["sell3"])){
   $playerNameSell3 = $_GET["sell3"];
@@ -226,7 +226,7 @@ else if (isset($_GET["sell3"])){
   $sql = "UPDATE users_players SET player3_id=NULL WHERE username=?";
   $stmt = $pdo->prepare($sql);
   $stmt->execute([$username]);
-  header('Location: /myteam.php');
+  header('Location: FantasyGo/myteam.php');
 }
 else if (isset($_GET["sell4"])){
   $playerNameSell4 = $_GET["sell4"];
@@ -240,7 +240,7 @@ else if (isset($_GET["sell4"])){
   $sql = "UPDATE users_players SET player4_id=NULL WHERE username=?";
   $stmt = $pdo->prepare($sql);
   $stmt->execute([$username]);
-  header('Location: /myteam.php');
+  header('Location: FantasyGo/myteam.php');
 }
 else if (isset($_GET["sell5"])){
   $playerNameSell5 = $_GET["sell5"];
@@ -254,7 +254,7 @@ else if (isset($_GET["sell5"])){
   $sql = "UPDATE users_players SET player5_id=NULL WHERE username=?";
   $stmt = $pdo->prepare($sql);
   $stmt->execute([$username]);
-  header('Location: /myteam.php');
+  header('Location: FantasyGo/myteam.php');
 }
 
 
