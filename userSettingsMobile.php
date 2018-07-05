@@ -13,6 +13,7 @@ $psw = $t['psw'];
 
 if (isset($_POST['register'])) {
   $email = !empty($_POST['email']) ? trim($_POST['email']) : null;
+  $_SESSION['email']=$email;
   $pass = !empty($_POST['psw']) ? trim($_POST['psw']) : null;
   $passVerify = !empty($_POST['psw-repeat']) ? trim($_POST['psw-repeat']) : null;
   $passCurrent = !empty($_POST['psw-current']) ? trim($_POST['psw-current']) : null;
