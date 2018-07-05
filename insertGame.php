@@ -440,12 +440,6 @@ function displayAlert($text,$type)
                 <a href="market.php">Market</a>
                 </li>
                 <li>
-                <a href="insertNextGame.php">Insert Next Game</a>
-                </li>
-                <li>
-                <a href="insertGame.php">Insert Last Game</a>
-                </li>
-                <li>
                 <a href="leaderboard.php">LeaderBoard</a>
                 </li>
                 <li>
@@ -453,6 +447,20 @@ function displayAlert($text,$type)
                 </li>
                 <li>
                 <a href="LastGames.php">Last Games</a>
+                </li>
+                <li>
+                <a href="graphinfo.php">Informational graphs</a>
+                </li>
+                <li>
+                <a href="userSettings.php">Settings</a>
+                </li>
+                <hr>
+                <li style="text-align:  center;margin-bottom: 8%;font-weight: 600;">Admin</li>
+                <li>
+                <a href="insertNextGame.php">Insert Next Game</a>
+                </li>
+                <li>
+                <a href="insertGame.php">Insert Last Game</a>
                 </li>
                 <li>
                 <a href="adminPanel.php">Roles/Tournaments</a>
@@ -468,12 +476,6 @@ function displayAlert($text,$type)
                 </li>
                 <li>
                 <a href="updateMarketTeams.php">Update available teams</a>
-                </li>
-                <li>
-                <a href="graphinfo.php">Informational graphs</a>
-                </li>
-                <li>
-                <a href="userSettings.php">Settings</a>
                 </li>
                 <li>
                 <a href="logout.php">Logout</a>
@@ -538,8 +540,6 @@ function displayAlert($text,$type)
           <thead>
             <tr>
               <th>Name</th>
-              <th>Kills</th>
-              <th>Deaths</th>
               <th>Rating</th>
             </tr>
           </thead>
@@ -549,15 +549,11 @@ function displayAlert($text,$type)
                 <?=$team1_player1?>
               </td>
               <td contenteditable='true'></td>
-              <td contenteditable='true'></td>
-              <td contenteditable='true'></td>
             </tr>
             <tr id="t1_player2">
               <td>
                 <?=$team1_player2?>
               </td>
-              <td contenteditable='true'></td>
-              <td contenteditable='true'></td>
               <td contenteditable='true'></td>
             </tr>
             <tr id="t1_player3">
@@ -565,23 +561,17 @@ function displayAlert($text,$type)
                 <?= $team1_player3?>
               </td>
               <td contenteditable='true'></td>
-              <td contenteditable='true'></td>
-              <td contenteditable='true'></td>
             </tr>
             <tr id="t1_player4">
               <td>
                 <?= $team1_player4?>
               </td>
               <td contenteditable='true'></td>
-              <td contenteditable='true'></td>
-              <td contenteditable='true'></td>
             </tr>
             <tr id="t1_player5">
               <td>
                 <?= $team1_player5?>
               </td>
-              <td contenteditable='true'></td>
-              <td contenteditable='true'></td>
               <td contenteditable='true'></td>
             </tr>
           </tbody>
@@ -596,8 +586,6 @@ function displayAlert($text,$type)
             <thead>
               <tr>
                 <th>Name</th>
-                <th>Kills</th>
-                <th>Deaths</th>
                 <th>Rating</th>
               </tr>
             </thead>
@@ -607,15 +595,11 @@ function displayAlert($text,$type)
                   <?=$team2_player1?>
                 </td>
                 <td contenteditable='true'></td>
-                <td contenteditable='true'></td>
-                <td contenteditable='true'></td>
               </tr>
               <tr id="t2_player2">
                 <td>
                   <?=$team2_player2?>
                 </td>
-                <td contenteditable='true'></td>
-                <td contenteditable='true'></td>
                 <td contenteditable='true'></td>
               </tr>
               <tr id="t2_player3">
@@ -623,23 +607,17 @@ function displayAlert($text,$type)
                   <?=$team2_player3?>
                 </td>
                 <td contenteditable='true'></td>
-                <td contenteditable='true'></td>
-                <td contenteditable='true'></td>
               </tr>
               <tr id="t2_player4">
                 <td>
                   <?=$team2_player4?>
                 </td>
                 <td contenteditable='true'></td>
-                <td contenteditable='true'></td>
-                <td contenteditable='true'></td>
               </tr>
               <tr id="t2_player5">
                 <td>
                   <?=$team2_player5?>
                 </td>
-                <td contenteditable='true'></td>
-                <td contenteditable='true'></td>
                 <td contenteditable='true'></td>
               </tr>
             </tbody>
@@ -661,34 +639,34 @@ function displayAlert($text,$type)
         var team2_score = document.getElementById('team2_score_input').value;
         var Row = document.getElementById("t1_player1");
         var Cells = Row.getElementsByTagName("td");
-        var t1_p1 = Cells[3].innerText;
+        var t1_p1 = Cells[1].innerText;
         var Row = document.getElementById("t1_player2");
         var Cells = Row.getElementsByTagName("td");
-        var t1_p2 = Cells[3].innerText;
+        var t1_p2 = Cells[1].innerText;
         var Row = document.getElementById("t1_player3");
         var Cells = Row.getElementsByTagName("td");
-        var t1_p3 = Cells[3].innerText;
+        var t1_p3 = Cells[1].innerText;
         var Row = document.getElementById("t1_player4");
         var Cells = Row.getElementsByTagName("td");
-        var t1_p4 = Cells[3].innerText;
+        var t1_p4 = Cells[1].innerText;
         var Row = document.getElementById("t1_player5");
         var Cells = Row.getElementsByTagName("td");
-        var t1_p5 = Cells[3].innerText;
+        var t1_p5 = Cells[1].innerText;
         var Row = document.getElementById("t2_player1");
         var Cells = Row.getElementsByTagName("td");
-        var t2_p1 = Cells[3].innerText;
+        var t2_p1 = Cells[1].innerText;
         var Row = document.getElementById("t2_player2");
         var Cells = Row.getElementsByTagName("td");
-        var t2_p2 = Cells[3].innerText;
+        var t2_p2 = Cells[1].innerText;
         var Row = document.getElementById("t2_player3");
         var Cells = Row.getElementsByTagName("td");
-        var t2_p3 = Cells[3].innerText;
+        var t2_p3 = Cells[1].innerText;
         var Row = document.getElementById("t2_player4");
         var Cells = Row.getElementsByTagName("td");
-        var t2_p4 = Cells[3].innerText;
+        var t2_p4 = Cells[1].innerText;
         var Row = document.getElementById("t2_player5");
         var Cells = Row.getElementsByTagName("td");
-        var t2_p5 = Cells[3].innerText;
+        var t2_p5 = Cells[1].innerText;
         window.location.href="insertGame.php?r1=" + t1_p1 + "&r2=" + t1_p2 + "&r3=" + t1_p3 + "&r4=" + t1_p4 + "&r5=" + t1_p5 + "&r6=" + t2_p1 + "&r7=" + t2_p2 + "&r8=" + t2_p3 + "&r9=" + t2_p4 + "&r10=" + t2_p5 + "&t1_score=" + team1_score + "&t2_score=" + team2_score;
       }
     </script>

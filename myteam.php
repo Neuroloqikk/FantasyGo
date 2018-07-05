@@ -39,6 +39,7 @@ $player1Photo = $t['photo'];
 if ($player1Name == NULL) {
   $player1Name = "Buy another player.";
   $player1Photo = "/BlackPlayer.png";
+  $player1_score = 0;
   $p1Sell = "none";
 }
 else{
@@ -70,6 +71,7 @@ $player2Photo = $t['photo'];
 if ($player2Name == "") {
   $player2Name = "Buy another player.";
   $player2Photo = "/BlackPlayer.png";
+  $player2_score = 0;
   $p2Sell = "none";
 }
 else{
@@ -101,6 +103,7 @@ $player3Photo = $t['photo'];
 if ($player3Name == "") {
   $player3Name = "Buy another player.";
   $player3Photo = "/BlackPlayer.png";
+  $player3_score = 0;
   $p3Sell = "none";
 }
 else{
@@ -130,6 +133,7 @@ $player4Photo = $t['photo'];
 if ($player4Name == "") {
   $player4Name = "Buy another player.";
   $player4Photo = "/BlackPlayer.png";
+  $player4_score = 0;
   $p4Sell = "none";
 }
 else{
@@ -160,6 +164,7 @@ if ($player5Name == "") {
   $player5Name = "Buy another player.";
   $player5Photo = "/BlackPlayer.png";
   $p5Sell = "none";
+  $player5_score = 0;
 }
 else{
   $sql = "SELECT player_score,timestamp FROM `users`.`results_player` WHERE player_name='" . $player5Name . "'";
@@ -179,6 +184,80 @@ else{
     $p5Sell = "none";
   }
 }
+
+
+if (isset($_GET["sell1"])){
+  $playerNameSell1 = $_GET["sell1"];
+  $stmt = $pdo->query("SELECT id,price FROM players WHERE name='".$playerNameSell1."'");
+  $p = $stmt->fetch();
+  $player1Price = $p['price'];
+  $newbalance =$balance + $player1Price;
+  $sql = "UPDATE users SET balance=? WHERE username=?";
+  $stmt = $pdo->prepare($sql);
+  $stmt->execute([$newbalance, $username]);
+  $sql = "UPDATE users_players SET player1_id=NULL WHERE username=?";
+  $stmt = $pdo->prepare($sql);
+  $stmt->execute([$username]);
+  header('Location: /myteam.php');
+}
+else if (isset($_GET["sell2"])){
+  $playerNameSell2 = $_GET["sell2"];
+  $stmt = $pdo->query("SELECT id,price FROM players WHERE name='".$playerNameSell2."'");
+  $p = $stmt->fetch();
+  $player2Price = $p['price'];
+  $newbalance =$balance + $player2Price;
+  $sql = "UPDATE users SET balance=? WHERE username=?";
+  $stmt = $pdo->prepare($sql);
+  $stmt->execute([$newbalance, $username]);
+  $sql = "UPDATE users_players SET player2_id=NULL WHERE username=?";
+  $stmt = $pdo->prepare($sql);
+  $stmt->execute([$username]);
+  header('Location: /myteam.php');
+}
+else if (isset($_GET["sell3"])){
+  $playerNameSell3 = $_GET["sell3"];
+  $stmt = $pdo->query("SELECT id,price FROM players WHERE name='".$playerNameSell3."'");
+  $p = $stmt->fetch();
+  $player3Price = $p['price'];
+  $newbalance =$balance + $player3Price;
+  $sql = "UPDATE users SET balance=? WHERE username=?";
+  $stmt = $pdo->prepare($sql);
+  $stmt->execute([$newbalance, $username]);
+  $sql = "UPDATE users_players SET player3_id=NULL WHERE username=?";
+  $stmt = $pdo->prepare($sql);
+  $stmt->execute([$username]);
+  header('Location: /myteam.php');
+}
+else if (isset($_GET["sell4"])){
+  $playerNameSell4 = $_GET["sell4"];
+  $stmt = $pdo->query("SELECT id,price FROM players WHERE name='".$playerNameSell4."'");
+  $p = $stmt->fetch();
+  $player4Price = $p['price'];
+  $newbalance =$balance + $player4Price;
+  $sql = "UPDATE users SET balance=? WHERE username=?";
+  $stmt = $pdo->prepare($sql);
+  $stmt->execute([$newbalance, $username]);
+  $sql = "UPDATE users_players SET player4_id=NULL WHERE username=?";
+  $stmt = $pdo->prepare($sql);
+  $stmt->execute([$username]);
+  header('Location: /myteam.php');
+}
+else if (isset($_GET["sell5"])){
+  $playerNameSell5 = $_GET["sell5"];
+  $stmt = $pdo->query("SELECT id,price FROM players WHERE name='".$playerNameSell5."'");
+  $p = $stmt->fetch();
+  $player5Price = $p['price'];
+  $newbalance =$balance + $player5Price;
+  $sql = "UPDATE users SET balance=? WHERE username=?";
+  $stmt = $pdo->prepare($sql);
+  $stmt->execute([$newbalance, $username]);
+  $sql = "UPDATE users_players SET player5_id=NULL WHERE username=?";
+  $stmt = $pdo->prepare($sql);
+  $stmt->execute([$username]);
+  header('Location: /myteam.php');
+}
+
+
 function displayAlert($text,$type)
 {
    echo "<div class=\"col-xs-10 col-xs-offset-1 col-xs-offset-right-1 alert alert-".$type."\" role=\"alert\">
@@ -264,12 +343,6 @@ function displayAlert($text,$type)
                 <a href="market.php">Market</a>
                 </li>
                 <li>
-                <a href="insertNextGame.php">Insert Next Game</a>
-                </li>
-                <li>
-                <a href="insertGame.php">Insert Last Game</a>
-                </li>
-                <li>
                 <a href="leaderboard.php">LeaderBoard</a>
                 </li>
                 <li>
@@ -277,6 +350,20 @@ function displayAlert($text,$type)
                 </li>
                 <li>
                 <a href="LastGames.php">Last Games</a>
+                </li>
+                <li>
+                <a href="graphinfo.php">Informational graphs</a>
+                </li>
+                <li>
+                <a href="userSettings.php">Settings</a>
+                </li>
+                <hr>
+                <li style="text-align:  center;margin-bottom: 8%;font-weight: 600;">Admin</li>
+                <li>
+                <a href="insertNextGame.php">Insert Next Game</a>
+                </li>
+                <li>
+                <a href="insertGame.php">Insert Last Game</a>
                 </li>
                 <li>
                 <a href="adminPanel.php">Roles/Tournaments</a>
@@ -292,12 +379,6 @@ function displayAlert($text,$type)
                 </li>
                 <li>
                 <a href="updateMarketTeams.php">Update available teams</a>
-                </li>
-                <li>
-                <a href="graphinfo.php">Informational graphs</a>
-                </li>
-                <li>
-                <a href="userSettings.php">Settings</a>
                 </li>
                 <li>
                 <a href="logout.php">Logout</a>
@@ -364,7 +445,7 @@ function displayAlert($text,$type)
               </p>
               <p>Score:
                 <?= $player1_score ?>
-                <a href="#" class="btn btn-danger" role="button" style="display:<?=$p1Sell?>;">Sell</a>
+                <a href="myteam.php?sell1=<?=$player1Name?>" class="btn btn-danger" role="button" style="display:<?=$p1Sell?>;">Sell</a>
               </p>
             </td>
             <td>
@@ -374,7 +455,7 @@ function displayAlert($text,$type)
               </p>
               <p>Score:
                 <?= $player2_score ?>
-                <a href="#" class="btn btn-danger" role="button" style="display:<?=$p2Sell?>;">Sell</a>
+                <a href="myteam.php?sell2=<?=$player2Name?>" class="btn btn-danger" role="button" style="display:<?=$p2Sell?>;">Sell</a>
               </p>
             </td>
             <td>
@@ -384,7 +465,7 @@ function displayAlert($text,$type)
               </p>
               <p>Score:
                 <?= $player3_score ?>
-                <a href="#" class="btn btn-danger" role="button" style="display:<?=$p3Sell?>;">Sell</a>
+                <a href="myteam.php?sell3=<?=$player3Name?>" class="btn btn-danger" role="button" style="display:<?=$p3Sell?>;">Sell</a>
               </p>
             </td>
             <td>
@@ -394,7 +475,7 @@ function displayAlert($text,$type)
               </p>
               <p>Score:
                 <?= $player4_score ?>
-                <a href="#" class="btn btn-danger" role="button" style="display:<?=$p4Sell?>;">Sell</a>
+                <a href="myteam.php?sell4=<?=$player4Name?>" class="btn btn-danger" role="button" style="display:<?=$p4Sell?>;">Sell</a>
               </p>
             </td>
             <td>
@@ -404,7 +485,7 @@ function displayAlert($text,$type)
               </p>
               <p>Score:
                 <?= $player5_score ?>
-                <a href="#" class="btn btn-danger" role="button" style="display:<?=$p5Sell?>;">Sell</a>
+                <a href="myteam.php?sell5=<?=$player5Name?>" class="btn btn-danger" role="button" style="display:<?=$p5Sell?>;">Sell</a>
               </p>
             </td>
           </tr>

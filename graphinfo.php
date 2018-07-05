@@ -189,6 +189,9 @@ function displayAlert($text,$type)
                   <a href="LastGames.php">Last Games</a>
                 </li>
                 <li>
+                  <a href="graphinfo.php">Informational graphs</a>
+                </li>
+                <li>
                   <a href="userSettings.php">Settings</a>
                 </li>
                 <li>
@@ -196,50 +199,52 @@ function displayAlert($text,$type)
                 </li>
               <?php elseif ($Admin == 1):?>
               <li>
-              <a href="myteam.php">My Team</a>
-              </li>
-              <li>
-              <a href="market.php">Market</a>
-              </li>
-              <li>
-              <a href="insertNextGame.php">Insert Next Game</a>
-              </li>
-              <li>
-              <a href="insertGame.php">Insert Last Game</a>
-              </li>
-              <li>
-              <a href="leaderboard.php">LeaderBoard</a>
-              </li>
-              <li>
-              <a href="NextGames.php">Next Games</a>
-              </li>
-              <li>
-              <a href="LastGames.php">Last Games</a>
-              </li>
-              <li>
-              <a href="adminPanel.php">Roles/Tournaments</a>
-              </li>
-              <li>
-              <a href="editPlayers.php">Edit Player's Prices</a>
-              </li>
-              <li>
-              <a href="teamInsert.php">Insert new team</a>
-              </li>
-              <li>
-              <a href="playerInsert.php">Insert new player</a>
-              </li>
-              <li>
-              <a href="updateMarketTeams.php">Update available teams</a>
-              </li>
-              <li>
-              <a href="graphinfo.php">Informational graphs</a>
-              </li>
-              <li>
-              <a href="userSettings.php">Settings</a>
-              </li>
-              <li>
-              <a href="logout.php">Logout</a>
-              </li>
+                <a href="myteam.php">My Team</a>
+                </li>
+                <li>
+                <a href="market.php">Market</a>
+                </li>
+                <li>
+                <a href="leaderboard.php">LeaderBoard</a>
+                </li>
+                <li>
+                <a href="NextGames.php">Next Games</a>
+                </li>
+                <li>
+                <a href="LastGames.php">Last Games</a>
+                </li>
+                <li>
+                <a href="graphinfo.php">Informational graphs</a>
+                </li>
+                <li>
+                <a href="userSettings.php">Settings</a>
+                </li>
+                <hr>
+                <li style="text-align:  center;margin-bottom: 8%;font-weight: 600;">Admin</li>
+                <li>
+                <a href="insertNextGame.php">Insert Next Game</a>
+                </li>
+                <li>
+                <a href="insertGame.php">Insert Last Game</a>
+                </li>
+                <li>
+                <a href="adminPanel.php">Roles/Tournaments</a>
+                </li>
+                <li>
+                <a href="editPlayers.php">Edit Player's Prices</a>
+                </li>
+                <li>
+                <a href="teamInsert.php">Insert new team</a>
+                </li>
+                <li>
+                <a href="playerInsert.php">Insert new player</a>
+                </li>
+                <li>
+                <a href="updateMarketTeams.php">Update available teams</a>
+                </li>
+                <li>
+                <a href="logout.php">Logout</a>
+                </li>
               <?php endif;?>
             </ul>
           </li>

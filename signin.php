@@ -6,7 +6,12 @@
 <?php
 session_start();
 require 'connect.php';
-
+if (isset($_GET['update'])){
+  if ($_GET['update'] == true)
+  displayAlert("Your password was updated!", "success");
+  else
+  displayAlert("You need to ask for a recover email!", "warning");
+}
 if (isset($_POST['login'])) {
   $username = !empty($_POST['username']) ? trim($_POST['username']) : null;
   $psw = !empty($_POST['psw']) ? trim($_POST['psw']) : null;

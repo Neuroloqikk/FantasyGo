@@ -105,12 +105,6 @@ function displayAlert($text,$type)
                 <a href="market.php">Market</a>
                 </li>
                 <li>
-                <a href="insertNextGame.php">Insert Next Game</a>
-                </li>
-                <li>
-                <a href="insertGame.php">Insert Last Game</a>
-                </li>
-                <li>
                 <a href="leaderboard.php">LeaderBoard</a>
                 </li>
                 <li>
@@ -118,6 +112,20 @@ function displayAlert($text,$type)
                 </li>
                 <li>
                 <a href="LastGames.php">Last Games</a>
+                </li>
+                <li>
+                <a href="graphinfo.php">Informational graphs</a>
+                </li>
+                <li>
+                <a href="userSettings.php">Settings</a>
+                </li>
+                <hr>
+                <li style="text-align:  center;margin-bottom: 8%;font-weight: 600;">Admin</li>
+                <li>
+                <a href="insertNextGame.php">Insert Next Game</a>
+                </li>
+                <li>
+                <a href="insertGame.php">Insert Last Game</a>
                 </li>
                 <li>
                 <a href="adminPanel.php">Roles/Tournaments</a>
@@ -133,12 +141,6 @@ function displayAlert($text,$type)
                 </li>
                 <li>
                 <a href="updateMarketTeams.php">Update available teams</a>
-                </li>
-                <li>
-                <a href="graphinfo.php">Informational graphs</a>
-                </li>
-                <li>
-                <a href="userSettings.php">Settings</a>
                 </li>
                 <li>
                 <a href="logout.php">Logout</a>
@@ -209,9 +211,9 @@ $getGames = $pdo->query("SELECT team1,team2,Date,Hour FROM next_games WHERE Inse
   $date = $user['Date'];
   $hour = $user['Hour'];
   echo "<tr>";
-  echo '<td style="cursor:pointer"> <a href="#">'.$user['team1'].'</a></td>';
+  echo '<td>'.$user['team1'].'</td>';
   echo "<td>vs</td>";
-  echo '<td style="cursor:pointer"> <a href="#">'.$user['team2'].'</a></td>';
+  echo '<td>'.$user['team2'].'</td>';
   echo '<td>'.$date.'</td>';
   echo '<td>'.$hour.'</td>';
   echo "</tr>";

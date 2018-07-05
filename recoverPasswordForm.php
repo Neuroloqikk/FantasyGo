@@ -2,16 +2,7 @@
 session_start();
 require 'connect.php';
 
-if (isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['hash']) && !empty($_GET['hash'])) {
-  $email = ($_GET['email']);
-  $hash = ($_GET['hash']);
-  $sql = "SELECT recover FROM `users`.`users` WHERE email= '" . $email . "' AND recover='" . $hash . "'";
-}
-if($email == null){
-  echo '<script>location="signin.php"</script>';
-}
 if (isset($_POST['register'])) {
-  $email = $_GET['email'];
   $pass = !empty($_POST['psw']) ? trim($_POST['psw']) : null;
   $passVerify = !empty($_POST['psw-repeat']) ? trim($_POST['psw-repeat']) : null;
 
@@ -21,10 +12,23 @@ if (isset($_POST['register'])) {
     ));
     $sql = "UPDATE `users`.`users` SET psw=?,recover=? WHERE email=?";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute([$passwordHash, $recover,$email]);
-    displayAlert("Your password was updated!", "success");
+    $stmt->execute([$passwordHash,NULL,$_SESSION['email']]);
+    header( "Location: signin.php?update=true" );
   }
 }
+
+if (isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['hash']) && !empty($_GET['hash'])) {
+  $email = ($_GET['email']);
+  $_SESSION['email'] = $email;
+  $hash = ($_GET['hash']);
+  $q = $pdo->query("SELECT recover FROM `users`.`users` WHERE email= '" . $email . "' AND recover='" . $hash . "'");
+  $t = $q->fetch();
+  $recover = $t['recover'];
+  if ($recover == ""){
+    header( "Location: signin.php?update=false" );
+  }
+}
+
 function displayAlert($text,$type)
 {
    echo "<div class=\"col-xs-10 col-xs-offset-1 col-xs-offset-right-1 alert alert-".$type."\" role=\"alert\">
