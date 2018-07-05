@@ -198,7 +198,7 @@ if (isset($_GET["sell1"])){
   $sql = "UPDATE users_players SET player1_id=NULL WHERE username=?";
   $stmt = $pdo->prepare($sql);
   $stmt->execute([$username]);
-  header('Location: FantasyGo/myteam.php');
+  header('Location: myteam.php');
 }
 else if (isset($_GET["sell2"])){
   $playerNameSell2 = $_GET["sell2"];
