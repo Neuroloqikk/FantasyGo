@@ -25,6 +25,9 @@ if (isset($_POST['insert'])) {
     $sql = "INSERT INTO `users`.`teams` (team) VALUES ('$teamname');";
     $stmt = $pdo->prepare($sql);
     $result = $stmt->execute();
+    if ($result == 1) {
+      displayAlert("Team Inserted", "success");
+    }
   }
   
 

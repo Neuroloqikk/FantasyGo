@@ -4,7 +4,9 @@
   }
 </script>
 <?php
+
 session_start();
+
 require 'connect.php';
 if (isset($_GET['update'])){
   if ($_GET['update'] == true)
@@ -15,6 +17,7 @@ if (isset($_GET['update'])){
 if (isset($_POST['login'])) {
   $username = !empty($_POST['username']) ? trim($_POST['username']) : null;
   $psw = !empty($_POST['psw']) ? trim($_POST['psw']) : null;
+  $rmb = !empty($_POST['remember']) ? trim($_POST['remember']) : null;
   $stmt = $pdo->prepare("SELECT * FROM users WHERE username=:id");
   $stmt->execute(['id' => $username]);
   $user = $stmt->fetch();
@@ -121,10 +124,9 @@ function displayAlert($text,$type)
 
             <label for="username"><b>Username</b></label>
             <input type="text" placeholder="Enter Username" name="username" required>
-
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
-
+            <input type="checkbox" name="remember" value="yes"> Remember Me <br>
             <p>Forgot your username/password? <a href="recoverMobile.php" style="color:dodgerblue">Click here!</a></p>
             <p>Don't have an account? <a href="index.php" style="color:dodgerblue">Register</a></p>
             <div class="clearfix">
