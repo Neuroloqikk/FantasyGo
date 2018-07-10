@@ -19,16 +19,16 @@ if (isset($_POST['register'])) {
   $lastname = !empty($_POST['lastname']) ? trim($_POST['lastname']) : null;
   $target_dir = "img/$team/";
   $target_file = $target_dir . basename($_FILES["Photo"]["name"]);
-
-    move_uploaded_file($_FILES["Photo"]["tmp_name"], $target_file);
-    $photo = "/$team/$name.png";
-    $teamphoto = "/$team/$team.svg";
+  move_uploaded_file($_FILES["Photo"]["tmp_name"], $target_file);
+  
+  $photo = "/$team/$name.png";
+  $teamphoto = "/$team/$team.svg";
 
   $sql = "INSERT INTO `users`.`players` (name,price,team,photo,first_name,last_name,team_photo) VALUES ('$name','$price','$team','$photo','$firstname','$lastname','$teamphoto')";
   $stmt = $pdo->prepare($sql);
   $result = $stmt->execute();
   if ($result == 1) {
-    displayAlert("Player Inserted", "success");
+    //displayAlert("Player Inserted", "success");
   }
 }
 
@@ -194,7 +194,7 @@ function displayAlert($text,$type)
          <?php }?>
       </div>
     </nav>
-    <form class="SignUp" method="POST" style="border:1px solid #ccc">
+    <form class="SignUp" method="POST" style="border:1px solid #ccc" action="playerInsert.php" enctype="multipart/form-data">
       <div class="txtcolor">
         <div class="container">
           <h1>Insert a new player</h1>
@@ -226,7 +226,7 @@ function displayAlert($text,$type)
           </select>
 
           <label for="Photo"><b>Photo</b></label>
-          <input class="txtcolorinput" type="file" placeholder="Enter Photo" name="Photo" required>
+          <input class="txtcolorinput" type="file" name="Photo" id="Photo">
           <div class="clearfix">
             <button type="button" class="cancelbtn">Cancel</button>
             <button type="submit" value="Register" class="signupbtn" name="register">Insert</button>
