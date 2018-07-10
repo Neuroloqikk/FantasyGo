@@ -20,7 +20,7 @@ if (isset($_POST['register'])) {
   $target_dir = "img/$team/";
   $target_file = $target_dir . basename($_FILES["Photo"]["name"]);
   move_uploaded_file($_FILES["Photo"]["tmp_name"], $target_file);
-  
+
   $photo = "/$team/$name.png";
   $teamphoto = "/$team/$team.svg";
 
@@ -28,7 +28,7 @@ if (isset($_POST['register'])) {
   $stmt = $pdo->prepare($sql);
   $result = $stmt->execute();
   if ($result == 1) {
-    //displayAlert("Player Inserted", "success");
+    displayAlert("Player Inserted", "success");
   }
 }
 
