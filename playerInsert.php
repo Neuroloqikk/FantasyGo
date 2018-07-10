@@ -12,6 +12,7 @@ $stmt = $pdo->query("SELECT `isAdmin` FROM `users`.`users` WHERE username='$user
 $p = $stmt->fetch();
 $Admin = $p['isAdmin'];
 if (isset($_POST['register'])) {
+  
   $name = !empty($_POST['name']) ? trim($_POST['name']) : null;
   $price = !empty($_POST['price']) ? trim($_POST['price']) : null;
   $team = !empty($_POST['teamname']) ? trim($_POST['teamname']) : null;
